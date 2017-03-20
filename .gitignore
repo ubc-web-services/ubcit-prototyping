@@ -38,3 +38,7 @@ jspm_packages
 
 # Compiled CSS
 *.css
+*.map
+
+# Build directories
+www
