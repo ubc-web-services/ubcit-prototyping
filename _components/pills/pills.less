@@ -1,0 +1,49 @@
+/* PILLS
+-------------------------------------------------- */
+
+/*
+
+  SAMPLE MARKUP:
+  --------------------------------------------------
+  
+  see: http://getbootstrap.com/2.3.2/components.html#navs
+  
+  
+  VARIABLES
+  --------------------------------------------------
+  @unit-secondary - sets background colour when hovering over pill and the pill has the 'active' class
+  @unit-accent - sets hover and focus background colour when the pill is active
+  @unit-accent-light - sets background colour
+  @textColor - sets default state text / link colour
+  @border-radius-base - sets border radius
+  
+*/
+
+/* GENERAL STYLES 
+- reset CLF styling */
+.nav-pills a {
+  color: @textColor;
+  background-color: @unit-accent-light;
+  border-radius: @border-radius-base !important;
+  &:hover {
+    background-color: @unit-secondary !important;
+    color: white !important;
+  }
+}
+.nav-pills li {
+  color: @textColor;
+  &:hover {
+    color: white !important;
+  }
+}
+
+.nav-pills>.active>a, 
+.nav-pills>.active>a:hover, 
+.nav-pills>.active>a:focus {
+  background-color: @unit-secondary;
+  color: white;
+  &:hover {
+    background-color: @unit-accent !important;
+    color: @textColor !important;
+  }
+}

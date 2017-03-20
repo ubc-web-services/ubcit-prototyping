@@ -1,0 +1,57 @@
+if clfwidthfixed
+  footer#ubc7-footer.expand(role="contentinfo")
+    div#ubc7-unit-footer.row-fluid.expand
+      != partial("clf-footer-address")
+    div.row-fluid.expand.ubc7-back-to-top
+      div.span2
+        a(href="#") Back to top 
+          div.ubc7-arrow.up-arrow.grey
+    div#ubc7-global-footer.row-fluid.expand
+      div#ubc7-signature.span5
+        a(href="http://www.ubc.ca/") The University of British Columbia
+      div#ubc7-footer-menu.span7
+    div#ubc7-minimal-footer.row-fluid.expand
+      div.span12
+        ul
+          li
+            a(href="//cdn.ubc.ca/clf/ref/emergency") Emergency Procedures
+            span.divider |
+          li
+            a(href="//cdn.ubc.ca/clf/ref/terms") Terms of Use
+            span.divider |
+          li
+            a(href="//cdn.ubc.ca/clf/ref/copyright") Copyright
+            span.divider |
+          li
+            a(href="//cdn.ubc.ca/clf/ref/accessibility") Accessibility
+      
+else
+  footer#ubc7-footer.expand(role="contentinfo")
+    div#ubc7-unit-footer.row-fluid.expand
+      div.container
+        != partial("clf-footer-address")
+      div.row-fluid.expand.ubc7-back-to-top
+        div.container
+          div.span2
+            a(href="#") Back to top 
+              div.ubc7-arrow.up-arrow.grey
+      div#ubc7-global-footer.row-fluid.expand
+        div.container
+          div#ubc7-signature.span5
+            a(href="http://www.ubc.ca/") The University of British Columbia
+          div#ubc7-footer-menu.span7
+      div#ubc7-minimal-footer.row-fluid.expand
+        div.container
+          div.span12
+            ul
+              li
+                a(href="//cdn.ubc.ca/clf/ref/emergency") Emergency Procedures
+                span.divider |
+              li
+                a(href="//cdn.ubc.ca/clf/ref/terms") Terms of Use
+                span.divider |
+              li
+                a(href="//cdn.ubc.ca/clf/ref/copyright") Copyright
+                span.divider |
+              li
+                a(href="//cdn.ubc.ca/clf/ref/accessibility") Accessibility

@@ -1,0 +1,145 @@
+/* SIDENAV
+-------------------------------------------------- */
+
+/*
+
+  SAMPLE MARKUP: 
+  --------------------------------------------------
+  
+  <section class="block-menu-block">
+    <header>
+      <h2>Menu Title</h2>
+    </header>
+    <nav>
+      <ul class="menu nav sidenav">
+        <li class="first leaf active-trail active">
+          <a href="#" title="" class="active-trail active">Registering for an Account</a>
+        </li>
+        <li class="leaf">
+          <a href="#">Browser Support Information</a>
+        </li>
+        <li class="leaf">
+          <a href="#">Browser Support Information</a>
+        </li>
+        <li class="leaf">
+          <a href="#">Browser Support Information</a>
+          <ul class="menu nav">
+            <li class="first leaf">
+              <a href="#" title="" class="">Registering for an Account</a>
+            </li>
+            <li class="last leaf">
+              <a href="#" title="" class="">Registering for an Account</a>
+            </li>
+          </ul>
+        </li>
+        <li class="last leaf">
+          <a href="#">Browser Support Information</a>
+        </li>
+      </ul>
+    </nav>
+  </section>
+  
+  
+  CUSTOM SIDENAV CLASSES:
+  --------------------------------------------------
+  
+  
+  VARIABLES:
+  --------------------------------------------------
+
+  
+  
+*/
+
+.block-menu-block h2 {
+  //font-weight: 400 !important;
+  font-size: 1em !important;
+  line-height: 1.5em !important;
+  //text-transform: uppercase;
+  margin-bottom: .25em;
+  margin-top: .5em;
+  padding-left: .75em;
+  color: @unit-primary !important;
+}
+.nav.sidenav {
+  border-top: 1px solid @unit-light-grey;
+  font-size: .875em;
+  .nav.sidenav {
+    border-top: none; 
+    margin-bottom: 0;
+  }
+  a {
+    text-decoration: none;
+    //text-transform: uppercase;
+    color: @unit-accent-dark;
+    border-bottom: 1px solid @unit-light-grey;
+    padding: 10px 45px 10px 15px;
+    position: relative;
+    border-left: 1px solid @unit-light-grey;
+    border-right: 1px solid @unit-light-grey;
+    &:hover {
+      background-color: @ubc-blue;
+      color: #fff;
+    }
+    /*&:before {
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 100%;
+      width: 35px;
+      content: '';
+      display: block;
+    }*/
+  }
+  .expanded > a:after,
+  .collapsed > a:after {
+    font-family: @icon-font-family;
+    position: absolute;
+    font-weight: normal;
+    right: 15px;
+    top: 50%;
+    line-height: 0;
+    font-size: 1.5em;
+    color: @unit-primary;
+    //text-transform: capitalize;
+  }
+  .expanded > a:after {
+    content: @sidenav__icon--expanded;
+  }
+  .collapsed > a:after {
+    content: @sidenav__icon--collapsed;
+  }
+  .active-trail > a {
+    color: @unit-primary;
+    &:hover {
+      color: #fff;
+    }
+  }
+  .active > a {
+    //font-weight: 600;
+    color: #fff;
+  }
+  .active > a {
+    background-color: @ubc-blue;
+  }
+  /*
+  li.active-trail > a {
+    font-weight: 600;
+    &.active {
+      color: #fff;
+      background-color: @unit-secondary;
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+  */
+  ul a  {
+    padding-left: 30px;
+    font-size: 14px;
+    line-height: 1.35em;
+  }
+  ul ul a  {
+    padding-left: 45px;
+  }
+} 

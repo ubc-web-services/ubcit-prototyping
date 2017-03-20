@@ -1,0 +1,51 @@
+// import base styles
+
+
+/* TABS
+-------------------------------------------------- */
+
+/* 
+
+  CUSTOM STYLES 
+  --------------------------------------------------
+  
+          
+  SAMPLE MARKUP:
+  --------------------------------------------------
+  
+    SEE: http://getbootstrap.com/javascript/#tabs
+  
+  
+  VARIABLES:
+  --------------------------------------------------
+
+
+*/
+
+
+.nav-tabs {
+  border-bottom: 2px solid @unit-tertiary;
+  margin: 1em auto 2em;
+  text-align: center;
+  display: inline-block;
+}
+.nav-tabs>li {
+  margin-bottom: 0;
+  border-bottom: 4px solid inherit;
+  margin-bottom: -2px;
+}
+.nav-tabs>li>a {
+  border: none;
+  border-radius: 0;
+  transition: border-color .3s ease-in-out;
+  &:hover {
+    color: @text-color;
+    background-color: inherit;
+  }
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+  background-color: inherit;
+  border: none;
+  color: @unit-secondary;
+  border-bottom: 4px solid @unit-secondary;
+}

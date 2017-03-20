@@ -1,0 +1,296 @@
+// TYPE
+
+
+// FIX FOR FONT WEIGHT / FLEXSLIDER in WEBKIT
+// Removed due to accessibility issues
+//html{ -webkit-font-smoothing: antialiased; }
+// Prevent font scaling in Landscape orientation on iOS
+@media only screen and (min-device-width : 320px) and (max-device-width : 1024px) {
+  html { -webkit-text-size-adjust: 100%; }
+}
+/* Added to animated elements so that they don't change font-smoothing properties after animating  EDIT - nevermind, doesn't work.
+.wow {
+  backface-visibility: hidden;
+}
+*/
+
+// SELECTION COLOURS
+::selection {
+  background: @unit-primary; /* WebKit/Blink */
+  color: white;
+}
+::-moz-selection {
+  background: @unit-primary; /* Gecko  */
+  color: white;
+}
+
+/* CUSTOM FONTS */
+// WebFonts
+// --------------------------
+.type-light(){
+  font-family: @sans-font-family;
+  font-weight: 200;
+  font-style: normal; }
+.type-book(){
+  font-family: @sans-font-family;
+  font-weight: 400;
+  font-style: normal; }
+.type-book-italic(){
+	font-family: @sans-font-family;
+	font-weight: 400;
+	font-style: italic; }
+.type-book-semibold() {
+	font-family: @sans-font-family;
+	font-weight: 600;
+	font-style: normal; }
+.type-heavy() {
+	font-family: @sans-font-family;
+	font-weight: 800;
+	font-style: normal; }
+
+
+// Add type styles to footer
+/*#ubc7-unit-footer,
+.ubc7-back-to-top {
+  font-family: @sans-font-family !important;
+}*/
+
+// adjust standard font weights, sizes and colours
+.text--light {
+  font-weight: 200;
+}
+.text--regular {
+  font-weight: 400;
+}
+.text--bold {
+  font-weight: 600;
+}
+.text--heavy {
+  font-weight: 800;
+}
+.text--white {
+  color: white;
+}
+.text--primary {
+  color: @unit-primary;
+}
+.text--secondary {
+  color: @unit-secondary;
+}
+.text--tertiary {
+  color: @unit-tertiary;
+}
+.text--accent {
+  color: @unit-accent;
+}
+.text--accent-light {
+  color: @unit-accent-light;
+}
+.text--lead {
+  font-weight: @lead-text-font-weight;
+  font-size: @lead-text-font-size;
+  line-height: @lead-text-line-height;
+  color: @unit-accent;
+}
+.text--small {
+  font-size: (@font-size-base * .875);
+  line-height: (@base-line-height * 1.048);
+}
+.text--note {
+  &:extend(.text--small);
+  font-style: italic;
+}
+.text--center {
+  text-align: center;
+}
+.text--right {
+  text-align: right;
+}
+.text--left {
+  text-align: left;
+}
+.text--upper {
+  text-transform: uppercase !important;
+}
+.text--lower {
+  text-transform: lowercase !important;
+}
+
+/* DEFAULT LINK STYLES */
+a {
+  color: @link-color;
+  //text-decoration: none;
+
+}
+a:hover {
+  color: @link-color-hover;
+  text-decoration: underline;
+}
+
+
+
+/* DEFAULT TYPE STYLES */
+.non-clf h1,
+.non-clf .h1 {
+  font-weight: @h1-font-weight;
+  font-size: @h1-font-size;
+  line-height: @h1-line-height;
+  color: @ubc-blue;
+  letter-spacing: 1px;
+}
+.non-clf h2,
+.non-clf .h2 {
+  font-weight: @h2-font-weight;
+  font-size: @h2-font-size;
+  line-height: @h2-line-height;
+  color: @ubc-blue;
+  letter-spacing: 1px;
+}
+.non-clf h3,
+.non-clf .h3 {
+  font-weight: @h3-font-weight;
+  font-size: @h3-font-size;
+  line-height: @h3-line-height;
+  color: @ubc-blue;
+  letter-spacing: 1px;
+}
+.non-clf h4,
+.non-clf .h4 {
+  font-weight: @h4-font-weight;
+  font-size: @h4-font-size;
+  line-height: @h4-line-height;
+  text-transform: uppercase;
+  color: @ubc-blue;
+  letter-spacing: 2px;
+}
+.non-clf h5,
+.non-clf .h5 {
+  font-weight: @h5-font-weight;
+  font-size: @h5-font-size;
+  line-height: @h5-line-height;
+  text-transform: uppercase;
+  color: @unit-primary;
+  letter-spacing: 2px;
+}
+.non-clf h6,
+.non-clf .h6 {
+  font-weight: @h6-font-weight;
+  font-size: @h6-font-size;
+  line-height: @h6-line-height;
+  color: @unit-primary;
+  letter-spacing: 1px;
+}
+hr {
+  border-top-color: @horizontal-rule-color;
+  border-width: 1px 0 0 0;
+  border-style: solid;
+  margin: 1.5em 0;
+}
+p {
+  margin: 0 0 1.5em;
+}
+
+
+.media_embed {
+  margin: 1.5em 0;
+}
+
+// adjust tpe sizes for smaller screens
+@media screen and (max-width: @screen-sm-max ) {
+  /* DEFAULT TYPE STYLES */
+  .non-clf h1,
+  .non-clf .h1 {
+    font-size: (@h1-font-size * .75);
+    line-height: (@h1-line-height * .75);
+  }
+  .non-clf h2,
+  .non-clf .h2 {
+    font-size: (@h2-font-size * .75);
+    line-height: (@h2-line-height * .75);
+  }
+  .non-clf h3,
+  .non-clf .h3 {
+    font-size: (@h3-font-size * .75);
+    line-height: (@h3-line-height * .75);
+  }
+  .non-clf h4,
+  .non-clf .h4 {
+    font-size: (@h4-font-size * .75);
+    line-height: (@h4-line-height * .75);
+  }
+  .non-clf h5,
+  .non-clf .h5 {
+    font-size: (@h5-font-size * .75);
+    line-height: (@h5-line-height * .75);
+  }
+  .non-clf h6,
+  .non-clf .h6 {
+    font-size: (@h6-font-size * .75);
+    line-height: (@h6-line-height * .75);
+  }
+  p {
+    font-size: (@font-size-base * .875);
+  }
+  .text--lead {
+    font-size: (@lead-text-font-size * .75);
+  }
+  .text--small {
+    font-size: (@font-size-base * .75);
+  }
+  .text--note {
+    &:extend(.text--small);
+    font-style: italic;
+  }
+}
+
+.page-header {
+  padding-bottom: 16px;
+  margin: 0;
+  border-bottom: none;
+}
+
+
+ol, ul {
+  margin-bottom: 1.5em;
+}
+
+.map--address {
+  .text--small();
+  padding-top: 2em;
+}
+
+// ALTERNATE TYPE COLOURS
+.non-clf .unit-theme-one {
+  color: @unit-theme-one;
+}
+.non-clf .unit-theme-one-dark {
+  color: @unit-theme-one-dark;
+}
+.non-clf .unit-theme-two {
+  color: @unit-theme-two;
+}
+.non-clf .unit-theme-two-dark {
+  color: @unit-theme-two-dark;
+}
+.non-clf .unit-theme-three {
+  color: @unit-theme-three;
+}
+.non-clf .unit-theme-three-dark {
+  color: @unit-theme-three-dark;
+}
+.non-clf .unit-theme-four {
+  color: @unit-theme-four;
+}
+.non-clf .unit-theme-four-dark {
+  color: @unit-theme-four-dark;
+}
+.non-clf .unit-theme-five {
+  color: @unit-theme-five;
+}
+.non-clf .unit-theme-five-dark {
+  color: @unit-theme-five-dark;
+}
+
+.non-clf .text--white {
+  color: #fff !important;
+}

@@ -1,0 +1,33 @@
+button.btn.btn-link.btn--sm.btn-block.text--left(type="button" data-toggle="collapse" data-target="#toggledfilters" aria-expanded="false" aria-controls="collapseExample") SHOW FILTERS 
+  span.fa.fa-angle-down  
+div#toggledfilters.collapse
+  div.view-header      
+    div.view.view-isotope-example.view-id-isotope_example.view-display-id-campus_filter
+      div.view-content
+        div.item-list
+          h3 Campus
+          ul.isotope-options.clearfix(data-filter-group="Campus")
+            li.first
+              a.filterbutton(href="#filter" data-filter="") all
+            li
+              a.filterbutton.selected(href="#filter" data-filter=".vancouver") Vancouver
+            li
+              a.filterbutton(href="#filter" data-filter=".okanagan") Okanagan
+      
+    div.view.view-isotope-example.view-id-isotope_example.view-display-id-type_filter
+      div.view-content
+        div.item-list
+          h3 Audience
+          ul.isotope-options.clearfix(data-filter-group="Type")
+            li.first
+              a.filterbutton(href="#filter" data-filter="") all
+            li
+              a.filterbutton.selected(href="#filter" data-filter=".research") staff
+            li
+              a.filterbutton(href="#filter" data-filter=".tools") faculty
+            li
+              a.filterbutton(href="#filter" data-filter=".profile") senior leaders
+            li
+              a.filterbutton(href="#filter" data-filter=".profile") managers
+            li
+              a.filterbutton(href="#filter" data-filter=".profile") deans

@@ -1,0 +1,96 @@
+/* BUTTONS
+-------------------------------------------------- */
+
+/*
+
+  SAMPLE MARKUP:
+  --------------------------------------------------
+  
+  see: http://getbootstrap.com/2.3.2/base-css.html#buttons
+  
+  
+  CUSTOM BUTTON CLASSES:
+  --------------------------------------------------
+  
+  .btn-unit : use in place of btn-primary
+  .btn-unit-secondary : use in place of btn-secondary
+  .btn-unit-alt : adds alternate styling to the two styles above 
+    (usage: class="btn btn-unit btn-unit-alt")
+  .btn-unit-reverse : adds alternate styling to the two styles above 
+    (usage: class="btn btn-unit btn-unit-reverse")
+  .btn-multiline : adds styling for descriptive text in buttons via a span
+  .btn-plain : adds a simplified button style (usage: class="btn btn-plain")
+  
+  
+  VARIABLES
+  --------------------------------------------------
+  @btn-border-radius - add default button radius
+  
+*/
+
+/* GENERAL STYLES 
+- utility class (.non-clf) added to limit the styling to regions with the 'non-clf' class applied
+*/
+
+.non-clf .btn {
+  //font-weight: bold;
+  border-radius: @btn-border-radius;
+  background-image:none;
+  box-shadow: none;
+  transition: background-color .5s ease, border-color .5s ease, color .5s ease;
+  padding: .5em 1.5em .375em;
+}
+
+/* BUTTON GROUPS */
+// remove borders from button group buttons
+.non-clf .btn-group>.btn {
+  border-radius:  0;
+}
+// fix for centering button groups
+.non-clf .btn-group.text-center {
+  display: block;
+}
+// put back borders on first button group button
+.non-clf .btn-group>.btn:first-child {
+  border-bottom-left-radius: @btn-border-radius;
+  border-top-left-radius: @btn-border-radius;
+}
+// put back borders on last button group button
+.non-clf .btn-group>.btn:last-child {
+  border-bottom-right-radius: @btn-border-radius;
+  border-top-right-radius: @btn-border-radius;
+}
+
+
+// add a separator between buttons
+.btn-group>[class*="btn-unit"] {
+  position: relative;
+  &:after {
+    position: absolute;
+    width: 1px;
+    height: 100%; //adjust the height
+    content: "";
+    display: block;
+    background-color: transparent; //adjust the colour
+    left: 0;
+    top: 0;
+  }
+  // ...and hide it for the first one
+  &:first-child:after {
+    display: none;
+  }
+}
+
+/* ICON FONT ADJUSTMENTS FOR BUTTONS */
+.btn >span.icon {
+  font-size: 120%;
+}
+
+/* MULTILINE BUTTONS */
+.btn-multiline span {
+  display: block;
+  font-weight: normal;
+}
+.btn-large.btn-multiline span {
+  font-size: 85%;
+}

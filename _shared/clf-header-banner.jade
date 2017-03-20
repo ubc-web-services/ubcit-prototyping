@@ -1,0 +1,20 @@
+div.span1
+  div#ubc7-logo
+    a(href="http://www.ubc.ca") The University of British Columbia
+div.span2
+  div#ubc7-apom
+    a(href="https://cdn.ubc.ca/clf/ref/aplaceofmind") UBC - A Place of Mind
+div#ubc7-wordmark-block.span9
+  div#ubc7-wordmark
+    a(href="https://www.ubc.ca") The University of British Columbia
+    if showcampus
+      case campus
+        when "Vancouver Campus"
+          span#ubc7-vancouver-campus.ubc7-campus= campus
+        when "Okanagan Campus"
+          span#ubc7-okanagan-campus.ubc7-campus= campus
+  div#ubc7-global-utility
+    button(type="button" data-toggle="collapse" data-target="#ubc7-global-menu")
+      span UBC Search
+    noscript
+      a#ubc7-global-utility-no-script(href="http://www.ubc.ca/") UBC Search

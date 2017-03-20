@@ -1,0 +1,136 @@
+// import base styles
+// the '_flexslider.less' file extends this to be a slideshow using the flexslider library. See http://www.woothemes.com/flexslider/ for details
+//@import "_flexslider.less";
+@import "_featured-content.less";
+
+/* FEATURED CONTENT
+-------------------------------------------------- */
+
+/*
+
+  SAMPLE MARKUP:
+  --------------------------------------------------
+  
+    - see components-featured-content.less  
+ 
+  
+  CUSTOM CLASSES:
+  --------------------------------------------------
+  
+  
+  
+  VARIABLES:
+  --------------------------------------------------
+  
+  
+*/
+
+
+// So we can add a container around the caption to make it appear as contained within the 12 columns
+
+
+
+
+
+@media screen and (min-width: @slideshow-mq-min) {
+  .featured.non-clf  {
+    color: #fff;
+    h3, p {
+      display: inline-block;
+      background-color: @unit-secondary;
+      text-align: left;
+      padding: .5em 1em;
+    }
+    p {
+      .text--tertiary();
+    }
+  }
+  
+  // image pager
+  .flex-control-nav img {
+    filter: brightness(0.6);
+    transition: all 0.2s ease-in;
+    cursor: pointer;
+    &.flex-active {
+      filter: none;
+    }
+  }
+  .flex-control-nav li {
+    width: 200px;
+    margin: 0 15px;
+  }
+  
+}
+@media screen and (max-width: @slideshow-mq-sm) {
+  .featured-content .flex-caption {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  //button pager
+  .flex-control-nav li {
+    width: 20px;
+    img {
+      filter: none;
+      border-radius: 300px;
+      -moz-background-clip: padding;
+      -webkit-background-clip: padding-box;
+      background-clip: padding-box;
+      background: white;
+      border: 1px solid @unit-accent-dark;
+      display: inline-block;
+      overflow: hidden;
+      width: 12px;
+      height: 0;
+      padding-top: 10px;
+      text-align: center;
+      &.flex-active {
+        background-color: @unit-accent-dark;
+      }
+    }
+  }
+}
+.slides li {
+  display:  none;
+}
+.flex-control-nav {
+  margin-top: 2em;
+  text-align: center;
+  list-style: none;
+  padding: 0;
+  .clearfix();
+  li {
+    display: inline-block;
+  }
+}
+.flex-active-slide img {
+  display: block;
+}
+
+@media screen and (max-width: @screen-xs-max) {
+  .front .featured-content .text-center {
+    text-align: left;
+  }
+}
+@media screen and (min-width: @screen-sm-min) {
+  .front .featured-content {
+    height: 500px;
+    max-height: 500px;
+    
+  } 
+}
+
+@media screen and (max-width: @screen-xs-max) {
+  .front .featured-content {
+    h1  { 
+      padding-bottom: 0;
+      font-size: 40px;
+    }
+    input[type=text] {
+      min-width: 150px;
+      width: 100%;
+    }
+  } 
+}
+
+
+

@@ -1,0 +1,226 @@
+/* IE Fix - html5 main element */
+main {
+  display: block;
+}
+
+// UI improvments
+//-------------------------
+//#edit-title { font-size: 24px; }
+#system-themes-form img { width: 100px; }
+.form-item .description {
+  font-style: italic;
+  line-height: 1.2em;
+  font-size: 11px;
+  margin-top: 5px;
+  color: #777; }
+#edit-delete { color: #c00; }
+// The word "Unpublished" displayed beneath the content.
+.node-unpublished { background-color: #fff; }
+.node-unpublished div.unpublished {
+  height: 0;
+  overflow: visible;
+  color: #d8d8d8;
+  font-size: 75px;
+  line-height: 1;
+  font-family: Impact, "Arial Narrow", Helvetica, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  word-wrap: break-word; }
+  
+ /* Fix Pager Styles */
+.item-list .pager li { padding: 0; }
+.item-list ul li { margin: 0; }
+.pager li.pager-current {
+  display: inline-block;
+  padding: 5px 14px;
+  background-color: #eee;
+  border: 1px solid #ddd; }
+   
+/* Fix ugly article footer styles */
+article footer { background-color: inherit; }
+
+/* Fix mobile navigation btn styles */
+#ubc7-unit-menu .nav-collapse li.dropdown, 
+#ubc7-unit-alternate-navigation .nav-collapse li.dropdown {
+  border-bottom: none;
+}
+
+
+@media screen and (max-width: 1024px) {
+  body.admin-menu.adminimal-menu:before {
+    height: 0;
+  }
+}
+
+
+// Make sure ckeditor behaves and doesn't display a background image or colour
+#cke_contents_edit-body-und-0-value body { background: none !important; }
+
+// Mix admin menu if it's there
+#admin-menu .shortcut-toolbar a { background: inherit; }
+
+/* Fix the ajax throbber styles */
+html.js input.form-autocomplete {
+  background-position: 100% 8px;
+}
+
+/* Fix the collapsed fieldset styles */
+html.js fieldset.collapsed {
+  height: auto;
+}
+
+// make file markup behave
+span.file {
+  display: inline !important;
+  position: static !important;
+}
+
+// Default Drupal Tabs
+/* @group Tabs */
+div.tabs { margin: 0 0 5px 0; }
+ul.primary, 
+ul.secondary { width: 99%; }
+ul.primary {
+  margin: 0 0 .5em 0;
+  padding: 0;
+  border-width: 0;
+  list-style: none;
+  white-space: nowrap;
+  line-height: normal;
+  border-bottom: 1px solid @gray-lighter; }
+ul.primary li {
+  float: left;
+  margin: 0;
+  padding: 0; }
+ul.primary li.active a, 
+ul.primary li.active a:hover {
+  border-width: 0;
+  color: @black;
+  background-color: lighten(@gray-light, 10); }
+ul.primary li a {
+  display: block;
+  //height: 28px;
+  margin: 0 3px 0 0;
+  padding: 5px 10px 2px;
+  border-width: 0;
+  font-weight: bold;
+  text-decoration: none;
+  color: #777777;
+  background-color: @gray-lighter;
+  .border-top-radius(4px);  }
+ul.primary li a:hover {
+  border-width: 0;
+  background-color: lighten(@gray-light, 25); }
+ul.primary li a .tab {
+  display: block;
+  height: 24px;
+  margin: 0;
+  padding: 4px 13px 4px 6px;
+  border-width: 0;
+  line-height: 20px; }
+ul.secondary {
+  margin: 0;
+  padding: 0 0 0 5px;
+  border-bottom: 1px solid silver;
+  list-style: none;
+  white-space: nowrap; }
+ul.secondary li {
+  float: left;
+  margin: 0 5px 0 0;
+  padding: 5px 0;
+  border-right: none; }
+ul.secondary a {
+  display: block;
+  height: 24px;
+  margin: 0;
+  padding: 0;
+  border: 1px solid silver;
+  text-decoration: none;
+  color: #777777; }
+ul.secondary a .active, 
+.active ul.secondary a:hover {
+  border: 1px solid silver;
+  color: @black; }
+ul.secondary a .tab {
+  display: block;
+  height: 18px;
+  margin: 0;
+  padding: 3px 8px;
+  line-height: 18px; }
+/* @end */
+
+// Custom Utilities for Drupal CLF
+//-------------------------
+.inflate {
+  margin-left: -15px;
+  margin-right: -15px;
+  padding-left: 0;
+  padding-right: 0; }
+.nopadding {
+  padding-left: 0;
+  padding-right: 0; }
+
+// DEFAULTS FOR CLF
+//-------------------------
+body {
+  background: @body-bg;
+  font-family: @sans-font-family;
+  color: @text-color;
+  min-width: 240px; 
+  font-size: @font-size-base;
+  line-height: @base-line-height; }
+body.full-width { background: @body-bg; }
+//#ubc7-unit-menu .nav > li > a { padding: 9px 15px 11px; }
+//#main { background-color: @white; }
+#ubc7-unit-identifier.no-umbrella {
+  line-height: 2.25em; }
+
+// Unit Bar link and font colour
+//-------------------------
+// remove the ugly box shadows and textshadows
+#ubc7-unit {
+  //background-color: @unit-primary; 
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+}
+#ubc7-unit,
+#ubc7-unit-name a,
+#ubc7-unit-name a:hover,
+#ubc7-unit-name a:active {
+  color: @white;
+  text-shadow: none; }
+  
+// enforce the font choices in CLF regions
+#ubc7-global-menu,
+#ubc7-search,
+#ubc7-header,
+#ubc7-unit,
+//#ubc7-unit-menu,
+#ubc7-footer {
+  font-family: @clf-font-family !important;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+
+// DEFAULT SUBNAV STYLES
+//-------------------------
+.bootstrap-sidenav ul {
+  margin: 0; }
+
+@media screen and (max-width:979px) {
+  // START 768-979 STYLES    
+  
+  .inflate {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0; }
+
+  // END 768-979 STYLES
+}
+
+
+

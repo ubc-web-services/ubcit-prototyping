@@ -1,0 +1,18 @@
+div#ubc7-unit-address.span10
+  div#ubc7-address-unit-name= unitname
+  div#ubc7-address-campus= campus
+  div#ubc7-address-street= unitaddress
+  div#ubc7-address-location
+    span#ubc7-address-city #{ unitcity },&nbsp;
+    span#ubc7-address-province BC&nbsp;
+    span#ubc7-address-country Canada&nbsp;
+    span#ubc7-address-postal= unitpostal
+  div#ubc7-address-phone Tel #{ unitphone }
+  div#ubc7-address-email E-mail #{ unitemail }
+div.span2
+  strong Find us on
+  div#ubc7-unit-social-icons
+    a(href="http://www.ubc.ca/")
+      i.icon-facebook-sign &nbsp;
+    a(href="http://www.ubc.ca/")
+      i.icon-twitter-sign

@@ -1,0 +1,50 @@
+/** FILE FOR CONCATENATING ALL LESS FILES - no additional styles should be added here directly **/
+
+/* CORE VARIABLES AND MIXINS */
+@import "_mixins.less";
+
+/* GENERAL UNTILITIES / LAYOUT */
+@import "utilities/_utilities.less";
+@import "clf/_clf-base.less"; // Drupal specific styles & overrides
+@import "layout/_grid-mixins.less"; // from bootstrap3 - add this in to generate BS3 grids
+@import "layout/_grid.less"; // add bootstrap3 grid - add this in to generate BS3 gids
+@import "layout/_mobile-layouts-box.less";
+@import "layout/_unit-layouts__content-first.less";
+
+/* LIBRARIES */
+@import "_lib/formstone/formstone.less";
+@import "_lib/animate/animate.less";
+
+/* BASE COMPONENTS */
+
+
+/* UNIT VARIABLES */
+@import "_unit-variables.less"; // Modify this file to add additional variables or interrupt previously declared variables before processing
+
+/* UNIT SPECIFIC COMPONENTS */
+@import "tags/_unit-badges.less";
+@import "supporting-content/_unit-supporting-content.less";
+@import "blockquotes/_unit-blockquotes.less";
+@import "lists/_unit-lists.less";
+@import "images/_unit-images.less";
+@import "buttons/_unit-buttons.less";
+@import "accordions/_unit-accordions.less";
+@import "tags/_unit-tags.less";
+@import "cards/_unit-cards.less";
+@import "tables/_unit-tables.less";
+
+/* UNIT STYLES */
+@import "typography/_unit-type.less";
+@import "_unit-custom-styles.less";
+
+// fix for bootstrap3 row styles that have a -12px margin
+.row {
+   margin-left: 0;
+   margin-right: 0;
+ }
+ body {
+   background-color: white;
+ }
+ table {
+   width: 100% !important;
+ }

@@ -1,0 +1,79 @@
+/* LEADERS
+-------------------------------------------------- */
+
+/*
+  
+  Implements a set of leading dots after a list item
+  
+  SAMPLE MARKUP:
+  --------------------------------------------------
+  
+<ul class="leaders">
+  <li>
+    <span>List item 1</span>
+    <span>7.95</span>
+  </li>
+  <li>
+    <span>List item 2</span>
+    <span>8.95</span>
+  </li>
+  <li>
+    <span>List item 3</span>
+    <span>7.95</span>
+  </li>
+  <li>
+    <span>List item 4</span>
+    <span>5.25</span></li>
+  <li>
+    <span>List item 5</span>
+    <span>10.95</span>
+  </li>
+</ul>
+  
+     
+  
+  VARIABLES:
+  --------------------------------------------------
+ none
+  
+*/
+
+
+//
+// Leader
+// --------------------------------------------------
+
+
+
+ul.leaders {
+    //max-width: 40em;
+    padding: 0;
+    margin-left: 0;
+    margin-right: 0;
+    overflow: hidden;
+    list-style: none; }
+@media screen and (min-width: @screen-xs-min) {
+  ul.leaders li:before {
+    float: left;
+    width: 0;
+    white-space: nowrap;
+    content:
+    ". . . . . . . . . . . . . . . . . . . . "
+    ". . . . . . . . . . . . . . . . . . . . "
+    ". . . . . . . . . . . . . . . . . . . . "
+    ". . . . . . . . . . . . . . . . . . . . "
+    ". . . . . . . . . . . . . . . . . . . . "; }
+  ul.leaders span:first-child {
+    padding-right: 0.5em;
+    background: white; }
+  ul.leaders span + span {
+    float: right;
+    padding-left: 0.5em;
+    background: white; }
+}
+
+@media screen and (max-width: @screen-ss-max) {
+  ul.leaders span {
+    display: block;
+  }
+}

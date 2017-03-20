@@ -1,0 +1,125 @@
+/* FEATURE BOXES
+-------------------------------------------------- */
+
+/*
+
+  SAMPLE MARKUP:
+  --------------------------------------------------
+  
+    <article class="featurebox text-hidden">
+      <a href="#"><img src="img/demo-small1.jpg" alt="" /></a>
+      <div class="inner-content">
+        <h3>Some title here</h3>
+        <p>Lorem ipsum dolor sit amet.</p>
+      </div>
+    </article>
+    
+  
+  SAMPLE MARKUP: ALTERNATE
+  --------------------------------------------------
+  - when content to be displayed without hover effect
+  
+  
+  <article class="featurebox">
+    <a href="#"><img src="img/demo-small1.jpg" alt="" /></a>
+    <div class="inner-content">
+      <h3>Some title here</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+    </div>
+  </article>
+  
+  
+  CUSTOM FEATURE BOX CLASSES:
+  --------------------------------------------------
+  
+  .featurebox : the container - usually an article
+  .text-hidden : allows the secondary text to be hidden until hover
+  .inner-content : wraps the text areas
+  
+  VARIABLES:
+  --------------------------------------------------
+  @unit-primary - 
+    
+*/
+
+@keyframes fadeInFeature {
+  0% {
+    opacity: 0;
+    //height: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    //height: auto;
+    transform: none;
+  }
+}
+
+.featurebox {
+  margin-bottom: 1.5em;
+  position: relative;
+  .inner-content {
+    color: #fff;
+    position: absolute;
+    bottom: 15px;
+    left: -15px;
+    border-left: 15px solid @unit-primary;
+    background-color: fade(@unit-primary, 80%);
+    width: 95%;
+    padding: 10px;
+  }
+  &.without-image .inner-content {
+    color: #fff; 
+    text-align: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-left: none;
+    width: 100%;
+    .vert-center-outer {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+.non-clf .featurebox {
+  h3 {
+    color: #fff;
+    text-transform: none;
+    margin: 0 0 .25em 0;
+    font-size: 18px;
+    line-height: 1.25em;
+    letter-spacing: 0.1px;
+  }
+  p {
+    margin-bottom: 0;
+    padding-bottom: 1px;
+    font-size: 15px;
+    line-height: 22px;
+  }
+}
+.no-touch .non-clf .featurebox {
+  &.text-hidden p {
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.45s ease-in-out, opacity .35s ease-in-out;
+    overflow: hidden;
+    
+  }
+  &.text-hidden:hover p {
+    max-height: 500px;
+    opacity: 1;
+    transition: max-height 1s ease-in-out, opacity .7s ease-in-out;
+  }
+}
+
+@media (max-width: @screen-ss-max) {
+  .box.listing .pull-left {
+    float: none;
+    max-width: 100%;
+    .center-block(); 
+    padding: 1em 1em 0;
+  }
+}

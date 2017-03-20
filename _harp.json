@@ -1,0 +1,29 @@
+{
+  "globals": {
+    "title": "The University of British Columbia | UBC Wellbeing",
+    "description": "UBC Wellbeing",
+    "name": "James O'Toole",
+    "iesupport": false,
+    "unitname": "UBC Wellbeing",
+    "clfminimal": true,
+    "clfcolor": "-bw",
+    "clfwidthfull": true,
+    "clfwidthfixed": false,
+    "clfwidthfluid": false,
+    "fontawesome": true,
+    "useswhitney": true,
+    "usesmodernizr": false,
+    "faculty": false,
+    "facultyname": "Faculty of Applied Science",
+    "showcampus": false,
+    "campus": "Vancouver & Okanagan Campuses",
+    "unitaddress": "",
+    "unitcity": "Vancouver / Kelowna",
+    "unitpostal": "",
+    "unitphone": "XXX XXX XXXX",
+    "unitemail": "email@ubc.ca",
+    "footernav": false,
+    "analytics": false,
+    "gmapapikey": "AIzaSyCTLCsg88eTp1ggeGtu1Nm62snTySqQvVk"
+  }
+}

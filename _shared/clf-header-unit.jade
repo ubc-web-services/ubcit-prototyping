@@ -1,0 +1,16 @@
+div.span12
+  div.navbar
+    a.btn.btn-navbar(data-toggle="collapse" data-target="#ubc7-unit-navigation")
+      span.icon-bar
+      span.icon-bar
+      span.icon-bar
+  if faculty
+    div#ubc7-unit-name
+      a(href="/")
+        span#ubc7-unit-faculty= facultyname
+        span#ubc7-unit-identifier= unitname
+  
+  else
+    div#ubc7-unit-name.ubc7-single-element
+      a(href="/")
+        span#ubc7-unit-identifier= unitname 

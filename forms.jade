@@ -1,0 +1,64 @@
+main.non-clf.vert-padding-3-3
+  div.container
+    div.row
+      div.col-sm-8
+        p.h5  Contact Wellbeing
+        h1 Some Contact Title
+        p.text--lead Have questions for us or want just want to let us know about something?
+        hr
+        p Get in touch and we'll get back to you as soon as possible. 
+        
+          
+        form.vert-padding-1-0
+          div.row
+            div.col-md-6
+              label(for="edit-psq") Name
+              div.views-widget
+                div.form-item.form-type-textfield.form-item-psq
+                  input#edit-psq.form-text(type="text" name="psq" value="" size="30" maxlength="128" placeholder="Jane Doe")
+                  div.description Please enter your full name
+            div.col-md-6
+              label(for="edit-psq") Email Address
+              div.views-widget
+                div.form-item.form-type-textfield.form-item-psq
+                  input#edit-psq.form-text(type="text" name="psq" value="" size="30" maxlength="128" placeholder="jane.doe@ubc.ca")
+                  div.description Enter your preferred email address 
+          label(for="edit-meta-type") Department
+          div#edit-meta-type.form-radios
+            div.form-item.form-type-radio.form-item-meta-type
+              input#edit-meta-type-.form-radio(type="radio" name="meta_type" value="" checked="checked")
+             label.option(for="edit-meta-type-") Department A
+             div.description for questions about xyz
+            
+            div.form-item.form-type-radio.form-item-meta-type
+              input#edit-meta-type-module.form-radio(type="radio" name="meta_type" value="module")  
+             label.option(for="edit-meta-type-module") Department B
+             div.description for questions about abc
+            
+            div.form-item.form-type-radio.form-item-meta-type
+              input#edit-meta-type-theme.form-radio(type="radio" name="meta_type" value="theme")
+             label.option(for="edit-meta-type-theme") Department C
+             div.description for questions about lmnop
+            
+            div.form-item.form-type-radio.form-item-meta-type
+              input#edit-meta-type-documentation.form-radio(type="radio" name="meta_type" value="documentation")  
+             label.option(for="edit-meta-type-documentation") General Question
+             div.description for questions about anything else
+           
+          div.form-item    
+            label(for="edit-psq2") Comments
+              div.form-textarea-wrapper.resizable.textarea-processed.resizable-textarea
+                textarea#edit-submitted-comments.form-textarea(name="submitted[comments]" cols="60" rows="5")
+                div.description e.g. sample question here
+                
+          div.form-actions.vert-margin-1-0
+            input.webform-submit.unit-btn.unit-btn--reverse.no-icon.form-submit(type="submit" name="op" value="Submit text")
+            
+      div.col-sm-4
+        div.supporting-content
+          h3.h5 Address
+          p.event__location Vancouver Campus<br />West Mall<br />Vanouver, BC, Canada<br />V6T 1Z4<br />
+            a(href="#") View Map 
+              span.fa.fa-external-link
+          
+!= partial("_components/_custom-content/unit-footer")

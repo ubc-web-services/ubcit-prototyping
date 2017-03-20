@@ -1,0 +1,90 @@
+/* SERVICES SUB NAVIGATION
+-------------------------------------------------- */
+
+/* 
+  
+  DOCUMENTATION
+  --------------------------------------------------
+  Extends the unit-navigation-subnav component
+ 
+          
+  SAMPLE MARKUP:
+  --------------------------------------------------
+  
+  
+  
+  VARIABLES:
+  --------------------------------------------------
+ 
+
+*/
+
+.subnav.services {
+  background-color: @unit-accent;
+}
+.subnav-services--links .subnav--link {
+  padding-left: 60px;
+  position: relative;
+  display: block;
+  .icon {
+    font-size: 24px;
+    position: absolute;
+    left: 20px;
+    top: 16px;
+  }
+}
+.subnav-services--links .active .subnav--link,
+.subnav-services--links .active .subnav--link:hover {
+  color: white !important;
+  background: @unit-secondary;
+}
+.subnav-services--links .active .subnav--link:before {
+  display: none;
+}
+// add in styles for tabs
+[role=tabpanel] {
+  display: none;
+}
+.active[role=tabpanel] {
+  display: block;
+}
+
+
+@media screen and (min-width: @screen-md-min) {
+  .subnav.services {
+    background-color: inherit;
+  }
+  .subnav-services--links li {
+    width: 10%;
+    float: left;
+    text-align: center;
+  }
+  .subnav-services--links .subnav--link {
+    color: @unit-accent-dark !important;
+    padding: 2em .5em;
+    font-size: 12px;
+    border-radius: 8px;
+    text-align: center;
+    height: auto;
+    height: 160px;
+    line-height: 1.4em;
+    &:hover {
+      color: white !important;
+    }
+    .icon {
+      font-size: 60px;
+      position: static;
+      display: block;
+      padding-bottom: 15px;
+    }
+    &:after,
+    &.active:before {
+      display: none;
+    }
+  }
+  .subnav-services--links.navbar-collapse.collapse {
+    height: auto !important;
+    overflow: visible;
+  }
+}
+

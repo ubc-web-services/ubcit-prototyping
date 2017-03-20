@@ -1,0 +1,78 @@
+/* IMAGEBREAK
+-------------------------------------------------- */
+
+/*
+
+  SAMPLE MARKUP: (variable depending on how they are generated)
+  --------------------------------------------------
+  
+  
+  CUSTOM CLASSES:
+  --------------------------------------------------
+  
+  
+  VARIABLES:
+  --------------------------------------------------
+  
+  
+  
+*/
+ 
+
+.imagebreak {
+  margin: 0; 
+  padding: 0;
+  position: relative;
+  color: #fff;
+  overflow: hidden;
+}
+@media screen and (min-width: @screen-md-min) {
+  .imagebreak {
+    max-height: 300px;
+  }
+}
+
+.imagebreak__small {
+  max-height: 250px;
+}
+.imagebreak img {
+  width: 100%; 
+  display: block; 
+}
+
+.imagebreak--caption {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.imagebreak--caption_text-center {
+  text-align: center;
+}
+.imagebreak--caption_text-left {
+  text-align: left;
+}
+.imagebreak--caption_text-right {
+  text-align: right;
+}
+.imagebreak--title__condensed {
+  margin-top: 0;
+}
+.imagebreak--cta {
+  margin-bottom: .75em;
+}
+.imagebreak--title-leader {
+  font-size: 36px;
+}
+@media screen and (max-width: @screen-xs-max) {
+  .imagebreak--title__condensed {
+    font-size: 48px !important;
+  }
+  .imagebreak--title-leader {
+    display: none;
+  }
+}
+@media screen and (max-width: @screen-ss-max) {
+  .imagebreak--title__condensed {
+    font-size: 36px !important;
+  }
+}

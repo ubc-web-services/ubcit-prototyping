@@ -1,0 +1,132 @@
+/* SUB NAVIGATION
+-------------------------------------------------- */
+
+/* 
+  
+  DOCUMENTATION
+  --------------------------------------------------
+  
+ 
+          
+  SAMPLE MARKUP:
+  --------------------------------------------------
+  
+  
+  
+  VARIABLES:
+  --------------------------------------------------
+ 
+
+*/
+
+.subnav {
+  background-color: @unit-secondary;
+}
+@media screen and (max-width: @screen-sm-max) {
+  .subnav .container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .subnav--links {
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  }
+}
+.subnav a {
+  text-decoration: none;
+  text-transform: uppercase;
+  display: block;
+  padding-left: 20px;
+  padding-right: 20px;
+  &:hover {
+    text-decoration: none;
+  }
+}
+.subnav ul,
+.subnav li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.subnav--toggle {
+  padding: .75em 0;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  &:hover {
+    color: fade(#fff, 90%);
+  }
+}
+.subnav--link {
+  padding-top: .95em;
+  padding-bottom: .95em;
+  color: @unit-accent !important;
+  background: @unit-lightest-grey;
+  border-bottom: 1px solid @unit-light-grey;
+  &.active,
+  &:hover
+   {
+    color: #fff !important;
+    background: @unit-primary;
+  }
+}
+
+@media screen and (min-width: @screen-md-min) {
+  .subnav--links.navbar-collapse.collapse {
+    height: auto !important;
+  }
+  .subnav--header {
+    display: none;
+  }
+  .subnav--links {
+    margin: 0 auto;
+    text-align: center;
+    overflow: visible;
+  }
+  .subnav ul {
+    &:extend(.clearfix);
+  }
+  .subnav li {
+    display: inline-block;
+  } 
+  .subnav a { 
+    display: inline-block;
+    position: relative;
+    height: 40px;
+    padding-left: 2em;
+    padding-right: 2em;
+    font-size: 14px;
+    line-height: 1em;
+  }
+  .subnav--link {
+    color: #fff !important;
+    background: transparent;
+    border-bottom: none;
+    &.active:before {
+      position: absolute;
+      content: ' ';
+      bottom: -10px;
+      left: 2em;
+      display: block;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 10px 10px 0 10px;
+      border-color: @unit-primary transparent transparent transparent;
+      z-index: 998;
+    }
+    &:after {
+      position: absolute;
+      content: ' ';
+      top: 10px;
+      left: 0;
+      display: block;
+      background-color: fade(#fff, 60%);
+      width: 1px;
+      height: 50%;
+    }
+  }
+  .subnav--links li:first-child .subnav--link:after,
+  .subnav--link.active:after {
+    display: none !important;
+  }
+}

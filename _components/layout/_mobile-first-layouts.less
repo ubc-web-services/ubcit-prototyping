@@ -1,0 +1,260 @@
+/* CONTENT-FIRST LAYOUTS
+-------------------------------------------------- 
+
+Using this file requires changing the default order of the CLF markup. That's a good thing. 
+This assumes you'll eventually be using a 3 column setup within Drupal
+See James for some pointers.
+
+-------------------------------------------------- 
+ main content = a, sidebar 1 = b, sidebar 2 = c
+
+*/
+
+/* 25% / 75% LAYOUT
+  
+ DESKTOP / TABLET LAYOUT PATTERN:
+ --------------------------------------------------
+         aaab
+         aaab
+         cccc
+         
+ MOBILE LAYOUT PATTERN:
+ --------------------------------------------------
+         aa
+         aa
+         bb
+         cc
+         
+*/
+@media screen and (min-width: 670px) {
+  .one-sidebar-25-75 .region-main {
+    width:75%;
+    float: left; }
+  .one-sidebar-25-75 .region-sidebar-first {
+    float: left;
+    width:25%; }
+  .one-sidebar-25-75 .region-sidebar-second { clear: both; }
+}
+
+/* 33% / 66% LAYOUT
+  
+ DESKTOP LAYOUT PATTERN:
+ --------------------------------------------------
+         aab
+         aab
+         ccc
+         
+ TABLET LAYOUT PATTERN:
+ --------------------------------------------------
+         aab
+         aab
+         ccc
+         
+ MOBILE LAYOUT PATTERN:
+ --------------------------------------------------
+         aa
+         aa
+         bb
+         cc
+         
+*/
+@media screen and (min-width: 670px) {
+  .two-sidebars-33-66 .region-main,
+  .one-sidebar-33-66 .region-main {
+    width:65.81196581196582%;
+    *width:65.75877432260411%;
+    float: left;
+    padding-right:2.564102564102564%;
+    *padding-right:2.5109110747408616%; }
+  .one-sidebar-33-66 .region-sidebar-first,
+  .one-sidebar-33-66 .region-sidebar-second,
+  .two-sidebars-33-66 .region-sidebar-first {
+    float: left;
+    width:31.623931623931625%;
+    *width:31.570740134569924%; }
+  .two-sidebars-33-66 .region-sidebar-first { float: right; }
+  .two-sidebars-33-66 .region-sidebar-second { clear: both; }
+} 
+
+@media screen and (min-width: 980px) {
+  .two-sidebars-33-66 .region-main {
+    width: 48.717948717948715%;
+    margin-left: 23.076923076923077%;
+    padding: 0 2.564102564102564%;
+    *padding: 0 2.5109110747408616%; }
+  .two-sidebars-33-66 .region-sidebar-first,
+  .two-sidebars-33-66 .region-sidebar-second { 
+    width:23.076923076923077%;
+    *width:23.023731587561375%; }
+  .two-sidebars-33-66 .region-sidebar-first { 
+    float: left;
+    margin-left: -76.92307692307692%;
+    *margin-left: -76.81669394435352% }
+  .two-sidebars-33-66 .region-sidebar-second {
+    float: right;
+    width:23.076923076923077%;
+    *width:23.023731587561375%;
+    clear: none; }
+}
+
+
+/* 38.2% / 61.8% LAYOUT - GOLDEN RATIO
+  
+ DESKTOP LAYOUT PATTERN:
+ --------------------------------------------------
+         aab
+         aab
+         ccc
+         
+ TABLET LAYOUT PATTERN:
+ --------------------------------------------------
+         aab
+         aab
+         ccc
+         
+ MOBILE LAYOUT PATTERN:
+ --------------------------------------------------
+         aa
+         aa
+         bb
+         cc
+         
+*/
+@media screen and (min-width: 670px) {
+  .one-sidebar-golden .region-main {
+    width: 60.51794871794872%;
+    *width: 60.54454446262957%;
+    float: left;
+    padding-right:2.564102564102564%;
+    *padding-right:2.5109110747408616%; }
+  .one-sidebar-golden .region-sidebar-first {
+    float: left;
+    width: 36.91794871794872%;
+    *width: 36.94454446262957%; }
+  .one-sidebar-golden .region-sidebar-second { clear: both; }
+}
+
+/* 25% / 50% / 25% LAYOUT
+  
+ DESKTOP LAYOUT PATTERN:
+ --------------------------------------------------
+         baac
+         baac
+         
+ TABLET LAYOUT PATTERN:
+ --------------------------------------------------
+         aab
+         aab
+         ccc
+         
+ MOBILE LAYOUT PATTERN:
+ --------------------------------------------------
+         aa
+         aa
+         bb
+         cc
+         
+*/
+@media screen and (min-width: 670px) {
+  .two-sidebars-25-50-25 .region-main {
+    width:74.35897435897436%;
+    *width:74.30578286961266%;
+    float: left;
+    padding-right:2.564102564102564%;
+    *padding-right:2.5109110747408616%; }
+  .two-sidebars-25-50-25 .region-sidebar-first {
+    float: left;
+    width:23.076923076923077%;
+    *width:23.023731587561375%; }
+  .two-sidebars-25-50-25 .region-sidebar-second { clear: both; }
+}
+@media screen and (min-width: 980px) {
+  .two-sidebars-25-50-25 .region-main {
+    width: 48.717948717948715%;
+    margin-left: 23.076923076923077%;
+    padding: 0 2.564102564102564%;
+    *padding: 0 2.5109110747408616%; }
+  .two-sidebars-25-50-25 .region-sidebar-first { 
+    margin-left: -76.92307692307692%;
+    *margin-left: -76.81669394435352% }
+  .two-sidebars-25-50-25 .region-sidebar-second {
+    float: right;
+    width:23.076923076923077%;
+    *width:23.023731587561375%;
+    clear: none; }
+}
+
+// BECAUSE IE8 IS DUMB
+// we repeat the layout rules without the media query so IE8 can see them.
+// 25% / 75% 
+.ie8 body.one-sidebar-25-75 .region-main {
+  width:74.35897435897436%;
+  *width:74.30578286961266%;
+  float: left;
+  padding-right:2.564102564102564%;
+  *padding-right:2.5109110747408616%; }
+.ie8 body.one-sidebar-25-75 .region-sidebar-first {
+  float: left;
+  width:23.076923076923077%;
+  *width:23.023731587561375%; }
+.ie8 body.one-sidebar-25-75 .region-sidebar-second { clear: both; }
+
+// 33% / 66% 
+.ie8 body.one-sidebar-33-66 .region-main {
+  width:65.81196581196582%;
+  *width:65.75877432260411%;
+  float: left;
+  padding-right:2.564102564102564%;
+  *padding-right:2.5109110747408616%; }
+.ie8 body.one-sidebar-33-66 .region-sidebar-first,
+.ie8 body.one-sidebar-33-66 .region-sidebar-second {
+  float: left;
+  width:31.623931623931625%;
+  *width:31.570740134569924%; }
+.ie8 body.two-sidebars-33-66 .region-main {
+    width: 48.717948717948715%;
+    margin-left: 23.076923076923077%;
+    float: left;
+    padding: 0 2.564102564102564%;
+    *padding: 0 2.5109110747408616%; }
+.ie8 body.two-sidebars-33-66 .region-sidebar-first,
+.ie8 body.two-sidebars-33-66 .region-sidebar-second { 
+    width:23.076923076923077%;
+    *width:23.023731587561375%; }
+.ie8 body.two-sidebars-33-66 .region-sidebar-first { 
+    float: left;
+    margin-left: -76.92307692307692%;
+    *margin-left: -76.81669394435352% }
+.ie8 body.two-sidebars-33-66 .region-sidebar-second {
+    float: right;
+    width:23.076923076923077%;
+    *width:23.023731587561375%;
+    clear: none; }
+    
+// golden ratio
+.ie8 body.one-sidebar-golden .region-main {
+  width: 60.51794871794872%;
+  *width: 60.54454446262957%;
+  float: left;
+  padding-right:2.564102564102564%;
+  *padding-right:2.5109110747408616%; }
+.ie8 body.one-sidebar-golden .region-sidebar-first {
+  float: left;
+  width: 36.91794871794872%;
+  *width: 36.94454446262957%; }
+.ie8 body.one-sidebar-golden .region-sidebar-second { clear: both; }
+
+// 25% / 50% / 25%
+.ie8 body.two-sidebars-25-50-25 .region-main {
+  width: 48.717948717948715%;
+  margin-left: 23.076923076923077%;
+  padding: 0 2.564102564102564%;
+  *padding: 0 2.5109110747408616%; }
+.ie8 body.two-sidebars-25-50-25 .region-sidebar-first { 
+  margin-left: -76.92307692307692%;
+  *margin-left: -76.81669394435352% }
+.ie8 body.two-sidebars-25-50-25 .region-sidebar-second {
+  float: right;
+  width:23.076923076923077%;
+  *width:23.023731587561375%;
+  clear: none; }

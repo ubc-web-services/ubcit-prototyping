@@ -1,0 +1,58 @@
+/* CUSTOM CONTENT-FIRST LAYOUTS - BORDER BOX
+-------------------------------------------------- 
+
+Using this file requires changing the default order of the CLF markup. That's a good thing. 
+This assumes you'll eventually be using a 3 column setup within Drupal
+See James for some pointers.
+
+-------------------------------------------------- 
+ main content = a, sidebar 1 = b, sidebar 2 = c
+
+*/
+
+
+/* 25% / 58.33333333% / 16.66666667% LAYOUT
+  
+ DESKTOP LAYOUT PATTERN:
+ --------------------------------------------------
+         baac
+         baac
+         
+ TABLET LAYOUT PATTERN:
+ --------------------------------------------------
+         aab
+         aab
+         ccc
+         
+ MOBILE LAYOUT PATTERN:
+ --------------------------------------------------
+         aa
+         aa
+         bb
+         cc
+         
+*/
+// we inherit styles from mobile-layouts-box.less, so only desktop styles need to be changed
+@media screen and (min-width: @screen-md-min) {
+  .two-sidebars-25-59-16 .region-main {
+    float: left;
+    width: 58.33333333% !important; 
+    margin-left: 25%;
+    padding-left: 8.33333333%;
+  }
+  .two-sidebars-25-59-16 .region-sidebar-first { 
+    margin-left: -83.33333333% !important;
+    width:25%;}
+  .two-sidebars-25-59-16 .region-sidebar-second {
+    float: right;
+    width:16.66666667% !important;
+    padding-top: inherit;
+    clear: none; }
+}
+
+/* 25% / 75% Layout */
+@media screen and (min-width: @screen-md-min) {
+  .one-sidebar.sidebar-first .region-main,
+  .one-sidebar-25-75 .region-main {
+    padding-left: 8.33333333%;  }
+}

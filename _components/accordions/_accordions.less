@@ -1,0 +1,70 @@
+/* CUSTOM ACCORDIONS 
+-------------------------------------------------- */
+
+/* These do not follow bootstrap markup and the namespace of this styling will collide with default bootstrap 
+
+  DEFAULT MARKUP REQUIRED:
+  --------------------------------------------------
+  
+    <div class="accordion">
+      <div class="accordion-tab" tabindex="0">Accordion Title</div>
+      <div class="accordion-content clearfix" style="display: none; ">
+        <p>Accordion Content</p>
+      </div>
+    </div>
+  
+  Also relies on js in custom.js:
+  --------------------------------------------------
+  
+    $('.accordion').find('.accordion-tab').click(function(e){
+      //Prevent content jump
+      e.preventDefault();
+      //Expand or collapse this panel
+      $(this).next().slideToggle('fast');
+      //Change the classes to trigger the icon change
+      $(this).parent().toggleClass('accordion-closed accordion-open');
+      //Optionally hide the other panels
+      //$(".accordion-content").not($(this).next()).slideUp('fast');
+    });
+    
+  
+  VARIABLES
+  --------------------------------------------------
+  @unit-primary - background colour when hovering over trigger
+  @unit-accent - border colours, alternate trigger text colour
+  @iconFontFamily - icon font
+
+
+  !!! TO DO: Consider changing class names to prevent namespace collisions !!!
+  --------------------------------------------------
+  
+*/
+
+.accordion__tab,
+.accordion-tab {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  padding: .5em 3em .5em 1em;
+  transition: background-color .3s ease, color .3s ease;
+  &:focus {
+  outline: 0;
+  }
+  &:after {
+    position: absolute;
+    padding: .4em;
+    font-size: 1.4em;
+    top: 0;
+    right: 0;
+    height: 100%;
+  }
+}
+.accordion__content,
+.accordion-content {
+  padding: 1.5em;
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+.js .accordion--closed .accordion__content,
+.js .accordion-closed .accordion-content { display: none; }

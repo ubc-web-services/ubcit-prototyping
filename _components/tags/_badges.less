@@ -1,0 +1,38 @@
+/* BUTTONS
+-------------------------------------------------- */
+
+/*
+
+  SAMPLE MARKUP:
+  --------------------------------------------------
+  
+  see: http://getbootstrap.com/2.3.2/components.html#labels-badges
+  
+  
+  VARIABLES
+  --------------------------------------------------
+  @unit-primary - default background colour of badge
+  @unit-accent-dark - background colour when hovering over badge
+  @border-radius-large - border radius / corners of label and badge
+  
+  
+*/
+
+/* GENERAL STYLES 
+- reset CLF styling
+
+*/
+
+.label, 
+.badge {
+  border-radius: @border-radius-large;
+  margin-left: 1em;
+}
+.nav-pills .badge {
+  float: right;
+  background-color: @unit-primary;
+  margin-top: -2px; // to account for line-height space
+}
+.nav-pills a:hover .badge {
+  background-color: lighten(@unit-accent-dark, 10%);
+}

@@ -1,0 +1,71 @@
+/* FAUX - TABLES (but pretending to be tables)
+-------------------------------------------------- */
+
+/*
+  
+  Extends the Bootstrap 3 row styles to add table styles to each row
+  
+  SAMPLE MARKUP:
+  --------------------------------------------------
+  
+  <h4 class="caption" id="something">Some Title</h4>
+  <div class="faux-table"
+    <div class="row faux-table--row">
+      <div class="col-md-4">
+        <strong>Some title</strong>
+      </div>
+      <div class="col-md-4">
+        Brief descriptive text
+      </div>
+      <div class="col-md-4">
+        <a href="#" class="btn btn-primary btn-mini">Click Me</a></td>
+      </div>
+    </div>
+  </div>
+  
+  
+  VARIABLES:
+  --------------------------------------------------
+  @ubcSilver - row border and hover background cover
+  
+*/
+
+// sometimes we'd rather use rows than tables. Like pretty much always.
+.faux-table {
+  font-size: .9em;
+  .row {
+    margin-left: 0;
+    margin-right: 0; 
+  }
+}
+.faux-table--header {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-left: .5em;
+  margin-right: .5em;
+  color: @table-bg-accent;
+  > div {
+    padding: 8px;
+  }
+}
+
+.faux-table--row {
+  line-height: 20px;
+  text-align: left;
+  vertical-align: top;
+  margin: .5em;
+  background-color: @table-bg-accent;
+  > div {
+    padding: 8px;
+  }
+  &:nth-child(2n+1) {
+    background-color: @table-bg-accent-alternate;
+  }
+  
+}
+
+h4.caption {
+  margin-bottom: 0;
+  font-weight: 600;
+}
+

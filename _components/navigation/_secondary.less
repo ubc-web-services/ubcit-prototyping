@@ -1,0 +1,201 @@
+/* SECONDARY NAVIGATION
+-------------------------------------------------- */
+
+/* 
+  
+  DOCUMENTATION
+  --------------------------------------------------
+  
+ 
+          
+  SAMPLE MARKUP:
+  --------------------------------------------------
+  
+  
+  
+  VARIABLES:
+  --------------------------------------------------
+  @sansFontFamily
+  @unit-accent
+  @unit-primary
+  @unit-secondary
+  @iconFontFamily
+
+*/
+#unit-submenu {
+  box-sizing: border-box;
+  margin-top: .25em;
+  margin-bottom: .75em;
+  font-size: 14px;
+}
+
+#unit-submenu .navbar-inner {
+  background-color: @unit-primary-lighter;
+}
+#unit-submenu .btn-group,
+#unit-submenu .btn {
+  margin-top: 0;
+}
+
+#unit-submenu .btn {
+  border: none;
+  background-color: inherit;
+  background-image: none;
+  box-shadow: none;
+}
+#unit-submenu .nav > li > a {
+  color: @ubc-blue;
+  font-weight: normal;
+  height: 24px;
+  margin: 0;
+  background-color: inherit;
+  box-shadow: none;
+}
+
+#unit-submenu .nav > li,
+#unit-submenu .btn-group,
+#unit-submenu .btn {
+  height: 45px;
+  box-sizing: border-box;
+  line-height: 26px;
+}
+#unit-submenu .btn-group > .btn{
+  line-height: 35px;
+}
+
+#unit-submenu button {
+  position: relative;
+}
+#unit-submenu button:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 1px;
+  top: 25%;
+  background-color: #fff;
+  height: 50%;
+}
+#unit-submenu li:hover button:after {
+  top: 0;
+  height: 100%;
+}
+#unit-submenu .nav > li.active-trail,
+#unit-submenu .nav > li.active {
+  background-color: darken(@unit-primary-light,12%);
+}
+#unit-submenu .nav > li:hover {
+  background-color: @unit-primary-light;
+}
+#unit-submenu button:hover {
+  background-color: darken(@unit-primary-light,8%);
+}
+
+@media screen and (min-width: @screen-md-min) {
+  .unit-navigation-header {
+    display: none;
+  }
+}
+
+// mobile version
+@media screen and (max-width: @screen-sm-max) {
+  #unit-navigation {
+    margin: 0 -20px;
+  }
+  #unit-submenu #unit-navigation {
+    background-color: darken(@unit-lightest-grey, 5%);
+  }
+  #unit-navigation > .nav {
+    border-bottom: 1px solid darken(@unit-lightest-grey, 15%);
+  }
+  .unit-navigation-header a {
+    text-decoration: none;
+    color: @ubc-blue;
+    font-size: 20px;
+    display: block;
+    padding: .5em 0;
+    cursor: pointer;
+    span {
+      float: right;
+      width: 45px;
+      height: 35px;
+      background-color: #fff;
+      margin-top: -5px;
+      position: relative;
+      &:before {
+        content: "";
+        position: absolute;
+        top: 11px;
+        left: 12px;
+        width: 1em;
+        height: 2px;
+        border-top: 8px double #000;
+        border-bottom: 3px solid #000;
+      }
+    }
+    &:hover {
+      color: @ubc-blue;
+    }
+  }
+  #unit-submenu .btn-group {
+    display: block;
+    //position: relative;
+  }
+  #unit-submenu .btn-group > a {
+    display: block;
+    margin-right: 40px;
+    padding-left: 20px;
+    text-align: left
+  }
+  #unit-submenu .nav > li > a {
+    display: block;
+    padding-left: 20px;
+    text-align: left;
+    color: @text-color;
+    font-weight: normal;
+  }
+  #unit-submenu .nav-collapse .nav {
+    margin-bottom: 0;
+  }
+  #unit-submenu .btn-group button {
+    z-index: 2;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 44px;
+    width: 44px;
+  }
+  #unit-submenu .btn-group,
+  #unit-submenu .nav > li > a {
+    border-top: 1px solid darken(@unit-lightest-grey, 15%);
+  }
+  #unit-submenu li:hover button:after {
+    top: 25%;
+    height: 50%;
+  }
+  #unit-submenu .nav-collapse .dropdown-menu {
+    margin: 0;
+    top: auto;
+    left: auto;
+    display: none;
+    float: none;
+    padding: 0;
+    background-color: white;
+    border: 0;
+    
+  }
+  #unit-submenu .nav-collapse .open>.dropdown-menu {
+    display: block;
+    z-index: 1;
+  }
+  #unit-submenu .dropdown-menu a {
+    font-weight: normal;
+    color: @text-color;
+    &:hover {
+      color: #fff;
+    }
+  }
+  #unit-submenu .nav > li,
+  #unit-submenu .btn-group {
+    height: auto;
+  }
+}

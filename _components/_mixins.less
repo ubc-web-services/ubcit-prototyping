@@ -1,0 +1,169 @@
+//
+// Mixins
+// --------------------------------------------------
+
+
+// UTILITY MIXINS
+// --------------------------------------------------
+
+// Clearfix
+// --------
+// For clearing floats like a boss h5bp.com/q
+.clearfix {
+  *zoom: 1;
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+    // Fixes Opera/contenteditable bug:
+    // http://nicolasgallagher.com/micro-clearfix-hack/#comment-36952
+    line-height: 0;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+// Webkit-style focus
+// ------------------
+.tab-focus() {
+  // Default
+  outline: thin dotted #333;
+  // Webkit
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+// Center-align a block level element
+// ----------------------------------
+.center-block() {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+// Text overflow
+// -------------------------
+// Requires inline-block or block for proper styling
+.text-overflow() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// CSS image replacement
+// -------------------------
+// Source: https://github.com/h5bp/html5-boilerplate/commit/aa0396eae757
+.hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+
+// WEB ICON FONT REPLACEMENT
+// specific styles still required included for illustration (commented out)
+.replaced-w-icon() {
+  text-indent: -400%;
+  overflow: hidden;
+  display: inline-block;
+  position: relative;
+  // width: 24px;
+  &:after {
+    position: absolute;
+    text-indent: 0;
+    display: block;
+    //font-size: 24px;
+    //font-family: fontawesome;
+    //top: .5em;
+  }
+}
+
+// Vertical align 
+.vertical-align() {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+// UTILITY
+
+// Reset filters for IE
+.reset-filter() {
+  filter: e(%("progid:DXImageTransform.Microsoft.gradient(enabled = false)"));
+}
+
+// Navbar vertical align
+// -------------------------
+// Vertically center elements in the navbar.
+// Example: an element has a height of 30px, so write out `.navbarVerticalAlign(30px);` to calculate the appropriate top margin.
+.navbarVerticalAlign(@elementHeight) {
+  margin-top: (@navbarHeight - @elementHeight) / 2;
+}
+
+
+// Grid System
+// -----------
+
+// Centered container element
+.container-fixed() {
+  margin-right: auto;
+  margin-left: auto;
+  .clearfix();
+}
+
+// DEFAULT PERCENTAGE WIDTHS - so we can include this to easily ape column widths
+//-------------------------
+.span12-width() {
+  width:100%;
+  *width:99.94680851063829%;
+}
+.span11-width() {
+  width:91.45299145299145%;
+  *width:91.39979996362975%;
+}
+.span10-width() {
+  width:82.90598290598291%;
+  *width:82.8527914166212%;
+}
+.span9-width() {
+  width:74.35897435897436%;
+  *width:74.30578286961266%;
+}
+.span8-width() {
+  width:65.81196581196582%;
+  *width:65.75877432260411%;
+}
+.span7-width() {
+  width:57.44680851063829%;
+  *width:57.39361702127659%;
+}
+.span6-width() {
+  width:48.717948717948715%;
+  *width:48.664757228587014%;
+}
+.span5-width() {
+  width:40.17094017094017%;
+  *width:40.11774868157847%;
+}
+.span4-width() {
+  width:31.623931623931625%;
+  *width:31.570740134569924%;
+}
+.span3-width() {
+  width:23.076923076923077%;
+  *width:23.023731587561375%;
+}
+.span2-width() {
+  width:14.52991452991453%;
+  *width:14.476723040552828%;
+}
+.span1-width() {
+  width:5.982905982905983%;
+  *width:5.929714493544281%;
+}

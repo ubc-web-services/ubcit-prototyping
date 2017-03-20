@@ -1,0 +1,62 @@
+/* FEATURED CONTENT
+-------------------------------------------------- */
+
+/* 
+
+  Featured Content with a static image
+  
+  
+  SAMPLE MARKUP:
+  --------------------------------------------------
+      
+    <div class="featured-content-image" role="complementary" aria-label="promotions">
+      <img src="img/slide3.jpg" alt="alternate text" />
+      <div class="caption">
+        <h1>It was in the midst of this repose.</h1>
+      </div>
+    </div>
+  
+*/
+  
+.featured-content-image {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+.featured-content-image img {
+  width: 100%;
+  height: auto;
+}
+.featured-content-image__caption {
+  position: absolute;
+  display: block;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+.featured-content-image__heading {
+  color: #000 !important;
+  padding: 1em 0 .45em 0;
+  margin: 0;
+}
+.featured-content-image__subheading {
+  color: #000 !important;
+  padding: 1em 0 0 0;
+  margin-bottom: 0;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.featured-content-image__subheading + .featured-content-image__heading {
+  margin-top: 0;
+  padding-top: .125em;
+}
+
+@media screen and (max-width: @screen-sm-max) {
+  .featured-content-image {
+    margin: 0 -20px;
+  }
+  .featured-content-image__caption .container {
+    margin: 0 20px;
+  }
+}

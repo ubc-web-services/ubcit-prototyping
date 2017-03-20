@@ -1,0 +1,349 @@
+// import base styles
+@import "_buttons.less";
+
+/* BUTTONS
+-------------------------------------------------- */
+
+/*
+
+  SAMPLE MARKUP:
+  --------------------------------------------------
+
+  see: http://getbootstrap.com/2.3.2/base-css.html#buttons
+
+
+  CUSTOM BUTTON CLASSES:
+  --------------------------------------------------
+
+  .btn-unit : use in place of btn-primary
+  .btn-unit-secondary : use in place of btn-secondary
+  .btn-unit-alt : adds alternate styling to the two styles above
+    (usage: class="btn btn-unit btn-nursing-alt")
+  .btn-unit-reverse : adds alternate styling to the two styles above
+    (usage: class="btn btn-unit btn-unit-reverse")
+  .btn-multiline : adds styling for descriptive text in buttons via a span
+  .btn-plain : adds a simplified button style (usage: class="btn btn-plain")
+
+
+  VARIABLES
+  --------------------------------------------------
+  @unit-primary
+  @unit-secondary
+  @unit-accent
+  @unit-accent-dark
+  @unit-accent-light
+  @btnBorderRadius - add default button radius
+  @linkColor
+  @linkColorHover
+
+*/
+
+/* GENERAL STYLES
+- utility class (.non-clf) added to limit the styling to regions with the 'non-clf' class applied
+*/
+/*
+.btn {
+  background-image: none !important;
+}
+*/
+
+.unit-btn {
+  white-space: normal;
+  display: inline-block;
+  text-decoration: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  border-style: solid;
+  border-width: @unit-btn--border-width;
+  padding: .4em 2.5em .3em 1.5em;
+  position: relative;
+  &:hover {
+    text-decoration: none;
+  }
+  &:after {
+    position: absolute;
+    content: @unit-btn--icon;
+    right: 1.75em;
+    display: block;
+    font-family: @icon-font-family;
+    top: 55%;
+    font-weight: normal;
+    font-size: .725em;
+    line-height: 0;
+  }
+  &:hover:after {
+    animation: iconwiggle ease-in-out .75s;
+    animation-iteration-count: infinite;
+  }
+  &.btn--block {
+    display: block;
+  }
+  &.no-icon {
+    padding: .4em 1.5em .3em 1.5em;
+  }
+  &.icon--left {
+    padding: .4em 1.5em .3em 2.5em;
+    &:after {
+      position: absolute;
+      content: @unit-btn--icon--reverse;
+      left: 1.75em;
+      display: block;
+      font-family: @icon-font-family;
+      top: 55%;
+      font-weight: normal;
+      font-size: .725em;
+      line-height: 0;
+    }
+    &:hover:after {
+      animation: iconwiggle-reverse ease-in-out .75s;
+      animation-iteration-count: infinite;
+    }
+  }
+  &.no-icon:after {
+    content: '';
+  }
+  .fa {
+    font-size: 120%;
+    position: relative;
+    padding-left: .25em;
+    bottom: -2px;
+    &.fa-angle-left {
+      padding-left: 0;
+      padding-right: .25em;
+      font-size: 200%;
+      line-height: 0;
+      bottom: -5px;
+    }
+  }
+}
+
+
+
+// remove the content from button groups
+.btn-group>[class*=unit-btn] {
+  padding: .5em 1.25em .375em 1.25em;
+}
+.btn-group>[class*=unit-btn]:after {
+  background-color: transparent;
+}
+
+
+/* CUSTOM UNIT BUTTON STYLES
+-------------------------------------------------- */
+// unit-btn used as a base so it doesn't conflict with Bootstrap button styles.
+/* PRIMARY BUTTONS */
+.unit-btn--primary {
+  color: @unit-btn--color;
+  background-color: @unit-btn--background-color;
+  border-color: @unit-btn--border-color;
+  &:hover {
+    color: @unit-btn--color_hover;
+    background-color: @unit-btn--background-color_hover;
+    border-color: @unit-btn--border-color_hover;
+  }
+}
+
+.unit-btn--reverse {
+  color: @unit-btn-reverse--color;
+  background-color: @unit-btn-reverse--background-color;
+  border-color: @unit-btn-reverse--border-color;
+  &:hover {
+    color: @unit-btn-reverse--color_hover;
+    background-color: @unit-btn-reverse--background-color_hover;
+    border-color: @unit-btn-reverse--border-color_hover;
+  }
+}
+
+.unit-btn--theme-one {
+  color: @unit-theme-one;
+  border-color: @unit-theme-one;
+  &:hover {
+    background-color: @unit-theme-one;
+    color: #000;
+  }
+}
+.unit-btn--theme-one-dark {
+  color: @unit-theme-one-dark;
+  border-color: @unit-theme-one-dark;
+  &:hover {
+    background-color: @unit-theme-one-dark;
+    color: #fff;
+  }
+}
+.unit-btn--theme-two {
+  color: @unit-theme-two;
+  border-color: @unit-theme-two;
+  &:hover {
+    background-color: @unit-theme-two;
+    color: #000;
+  }
+}
+.unit-btn--theme-two-dark {
+  color: @unit-theme-two-dark;
+  border-color: @unit-theme-two-dark;
+  &:hover {
+    background-color: @unit-theme-two-dark;
+    color: #fff;
+  }
+}
+.unit-btn--theme-three {
+  color: @unit-theme-three;
+  border-color: @unit-theme-three;
+  &:hover {
+    background-color: @unit-theme-three;
+    color: #000;
+  }
+}
+.unit-btn--theme-three-dark {
+  color: @unit-theme-three-dark;
+  border-color: @unit-theme-three-dark;
+  &:hover {
+    background-color: @unit-theme-three-dark;
+    color: #fff;
+  }
+}
+.unit-btn--theme-four {
+  color: @unit-theme-four;
+  border-color: @unit-theme-four;
+  &:hover {
+    background-color: @unit-theme-four;
+    color: #000;
+  }
+}
+.unit-btn--theme-four-dark {
+  color: @unit-theme-four-dark;
+  border-color: @unit-theme-four-dark;
+  &:hover {
+    background-color: @unit-theme-four-dark;
+    color: #fff;
+  }
+}
+.unit-btn--theme-five {
+  color: @unit-theme-five;
+  border-color: @unit-theme-five;
+  &:hover {
+    background-color: @unit-theme-five;
+    color: #000;
+  }
+}
+.unit-btn--theme-five-dark {
+  color: @unit-theme-five-dark;
+  border-color: @unit-theme-five-dark;
+  &:hover {
+    background-color: @unit-theme-five-dark;
+    color: #fff;
+  }
+}
+
+
+
+@keyframes iconwiggle{
+  0% {
+    transform:  translate(0,0)  ;
+  }
+  50% {
+    transform:  translate(4px,0)  ;
+  }
+  100% {
+    transform:  translate(0,0)  ;
+  }
+}
+
+@keyframes iconwiggle-reverse{
+  0% {
+    transform:  translate(0,0)  ;
+  }
+  50% {
+    transform:  translate(-4px,0)  ;
+  }
+  100% {
+    transform:  translate(0,0)  ;
+  }
+}
+
+
+/* PLAIN BUTTONS (for alternate use) */
+.unit-btn--plain {
+  background-color: transparent;
+  border: none;
+  color: @unit-btn-plain--color !important;
+  position: relative;
+  text-decoration: none;
+  padding: 0 1.75em 0 0;
+  box-shadow: none;
+  position: relative;
+  display: inline-block;
+  font-size: inherit;
+  //font-weight: 600;
+  transition: all 0.4s cubic-bezier(0.58, 0.39, 0.7, 1.55);
+  &:hover {
+    background-color: transparent;
+    color: @unit-btn-plain--hover-color !important;
+    text-decoration: none;
+    &:after {
+      animation: iconwiggle ease-in-out .75s;
+      animation-iteration-count: infinite;
+    }
+  }
+  &:after {
+    position: absolute;
+    content: @unit-btn--plain-icon;
+    right: 1em;
+    display: block;
+    font-family: @icon-font-family;
+    top: 50%;
+    font-weight: normal;
+    font-size: .875em;
+    //color: @unit-primary;
+    line-height: 0;
+  }
+}
+
+
+
+
+// EXTEND SOME BUTTON STYLES
+.pager.pager-load-more li>a,
+.non-clf .btn.form-submit,
+.non-clf .btn.btn-secondary.form-submit {
+  &:extend(.unit-btn);
+}
+
+.pager.pager-load-more li>a,
+.non-clf .btn.form-submit,
+.non-clf .btn.btn-secondary.form-submit {
+  text-decoration: none;
+  position: relative;
+}
+.non-clf .btn.form-submit,
+.non-clf .btn.btn-secondary.form-submit {
+  padding-right: 1.25em;
+}
+
+// BUTTON SIZES
+.btn--xs {
+  font-size: 0.800em;
+  //padding-top: 4px !important;
+}
+.btn--sm {
+  &:extend(.btn-sm);
+}
+.btn--lg {
+  &:extend(.btn-lg);
+}
+
+@media screen and (max-width: @screen-sm-max) {
+  .unit-btn {
+    font-size: inherit;
+  }
+  .btn--xs {
+    font-size: 0.700em;
+    //padding-top: 4px !important;
+  }
+  .btn--sm {
+    font-size: 0.800em;
+  }
+  .btn--lg {
+    font-size: 1.25em;
+  }
+}

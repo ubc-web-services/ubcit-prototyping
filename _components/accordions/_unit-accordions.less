@@ -1,0 +1,90 @@
+// import base styles
+@import "_accordions.less";
+
+/* CUSTOM ACCORDIONS 
+-------------------------------------------------- */
+
+/* These do not follow bootstrap markup and the namespace of this styling will collide with default bootstrap 
+
+  DEFAULT MARKUP REQUIRED:
+  --------------------------------------------------
+  
+    <div class="accordion">
+      <div class="accordion-tab" tabindex="0">Accordion Title</div>
+      <div class="accordion-content clearfix" style="display: none; ">
+        <p>Accordion Content</p>
+      </div>
+    </div>
+  
+  Also relies on js in custom.js:
+  --------------------------------------------------
+  
+    $('.accordion').find('.accordion-tab').click(function(e){
+      //Prevent content jump
+      e.preventDefault();
+      //Expand or collapse this panel
+      $(this).next().slideToggle('fast');
+      //Change the classes to trigger the icon change
+      $(this).parent().toggleClass('accordion-closed accordion-open');
+      //Optionally hide the other panels
+      //$(".accordion-content").not($(this).next()).slideUp('fast');
+    });
+    
+  
+  VARIABLES
+  --------------------------------------------------
+  @unit-primary - background colour when hovering over trigger
+  @unit-accent - border colours, alternate trigger text colour
+  @icon-font-name - icon font
+
+
+  !!! TO DO: Consider changing class names to prevent namespace collisions !!!
+  --------------------------------------------------
+  
+*/
+
+.accordion,
+.accordion-formatted {
+  margin: 0;
+  border: none;
+}
+.accordion .accordion__tab,
+.accordion .accordion-tab {
+  color: @accordion-trigger-open-text-color;
+  background-color: @accordion-trigger-open-background-color;
+  border-top: 1px solid @accordion-trigger-border-color;
+  border-bottom: 1px solid @accordion-trigger-border-color;
+  margin-top: -1px;
+  span {
+    color: #aaa;
+  }
+}
+
+.accordion.accordion--closed .accordion__tab,
+.accordion.accordion-closed .accordion-tab {
+  color: @accordion-trigger-closed-text-color;
+  background-color: @accordion-trigger-closed-background-color;
+  &:hover {
+    color: @accordion-trigger-hover-text-color;
+    background-color: @accordion-trigger-hover-background-color;
+  }
+}
+.accordion__content,
+.accordion-content {
+  //border: 1px solid @unit-accent;
+  border: none;
+  padding: 1.5em 1.25em;
+  border-bottom: 1px solid @accordion-trigger-border-color;
+}
+.accordion .accordion__tab:after,
+.accordion .accordion-tab:after {
+  // add 'angle-up' icon - see http://fontawesome.github.io/Font-Awesome/3.2.1/icons/ for alternates (click on icon to find unicode)
+  font-family: @icon-font-family;
+  content: @accordion-open-icon;
+}
+.accordion.accordion--closed .accordion__tab:after,
+.accordion.accordion-closed .accordion-tab:after {
+  // add 'angle-down' icon - see http://fontawesome.github.io/Font-Awesome/3.2.1/icons/ for alternates (click on icon to find unicode)
+  content: @accordion-closed-icon;
+}
+

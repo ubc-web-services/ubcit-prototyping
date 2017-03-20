@@ -1,0 +1,70 @@
+/* File for adding fixes and alterations to the CLF where issues may have occured from using the minimal clf files */
+
+.ubc7-unit-menu .btn-group > .btn {
+  float: none;
+}
+
+@media (max-width: @screen-sm-max) {
+  .full-width .container {
+    width: auto;
+  }
+  .full-width #ubc7-unit-navigation .container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+// button styles get mangled because of body font size
+#ubc7-search-box .btn {
+  font-size: 14px;
+  padding-bottom: 4px;
+  padding-top: 4px
+}
+
+// remove collapse nav padding for tablets
+/*
+@media (max-width: @screen-sm-max) {
+  .full-width .expand,
+  .full-width-container .expand {
+    margin: 0;
+    padding: 0;
+  }
+  .full-width #ubc7-header > .container,
+  .full-width #ubc7-unit > .container,
+  .full-width main.container,
+  .full-width #ubc7-footer > .row-fluid > .container {
+    padding-left: 20px;
+    padding-right: 20px; 
+  }
+}
+*/
+@media screen and (min-width: @screen-md-min) {
+  .navbar .nav.pull-right {
+    float: right;
+    margin-right: 0;
+  }
+  .navbar .pull-right > li > .dropdown-menu {
+    right: 0;
+    left: auto;
+  }
+}
+
+/* Added due to omission in current minimized version of clf - remove when that is fixed (see this issue: https://github.com/ubc-web-services/ubc-clf-min/issues/3) */
+.ubc7-single-element a{margin-top:16px}.ubc7-single-element a #ubc7-unit-faculty{display:none!important}
+@media screen and (min-width: 1200px){ 
+  .ubc7-single-element a{margin-top:20px}
+}
+
+/* Remove the awful text shadow from nav items */
+#ubc7-unit-alternate-navigation .nav>li.active>a, 
+.navbar .nav>.active>a, 
+.navbar .nav>.active>a:focus, 
+.navbar .nav>.active>a:hover,
+.ubc7-unit-menu .nav>li.active>a {
+  text-shadow: none;
+}
+
+.nav-collapse .dropdown-menu a, 
+.nav-collapse .nav>li>a {
+  border-radius: 0;
+}

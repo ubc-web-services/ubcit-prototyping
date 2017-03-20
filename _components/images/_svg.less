@@ -1,0 +1,55 @@
+/* SVG
+-------------------------------------------------- */
+
+/* Preferred embedding method is via <object> tag. 
+
+  SAMPLE MARKUP:
+  --------------------------------------------------
+  
+  <object type="image/svg+xml" data="my_SVG_file.svg">
+      <!-- fallback here (<img> referencing a PNG version of the graphic, for example, or text for a logo) -->
+  </object>
+  
+  SVG LINKS
+  --------------------------------------------------
+  <a href="mylink" class="svg-link">
+    <object type="image/svg+xml" data="my_SVG_file.svg">
+      <!-- fallback here (<img> referencing a PNG version of the graphic, for example, or text for a logo) -->
+    </object>
+  </a>
+  
+*/
+/* fix for IE */ // commented out so you don't need to have a set width
+/*
+object {
+    width: 100%;
+    //max-width: 100%;
+}
+*/
+a.svg-link {
+  position: relative; 
+  display: inline-block;
+}
+a.svg-link:after {
+  content: ""; 
+  position: absolute; 
+  top: 0; 
+  right: 0; 
+  bottom: 0; 
+  left: 0;
+}
+.svg-responsive-container {
+  display: inline-block;
+	position: relative;
+	width: 100%;
+	// change this value on your svg to adjust the visible area - setting below will render a square
+	padding-bottom: 100%; 
+	vertical-align: middle; 
+	overflow: hidden; 
+}
+.svg-responsive-content { 
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	left: 0;
+}

@@ -1,0 +1,89 @@
+// import base styles
+@import "_tags.less";
+
+/* TAGS
+-------------------------------------------------- */
+
+/*
+
+  CUSTOM STYLES
+  --------------------------------------------------
+
+  .tags : add to ul / ol to convert into a list of tag style items (with or without links). Will require .clearfix on ul/ol for proper float behaviour
+
+  SAMPLE MARKUP:
+  --------------------------------------------------
+
+    <ul class="tags clearfix">
+      <li><a href="#">item one</a></li>
+      <li><a href="#">item two</a></li>
+      <li><a href="#">item three</a></li>
+    </ul>
+
+
+  VARIABLES:
+  --------------------------------------------------
+  @unit-primary
+  @btn-border-radius
+  @unit-text-light
+
+*/
+
+
+.tags {
+  li {
+    text-transform: lowercase;
+    a {
+      text-decoration: none;
+      padding: .25em 1em;
+      border-style: solid;
+      border-width: 1px;
+      margin-right: 10px;
+      text-align: center;
+      min-width: 150px;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.tag {
+  border: 1px solid @unit-accent;
+  color: @unit-accent;
+  &:hover {
+    color: #fff;
+    background-color: @unit-accent;
+  }
+}
+.tag--reversed {
+  color: #fff;
+  border: 1px solid @unit-accent;
+  background-color: @unit-accent;
+  &:hover {
+    background-color: #fff;
+    color: @unit-accent;
+  }
+}
+.tag--alt {
+  border: 1px solid @unit-primary;
+  color: @unit-primary;
+  &:hover {
+    color: #fff;
+    background-color: @unit-primary;
+  }
+}
+
+.tags__container {
+  background-color: @unit-accent-light;
+  padding: 1.5em 1.5em .75em 1.5em;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+.tags__label {
+  font-size: @h5-font-size;
+  font-weight: 400;
+  margin: 0 10px 0 0;
+  vertical-align: top;
+  padding-top: 5px
+}

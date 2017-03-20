@@ -1,0 +1,42 @@
+doctype html
+!= partial("_shared/html")
+  head
+    != partial("_shared/head")
+  
+  if clfwidthfull
+    body.full-width.make-nice
+      != partial("_shared/clf-header")
+        div#ubc7-unit-menu.navbar.expand(role="navigation")
+          != partial("_shared/unit-nav")
+        != yield
+        if footernav
+          div#ubc7-unit-alternate-navigation.navbar.expand.visible-phone(role="navigation")
+            != partial("_shared/unit-nav")
+        != partial("_shared/clf-footer")
+      != partial("_shared/scripts")
+      
+  if clfwidthfluid
+    body.full-width.full-width-left.make-nice
+      != partial("_shared/clf-header")
+        div#ubc7-unit-menu.navbar.expand(role="navigation")
+          != partial("_shared/unit-nav")
+        != yield
+        if footernav
+          div#ubc7-unit-alternate-navigation.navbar.expand.visible-phone(role="navigation")
+            != partial("_shared/unit-nav")
+        != partial("_shared/clf-footer")
+      != partial("_shared/scripts")
+      
+  if clfwidthfixed
+    body.make-nice
+      div.container
+  
+        != partial("_shared/clf-header")
+        div#ubc7-unit-menu.navbar.expand(role="navigation")
+          != partial("_shared/unit-nav")
+        != yield
+        if footernav
+          div#ubc7-unit-alternate-navigation.navbar.expand.visible-phone(role="navigation")
+            != partial("_shared/unit-nav")
+        != partial("_shared/clf-footer")
+      != partial("_shared/scripts")

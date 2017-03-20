@@ -1,0 +1,78 @@
+/* QUICKLINKS
+-------------------------------------------------- */
+
+/* 
+
+  Styles for Quicklinks that appear on the right side of the viewport
+
+  SAMPLE MARKUP:
+  --------------------------------------------------
+  
+  <div id="quicklinks">
+    <a class="quicklinks--it-help">
+      <span>IT HELP</span></a>
+    <a class="quicklinks--links">
+      <span class="icon icon-link"></span></a>
+    <a class="quicklinks--search">
+      <span class="icon icon-search"></span></a>
+    <div class="search">
+      <form method="get" action="#" role="search" class="form-search">
+        <input type="text" name="q" placeholder="Search Information Technology @ Applied Science">
+        <input type="hidden" name="label" value="Search UBC">
+        <input type="hidden" name="site" value="*.ubc.ca">
+      </form>
+    </div>
+  </div>
+
+*/
+
+#quicklinks {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  margin-top: -48px;
+  a {
+    color: white;
+    display: block;
+    width: 48px;
+    height: 48px;
+    //padding: 12px;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color .35s ease-in-out;
+    cursor: pointer;
+  }
+  .search {
+    display: block;
+    width: 3em;
+    height: 3em;
+    //overflow: hidden;
+  }
+}
+.quicklinks--it-help {
+  background-color: @unit-accent;
+  font-size: 13px;
+  line-height: 1.25em;
+  padding: 8px;
+  &:hover {
+    background-color: lighten(@unit-accent, 15%);
+  }
+}
+.quicklinks--links {
+  background-color: @unit-accent-dark;
+  font-size: 24px;
+  padding: 12px !important;
+  &:hover {
+    background-color: lighten(@unit-accent-dark, 15%);
+  }
+}
+#quicklinks--search {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  margin-top: 48px;
+}
+#quicklinks,
+#quicklinks--search {
+  box-shadow: -2px 2px 2px rgba(0, 0, 0, .15);
+}

@@ -1,0 +1,241 @@
+
+
+/* CARDS
+-------------------------------------------------- */
+
+/*
+
+  SAMPLE MARKUP:
+  --------------------------------------------------
+  
+    <article class="card card--xs-text-left clearfix">
+      <div class="card__image-area card__image-area--screened card__image-area--rounded card__image-area--shadow">
+        <h3 class="card__title">Multiline Formal Space Under Construction</h3>
+        <div class="card__subtitle">Renovation, In Progress</div><img src="img/prototype/demo-huge1.jpg" alt=""/>
+      </div>
+      <div class="card__content">
+        <p>Do you need <strong>free</strong> Microsoft applications such as Visual Studio, Microsoft Windows 10, Visio or free Azure credits? All faculty and registered students in Applied Science are able to access Dreamspark to get these and other Microsoft applications at no charge.
+        </p>
+        <p><a href="#" class="btn btn-unit btn-sm">Learn More</a></p>
+      </div>
+    </article>
+  
+  
+  ALTERNATE MARKUP:
+  --------------------------------------------------
+  
+    <article class="card card--sm-text-left clearfix">
+      <div class="card__image-area card__image-area--shadow">
+        <img src="img/prototype/demo-huge1.jpg" alt=""/>
+      </div>
+      <div class="card__content">
+        <h3 class="card__title">Multiline Formal Space Under Construction</h3>
+        <div class="card__subtitle">Renovation, In Progress</div>
+        <p>Do you need <strong>free</strong> Microsoft applications such as Visual Studio, Microsoft Windows 10, Visio or free Azure credits? All faculty and registered students in Applied Science are able to access Dreamspark to get these and other Microsoft applications at no charge.
+        </p>
+        <p><a href="#" class="btn btn-unit btn-sm">Learn More</a></p>
+      </div>
+    </article>
+  
+  CUSTOM card CLASSES:
+  --------------------------------------------------
+  
+  TODO
+  
+  
+  
+  VARIABLES:
+  --------------------------------------------------
+ 
+  
+*/
+@media screen and (min-width: @screen-sm-min) {
+  .card {
+    background-color: inherit;
+  }
+  .card--xs-text-left, 
+  .card--xs-text-right {
+    margin-bottom: 1.5em;
+  }
+  .card__image-area--screened {
+    position: relative;
+    display: inline-block;
+    margin-bottom: .75em;
+    
+    &:after {
+      content: '';
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: rgba(55,60,50, 0.6);
+      border-radius: @border-radius-small;
+      transition: all 0.2s ease-in;
+    }
+    &:hover:after {
+      background: rgba(55,60,50, 0.9);
+      transition: all 0.2s ease-in;
+    }
+    
+  }  
+  .card__title--overimage {
+    color: @unit-tertiary;
+    position: absolute;
+    bottom: 20px;
+    left: 15px;
+    right: 15px;
+    font-size: 20px;
+    z-index:2;
+    &:after {
+      content: '';
+      height: 10px;
+      width: auto;
+      position: absolute;
+      background: #578429;
+      left: -4px;
+      right: -4px;
+      bottom: 0;
+      z-index: -1;
+      transition: all 0.2s cubic-bezier(.58,.39,.7,1.55);
+    }
+  }
+  .card__image-area:hover .card__title--overimage:after {
+    height: 105%;
+  }
+  .card__subtitle--overimage {
+    position: absolute;
+    top: 20px;
+    left: 15px;
+    font-family: arial, sans-serif;
+    color: @unit-tertiary;
+    font-size: 0.8rem;
+    z-index: 1;
+  }
+  
+}
+.card-profile__image-area img {
+  display: inline-block;
+  text-align: center;
+  margin: 0 auto;
+}
+.non-clf .card-profile__title {
+  text-align: center;
+  font-size: 1.125em;
+  margin: 0;
+  color: @unit-secondary;
+}
+.non-clf .card-profile__subtitle {
+  text-align: center;
+  font-size: 1em;
+  margin: 0;
+  color: @text-color;
+  font-weight: 600;
+  line-height: 20px;
+  text-transform: none;
+}
+.card-profile__email,
+.card-profile__phone {
+  //display: block;
+  line-height: 17px;
+  
+  &:before {
+    color: @unit-accent-light;
+    width: 24px;
+    display: inline-block;
+  }
+}
+/*
+@media screen and (min-width: @screen-sm-min) {
+  .card--sm-text-right .card__image-area,
+  .card--sm-text-left  .card__image-area {
+    width: 41.66666667%;
+  }
+  .card--sm-text-right .card__image-area {
+    margin-right: 8.33333333%;
+    float: left;
+  }
+  .card--sm-text-left  .card__image-area {
+    margin-left: 8.33333333%;
+    float: right;
+  }
+  .card--sm-text-left .card__content,
+  .card--sm-text-right .card__content {
+    width: 50%;
+  }
+  .card--sm-text-left .card__content {
+    float: left;
+    left-right: 8.33333333%;
+  }
+  .card--sm-text-right .card__content {
+    float: right;
+    padding-right: 8.33333333%;
+  }
+}
+.card__image-area--rounded img {
+  border-radius: @border-radius-small;
+}
+*/
+
+
+//@media screen and (max-width: @screen-xs-max) {
+  .card--xs-text-left, 
+  .card--xs-text-right {
+    border-bottom: 1px solid @unit-lightest-grey;
+  }
+  .card--xs-text-left img,
+  .card--xs-text-right img {
+    width: 33.33333%;
+  }
+  .card--xs-text-left .card__content,
+  .card--xs-text-right .card__content {
+    width: 66.66666%;
+  }
+  .card--xs-text-right .card-profile__content,
+  .card--xs-text-left .card-profile__content {
+    width: 75%;
+  }
+  .card--xs-text-right .card-profile__image-area img,
+  .card--xs-text-left .card-profile__image-area img {
+    width: 25%;
+  }
+  .card--xs-text-left .card__content {
+    float: left;
+    padding-right: 20px;
+  }
+  .card--xs-text-left img {
+    float: right;
+  }
+  .card--xs-text-right .card__content {
+   float: right;
+   padding-left: 20px;
+  }
+  .card--xs-text-right img {
+   float: left;
+  }
+  .card--xs-text-right .card__title--overimage,
+  .card--xs-text-right .card__subtitle--overimage {
+    margin-left: 33.33333%;
+    padding-left: 20px;
+  }
+  .card--xs-text-left .card__title--overimage,
+  .card--xs-text-left .card__subtitle--overimage {
+    padding-right: 20px;
+  }
+  .card--xs-text-left .card__subtitle--overimage,
+  .card--xs-text-right .card__subtitle--overimage {
+    .text--bold();
+    .text--accent-light();
+    font-size: 12px;
+    margin-top: -12px;
+    padding-bottom: 8px;
+  }
+  .card-profile {
+    padding: 2em 0;
+  }
+  .non-clf .card-profile__title,
+  .non-clf .card-profile__subtitle {
+    text-align: left;
+  }
+//}
+
