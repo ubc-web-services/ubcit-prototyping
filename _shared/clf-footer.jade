@@ -1,7 +1,8 @@
 if clfwidthfixed
+  != partial("clf-footer--unit")
   footer#ubc7-footer.expand(role="contentinfo")
     div#ubc7-unit-footer.row-fluid.expand
-      != partial("clf-footer-address")
+      != partial("clf-footer--address")
     div.row-fluid.expand.ubc7-back-to-top
       div.span2
         a(href="#") Back to top 
@@ -26,10 +27,11 @@ if clfwidthfixed
             a(href="//cdn.ubc.ca/clf/ref/accessibility") Accessibility
       
 else
+  != partial("clf-footer--unit")
   footer#ubc7-footer.expand(role="contentinfo")
     div#ubc7-unit-footer.row-fluid.expand
       div.container
-        != partial("clf-footer-address")
+        != partial("clf-footer--address")
       div.row-fluid.expand.ubc7-back-to-top
         div.container
           div.span2

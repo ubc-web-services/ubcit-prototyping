@@ -2,10 +2,10 @@ div#ubc7-global-menu.collapse.expand
   div#ubc7-search.expand
   
     if clfwidthfixed
-      != partial("clf-header-search")
+      != partial("clf-header--search")
     else
       div.container
-      != partial("clf-header-search")
+      != partial("clf-header--search")
   
   if clfwidthfixed
     div#ubc7-global-header.expand
@@ -15,15 +15,15 @@ div#ubc7-global-menu.collapse.expand
 
 header#ubc7-header.row-fluid.expand(role="banner")
   if clfwidthfixed
-    != partial("clf-header-banner")
+    != partial("clf-header--banner")
   else
     div.container
-      != partial("clf-header-banner")
+      != partial("clf-header--banner")
 
 div#ubc7-unit.row-fluid.expand
   if clfwidthfixed
-    != partial("clf-header-unit")
+    != partial("clf-header--unit")
   else
     div.container
-      != partial("clf-header-unit")
+      != partial("clf-header--unit")
     
