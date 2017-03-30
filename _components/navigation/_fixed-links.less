@@ -9,11 +9,11 @@
   --------------------------------------------------
   
   <div id="quicklinks">
-    <a class="quicklinks--it-help">
+    <a class="quicklinks__links">
       <span>IT HELP</span></a>
-    <a class="quicklinks--links">
+    <a class="quicklinks__links">
       <span class="icon icon-link"></span></a>
-    <a class="quicklinks--search">
+    <a class="quicklinks__search">
       <span class="icon icon-search"></span></a>
     <div class="search">
       <form method="get" action="#" role="search" class="form-search">
@@ -49,16 +49,7 @@
     //overflow: hidden;
   }
 }
-.quicklinks--it-help {
-  background-color: @unit-accent;
-  font-size: 13px;
-  line-height: 1.25em;
-  padding: 8px;
-  &:hover {
-    background-color: lighten(@unit-accent, 15%);
-  }
-}
-.quicklinks--links {
+.quicklinks__links {
   background-color: @unit-accent-dark;
   font-size: 24px;
   padding: 12px !important;
@@ -66,13 +57,13 @@
     background-color: lighten(@unit-accent-dark, 15%);
   }
 }
-#quicklinks--search {
+#quicklinks__search {
   position: fixed;
   top: 50%;
   right: 0;
   margin-top: 48px;
 }
 #quicklinks,
-#quicklinks--search {
+#quicklinks__search {
   box-shadow: -2px 2px 2px rgba(0, 0, 0, .15);
 }
