@@ -11,7 +11,33 @@
   SAMPLE MARKUP:
   --------------------------------------------------
   
+  <nav class="subnav">
+    <div class="vert-content-space-2-2">
+      <div class="subnav__header">Submenu</div>
+      <div class="subnav__links">
+        <ul class="clearfix">
+          <li class="active"><a href="#" class="subnav__link">First Menu Item </a></li>
+          <li><a href="#" class="subnav__link">Second Menu Item </a></li>
+          <li><a href="#" class="subnav__link">Third Menu Item </a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
   
+  // ALTERNATE COLLAPSING VERSION
+  
+  <nav class="subnav subnav--collapsing">
+    <div class="vert-content-space-2-2">
+      <div class="subnav__header"><a data-toggle="collapse" data-target=".subnav__links" aria-expanded="false" class="subnav__toggle collapsed">Submenu</a></div>
+      <div class="subnav__links collapse navbar-collapse">
+        <ul class="clearfix">
+          <li class="active"><a href="#" class="subnav__link">First Menu Item </a></li>
+          <li><a href="#" class="subnav__link">Second Menu Item </a></li>
+          <li><a href="#" class="subnav__link">Third Menu Item </a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
   
   VARIABLES:
   --------------------------------------------------

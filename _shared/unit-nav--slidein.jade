@@ -1,18 +1,37 @@
-section#sidebar-quicklinks.sidebar(data-navigation-handle=".navhandle-quicklinks" data-navigation-content="#wrapper")
-  h4.handle.navhandle-quicklinks CLOSE
-  
-  h3 Quicklinks
+section.sidebar(data-navigation-handle=".navhandle" data-navigation-content="#wrapper")
+  h4.navhandle CLOSE
+  nav
+    ul.nav.main
+      li
+        a(href="#") Home
+      li
+        a(href="#") About VPA Academic
+      li
+        a(href="#") Strategy + Budget Planning
+      li
+        a(href="#") Support + Resources
+      li
+        a(href="#") Our Initiatives
+      li
+        a(href="#") Awards + Funding
+      li
+        a(href="#") Academic Community
+  h4 Search + Quicklinks
+  form.form-inline(method="get" action="http://www.ubc.ca/search/refine/")
+    div.form-group
+      input.search-query(type="text" name="q" placeholder="Search #{ unitname }")
+      input(type="hidden" name="label" value="UBC")
+      input(type="hidden" name="site" value="#{ domain }")
+    button.btn-search.btn-xs(type="submit") Search
   nav
     ul.nav.quicklinks
       li
-        a(href="#") Forms
-      li
-        a(href="#") Policies
-      li
-        a(href="#") Announcements
-      li
-        a(href="#") FAQ
-      li
-        a(href="#") Number Generators
+        a(href="#") Faculty Resources
       li
         a(href="#") Contact Us
+      li
+        a(href="#") News + Announcements
+      li
+        a(href="#") Organization Chart
+      li
+        a(href="#") Budget Information

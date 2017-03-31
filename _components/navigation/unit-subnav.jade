@@ -1,20 +1,19 @@
-nav.subnav.non-clf
-  div.container
-    div.subnav--header
-      a.subnav--toggle.collapsed(data-toggle="collapse" data-target=".subnav--links" aria-expanded="false")
-        | Get Started Menu 
-        span.icon-chevron-down
-       
-    div.subnav--links.collapse.navbar-collapse
-      ul
-        li
-          a.subnav--link.active(href="#") Faculty 
-        li
-          a.subnav--link(href="#") Staff
-        li
-          a.subnav--link(href="#") Graduate Students
-        li
-          a.subnav--link(href="#") Undergrad Students
-        li
-          a.subnav--link(href="#") Visitors
-          
+nav.menu-block-wrapper
+  ul.menu.nav.subnav
+    li.first.expanded.active-trail.menu-mlid-3599
+      a(href="#") Expanded Item
+      ul.menu.nav.subnav
+        li.first.leaf.active
+          a(href="#") Active Item
+        li.leaf
+          a(href="#") Inactive Items
+        li.leaf.last
+          a(href="#") Last Item
+    li.collapsed.menu-mlid-3603
+      a(href="#") Collapsed Item
+    li.collapsed.menu-mlid-3607
+      a(href="#") Another Collapsed Item
+    li.leaf.menu-mlid-3609
+      a(href="#") Single Item
+    li.last.leaf.menu-mlid-3553
+      a(href="#") Last Item

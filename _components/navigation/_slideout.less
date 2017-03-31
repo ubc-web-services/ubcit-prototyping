@@ -1,37 +1,78 @@
 /* SLIDEOUT NAVIGATION
 -------------------------------------------------- */
 
-/* 
-  
+/*
+
   DOCUMENTATION
   --------------------------------------------------
   https://formstone.it/components/navigation/ (using off canvas overlay)
-  
- 
-          
+
+
+
   SAMPLE MARKUP:
   --------------------------------------------------
-  
-  
-  
+
+
+
   VARIABLES:
   --------------------------------------------------
-  @sansFontFamily
-  @unit-accent
-  @unit-primary
-  @unit-secondary
-  @iconFontFamily
+
 
 */
 
-
-
-
-
+body,
+#wrapper {
+  background-color: white;
+}
+/* Revert the CLF body padding to accomodate our wrapper (needed for the offside nav) */
+@media screen and (max-width: @screen-sm-max) {
+  // remove default clf body padding
+  body {
+    padding: 0
+  }
+}
+@media screen and (max-width: @screen-sm-max) {
+  // add default back to the container wrappers
+  .container {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}
+@media screen and (min-width: @screen-md-min) {
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+.ubc7-unit-menu .container {
+  position: relative;
+}
+.handle {
+  height: 40px;
+  line-height: 40px;
+  font-weight: normal !important;
+  font-family: @sans-font-family;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.ubc7-unit-menu .handle {
+  right: 15px;
+  display: inline-block !important;
+  float: right;
+}
+// adjust the mobile clf nav trigger */
+#ubc7-unit .navbar .btn-navbar {
+  text-shadow: none;
+  text-indent: -400%;
+  overflow: hidden;
+  //background-color: @unit-secondary;
+  &:hover,
+  &.fs-navigation-open {
+    background-color: @unit-accent;
+  }
+}
 
 /*! formstone v0.5.14 [navigation.css] 2015-05-20 | MIT License | formstone.it */
-
-
 .fs-navigation.fs-navigation-enabled {
   margin: 0;
 }
@@ -259,59 +300,15 @@
   overflow: hidden !important;
 }
 
-
-.ubc7-unit-menu .container {
-  position: relative;
-}
-
-.handle {
-  height: 40px;
-  line-height: 40px;
-  font-weight: normal !important;
-  font-family: @sansFontFamily;
-  text-decoration: none;
-  text-transform: uppercase;
-  
-}
-.ubc7-unit-menu .handle {
-  right: 15px;
-  display: inline-block !important;
-  float: right;
-}
-
-// adjust the mobile clf nav trigger */
-#ubc7-unit .navbar .btn-navbar {
-  text-shadow: none;
-  text-indent: -400%;
-  overflow: hidden;
-  //background-color: @unit-secondary;
-  &:hover,
-  &.fs-navigation-open {
-    background-color: @unit-accent;
-  }
-}
-
 .fs-navigation-handle.fs-navigation-open:after {
   text-indent: 0 !important;
 }
 
-.sidebar .fs-navigation-overlay-handle.fs-navigation-enabled, 
+.sidebar .fs-navigation-overlay-handle.fs-navigation-enabled,
 .sidebar .fs-navigation-push-handle.fs-navigation-enabled {
   padding: 3px 24px 2px 24px;
 }
-.fs-navigation-handle.fs-navigation-enabled
-.navbar.quicklinksnav {
-  position: fixed;
-  right: -55px;
-  top: 50vh;
-  z-index: 10;
-  transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  a {
-    text-indent: 25px; 
-    width: 80px
-  }
-}
+
 @media (max-width: @screen-sm-max) {
   .mobilenav-triggered .navbar.quicklinksnav {
     z-index: -1;
@@ -354,139 +351,53 @@
     background: transparent;
   }
 }
-a.navhandle-quicklinks.fs-navigation-handle.fs-navigation-enabled {
-  background-color: @unit-primary;
-  &:hover {
-    background-color: @unit-secondary;
-    color: white;
-  }
-}
+
 
 // Allow the nav area to scroll when open
 .fs-navigation-element.fs-navigation-open {
   height: 100% !important;
   overflow: hidden scroll;
-} 
-
-.navhandle-quicklinks.fs-navigation-handle.fs-navigation-enabled:after {
-  display: none;
-}
-.navhandle-quicklinks.fs-navigation-handle.fs-navigation-enabled:before {
-  //content: '\f0c9';
-  //font-family: @iconFontFamily;
-  font-weight: normal;
-  display: block;
-  margin: auto 0;
-  bottom: 0;
-  position: absolute;
-  top: 2px;
-  left: 15px;
-  font-size: 18px;
-  height: 40px;
-  width: 45px;
-  text-indent: 0;
-}
-.navhandle-quicklinks.fs-navigation-handle.fs-navigation-enabled.fs-navigation-open:before {
-  display: none;
-}
-.navhandle-quicklinks.fs-navigation-handle.fs-navigation-enabled.fs-navigation-open:after {
-  display: block;
-}
-.btn-navbar.navhandle-quicklinks.fs-navigation-handle.fs-navigation-enabled:before {
-  left: 0;
 }
 
-body {
-  background-color: white;
-}
-#wrapper {
-  background-color: white;
-}
+
 /*
-.fs-navigation-overlay-nav.fs-navigation-enabled, 
-.fs-navigation-push-nav.fs-navigation-enabled, 
+.fs-navigation-overlay-nav.fs-navigation-enabled,
+.fs-navigation-push-nav.fs-navigation-enabled,
 .fs-navigation-reveal-nav.fs-navigation-enabled {
   background-color: #e1f3f9
 }
 */
-.sidebar {
-  .fs-navigation-handle {
-    border-bottom: 2px solid white;
-    border-top: 2px solid white;
+
+
+// Allow triggered dropdowns to work in sidenav
+.fs-navigation-element {
+  .btn-group {
+    display: block;
   }
-  h4 {
-    text-transform: uppercase;
-    padding: 21px 21px 0;
-    color: @unit-primary;
-    font-weight: 600; 
+  .btn-group>.btn:first-child {
+    text-align: left;
+    float: none;
+    width: 100%;
+    white-space: normal;
+    padding-right: 40px;
+    box-sizing: border-box;
   }
-  .nav a,
-  .nav a:hover {
-    background-color: inherit;
-    text-decoration: none;
-    font-size: 14px;
-    color: @text-color;
-    padding: .75em 1.5em .25em;
+  button.btn.dropdown-toggle {
+    z-index: 2;
+    float: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
   }
-  .nav a:hover {
-    color: @ubcBlue;
-    text-decoration: underline;
+  .dropdown-menu>li>a {
+    white-space: normal;
   }
-  .nav.main a {
-    background-color: @unit-secondary;
-    color: #fff;
-    border-bottom: 2px solid white;
-    padding: .75em 1.5em;
-    position: relative;
-    text-transform: uppercase;
-    &:hover {
-      background-color: @unit-accent;
-      color: @ubcBlue;
-      text-decoration: none;
-    }
-    &.alt-home {
-      background-color: lighten(@unit-secondary, 10%);
-      &:hover {
-        background-color: @unit-accent;
-      }
-    }
-    &.alt {
-      background-color: @unit-primary;
-      &:hover {
-        background-color: @unit-accent;
-        color: @ubcBlue;
-      }
-    }
-    .fa {
-      width: 20px;
-    }
-    &:after {
-      font-family: 'ubc_finance';
-      position: absolute;
-      right: 1.5em;
-      top: 11px;
-      height: 100%;
-      font-size: .7em;
-      content: '\e801';
-      transition: right 0.25s ease-in-out;
-    }
-    &:hover:after {
-      right: 1.25em;
-    }
+  .open>.dropdown-menu {
+    position: relative;;
+    width: 100%;
+    box-shadow: none;
+    z-index: 3;
+    float: none;
   }
-  .quicklinks {
-    margin: 0 1.5em;
-    border-bottom: 2px solid @unit-primary;
-  }
-  .quicklinks a,
-  .quicklinks a:hover {
-    border-top: 2px solid @unit-primary;
-    padding: .5em;
-    text-transform: uppercase;
-    text-decoration: none;
-  }
-  .quicklinks a:hover {
-    background-color: @unit-primary;
-    color: white;
-  }
-} 
+}
