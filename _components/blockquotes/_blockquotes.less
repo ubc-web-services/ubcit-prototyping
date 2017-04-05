@@ -29,20 +29,18 @@ blockquote {
   border-left: 8px solid @blockquote-border;
   padding: 1em 2em;
   margin: 1em 0 1em 2em;
-  //background-image: data-uri('image/svg+xml;charset=UTF-8', '../img/quote_icon.svg');
   background-repeat: no-repeat;
   color: @blockquote-text;
   p {
-    font-size: 18px;
-    //font-style: italic;
-    line-height: 30px;
-    //color: @unit-text-light;
+    font-size: @blockquote-text-size;
+    line-height: @blockquote-text-line-height;
   }
   cite {
     display: block;
     text-align: right;
     color: @blockquote-cite-text;
-    font-size: .875em;
+    line-height: @blockquote-cite-line-height;
+    font-size: @blockquote-cite-text-size;
     font-style: italic;
   }
 }

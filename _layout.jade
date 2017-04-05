@@ -5,7 +5,7 @@ doctype html
   
   if clfwidthfull
     body.full-width.make-nice
-    if slideoutprimarynav
+    if slideinprimarynav
       div#wrapper
         != partial("_shared/clf-header")
           div#ubc7-unit-menu.navbar.expand.visible-md-block.visible-lg-block(role="navigation")
@@ -30,7 +30,7 @@ doctype html
       
   if clfwidthfluid
     body.full-width.full-width-left.make-nice
-    if slideoutprimarynav
+    if slideinprimarynav
       div#wrapper
         != partial("_shared/clf-header")
           div#ubc7-unit-menu.navbar.expand.visible-md-block.visible-lg-block(role="navigation")
@@ -55,7 +55,7 @@ doctype html
       
   if clfwidthfixed
     body.make-nice
-    if slideoutprimarynav
+    if slideinprimarynav
       div.container
         != partial("_shared/clf-header")
         div#ubc7-unit-menu.navbar.expand.visible-md-block.visible-lg-block(role="navigation")

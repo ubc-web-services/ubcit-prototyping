@@ -122,3 +122,7 @@ form.condensed label {
     border: 1px solid @input-border-focus;
   }
 }
+
+// hotfix for mobile selects not triggering native selects
+.fs-dropdown-mobile .fs-dropdown-element{z-index:7}
+.fs-dropdown-mobile.fs-dropdown-multiple .fs-dropdown-element{z-index:-1}

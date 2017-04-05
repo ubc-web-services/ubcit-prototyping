@@ -103,24 +103,31 @@
 @h1-font-weight:         400;
 @h1-font-size:           48px;
 @h1-line-height:         56px;
+@h1-color:               @ubc-blue;
 @h2-font-weight:         600;
 @h2-font-size:           30px;
 @h2-line-height:         40px;
+@h2-color:               @ubc-blue;
 @h3-font-weight:         400;
 @h3-font-size:           30px;
 @h3-line-height:         40px;
+@h3-color:               @unit-grey--dark;
 @h4-font-weight:         600;
 @h4-font-size:           20px;
 @h4-line-height:         24px;
+@h4-color:               @ubc-blue;
 @h5-font-weight:         600;
 @h5-font-size:           15px;
 @h5-line-height:         24px;
+@h5-color:               56px;
 @h6-font-weight:         600;
 @h6-font-size:           15px;
 @h6-line-height:         24px;
+@h6-color:               56px;
 @lead-text-font-weight:  400;
 @lead-text-font-size:    24px;
 @lead-text-line-height:  1.5em;
+@lead-text-color:        @ubc-blue;
 //** Unit-less `line-height` for use in components like buttons.
 @line-height-base:        1.428571429; // 20/14
 //** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
@@ -161,6 +168,12 @@
 @unit-text-light:       @unit-accent-lighter;
 @unit-light-grey:       #ccc;
 @unit-lightest-grey:    #ededed;
+@unit-grey--darker:     #333;
+@unit-grey--dark:       #676767;
+@unit-grey:             #999;
+@unit-grey--light:      #ccc;
+@unit-grey--lighter:    #e1e1e1;
+@unit-grey--lightest:   #f4f4f4;
 // Alert Colours
 @unit-warning:          #f39c12;
 @unit-danger:           #e74c3c;
@@ -191,6 +204,7 @@
 @sidenav__icon:    '\f106';
 @sidenav__icon--expanded:    '\f107';
 @sidenav__icon--collapsed:    '\f105';
+@slidenav_icon:    '\f105';
 // BUTTONS
 @unit-btn--icon:    '\f054';
 @unit-btn--icon--reverse: '\f053';
@@ -229,8 +243,12 @@
 // Blockquotes
 // -------------------------
 @blockquote-border: @text-muted;
-@blockquote-text: @unit-accent;
-@blockquote-cite-text: @unit-accent-dark;
+@blockquote-text: @unit-grey--dark;
+@blockquote-text-size: 18px;
+@blockquote-text-line-height: 30px;
+@blockquote-cite-text: @text-color;
+@blockquote-cite-text-size: 15px;
+@blockquote-cite-line-height: 21px;
 
 
 // Breadcrumbs

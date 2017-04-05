@@ -68,8 +68,17 @@
 .text--heavy {
   font-weight: 800;
 }
+
+
+// ALTERNATE TYPE COLOURS
+.text--ubc-blue {
+  color: @ubc-blue;
+}
 .text--white {
-  color: white;
+  color: #fff;
+}
+.text--black {
+  color: #000;
 }
 .text--primary {
   color: @unit-primary;
@@ -90,7 +99,7 @@
   font-weight: @lead-text-font-weight;
   font-size: @lead-text-font-size;
   line-height: @lead-text-line-height;
-  color: @unit-accent;
+  color: @lead-text-color;
 }
 .text--small {
   font-size: (@font-size-base * .875);
@@ -109,11 +118,14 @@
 .text--left {
   text-align: left;
 }
-.text--upper {
+.text--uppercase {
   text-transform: uppercase !important;
 }
-.text--lower {
+.text--lowercase {
   text-transform: lowercase !important;
+}
+.text--normalcase {
+  text-transform: none !important;
 }
 
 /* DEFAULT LINK STYLES */
@@ -130,54 +142,54 @@ a:hover {
 
 
 /* DEFAULT TYPE STYLES */
-.non-clf h1,
-.non-clf .h1 {
+h1,
+.h1 {
   font-weight: @h1-font-weight;
   font-size: @h1-font-size;
   line-height: @h1-line-height;
-  color: @ubc-blue;
+  color: @h1-color;
   letter-spacing: 1px;
 }
-.non-clf h2,
-.non-clf .h2 {
+h2,
+.h2 {
   font-weight: @h2-font-weight;
   font-size: @h2-font-size;
   line-height: @h2-line-height;
-  color: @ubc-blue;
+  color: @h2-color;
   letter-spacing: 1px;
+  text-transform: uppercase;
 }
-.non-clf h3,
-.non-clf .h3 {
+h3,
+.h3 {
   font-weight: @h3-font-weight;
   font-size: @h3-font-size;
   line-height: @h3-line-height;
-  color: @ubc-blue;
+  color: @h3-color;
   letter-spacing: 1px;
+  text-transform: uppercase;
 }
-.non-clf h4,
-.non-clf .h4 {
+h4,
+.h4 {
   font-weight: @h4-font-weight;
   font-size: @h4-font-size;
   line-height: @h4-line-height;
-  text-transform: uppercase;
-  color: @ubc-blue;
-  letter-spacing: 2px;
+  color: @h4-color;
+  letter-spacing: 1px;
 }
-.non-clf h5,
-.non-clf .h5 {
+h5,
+.h5 {
   font-weight: @h5-font-weight;
   font-size: @h5-font-size;
   line-height: @h5-line-height;
-  text-transform: uppercase;
-  color: @unit-primary;
-  letter-spacing: 2px;
+  color: @h5-color;
+  letter-spacing: 1px;
 }
-.non-clf h6,
-.non-clf .h6 {
+h6,
+.h6 {
   font-weight: @h6-font-weight;
   font-size: @h6-font-size;
   line-height: @h6-line-height;
-  color: @unit-primary;
+  color: @h6-color;
   letter-spacing: 1px;
 }
 hr {
@@ -198,33 +210,33 @@ p {
 // adjust tpe sizes for smaller screens
 @media screen and (max-width: @screen-sm-max ) {
   /* DEFAULT TYPE STYLES */
-  .non-clf h1,
-  .non-clf .h1 {
+  h1,
+  .h1 {
     font-size: (@h1-font-size * .75);
     line-height: (@h1-line-height * .75);
   }
-  .non-clf h2,
-  .non-clf .h2 {
+  h2,
+  .h2 {
     font-size: (@h2-font-size * .75);
     line-height: (@h2-line-height * .75);
   }
-  .non-clf h3,
-  .non-clf .h3 {
+  h3,
+  .h3 {
     font-size: (@h3-font-size * .75);
     line-height: (@h3-line-height * .75);
   }
-  .non-clf h4,
-  .non-clf .h4 {
+  h4,
+  .h4 {
     font-size: (@h4-font-size * .75);
     line-height: (@h4-line-height * .75);
   }
-  .non-clf h5,
-  .non-clf .h5 {
+  h5,
+  .h5 {
     font-size: (@h5-font-size * .75);
     line-height: (@h5-line-height * .75);
   }
-  .non-clf h6,
-  .non-clf .h6 {
+  h6,
+  .h6 {
     font-size: (@h6-font-size * .75);
     line-height: (@h6-line-height * .75);
   }
@@ -243,6 +255,14 @@ p {
   }
 }
 
+footer h3,
+footer h4 {
+  font-family: @clf-font-family;
+  font-weight: inherit;
+  text-transform: none;
+  letter-spacing: normal;
+}
+
 .page-header {
   padding-bottom: 16px;
   margin: 0;
@@ -259,7 +279,3 @@ ol, ul {
   padding-top: 2em;
 }
 
-// ALTERNATE TYPE COLOURS
-.non-clf .text--white {
-  color: #fff !important;
-}

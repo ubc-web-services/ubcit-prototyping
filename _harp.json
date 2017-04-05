@@ -11,7 +11,7 @@
     "clfwidthfull": true,
     "clfwidthfixed": false,
     "clfwidthfluid": false,
-    "slideoutprimarynav": false,
+    "slideinprimarynav": true,
     "fontawesome": true,
     "useswhitney": true,
     "usesmodernizr": false,

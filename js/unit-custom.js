@@ -5,7 +5,7 @@
  */
  /*
 (function ($) {
-  Drupal.behaviors.wellbeing_theme = {
+  Drupal.behaviors.mycustom_theme = {
     attach: function (context) {
     
     
@@ -25,11 +25,4 @@ $(window).load(function() {
   });
   $("input[type=checkbox], input[type=radio]").checkbox();
   $("select").dropdown();
-  $("button[data-target='#toggledfilters']").click(function(e){
-    var newstate = $(this).attr('data-state') ^ 1,
-    	text = newstate ? "HIDE" : "SHOW";
-    	icon = newstate ? "up" : "down";
-    $(this).html(text + ' FILTERS <span class="fa fa-angle-' + icon + '">&nbsp;</span>');
-    $(this).attr('data-state',newstate);
-  });
 });

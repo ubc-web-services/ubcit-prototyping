@@ -16,7 +16,11 @@
 
   VARIABLES:
   --------------------------------------------------
-
+  @sansFontFamily
+  @unit-accent
+  @unit-primary
+  @unit-secondary
+  @iconFontFamily
 
 */
 
@@ -24,6 +28,7 @@ body,
 #wrapper {
   background-color: white;
 }
+
 /* Revert the CLF body padding to accomodate our wrapper (needed for the offside nav) */
 @media screen and (max-width: @screen-sm-max) {
   // remove default clf body padding
@@ -44,9 +49,11 @@ body,
     padding-right: 15px;
   }
 }
+
 .ubc7-unit-menu .container {
   position: relative;
 }
+
 .handle {
   height: 40px;
   line-height: 40px;
@@ -54,12 +61,14 @@ body,
   font-family: @sans-font-family;
   text-decoration: none;
   text-transform: uppercase;
+
 }
 .ubc7-unit-menu .handle {
   right: 15px;
   display: inline-block !important;
   float: right;
 }
+
 // adjust the mobile clf nav trigger */
 #ubc7-unit .navbar .btn-navbar {
   text-shadow: none;
@@ -71,6 +80,7 @@ body,
     background-color: @unit-accent;
   }
 }
+
 
 /*! formstone v0.5.14 [navigation.css] 2015-05-20 | MIT License | formstone.it */
 .fs-navigation.fs-navigation-enabled {
@@ -300,6 +310,9 @@ body,
   overflow: hidden !important;
 }
 
+
+
+
 .fs-navigation-handle.fs-navigation-open:after {
   text-indent: 0 !important;
 }
@@ -330,13 +343,13 @@ body,
     box-shadow: 0 5px 0 #fff, 0 -5px 0 #fff;
   }
   &:hover {
-    background-color: @unit-accent;
-    color: #000;
+    background-color: @unit-primary;
+    color: #fff;
     text-decoration: none;
   }
   &:hover:after {
-    background: #000;
-    box-shadow: 0 5px 0 #000, 0 -5px 0 #000
+    background: #fff;
+    box-shadow: 0 5px 0 #fff, 0 -5px 0 #fff
   }
   &.fs-navigation-open {
     background-color: @unit-secondary;
