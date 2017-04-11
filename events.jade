@@ -11,30 +11,19 @@ section.non-clf.vert-padding-1-3
   div.container
     != partial("_components/forms/unit-form-events")     
     div.row.equalize
-      div.col-sm-4.col-xs-6
-        != partial("_components/teasers/unit-teaser--event")
-      div.col-sm-4.col-xs-6
-        != partial("_components/teasers/unit-teaser--event")
-      div.col-sm-4.col-xs-6
-        != partial("_components/teasers/unit-teaser--event")
-      div.col-sm-4.col-xs-6
-        != partial("_components/teasers/unit-teaser--event")
-      div.col-sm-4.col-xs-6
-        != partial("_components/teasers/unit-teaser--event")
-      div.col-sm-4.col-xs-6
-        != partial("_components/teasers/unit-teaser--event")
-      div.col-sm-4.col-xs-6
-        != partial("_components/teasers/unit-teaser--event")
-      div.col-sm-4.col-xs-6
-        != partial("_components/teasers/unit-teaser--event")
-      div.col-sm-4.col-xs-6
-        != partial("_components/teasers/unit-teaser--event")
-      div.col-sm-4.col-xs-6
-        != partial("_components/teasers/unit-teaser--event")
-      div.col-sm-4.col-xs-6
-        != partial("_components/teasers/unit-teaser--event")
-      div.col-sm-4.col-xs-6
-        != partial("_components/teasers/unit-teaser--event")
+      for event in public.events._data
+        div.col-sm-4.col-xs-6
+          a.teaser(href="event.html")
+            article.teaser-event
+              p.h5= event.date
+              h3.h4= event.title
+              p.h6= event.location
+                br 
+                | #{event.time}
+              p= event.teaser
+              p
+                button.unit-btn--plain Event Details Test
+                
     hr
     p.text--lead.text--center Have an event related to wellbeing?
     p.text--center

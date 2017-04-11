@@ -11,27 +11,18 @@ section.non-clf.vert-padding-3-3
   div.container
     != partial("_components/forms/unit-form-workshops")     
     div.row.equalize
-      div.col-sm-4.col-xs-6
-        != partial("_components/teasers/unit-teaser--profile")
-      div.col-sm-4.col-xs-6
-        != partial("_components/teasers/unit-teaser--profile")
-      div.col-sm-4.col-xs-6
-        != partial("_components/teasers/unit-teaser--profile")
-      div.col-sm-4.col-xs-6
-        != partial("_components/teasers/unit-teaser--profile")
-      div.col-sm-4.col-xs-6
-        != partial("_components/teasers/unit-teaser--profile")
-      div.col-sm-4.col-xs-6
-        != partial("_components/teasers/unit-teaser--profile")
-      div.col-sm-4.col-xs-6
-        != partial("_components/teasers/unit-teaser--profile")
-      div.col-sm-4.col-xs-6
-        != partial("_components/teasers/unit-teaser--profile")
-      div.col-sm-4.col-xs-6
-        != partial("_components/teasers/unit-teaser--profile")
-      div.col-sm-4.col-xs-6
-        != partial("_components/teasers/unit-teaser--profile")
-      div.col-sm-4.col-xs-6
-        != partial("_components/teasers/unit-teaser--profile")
-      div.col-sm-4.col-xs-6
-        != partial("_components/teasers/unit-teaser--profile")
+      for profile in public.profiles._data
+        div.col-sm-4.col-xs-6
+          a.teaser.teaser__w-image(href="profile.html")
+            article.teaser-profile
+              figure.teaser--image
+                img(src="img/prototype/demo-normal#{profile.image}" alt="#{profile.title}" title="")
+              div.teaser--content
+                h3.h4 #{profile.prefix} #{profile.firstname} #{profile.lastname} #{profile.suffix}
+                p= profile.role
+                p= profile.department
+                p= profile.teaser
+                h4.h5 Contact
+                p= profile.email
+                p 
+                  button.unit-btn--plain Full Bio 

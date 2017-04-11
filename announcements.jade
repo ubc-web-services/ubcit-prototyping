@@ -7,27 +7,14 @@ main.non-clf.vert-padding-3-3
           
     h3 Stories: All
     div.row.equalize
-      div.col-sm-4.col-md-3.col-xs-6
-        != partial("_components/teasers/unit-teaser-w-image")
-      div.col-sm-4.col-md-3.col-xs-6
-        != partial("_components/teasers/unit-teaser-w-image")
-      div.col-sm-4.col-md-3.col-xs-6
-        != partial("_components/teasers/unit-teaser-w-image")
-      div.col-sm-4.col-md-3.col-xs-6
-        != partial("_components/teasers/unit-teaser-w-image")
-      div.col-sm-4.col-md-3.col-xs-6
-        != partial("_components/teasers/unit-teaser-w-image")
-      div.col-sm-4.col-md-3.col-xs-6
-        != partial("_components/teasers/unit-teaser-w-image")
-      div.col-sm-4.col-md-3.col-xs-6
-        != partial("_components/teasers/unit-teaser-w-image")
-      div.col-sm-4.col-md-3.col-xs-6
-        != partial("_components/teasers/unit-teaser-w-image")
-      div.col-sm-4.col-md-3.col-xs-6
-        != partial("_components/teasers/unit-teaser-w-image")
-      div.col-sm-4.col-md-3.col-xs-6
-        != partial("_components/teasers/unit-teaser-w-image")
-      div.col-sm-4.col-md-3.col-xs-6
-        != partial("_components/teasers/unit-teaser-w-image")
-      div.col-sm-4.col-md-3.col-xs-6
-        != partial("_components/teasers/unit-teaser-w-image")
+      for announcement in public.announcements._data
+        div.col-sm-4.col-md-3.col-xs-6
+          a.teaser.teaser__w-image(href="announcement.html")
+            article.teaser-announcement
+              figure.teaser--image
+                img(src="img/prototype/#{announcement.image}" alt="#{announcement.title}" title="")
+              div.teaser--content
+                h5= announcement.title
+                p= announcement.teaser
+                p
+                  button.unit-btn--plain Read More  
