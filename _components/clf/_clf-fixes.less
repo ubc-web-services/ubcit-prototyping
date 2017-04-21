@@ -1,4 +1,22 @@
 /* File for adding fixes and alterations to the CLF where issues may have occured from using the minimal clf files */
+// FIRST WE FORCE NON-CLF AREAS TO USE BORDER-BOX - THESE AREAS NO LONGER REQUIRE THE .non-clf CLASS
+//.non-clf * {
+//  box-sizing: border-box;
+//}
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+// NOW WE REAPPLY THE BOX-SIZING THAT THE CLF EXPECTS
+#ubc7-global-menu,
+#ubc7-header,
+#ubc7-unit,
+#ubc7-unit-menu,
+#ubc7-footer {
+  box-sizing: content-box;
+}
 
 .ubc7-unit-menu .btn-group > .btn {
   float: none;
@@ -67,4 +85,11 @@
 .nav-collapse .dropdown-menu a, 
 .nav-collapse .nav>li>a {
   border-radius: 0;
+}
+footer h3,
+footer h4 {
+  font-family: @clf-font-family;
+  //font-weight: inherit;
+  text-transform: none;
+  letter-spacing: normal;
 }

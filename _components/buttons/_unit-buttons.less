@@ -15,15 +15,17 @@
   CUSTOM BUTTON CLASSES:
   --------------------------------------------------
 
-  .btn-unit : use in place of btn-primary
-  .btn-unit-secondary : use in place of btn-secondary
-  .btn-unit-alt : adds alternate styling to the two styles above
-    (usage: class="btn btn-unit btn-nursing-alt")
-  .btn-unit-reverse : adds alternate styling to the two styles above
-    (usage: class="btn btn-unit btn-unit-reverse")
-  .btn-multiline : adds styling for descriptive text in buttons via a span
-  .btn-plain : adds a simplified button style (usage: class="btn btn-plain")
-
+  .unit-btn : a base class for custom-styled buttons with unit colours. Intended for use with a second class defining colours (see below)
+  .unit-btn--primary : used to add the primary unit color to the unit button
+    (usage: class="unit-btn unit-btn--primary")
+  .unit-btn--reverse : used to create the reverse button colors of .unit-btn--primary
+    (usage: class="unit-btn unit-btn--reverse")
+  .unit-btn--plain : adds a simplified button style
+    (usage: class="unit-btn--plain" - this style does not require the base class)
+  .btn--w-icon : adds spacing to the button for an icon on the right. Also requires the icon class (fontawesome eample below)
+    (usage: class="unit-btn unit-btn--reverse btn--w-icon fa fa-twitter")
+  .btn--w-icon-reverse : adds spacing to the button for an icon on the left. Also requires the icon class (fontawesome eample below)
+    (usage: class="unit-btn unit-btn--reverse btn--w-icon-reverse fa fa-twitter")
 
   VARIABLES
   --------------------------------------------------
@@ -41,12 +43,8 @@
 /* GENERAL STYLES
 - utility class (.non-clf) added to limit the styling to regions with the 'non-clf' class applied
 */
-/*
-.btn {
-  background-image: none !important;
-}
-*/
 
+// default unit button styles
 .unit-btn {
   white-space: normal;
   display: inline-block;
@@ -54,79 +52,56 @@
   vertical-align: middle;
   white-space: nowrap;
   border-style: solid;
+  line-height: 1.5em !important; // to prevent fontawesome from triggering new line heights
   border-width: @unit-btn--border-width;
-  padding: .4em 2.5em .3em 1.5em;
+  padding: .50em .750em;
   position: relative;
   &:hover {
     text-decoration: none;
   }
-  &:after {
+}
+// icon on right side (default)
+.btn--w-icon {
+  padding: .50em 44px .50em .750em;
+  position: relative;
+  &:before {
     position: absolute;
-    content: @unit-btn--icon;
-    right: 1.75em;
+    right: 0;
+    top: 50%;
     display: block;
-    font-family: @icon-font-family;
-    top: 55%;
-    font-weight: normal;
-    font-size: .725em;
+    width: 34px;
     line-height: 0;
+    font-size: 120%;
+    font-family: @icon-font-family;
+    text-align: center;
+    z-index: 2;
   }
-  &:hover:after {
-    animation: iconwiggle ease-in-out .75s;
+  &:active:before, &:hover:before {
+    animation: iconwiggle-reverse ease-in-out .75s;
     animation-iteration-count: infinite;
   }
-  &.btn--block {
-    display: block;
-  }
-  &.no-icon {
-    padding: .4em 1.5em .3em 1.5em;
-  }
-  &.icon--left {
-    padding: .4em 1.5em .3em 2.5em;
-    &:after {
+  // icon on left side
+  &-reverse {
+    padding: .50em .750em .50em 44px;
+    position: relative;
+    &:before {
       position: absolute;
-      content: @unit-btn--icon--reverse;
-      left: 1.75em;
+      left: 0;
+      top: 50%;
       display: block;
-      font-family: @icon-font-family;
-      top: 55%;
-      font-weight: normal;
-      font-size: .725em;
+      width: 34px;
       line-height: 0;
+      font-size: 120%;
+      font-family: @icon-font-family;
+      text-align: center;
+      z-index: 2;
     }
-    &:hover:after {
+    &:active:before, &:hover:before {
       animation: iconwiggle-reverse ease-in-out .75s;
       animation-iteration-count: infinite;
     }
   }
-  &.no-icon:after {
-    content: '';
-  }
-  .fa {
-    font-size: 120%;
-    position: relative;
-    padding-left: .25em;
-    bottom: -2px;
-    &.fa-angle-left {
-      padding-left: 0;
-      padding-right: .25em;
-      font-size: 200%;
-      line-height: 0;
-      bottom: -5px;
-    }
-  }
 }
-
-
-
-// remove the content from button groups
-.btn-group>[class*=unit-btn] {
-  padding: .5em 1.25em .375em 1.25em;
-}
-.btn-group>[class*=unit-btn]:after {
-  background-color: transparent;
-}
-
 
 /* CUSTOM UNIT BUTTON STYLES
 -------------------------------------------------- */
@@ -143,6 +118,7 @@
   }
 }
 
+/* REVEERSED PRIMARY BUTTONS */
 .unit-btn--reverse {
   color: @unit-btn-reverse--color;
   background-color: @unit-btn-reverse--background-color;
@@ -154,34 +130,7 @@
   }
 }
 
-
-
-@keyframes iconwiggle{
-  0% {
-    transform:  translate(0,0)  ;
-  }
-  50% {
-    transform:  translate(4px,0)  ;
-  }
-  100% {
-    transform:  translate(0,0)  ;
-  }
-}
-
-@keyframes iconwiggle-reverse{
-  0% {
-    transform:  translate(0,0)  ;
-  }
-  50% {
-    transform:  translate(-4px,0)  ;
-  }
-  100% {
-    transform:  translate(0,0)  ;
-  }
-}
-
-
-/* PLAIN BUTTONS (for alternate use) */
+/* PLAIN BUTTONS */
 .unit-btn--plain {
   background-color: transparent;
   border: none;
@@ -193,7 +142,6 @@
   position: relative;
   display: inline-block;
   font-size: inherit;
-  //font-weight: 600;
   transition: all 0.4s cubic-bezier(0.58, 0.39, 0.7, 1.55);
   &:hover {
     background-color: transparent;
@@ -218,10 +166,51 @@
   }
 }
 
+/* ICON ANIMATIONS */
+@keyframes iconwiggle{
+  0% {
+    transform:  translate(0,0)  ;
+  }
+  50% {
+    transform:  translate(4px,0)  ;
+  }
+  100% {
+    transform:  translate(0,0)  ;
+  }
+}
+@keyframes iconwiggle-reverse{
+  0% {
+    transform:  translate(0,0)  ;
+  }
+  50% {
+    transform:  translate(-4px,0)  ;
+  }
+  100% {
+    transform:  translate(0,0)  ;
+  }
+}
+
+// BUTTON SIZES
+.btn--xs {
+  font-size: .656em;
+}
+.btn--sm {
+  font-size: .750em;
+}
+.btn--lg {
+  font-size: 1.25em;
+}
+
+// remove the content from button groups
+.btn-group>[class*=unit-btn] {
+  padding: .5em 1.25em .375em 1.25em;
+}
+.btn-group>[class*=unit-btn]:after {
+  background-color: transparent;
+}
 
 
-
-// EXTEND SOME BUTTON STYLES
+// EXTEND SOME BUTTON STYLES FOR DRUPAL CONTENT THAT IS DIFFICULT TO ALTER
 .pager.pager-load-more li>a,
 .non-clf .btn.form-submit,
 .non-clf .btn.btn-secondary.form-submit {
@@ -239,30 +228,33 @@
   padding-right: 1.25em;
 }
 
-// BUTTON SIZES
-.btn--xs {
-  font-size: 0.800em;
-  //padding-top: 4px !important;
+input.form-submit,
+ul.pager-load-more a {
+  &:extend(.unit-btn);
+  &:extend(.unit-btn--reverse);
+  text-decoration: none !important;
+  &:hover {
+    &:extend(.unit-btn:hover);
+    &:extend(.unit-btn--reverse:hover);
+    transition: background-color .5s ease, color .5s ease;
+  }
 }
-.btn--sm {
-  &:extend(.btn-sm);
+.views-reset-button input.form-submit {
+  &:extend(.unit-btn--primary);
+  &:hover {
+    &:extend(.unit-btn--primary:hover);
+  }
 }
-.btn--lg {
-  &:extend(.btn-lg);
+.link--more {
+  text-align: right;
+}
+.link--more a {
+  &:extend(.unit-btn);
+  &:extend(.unit-btn--primary);
+  text-decoration: none !important;
+  &:hover {
+    &:extend(.unit-btn:hover);
+    &:extend(.unit-btn--primary:hover);
+  }
 }
 
-@media screen and (max-width: @screen-sm-max) {
-  .unit-btn {
-    font-size: inherit;
-  }
-  .btn--xs {
-    font-size: 0.700em;
-    //padding-top: 4px !important;
-  }
-  .btn--sm {
-    font-size: 0.800em;
-  }
-  .btn--lg {
-    font-size: 1.25em;
-  }
-}
