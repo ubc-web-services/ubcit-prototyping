@@ -1,0 +1,59 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+// BUTTONS
+.unit-button {
+  padding-top: .5rem;
+  padding-right: 2rem;
+  padding-bottom: .5rem;
+  padding-left: 2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  line-height: 1.5rem;
+  display: inline-block;
+  &--white {
+    background-color: #fff;
+    color: $unit-grey;
+    border: 1px solid $unit-grey;
+    &:hover {
+      background-color: $unit-grey;
+      color: #fff;
+    }
+  }
+  &--grey {
+    background-color: $unit-grey;
+    color: #fff;
+    border: 1px solid $unit-grey;
+    &:hover {
+      background-color: darken($unit-grey, 10%);
+    }
+  }
+  &--red {
+    background-color: $unit-red;
+    color: #fff;
+    border: 1px solid $unit-red;
+    &:hover {
+      background-color: darken($unit-red, 10%);
+    }
+  }
+  &--blue {
+    background-color: $ubc-blue;
+    color: #fff;
+    border: 1px solid $ubc-blue;
+    &:hover {
+      background-color: darken($ubc-blue, 10%);
+    }
+  }
+  &--transparent {
+    color: #fff;
+    border: 1px solid #fff;
+    &:hover {
+      background-color: rgba(255, 255, 255, .2);
+    }
+  }
+  &--alt {
+    padding: .5rem;
+    line-height: 1rem;
+    display: inline-block;
+  }
+}

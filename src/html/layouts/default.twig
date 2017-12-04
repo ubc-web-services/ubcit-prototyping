@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    {% include "../includes/head.twig" %}
+</head>
+<body class="sbqmi-texture">
+    {% include "../includes/header.twig" %}
+    {% block content %}{% endblock %}
+    {% include "../includes/footer.twig" %}
+    {% include "../includes/scripts.twig" %}
+</body>
+</html>

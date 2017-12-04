@@ -1,0 +1,29 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the table component.
+// -----------------------------------------------------------------------------
+// BUTTONS
+.responsive-table {
+  @apply .block .min-w-full
+}
+
+@media (max-width: ($breakpoint--md - 1)) {
+  .responsive-table table {
+    @apply .block .overflow-x-scroll
+  }
+}
+
+table {
+  @apply .border-b .border-unit-grey .w-full .text-left
+}
+
+th {
+  @apply .uppercase .text-unit-red .py-2 .pr-2
+}
+
+tr {
+  @apply .border-t .border-unit-grey
+}
+
+td {
+  @apply .py-2 .pr-2
+}

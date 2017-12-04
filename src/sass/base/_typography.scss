@@ -1,0 +1,173 @@
+// -----------------------------------------------------------------------------
+// This file contains default typographic styles for text.
+// -----------------------------------------------------------------------------
+// From Typebase.scss v0.1.0 | https://github.com/devinhunt/typebase.css/blob/master/src/typebase.scss
+// Typesetting variables.
+$base-font-size: 16; // as an integer. We convert the unit later. The default will result in 16px on desktop
+$base-line-height: 1.5; // as an integer. Defines how high the line height is as a multiple of font size
+$leading: $base-line-height * 1rem; // multiply the line height and add a unit. Defaults to rem.
+$default-typeface: 'Open Sans',
+sans-serif;
+$alternate-typeface: sans-serif;
+// TYPE SCALES:
+// 1.067 Minor Second
+// 1.125 Major Second
+// 1.200 Minor Third
+// 1.250 Major Third
+// 1.333 Perfect Fourth
+// 1.414 Augmented Fourth
+// 1.500 Perfect Fifth
+// 1.618 Golden Ratio
+$scale: 1.2;
+$h1-weight: 300;
+$h2-weight: 300;
+$h3-weight: 600;
+$h4-weight: 600;
+$h5-weight: 600;
+$h6-weight: 600;
+//
+// Default
+//
+html {
+  font-family: $default-typeface;
+  font-size: ($base-font-size / 16) * 100%;
+  color: $unit-grey-dark;
+}
+
+// Copy & Lists
+p {
+  margin-top: $leading;
+  margin-bottom: 0;
+  line-height: $leading;
+}
+
+ul,
+ol {
+  margin-top: $leading;
+  margin-bottom: $leading;
+  li {
+    line-height: $leading;
+  }
+  ul,
+  ol {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+blockquote {
+  margin-top: $leading;
+  margin-bottom: $leading;
+  line-height: $leading;
+}
+
+// Headings
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.#{$namespace}heading-one,
+.#{$namespace}heading-two,
+.#{$namespace}heading-three,
+.#{$namespace}heading-four,
+.#{$namespace}heading-five,
+.#{$namespace}heading-six {
+  margin-bottom: 0;
+}
+
+h1,
+.#{$namespace}heading-one {
+  margin-top: 2 * $leading;
+  line-height: 5 * $leading;
+  font-size: (5 * $scale) * 1rem;
+  font-weight: $h1-weight;
+}
+
+h2,
+.#{$namespace}heading-two {
+  margin-top: 2 * $leading;
+  line-height: 4 * $leading;
+  font-size: (4 * $scale) * 1rem;
+  font-weight: $h2-weight;
+}
+
+h3,
+.#{$namespace}heading-three {
+  margin-top: 2 * $leading;
+  line-height: 3 * $leading;
+  font-size: (3 * $scale) * 1rem;
+  font-weight: $h3-weight;
+}
+
+h4,
+.#{$namespace}heading-four {
+  margin-top: 2 * $leading;
+  line-height: 2 * $leading;
+  font-size: (2 * $scale)* 1rem;
+  font-weight: $h4-weight;
+}
+
+h5,
+.#{$namespace}heading-five {
+  margin-top: $leading;
+  line-height: $leading;
+  font-size: (1 * $scale) * 1rem;
+  font-weight: $h5-weight;
+}
+
+h6,
+.#{$namespace}heading-six {
+  margin-top: $leading;
+  line-height: $leading;
+  font-size: ($scale / 1.5) * 1rem;
+  font-weight: $h6-weight;
+}
+
+// Tables
+table {
+  margin-top: $leading;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+  line-height: ($base-line-height * $base-font-size) - 0px;
+}
+
+hr {
+  margin: 2rem 0;
+  border-top: 1px solid $unit-grey;
+}
+
+// Code blocks
+code,
+.text--code {
+  // Forces text to constrain to the line-height. Not ideal, but works.
+  vertical-align: bottom;
+}
+
+// TEXT UTILITIES
+// -------------------
+// Sizes
+.text--lead {
+  margin-top: $leading;
+  margin-bottom: 0;
+  line-height: 2.5rem;
+  font-size: 1.75rem;
+  font-weight: 200;
+  color: $unit-grey-dark;
+}
+
+.text--small {
+  font-size: $scale * .75rem;
+}
+
+// Position
+// Hug the block above you
+.text--hug {
+  margin-top: 0;
+}

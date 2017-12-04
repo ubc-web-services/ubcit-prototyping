@@ -1,0 +1,95 @@
+// -----------------------------------------------------------------------------
+// This file contains all default application-wide Sass and CSS3 variables.
+// -----------------------------------------------------------------------------
+/// Namespace for prefixing styles
+/// Usage - add a unique prefix here, such as 'ubc-'. This will be prepended to your styles. For example, the class 'grid' would become 'ubc-grid'. It is left blank by default.
+/// @type String
+$namespace: '' !default;
+/// Regular font family
+/// @type List
+$text-font-stack: 'Open Sans',
+'Helvetica Neue Light',
+'Helvetica Neue',
+'Helvetica',
+'Arial',
+sans-serif !default;
+/// Code (monospace) font family
+/// @type List
+$code-font-stack: 'Courier New',
+'DejaVu Sans Mono',
+'Bitstream Vera Sans Mono',
+'Monaco',
+monospace !default;
+// Type Variables
+$base-font-size: 16 !default; // as an integer. We convert the unit later. The default will result in 16px on desktop
+$base-line-height: 1.5 !default; // as an integer. Defines how high the line height is as a multiple of font size.
+$leading: $base-line-height * 1rem !default; // multiply the line height and add a unit. Defaults to rem.
+$default-typeface: sans-serif !default;
+$alternate-typeface: sans-serif !default;
+// TYPE SCALES:
+// 1.067 Minor Second
+// 1.125 Major Second
+// 1.200 Minor Third
+// 1.250 Major Third
+// 1.333 Perfect Fourth
+// 1.414 Augmented Fourth
+// 1.500 Perfect Fifth
+// 1.618 Golden Ratio
+$scale: 1.25 !default;
+// Preference is given to HSLA format
+// Online color converter: https://www.w3schools.com/colors/colors_converter.asp
+/// Copy text color
+/// @type Color
+$text-color: hsla(0, 0%, 13%, 1) !default;
+/// Main brand color
+/// @type Color
+//$brand-color: var(--brand-color) !default;
+/// Light grey
+/// @type Color
+// $light-grey: hsla(0, 0%, 93%, 1) !default;
+/// Medium grey
+/// @type Color
+// $mid-grey: hsla(0, 0%, 60%, 1) !default;
+/// Dark grey
+/// @type Color
+// $dark-grey: hsla(0, 0%, 27%, 1) !default;
+/// Container's maximum width
+/// @type Length
+// $max-width: 1180px !default;
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+// $breakpoints: ( 'sm': 576px, 'md': 768px, 'lg': 992px, 'xl': 1200px, ) !default;
+$breakpoint--sm: 576px;
+$breakpoint--md: 768px;
+$breakpoint--lg: 992px;
+$breakpoint--xl: 1200px;
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///   $base-url: 'http://cdn.example.com/assets/';
+// $base-url: '/assets/' !default;
+/// CSS Variables
+/// Added here so we are able to use them throughout the cascade.
+// https://github.com/sasstools/sass-lint/issues/877
+// ugly hack to get around sass-lint not understanding css variables.
+
+/*
+:root {
+  #{--unit-red}: #B22029;
+  #{--ubc-blue}: #002145;
+  #{--unit-grey-dark}: #5B6267;
+  #{--unit-grey}: #7D868C;
+  #{--unit-grey-light}: #D6D6D8;
+  #{--unit-accentr}: #90C9CB;
+  #{--unit-accent-dark}: #454545;
+}
+*/
+
+$unit-red: #B22029;
+$ubc-blue: #002145;
+$unit-grey-dark: #5B6267;
+$unit-grey: #7D868C;
+$unit-grey-light: #D6D6D8;
+$unit-accent: #90C9CB;
+$unit-accent-dark: #454545;

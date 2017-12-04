@@ -1,0 +1,111 @@
+{% extends "layouts/default.twig" %}
+{% set title = "Components Page" %}
+{% set pageTitle = "Sample Title" %}
+{% set pageTeaser = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor." %}
+{% set pageIntro = "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." %}
+
+{% block content %}
+<div class="page-title"><h1 class="container mx-auto">SBQMI Web Styles</h1></div>
+
+<h3 class="uppercase">Colours</h3>
+<hr />
+<section class="container mx-auto p-4">
+  {% include "components/colors.twig" %}
+</section>
+
+<h3 class="uppercase">Typography</h3>
+<hr />
+<section class="container mx-auto p-4">
+  {% include "components/type.twig" %}
+</section>
+
+<h3 class="uppercase">SVG Icons</h3>
+<hr />
+<section class="container mx-auto p-4">
+  {% include "components/icons.twig" %}
+</section>
+
+<h3 class="uppercase">Navigation: Subnavigation</h3>
+<hr />
+<section class="container mx-auto p-4">
+  {% include "components/subnavigation.twig" %}
+</section>
+
+<h3 class="uppercase">Navigation: Breadcrumbs</h3>
+<hr />
+<section class="container mx-auto p-4">
+  {% include "components/breadcrumbs.twig" %}
+</section>
+
+<h3 class="uppercase">Buttons</h3>
+<hr />
+<section class="container mx-auto p-4">
+  {% include "components/buttons.twig" %}
+</section>
+
+<h3 class="uppercase">Tables</h3>
+<hr />
+<section class="container mx-auto p-4">
+  {% include "components/tables.twig" %}
+</section>
+
+<h3 class="uppercase">Featured</h3>
+<hr />
+<section class="container mx-auto p-4">
+{% include "components/featured.twig" %}
+</section>
+
+<h3 class="uppercase">Featured: Homepage</h3>
+<hr />
+{% include "components/featured-home.twig" %}
+
+
+<h3 class="uppercase">Teasers: Default Cards</h3>
+<hr />
+<section class="container mx-auto p-4">
+  {% include "components/cards-default.twig" %}
+</section>
+
+<h3 class="uppercase">Teasers: Featured Cards</h3>
+<hr />
+<section class="container mx-auto p-4">
+  {% include "components/cards-featured.twig" %}
+</section>
+
+<h3 class="uppercase">Teasers: Small Cards</h3>
+<hr />
+<section class="container mx-auto p-4">
+  {% include "components/cards-small.twig" %}
+</section>
+
+<h3 class="uppercase">Teasers: Mini</h3>
+<hr />
+<section class="container mx-auto p-4">
+  {% include "components/teasers-mini.twig" %}
+</section>
+
+<h3 class="uppercase">Teasers: Cards, Home</h3>
+<hr />
+<section class="container mx-auto">
+  {% include "components/cards-home.twig" %}
+</section>
+
+<h3 class="uppercase">Stats: Home</h3>
+<hr />
+<section class="container mx-auto p-4" id="test">
+  {% include "components/stats-home.twig" %}
+</section>
+
+<h3 class="uppercase">Partners: Home</h3>
+<hr />
+<section class="container mx-auto p-4">
+  {% include "components/partners.twig" %}
+</section>
+
+<h3 class="uppercase">Supporting Content</h3>
+<hr />
+<section class="container mx-auto p-4">
+  {% include "components/supporting.twig" %}
+</section>
+
+{% endblock %}
