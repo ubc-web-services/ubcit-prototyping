@@ -7,8 +7,10 @@
 }
 
 @media (max-width: ($breakpoint--md - 1)) {
-  .responsive-table table {
-    @apply .block .overflow-x-scroll
+  .responsive-table {
+    table {
+      @apply .block .overflow-x-scroll
+    }
   }
 }
 

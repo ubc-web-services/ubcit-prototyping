@@ -1,11 +1,13 @@
 {% extends "layouts/default.twig" %}
 {% set title = "Components Page" %}
-{% set pageTitle = "Sample Title" %}
+{% set pageTitle = "SBQMI Web Styles" %}
 {% set pageTeaser = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor." %}
 {% set pageIntro = "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." %}
 
 {% block content %}
-<div class="page-title"><h1 class="container mx-auto">SBQMI Web Styles</h1></div>
+<div class="page-title">
+  <h1 class="leading-tight text-xl mt-0 container mx-auto md--text-5xl uppercase">{{ pageTitle }}</h1>
+</div>
 
 <h3 class="uppercase">Colours</h3>
 <hr />
@@ -59,6 +61,11 @@
 <hr />
 {% include "components/featured-home.twig" %}
 
+<h3 class="uppercase">Featured: Image</h3>
+<hr />
+<section class="container mx-auto p-4">
+  {% include "components/featured-image.twig" %}
+</section>
 
 <h3 class="uppercase">Teasers: Default Cards</h3>
 <hr />
@@ -84,6 +91,12 @@
   {% include "components/teasers-mini.twig" %}
 </section>
 
+<h3 class="uppercase">Teasers: Profiles</h3>
+<hr />
+<section class="container mx-auto p-4">
+  {% include "components/cards-profiles.twig" %}
+</section>
+
 <h3 class="uppercase">Teasers: Cards, Home</h3>
 <hr />
 <section class="container mx-auto">
@@ -106,6 +119,12 @@
 <hr />
 <section class="container mx-auto p-4">
   {% include "components/supporting.twig" %}
+</section>
+
+<h3 class="uppercase">Forms</h3>
+<hr />
+<section class="container mx-auto p-4">
+  {% include "components/forms.twig" %}
 </section>
 
 {% endblock %}

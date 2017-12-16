@@ -1,0 +1,33 @@
+{% extends "layouts/default.twig" %}
+{% set title = "Students" %}
+{% set pageTitle = "Students" %}
+{% set pageTeaser = "Test the Most Promising Ideas<br/>
+Give New Solutions to the World" %}
+{% set pageIntro = "Our student programs are positioning Canada for continued leadership in quantum materials by giving undergraduate and graduate students opportunities to learn from experts and acquire meaningful research experience." %}
+
+{% block content %}
+<nav class="nav-breadcrumbs text-xs hidden md--block container mx-auto p-4">
+  <a href="#" class="text-unit-grey no-underline hover--underline piped piped--grey">Home</a>
+  <a href="#" class="text-unit-grey no-underline hover--underline piped piped--grey">Path Title</a>
+  <a href="#" class="text-unit-red no-underline">{{ title }}</a>
+</nav>
+
+<div class="page-title">
+  <h1 class="leading-tight text-xl mt-0 container mx-auto md--text-5xl uppercase">{{ pageTitle }}</h1>
+</div>
+
+<section class="container mx-auto p-4">
+  {% include "components/featured.twig" %}
+</section>
+
+<main class="container mx-auto px-4 py-12">
+  <p class="text-center text-lg md--text-3xl font-light leading-normal">{{ pageIntro }}</p>
+</main>
+
+{% include "components/tabs.twig" %}
+
+<section class="container mx-auto p-4">
+  {% include "components/cards-featured--students.twig" %}
+</section>
+
+{% endblock %}

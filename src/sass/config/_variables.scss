@@ -1,10 +1,6 @@
 // -----------------------------------------------------------------------------
 // This file contains all default application-wide Sass and CSS3 variables.
 // -----------------------------------------------------------------------------
-/// Namespace for prefixing styles
-/// Usage - add a unique prefix here, such as 'ubc-'. This will be prepended to your styles. For example, the class 'grid' would become 'ubc-grid'. It is left blank by default.
-/// @type String
-$namespace: '' !default;
 /// Regular font family
 /// @type List
 $text-font-stack: 'Open Sans',
@@ -21,6 +17,7 @@ $code-font-stack: 'Courier New',
 'Monaco',
 monospace !default;
 // Type Variables
+// From Typebase.scss v0.1.0 | https://github.com/devinhunt/typebase.css/blob/master/src/typebase.scss
 $base-font-size: 16 !default; // as an integer. We convert the unit later. The default will result in 16px on desktop
 $base-line-height: 1.5 !default; // as an integer. Defines how high the line height is as a multiple of font size.
 $leading: $base-line-height * 1rem !default; // multiply the line height and add a unit. Defaults to rem.
@@ -35,61 +32,68 @@ $alternate-typeface: sans-serif !default;
 // 1.414 Augmented Fourth
 // 1.500 Perfect Fifth
 // 1.618 Golden Ratio
-$scale: 1.25 !default;
+$scale: 1.2;
+// TYPE WEIGHTS
+$h1-weight: 300;
+$h2-weight: 300;
+$h3-weight: 600;
+$h4-weight: 600;
+$h5-weight: 600;
+$h6-weight: 600;
 // Preference is given to HSLA format
 // Online color converter: https://www.w3schools.com/colors/colors_converter.asp
 /// Copy text color
 /// @type Color
 $text-color: hsla(0, 0%, 13%, 1) !default;
-/// Main brand color
-/// @type Color
-//$brand-color: var(--brand-color) !default;
-/// Light grey
-/// @type Color
-// $light-grey: hsla(0, 0%, 93%, 1) !default;
-/// Medium grey
-/// @type Color
-// $mid-grey: hsla(0, 0%, 60%, 1) !default;
-/// Dark grey
-/// @type Color
-// $dark-grey: hsla(0, 0%, 27%, 1) !default;
-/// Container's maximum width
-/// @type Length
-// $max-width: 1180px !default;
+$white: #fff;
+$unit-red: #b22029;
+$ubc-blue: #002145;
+$unit-grey-dark: #5b6267;
+$unit-grey: #7d868c;
+$unit-grey-light: #d6d6d8;
+$unit-accent: #90c9cb;
+$unit-accent-dark: #454545;
+$box-shadow-color: rgba(0, 0, 0, .1);
+$image-overlay-bg-colour: rgba(69, 69, 69, 1);
+$image-overlay-screen-colour: rgba(125, 134, 140, .2);
+$page-title-bg-mobile: rgba(255, 255, 255, .5);
+$button-tranparent-hover-bg-colour: rgba(255, 255, 255, .2);
+
+// Gradient Colours
+// GRADIENTS
+$gradient-grey-transparent: rgba(69, 69, 69, 0);
+$gradient-grey-intermediate: rgba(69, 69, 69, .6);
+$gradient-grey-intermediate-dark: rgba(69, 69, 69, .8);
+$gradient-grey-opaque: rgba(69, 69, 69, 1);
+$gradient-grey-lighter-opaque: rgba(125, 134, 140, 1);
+$gradient-grey-lighter-intermediate: rgba(125, 134, 140, .5);
+
+// Card Background Colours
+$card-red-background-color: #f4eeee;
+$card-grey-background-color: #f5f5f6;
+$card-blue-background-color: #ecedf0;
+
 /// Breakpoints map
-/// @prop {String} keys - Keys are identifiers mapped to a given length
-/// @prop {Map} values - Values are actual breakpoints expressed in pixels
-// $breakpoints: ( 'sm': 576px, 'md': 768px, 'lg': 992px, 'xl': 1200px, ) !default;
 $breakpoint--sm: 576px;
 $breakpoint--md: 768px;
 $breakpoint--lg: 992px;
 $breakpoint--xl: 1200px;
-/// Relative or absolute URL where all assets are served from
-/// @type String
-/// @example scss - When using a CDN
-///   $base-url: 'http://cdn.example.com/assets/';
-// $base-url: '/assets/' !default;
+
 /// CSS Variables
 /// Added here so we are able to use them throughout the cascade.
 // https://github.com/sasstools/sass-lint/issues/877
 // ugly hack to get around sass-lint not understanding css variables.
 
-/*
-:root {
-  #{--unit-red}: #B22029;
-  #{--ubc-blue}: #002145;
-  #{--unit-grey-dark}: #5B6267;
-  #{--unit-grey}: #7D868C;
-  #{--unit-grey-light}: #D6D6D8;
-  #{--unit-accentr}: #90C9CB;
-  #{--unit-accent-dark}: #454545;
-}
-*/
+// :root {
+//   #{--unit-red}: #b22029;
+//   #{--ubc-blue}: #002145;
+//   #{--unit-grey-dark}: #5b6267;
+//   #{--unit-grey}: #7d868c;
+//   #{--unit-grey-light}: #d6d6d8;
+//   #{--unit-accentr}: #90c9cb;
+//   #{--unit-accent-dark}: #454545;
+// }
 
-$unit-red: #B22029;
-$ubc-blue: #002145;
-$unit-grey-dark: #5B6267;
-$unit-grey: #7D868C;
-$unit-grey-light: #D6D6D8;
-$unit-accent: #90C9CB;
-$unit-accent-dark: #454545;
+
+
+

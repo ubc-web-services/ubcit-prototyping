@@ -24,14 +24,18 @@
 .navlink--primary,
 .navlink--secondary {
   @apply .no-underline .block .px-4 .py-2 .border-b .text-sm .relative;
+
   &:hover {
     @apply .no-underline .border-unit-red .bg-unit-red;
   }
+
   &-nested {
     @apply .no-underline .block .text-unit-grey .px-4 .py-2 .border-b .border-unit-grey .text-xs;
+
     &:hover {
       @apply .no-underline .text-white .border-unit-red .bg-unit-red;
     }
+
     &.is-active {
       @apply .border-unit-red .bg-unit-red;
     }
@@ -39,16 +43,26 @@
 }
 
 .navlink--secondary {
-  @apply .text-base .text-unit-grey .border-unit-grey;
+  @apply .text-base .bg-white .text-unit-grey .border-unit-grey;
+
   &:hover {
-    color: white;
+    color: $white;
+
     &::after {
-      color: white;
+      color: $white;
     }
   }
+
   &-nested {
+
     &:hover {
       @apply .bg-unit-grey .border-unit-grey;
+    }
+  }
+
+  &.active-trail {
+    +.children {
+      display: block;
     }
   }
 }
@@ -56,17 +70,21 @@
 .navlink--secondary,
 .navlink--secondary-nested {
   position: relative;
+
   .subnav-arrow {
+    display: inline-block;
+    position: absolute;
     top: .25rem;
     right: 1rem;
     transition: transform .125s ease;
-    display: inline-block;
-    position: absolute;
-    height: 2rem;
     width: 2rem;
+    height: 2rem;
   }
-  &:hover .subnav-arrow {
-    transform: translateX(.5rem);
+
+  &:hover {
+    .subnav-arrow {
+      transform: translateX(.5rem);
+    }
   }
 }
 
@@ -75,35 +93,37 @@
   display: none;
 }
 
-.navlink--secondary.active-trail+.children {
-  display: block;
-}
-
 .navlink--primary {
   @apply .text-white .border-white;
+
   &.is-active {
     @apply .border-unit-red .bg-unit-red;
   }
+
   &.nav-trigger {
     padding-right: 4em;
-  }
-  &.nav-trigger::after {
-    position: absolute;
-    display: block;
-    content: '';
-    height: 100%;
-    right: 0;
-    top: 0;
-    width: 3em;
-    background-image: url('../images/svg/chevron-white-01.svg');
-    background-repeat: no-repeat;
-    background-position-x: left;
-    background-position-y: center;
-    background-size: 24px;
-  }
-  &.nav-trigger.is-active::after {
-    transform: rotate(180deg);
-    background-position-x: right;
+
+    &::after {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-image: url('../img/svg/chevron-white-01.svg');
+      background-repeat: no-repeat;
+      background-size: 24px;
+      width: 3em;
+      height: 100%;
+      content: '';
+      background-position-x: left;
+      background-position-y: center;
+    }
+
+    &.is-active {
+      &::after {
+        transform: rotate(180deg);
+        background-position-x: right;
+      }
+    }
   }
 }
 
@@ -120,38 +140,45 @@
 .piped {
   position: relative;
   padding-right: 3em;
+
   &::after {
-    position: absolute;
-    content: '|';
     display: block;
+    position: absolute;
     top: 0;
     right: 1em;
+    content: '|';
   }
-  &--grey::after {
-    color: $unit-grey;
+
+  &--grey {
+    &::after {
+      color: $unit-grey;
+    }
   }
 }
 
 .link--more {
-  position: relative;
   display: inline-block;
-  color: $unit-grey-dark;
-  text-decoration: none;
+  position: relative;
   padding-right: 2em;
+  text-decoration: none;
+  color: $unit-grey-dark;
+
   &:hover {
     color: $unit-red;
+
+    &::after {
+      color: $unit-grey-dark;
+    }
   }
+
   &::after {
-    position: absolute;
-    content: '> >';
     display: block;
+    position: absolute;
     top: 0;
     right: 0;
     width: 1.5rem;
     height: 1.5rem;
     color: $unit-red;
-  }
-  &:hover::after {
-    color: $unit-grey-dark;
+    content: '> >';
   }
 }

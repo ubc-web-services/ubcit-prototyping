@@ -1,0 +1,16 @@
+<div class="tabs">
+  <ul class="tab-links list-reset text-center w-full flex md--block">
+    <li class="is-active w-1/2 md--w-auto"><a href="#tab1" class="uppercase md--inline-block">Prospective Students</a></li>
+    <li class="w-1/2 md--w-auto"><a href="#tab2" class="uppercase md--inline-block">Current Students</a></li>
+  </ul>
+
+  <div class="tab-content container mx-auto">
+    <div id="tab1" class="tab is-active" style="display: block;">
+      {% include "cards-small--students1.twig" %}
+    </div>
+
+    <div id="tab2" class="tab" style="display: none;">
+      {% include "cards-small--students2.twig" %}
+    </div>
+  </div>
+</div>

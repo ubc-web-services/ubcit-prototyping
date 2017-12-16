@@ -29,8 +29,10 @@ svg {
   fill: currentColor;
 }
 
-[tabindex="-1"]:focus {
-  outline: none !important
+[tabindex='-1'] {
+  &:focus {
+    outline: none !important;
+  }
 }
 
 [hidden] {

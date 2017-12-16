@@ -56,13 +56,35 @@ jQuery('.nav-trigger').click(function(e) {
 
   var btn = jQuery('.primary-nav--trigger');
   btn.html(btn.hasClass('is-active') ?
-    'Menu <svg role="presentation" class="svg-icon inline-block h-8 w-8 stroke-white absolute pin-r close-icon" style="top: -.5em"><use xlink:href="#icon-close"/></svg>':
-    'Menu <svg role="presentation" class="svg-icon inline-block h-8 w-8 stroke-white absolute pin-r hamburger-icon"><use xlink:href="#icon-hamburger"/></svg>'
+    'Menu <svg role="presentation" class="svg-icon inline-block h-6 w-6 absolute close-icon" style="top: -.25em;right:.25em"><use xlink:href="#icon-close"/></svg>':
+    'Menu <svg role="presentation" class="svg-icon inline-block h-8 w-8 absolute pin-r hamburger-icon"><use xlink:href="#icon-hamburger"/></svg>'
   );
 });
 
 jQuery('.primary-nav--dropdown').on('blur', function () {
     jQuery(this).hide().addProp('hidden');
+});
+
+jQuery('.filter-trigger').click(function(e) {
+    e.preventDefault();
+    var newstate = jQuery(this).attr('data-state') ^ 1,
+                      text = newstate ? "Open" : "Close";
+                      icon = newstate ? "hamburger" : "close";
+                      position = newstate ? "mr-2 mt-4" : "mr-2";
+    jQuery(this).siblings('form').slideToggle(120);
+    jQuery(this).html('<a class="form-submit unit-button block w-full text-center unit-button--grey relative md--hidden">' + text + ' Filters <svg role="presentation" class="svg-icon inline-block h-6 w-6 absolute pin-r ' + icon + '-icon ' + position + '"><use xlink:href="#icon-' + icon + '"/></svg></a>');
+    // update the state on the expandcollapse trigger
+    jQuery(this).attr('data-state', newstate);
+});
+
+// Standard
+jQuery('.tabs .tab-links a').on('click', function(e)  {
+  var currentAttrValue = jQuery(this).attr('href');
+  // Show/Hide Tabs
+  jQuery('.tabs ' + currentAttrValue).show().siblings().hide();
+  // Change/remove current tab to active
+  jQuery(this).parent('li').addClass('is-active').siblings().removeClass('is-active');
+  e.preventDefault();
 });
 
 jQuery("a.anchor-link[href^='#']").on('click', function(e) {

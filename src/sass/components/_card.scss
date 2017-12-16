@@ -3,61 +3,81 @@
 // -----------------------------------------------------------------------------
 // CARDS
 .card-small__heading {
-  padding: 1rem 4.25rem 1rem 1rem;
+  padding: .6rem 4.25rem .5rem 1rem;
+  height: 4.25rem;
+
   &::before {
-    position: absolute;
     display: block;
-    height: 4.25rem;
-    content: '';
+    position: absolute;
     bottom: 0;
     left: 0;
-    width: 100%;
     background-color: $unit-accent-dark;
-  }
-  &::after {
-    position: absolute;
-    display: block;
-    height: 2.5rem;
+    width: 100%;
+    height: 4.25rem;
     content: '';
+  }
+
+  &::after {
+    display: block;
+    position: absolute;
     bottom: 4.25rem;
     left: 0;
+    background: linear-gradient(to bottom, $gradient-grey-transparent 0%, $gradient-grey-opaque 100%);
     width: 100%;
-    background: linear-gradient(to bottom, rgba(69, 69, 69, 0) 0%, rgba(69, 69, 69, 1) 100%);
+    height: 2.5rem;
+    content: '';
+  }
+}
+
+.card-small__heading--alternate {
+  &::after {
+    display: none;
   }
 }
 
 .card-small__reveal {
+  transition: opacity .15s ease-out, transform .15s ease-out, background-color .15s ease-out;
   opacity: 0;
-  transition: opacity 0.15s ease-out, transform 0.15s ease-out, background-color 0.15s ease-out;
 }
 
-.card-small__content {
-  transition: opacity 0.15s ease-out, background-color 0.15s ease-out;
+.card-small__content,
+.card-small__content--dark {
+  transition: opacity .15s ease-out, background-color .15s ease-out;
 }
 
-.card-small:hover {
-  .card-small__reveal {
-    opacity: 1;
-    transition: opacity 0.15s ease-out, transform 0.15s ease-out, background-color 0.15s ease-out;
-    transform: translateY(1rem);
-  }
-  .card-small__content {
-    opacity: 1;
-    background-color: rgba(125, 134, 140, .5);
+.card-small {
+  &:hover {
+    .card-small__reveal {
+      transform: translateY(1rem);
+      transition: opacity .15s ease-out, transform .15s ease-out, background-color .15s ease-out;
+      opacity: 1;
+    }
+
+    .card-small__content {
+      opacity: 1;
+      background-color: $gradient-grey-lighter-intermediate;
+    }
+
+    .card-small__content--dark {
+      opacity: 1;
+      background-color: $gradient-grey-intermediate-dark;
+    }
   }
 }
+
 
 .card__image {
   position: relative;
+
   &::after {
-    position: absolute;
-    content: '';
     display: block;
+    position: absolute;
     top: 0;
     left: 0;
-    height: 100%;
+    background: linear-gradient(to bottom, $gradient-grey-opaque 0%, $gradient-grey-transparent 30%);
     width: 100%;
-    background: linear-gradient(to bottom, rgba(69, 69, 69, 1) 0%, rgba(69, 69, 69, 0) 30%);
+    height: 100%;
+    content: '';
   }
 }
 
@@ -70,33 +90,33 @@
 }
 
 .card__background-image--red {
-  background-image: url('../images/bg-card-texture_1.png');
+  background-image: url('../img/bg-card-texture_1.png');
   background-size: cover;
 }
 
 .card--bg-color-red {
   @apply .border-b-4 .border-unit-red;
-  background-color: #f4eeee;
+  background-color: $card-red-background-color;
 }
 
 .card__background-image--grey {
-  background-image: url('../images/bg-card-texture_2.png');
+  background-image: url('../img/bg-card-texture_2.png');
   background-size: cover;
 }
 
 .card--bg-color-grey {
   @apply .border-b-4 .border-unit-grey;
-  background-color: #f5f5f6;
+  background-color: $card-grey-background-color;
 }
 
 .card__background-image--blue {
-  background-image: url('../images/bg-card-texture_3.png');
+  background-image: url('../img/bg-card-texture_3.png');
   background-size: cover;
 }
 
 .card--bg-color-blue {
   @apply .border-b-4 .border-ubc-blue;
-  background-color: #ecedf0;
+  background-color: $card-blue-background-color;
 }
 
 .card--home {

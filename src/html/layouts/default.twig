@@ -5,10 +5,11 @@
     <title>{{ title }}</title>
     {% include "../includes/head.twig" %}
 </head>
-<body class="sbqmi-texture">
+<body>
     {% include "../includes/header.twig" %}
     {% block content %}{% endblock %}
     {% include "../includes/footer.twig" %}
+    <div class="sbqmi-texture"></div>
     {% include "../includes/scripts.twig" %}
 </body>
 </html>
