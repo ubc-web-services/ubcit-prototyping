@@ -1,0 +1,33 @@
+{% extends "layouts/default.twig" %}
+{% set title = "homepage" %}
+{% set pageTitle = "Pursue Compelling Questions" %}
+{% set pageTeaser = "Test the Most Promising Ideas<br/>
+Give New Solutions to the World" %}
+{% set pageIntro = "Our world-renowned team of researchers are dedicated to accelerating scientific breakthroughs, push known boundaries, and create fundamentally new functionalities. Work that is supported by strong international collaborations, including formal agreements with the Max Planck Society of Germany and the University of Tokyo." %}
+
+{% block content %}
+{% include "components/featured-home.twig" %}
+
+<main class="container mx-auto pt-16 pb-8 px-4">
+  <p class="text-center text-lg md--text-2xl leading-normal">{{ pageIntro }}</p>
+</main>
+
+<section class="container mx-auto p-4" id="test">
+  {% include "components/cards-home.twig" %}
+</section>
+<section class="container mx-auto p-4">
+  {% include "components/stats-home.twig" %}
+</section>
+<section class="container mx-auto px-4 pb-8 pt-16">
+  {% include "components/cards-featured--home.twig" %}
+</section>
+<section class="container mx-auto px-4 pb-8 pt-16">
+  {% include "components/teasers-mini.twig" %}
+</section>
+
+<section class="container mx-auto p-4">
+  {% include "components/partners.twig" %}
+</section>
+
+
+{% endblock %}

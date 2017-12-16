@@ -1,0 +1,25 @@
+{% extends "layouts/default.twig" %}
+{% set title = "Site Styles" %}
+{% set pageTitle = "Site Web Styles" %}
+{% set pageTeaser = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor." %}
+{% set pageIntro = "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." %}
+
+{% block content %}
+<div class="page-title">
+  <h1 class="leading-tight text-xl mt-0 container mx-auto md--text-5xl uppercase">{{ pageTitle }}</h1>
+</div>
+
+<section class="container mx-auto p-4">
+  <p>* Note: these pages have not been fully tested for cross-browser compatability, so display issues may be present. Please use current versions of Chrome or Safari at this time.</p>
+  <ul class="list-reset">
+    <li class="block bg-unit-red"><h2 class="heading-five text-white uppercase p-4 mt-0">Prototype pages</h2></li>
+    <li class="block border border-unit-grey-light border-t-0"><a href="components.html" class="block p-4 no-underline hover--underline text-unit-red hover--unit-grey">Components Page (contains a list of all web styles).</a></li>
+    <li class="block border border-unit-grey-light border-t-0"><a href="home.html" class="block p-4 no-underline hover--underline text-unit-red hover--unit-grey">Home Page</a></li>
+    <li class="block border border-unit-grey-light border-t-0"><a href="research-area.html" class="block p-4 no-underline hover--underline text-unit-red hover--unit-grey">Research Area Page</a></li>
+    <li class="block border border-unit-grey-light border-t-0"><a href="students.html" class="block p-4 no-underline hover--underline text-unit-red hover--unit-grey">Students Page</a></li>
+    <li class="block border border-unit-grey-light border-t-0"><a href="events.html" class="block p-4 no-underline hover--underline text-unit-red hover--unit-grey">Events Page</a></li>
+    <li class="block border border-unit-grey-light border-t-0"><a href="page.html" class="block p-4 no-underline hover--underline text-unit-red hover--unit-grey">Basic Page</a></li>
+  </ul>
+</section>
+
+{% endblock %}

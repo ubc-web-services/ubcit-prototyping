@@ -1,0 +1,98 @@
+// -----------------------------------------------------------------------------
+// This file contains basic form styles.
+// -----------------------------------------------------------------------------
+button,
+input,
+optgroup,
+select,
+textarea {
+  line-height: 1.5rem;
+}
+
+input {
+  margin: .5rem 0;
+}
+
+label {
+  font-weight: 400;
+}
+
+select {
+  border: 1px solid $unit-grey;
+  border-radius: 0;
+  background: none;
+  padding: .5rem 1rem;
+  color: $unit-grey;
+  -webkit-appearance: initial;
+}
+
+input[type=number],
+input[type=search],
+input[type=date],
+input[type=time],
+input[type=datetime-local],
+input[type=month],
+input[type=text],
+input[type=password],
+input[type=datetime],
+input[type=week],
+input[type=email],
+input[type=url],
+input[type=tel],
+input[type=color],
+textarea {
+  margin-top: .5rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid $unit-grey;
+  padding: .5rem;
+  max-width: 100%;
+  color: $unit-grey;
+}
+
+.form-type-select {
+  display: inline-block;
+  position: relative;
+  margin-top: .5rem;
+  margin-bottom: 1.5rem;
+  max-width: 100%;
+  overflow: hidden;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: $unit-grey;
+    background-image: url('../img/svg/chevron-white-01.svg');
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    width: 40px;
+    height: 100%;
+    color: $white;
+    content: '';
+    background-position-x: center;
+    background-position-y: center;
+    pointer-events: none;
+  }
+}
+
+.form-type-checkbox,
+.form-type-radio {
+  @apply .flex .items-center;
+
+  input {
+    @apply .flex-order-1;
+  }
+
+  label {
+    @apply .flex-order-2;
+    margin-left: 1rem;
+  }
+}
+
+// always show form filters on desktop
+@media (min-width: $breakpoint--md) {
+  form,
+  .views-exposed-form {
+    display: block !important;
+  }
+}

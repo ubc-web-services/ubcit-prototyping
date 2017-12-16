@@ -1,0 +1,69 @@
+// Tailwind's base styles
+//See: https://github.com/tailwindcss/tailwindcss/issues/53#issuecomment-341413622 */
+@tailwind preflight;
+
+// Add custom styles */
+@import 'config/variables',
+'config/functions';
+@import 'base/base',
+'base/forms',
+'base/typography';
+@import 'components/button',
+'components/table',
+'components/card',
+'components/tabs',
+'components/navigation';
+@import 'theme/default';
+
+// Injects all of Tailwind's utility classes
+//See: https://github.com/tailwindcss/tailwindcss/issues/53#issuecomment-341413622 */
+@tailwind utilities;
+
+// Custom utilities you need that don't come out of the box with Tailwind. /
+
+// TRANSFORMATION UTILITIES
+.rotate-90 {
+  transform: rotate(90deg);
+}
+
+.rotate-180 {
+  transform: rotate(180deg);
+}
+
+.rotate-270 {
+  transform: rotate(270deg);
+}
+
+// Add tailwind responsive directive to generate repsonsive utility classes
+@responsive {
+
+  // SHADOWS
+  .shadow-inside {
+    box-shadow: inset 0 0 2px 2px $box-shadow-color;
+  }
+
+  // FLEXBOX ORDER
+  .flex-order-1 {
+    order: 1;
+  }
+
+  .flex-order-2 {
+    order: 2;
+  }
+
+  .flex-order-3 {
+    order: 3;
+  }
+
+  .flex-order-4 {
+    order: 4;
+  }
+
+  .flex-order-5 {
+    order: 5;
+  }
+
+  .flex-order-6 {
+    order: 6;
+  }
+}

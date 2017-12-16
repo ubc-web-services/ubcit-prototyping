@@ -1,0 +1,28 @@
+{
+  "name": "sbqmi",
+  "version": "1.0.0-alpha",
+  "description": "SBQMI prototype",
+  "main": "index.jade",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "James O'Toole",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-imagemin": "^4.0.0",
+    "gulp-postcss": "^7.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sass-lint": "^1.3.4",
+    "gulp-sourcemaps": "^2.6.1",
+    "gulp-twig": "^1.1.1",
+    "purgecss": "^0.13.1"
+  },
+  "dependencies": {
+    "gulp-purgecss": "^0.13.0",
+    "tailwindcss": "^0.3.0"
+  }
+}
