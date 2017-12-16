@@ -83,17 +83,6 @@ li {
       position: relative;
       background-color: $unit-red;
 
-      &::before {
-        @apply .absolute .pin .block .w-full .h-full;
-        opacity: .2;
-        background-image: url('../img/svg/texture-new-01-01.svg');
-        background-repeat: no-repeat;
-        background-size: 150px;
-        content: '';
-        background-position-x: left;
-        background-position-y: -80px;
-      }
-
       a,
       a:hover {
         color: $white;
