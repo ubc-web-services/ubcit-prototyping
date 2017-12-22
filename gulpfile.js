@@ -38,7 +38,8 @@ var paths = {
  ***************************************/
 // full list of rules at: https://github.com/sasstools/sass-lint/tree/develop/docs/rules
 gulp.task('lint', function() {
-  return gulp.src(paths.src.sass + '**/*.s+(a|c)ss')
+  var stream = gulp
+    .src(paths.src.sass + '**/*.s+(a|c)ss')
     .pipe(sasslint({
       options: {
         formatter: 'stylish',
@@ -51,19 +52,7 @@ gulp.task('lint', function() {
     }))
     .pipe(sasslint.format())
     .pipe(sasslint.failOnError())
-});
-
-/***************************************
- *
- *	Create new html builds, compiling to build and dist directories
- *  Run command "gulp html" to start
- *
- ***************************************/
-gulp.task('html', function() {
-  return gulp.src(paths.src.html + '*.twig')
-    .pipe(twig())
-    .pipe(gulp.dest(paths.build.html))
-    .pipe(gulp.dest(paths.dist.html))
+  return stream;
 });
 
 /***************************************
@@ -74,7 +63,8 @@ gulp.task('html', function() {
  *
  ***************************************/
 gulp.task('images', function() {
-	return gulp.src(paths.src.img + '**/*')
+  var stream = gulp
+    .src(paths.src.img + '**/*')
 		.pipe(imagemin([
         imagemin.gifsicle({interlaced: true}),
         imagemin.jpegtran({progressive: true}),
@@ -84,7 +74,23 @@ gulp.task('images', function() {
         verbose: true
     }))
     .pipe(gulp.dest(paths.build.img))
-		.pipe(gulp.dest(paths.dist.img))
+    .pipe(gulp.dest(paths.dist.img))
+  return stream;
+});
+
+/***************************************
+ *
+ *	Create new html builds, compiling to build and dist directories
+ *  Run command "gulp html" to start
+ *
+ ***************************************/
+gulp.task('html', function() {
+  var stream = gulp
+    .src(paths.src.html + '*.twig')
+    .pipe(twig())
+    .pipe(gulp.dest(paths.build.html))
+    .pipe(gulp.dest(paths.dist.html))
+  return stream;
 });
 
 /***************************************
@@ -96,7 +102,8 @@ gulp.task('images', function() {
 gulp.task('css', function() {
   var postcss = require('gulp-postcss');
   var tailwindcss = require('tailwindcss');
-  return gulp.src(paths.src.sass + '**/styles-all.scss')
+  var stream = gulp
+    .src(paths.src.sass + '**/styles-all.scss')
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss([
@@ -109,16 +116,21 @@ gulp.task('css', function() {
     }))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(paths.build.css))
+  return stream;
 });
 
 /***************************************
  *
- *	Find new css builds and recompile
- *  Run command "gulp purgecss" to start
+ *	Run css and html compile tasks then purge unused css when complete
+ *  Note that async tasks are intentionally avoided to prevent
+ *  purging based on old css / html files
+ *  https://stackoverflow.com/questions/22824546/how-to-run-gulp-tasks-sequentially-one-after-the-other#22826429
+ *  Run command "gulp deploy" to start
  *
  ***************************************/
-gulp.task('purgecss', function() {
-  return gulp
+gulp.task('deploy', ['css', 'html'], function() {
+  var purgecss = require('gulp-purgecss')
+  var stream = gulp
     .src('build/**/*.css')
     .pipe(
       purgecss({
@@ -141,15 +153,8 @@ gulp.task('purgecss', function() {
       }
     }))
     .pipe(gulp.dest(paths.dist.css))
+  return stream;
 })
-
-/***************************************
- *
- *	Run all compile tasks
- *  Run command "gulp deploy" to start
- *
- ***************************************/
-gulp.task('deploy', ['css', 'html', 'purgecss', 'images'], function() {})
 
 /***************************************
  *
@@ -157,7 +162,7 @@ gulp.task('deploy', ['css', 'html', 'purgecss', 'images'], function() {})
  *  Run command "gulp watch" to start
  *
  ***************************************/
-gulp.task('watch', ['css', 'purgecss', 'html'], function() {
+gulp.task('watch', ['css', 'html', 'deploy' ], function() {
   gulp.watch(paths.src.sass + '/**/*.s+(a|c)ss', ['css'])
   gulp.watch(paths.src.html + '*.twig', ['html'])
 });
@@ -168,4 +173,4 @@ gulp.task('watch', ['css', 'purgecss', 'html'], function() {
  *  Run command "gulp" to start
  *
  ***************************************/
-gulp.task('default', ['css', 'purgecss', 'html', 'watch'], function() {})
+gulp.task('default', ['css', 'html', 'deploy', 'watch'], function() {})
