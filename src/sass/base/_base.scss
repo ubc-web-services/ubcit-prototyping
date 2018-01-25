@@ -43,3 +43,11 @@ a,
 button {
   transition: background-color .125s ease, color .125s ease;
 }
+
+a {
+  @apply .text-unit-red .no-underline;
+
+  &:hover {
+    @apply .text-unit-grey .underline;
+  }
+}

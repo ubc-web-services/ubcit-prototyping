@@ -20,6 +20,7 @@
     &:hover {
       background-color: $unit-grey;
       color: $white;
+      text-decoration: none;
     }
   }
 
@@ -30,6 +31,8 @@
 
     &:hover {
       background-color: darken($unit-grey, 10%);
+      color: $white;
+      text-decoration: none;
     }
   }
 
@@ -40,6 +43,8 @@
 
     &:hover {
       background-color: darken($unit-red, 10%);
+      color: $white;
+      text-decoration: none;
     }
   }
 
@@ -50,6 +55,8 @@
 
     &:hover {
       background-color: darken($ubc-blue, 10%);
+      color: $white;
+      text-decoration: none;
     }
   }
 
@@ -59,6 +66,8 @@
 
     &:hover {
       background-color: $button-tranparent-hover-bg-colour;
+      color: $white;
+      text-decoration: none;
     }
   }
 

@@ -34,9 +34,15 @@ ol {
 }
 
 blockquote {
-  margin-top: $leading;
-  margin-bottom: $leading;
-  line-height: $leading;
+  @apply .my-12 .px-12;
+  border-left: 4px solid $unit-red;
+  //line-height: 2 * $leading;
+  font-size: (1.5 * $scale) * 1rem;
+  color: $unit-grey;
+  font-weight: 300;
+  p {
+    line-height: 1.4em;
+  }
 }
 
 // Headings
@@ -103,19 +109,7 @@ h6,
   font-weight: $h6-weight;
 }
 
-// Tables
-table {
-  margin-top: $leading;
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-td,
-th {
-  padding: 0;
-  line-height: ($base-line-height * $base-font-size) - 0px;
-}
-
+// Horizontal Rule
 hr {
   margin: 2rem 0;
   border-top: 1px solid $unit-grey;
@@ -132,12 +126,21 @@ code,
 // -------------------
 // Sizes
 .text--lead {
+  @apply .text-lg .leading-normal;
   margin-top: $leading;
   margin-bottom: 0;
-  line-height: 2.5rem;
+  //line-height: 2rem;
   color: $unit-grey-dark;
-  font-size: 1.75rem;
+  //font-size: 1.25rem;
   font-weight: 200;
+}
+
+@media (min-width: $breakpoint--md) {
+  .text--lead {
+    @apply .text-3xl;
+    //line-height: 2.5rem;
+    //font-size: 1.75rem;
+  }
 }
 
 .text--small {
@@ -149,3 +152,4 @@ code,
 .text--hug {
   margin-top: 0;
 }
+

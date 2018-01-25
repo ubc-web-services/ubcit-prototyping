@@ -1,5 +1,25 @@
 // BRANDING
 @media (min-width: $breakpoint--md) {
+  .sbqmi-texture {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-image: url('../img/svg/texture-new-01-01.svg');
+    background-repeat: no-repeat;
+    background-size: 500px;
+    width: 500px;
+    height: 1000px;
+    background-position-x: left;
+    background-position-y: 4rem;
+  }
+}
+
+.sbqmi-logo {
+  background-image: url('../img/svg/logo-sbqmi2.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  //@apply .bg-white;
 }
 
 .ubc-logo {
@@ -16,6 +36,18 @@
 }
 
 @media (min-width: $breakpoint--md) {
+  .sbqmi-logo {
+    &::after {
+      @apply .absolute .block .bg-ubc-blue;
+      top: 25%;
+      right: 0;
+      width: 1px;
+      height: 50%;
+      content: '';
+    }
+  }
+
+  .sbqmi-logo,
   .ubc-logo {
     @apply .relative;
     background-size: 200px 200px;
@@ -41,6 +73,7 @@
 }
 
 @media (min-width: $breakpoint--lg) {
+  .sbqmi-logo,
   .ubc-logo {
     background-size: 240px 240px;
   }
@@ -67,6 +100,10 @@
     background-color: $image-overlay-screen-colour;
     content: '';
   }
+
+  img {
+    display: block;
+  }
 }
 
 // GRADIENTS
@@ -89,6 +126,17 @@
 // page title with texture
 .page-title {
   @apply .text-white .bg-unit-grey .p-4 .leading-tight .text-4xl .mt-0 .relative;
+
+  &::before {
+    @apply .absolute .pin .block .w-full .h-full;
+    opacity: .2;
+    background-image: url('../img/svg/texture-new-01-01.svg');
+    background-repeat: no-repeat;
+    background-size: 150px;
+    content: '';
+    background-position-x: left;
+    background-position-y: -80px;
+  }
 }
 
 @media (min-width: $breakpoint--md) {
@@ -193,4 +241,10 @@
       z-index: 2;
     }
   }
+}
+
+// CARDS
+/* purgecss ignore */
+.sbqmi-cards a:hover {
+    text-decoration: none;
 }

@@ -2,6 +2,7 @@
 // This file contains all styles related to the card component.
 // -----------------------------------------------------------------------------
 // CARDS
+
 .card-small__heading {
   padding: .6rem 4.25rem .5rem 1rem;
   height: 4.25rem;
@@ -89,34 +90,68 @@
   }
 }
 
-.card__background-image--red {
-  background-image: url('../img/bg-card-texture_1.png');
-  background-size: cover;
-}
+.md--flex .card--home {
 
-.card--bg-color-red {
-  @apply .border-b-4 .border-unit-red;
-  background-color: $card-red-background-color;
-}
+  &:nth-child(1) {
+    @apply .border-b-4 .border-unit-red;
+    background-color: $card-red-background-color;
 
-.card__background-image--grey {
-  background-image: url('../img/bg-card-texture_2.png');
-  background-size: cover;
-}
+    .flex {
+      background-size: cover;
+      background-image: url('../img/bg-card-texture_1.png');
+    }
 
-.card--bg-color-grey {
-  @apply .border-b-4 .border-unit-grey;
-  background-color: $card-grey-background-color;
-}
+    .unit-button {
+      border: 1px solid $unit-red;
+      background-color: $unit-red;
+      color: $white;
 
-.card__background-image--blue {
-  background-image: url('../img/bg-card-texture_3.png');
-  background-size: cover;
-}
+      &:hover {
+        background-color: darken($unit-red, 10%);
+        text-decoration: none;
+      }
+    }
+  }
+  &:nth-child(2) {
+    @apply .border-b-4 .border-unit-grey;
+    background-color: $card-grey-background-color;
 
-.card--bg-color-blue {
-  @apply .border-b-4 .border-ubc-blue;
-  background-color: $card-blue-background-color;
+    .flex {
+      background-size: cover;
+      background-image: url('../img/bg-card-texture_2.png');
+    }
+
+    .unit-button {
+      border: 1px solid $unit-grey;
+      background-color: $unit-grey;
+      color: $white;
+
+      &:hover {
+        background-color: darken($unit-grey, 10%);
+        text-decoration: none;
+      }
+    }
+  }
+  &:nth-child(3) {
+    @apply .border-b-4 .border-ubc-blue;
+    background-color: $card-blue-background-color;
+
+    .flex {
+      background-size: cover;
+      background-image: url('../img/bg-card-texture_3.png');
+    }
+
+    .unit-button {
+      border: 1px solid $ubc-blue;
+      background-color: $ubc-blue;
+      color: $white;
+
+      &:hover {
+        background-color: darken($ubc-blue, 10%);
+        text-decoration: none;
+      }
+    }
+  }
 }
 
 .card--home {

@@ -1,0 +1,63 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the table component.
+// -----------------------------------------------------------------------------
+
+table {
+  @apply .border-b .border-unit-grey .w-full .text-left;
+  margin-top: $leading;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  @apply .align-top;
+  padding: 0;
+  line-height: ($base-line-height * $base-font-size) - 0px;
+}
+
+th {
+  @apply .uppercase .text-unit-red .py-2 .pr-2
+}
+
+tr {
+  @apply .border-t .border-unit-grey
+}
+
+td {
+  @apply .py-2 .pr-2
+}
+
+// TABLE VARIANTS
+.table--responsive {
+  @apply .block .min-w-full
+}
+
+@media (max-width: ($breakpoint--md - 1)) {
+  .table--responsive {
+    table {
+      @apply .block .overflow-x-scroll
+    }
+  }
+}
+
+/* purgecss ignore */
+.table--plain {
+  @apply .border-b-0;
+
+  /* purgecss ignore */
+  tr {
+    @apply .border-t-0;
+  }
+}
+
+/* purgecss ignore */
+.table--condensed {
+
+  /* purgecss ignore */
+  th,
+  /* purgecss ignore */
+  td {
+    @apply .py-1 .pr-1;
+  }
+}

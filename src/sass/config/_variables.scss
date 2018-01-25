@@ -9,6 +9,7 @@ $text-font-stack: 'Open Sans',
 'Helvetica',
 'Arial',
 sans-serif !default;
+
 /// Code (monospace) font family
 /// @type List
 $code-font-stack: 'Courier New',
@@ -16,6 +17,7 @@ $code-font-stack: 'Courier New',
 'Bitstream Vera Sans Mono',
 'Monaco',
 monospace !default;
+
 // Type Variables
 // From Typebase.scss v0.1.0 | https://github.com/devinhunt/typebase.css/blob/master/src/typebase.scss
 $base-font-size: 16 !default; // as an integer. We convert the unit later. The default will result in 16px on desktop
@@ -23,6 +25,7 @@ $base-line-height: 1.5 !default; // as an integer. Defines how high the line hei
 $leading: $base-line-height * 1rem !default; // multiply the line height and add a unit. Defaults to rem.
 $default-typeface: sans-serif !default;
 $alternate-typeface: sans-serif !default;
+
 // TYPE SCALES:
 // 1.067 Minor Second
 // 1.125 Major Second
@@ -33,6 +36,7 @@ $alternate-typeface: sans-serif !default;
 // 1.500 Perfect Fifth
 // 1.618 Golden Ratio
 $scale: 1.2;
+
 // TYPE WEIGHTS
 $h1-weight: 300;
 $h2-weight: 300;
@@ -40,6 +44,7 @@ $h3-weight: 600;
 $h4-weight: 600;
 $h5-weight: 600;
 $h6-weight: 600;
+
 // Preference is given to HSLA format
 // Online color converter: https://www.w3schools.com/colors/colors_converter.asp
 /// Copy text color
@@ -79,6 +84,11 @@ $breakpoint--md: 768px;
 $breakpoint--lg: 992px;
 $breakpoint--xl: 1200px;
 
+$breakpoint--sm--max: $breakpoint--md - 1px;
+$breakpoint--md--max: $breakpoint--lg - 1px;
+$breakpoint--lg--max: $breakpoint--xl - 1px;
+
+
 /// CSS Variables
 /// Added here so we are able to use them throughout the cascade.
 // https://github.com/sasstools/sass-lint/issues/877
@@ -94,6 +104,18 @@ $breakpoint--xl: 1200px;
 //   #{--unit-accent-dark}: #454545;
 // }
 
-
-
+/// Accordions
+$accordion-open-icon:   '\f056';
+$accordion-closed-icon:   '\f055';
+$accordion-trigger-open-text-color:   #fff;
+$accordion-trigger-closed-text-color:   $text-color;
+$accordion-trigger-hover-text-color:   #fff;
+$accordion-trigger-open-background-color:   $unit-red;
+$accordion-trigger-closed-background-color:   #fff;
+$accordion-trigger-hover-background-color:   $unit-red;
+$accordion-trigger-open-icon-color:   #fff;
+$accordion-trigger-closed-icon-color:   lighten($unit-red, 5%);
+$accordion-trigger-hover-icon-color:   #fff;
+$accordion-trigger-border-color: #ccc;
+$icon-font-family: 'fontawesome';
 
