@@ -1,6 +1,6 @@
 {% extends "layouts/default.twig" %}
 {% set title = "Components Page" %}
-{% set pageTitle = "Site Web Styles" %}
+{% set pageTitle = "SBQMI Web Styles" %}
 {% set pageTeaser = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor." %}
 {% set pageIntro = "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." %}
 
@@ -125,6 +125,33 @@
 <hr />
 <section class="container mx-auto p-4">
   {% include "components/forms.twig" %}
+  {% include "components/pager.twig" %}
+  <!-- {% include "components/throbber.twig" %} -->
+</section>
+
+<h3 class="uppercase">Accordions</h3>
+<hr />
+<section class="container mx-auto p-4">
+  {% include "components/accordion.twig" %}
+  {% include "components/accordion.twig" %}
+</section>
+
+<h3 class="uppercase">Figcaption</h3>
+<hr />
+<section class="container mx-auto p-4">
+{% include "components/image-w-caption.twig" %}
+</section>
+
+<h3 class="uppercase">Blockquote</h3>
+<hr />
+<section class="container mx-auto p-4">
+{% include "components/blockquote.twig" %}
+</section>
+
+<h3 class="uppercase">Callout</h3>
+<hr />
+<section class="container mx-auto p-4">
+
 </section>
 
 {% endblock %}

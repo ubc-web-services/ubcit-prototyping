@@ -1,0 +1,107 @@
+{% extends "layouts/default.twig" %}
+{% set title = "Facility Title" %}
+{% set pageTitle = "Facility Title" %}
+
+
+{% block content %}
+<nav class="nav-breadcrumbs text-xs hidden md--block container mx-auto p-4">
+  <a href="#" class="text-unit-grey no-underline hover--underline piped piped--grey">Home</a>
+  <a href="#" class="text-unit-grey no-underline hover--underline piped piped--grey">Facilities</a>
+  <a href="#" class="text-unit-red no-underline">{{ title }}</a>
+</nav>
+
+<div class="page-title">
+  <h1 class="leading-tight text-xl mt-0 container mx-auto md--text-5xl uppercase">{{ pageTitle }}</h1>
+</div>
+
+<main class="container mx-auto px-4 py-12">
+  <p class="text-center text-lg md--text-3xl font-light leading-normal">Our student programs are positioning Canada for continued leadership in quantum materials by giving undergraduate and graduate students opportunities to learn from experts and acquire meaningful research experience.</p>
+</main>
+
+<section class="container mx-auto px-4">
+  <div class="md--flex">
+    <div class="md--w-two-thirds md--pr-4">
+      <div class="relative image-overlay ">
+        <img src="img/prototype/Asset 2-100.jpg" />
+      </div>
+      <h2 class="heading-four uppercase text-unit-red">Some title</h2>
+      <p>Cabore plaut am nihicit, sant adiciis erum everit doluptate voloriam rem quiderspis nobitia pe sitatusdanis nonserum que vidi dolupti te adit dolupta sperum quam que perferempos quae res enistrum repudae pudios alitae omnis nulparchic te velibusa pratur sinctatus doloratur minti nit fugit, qui cor moluptam alia nonse eatem acest voleseque rehenimintia niam is quiant molorument odio et vitio. Nam, odipsan totaquae. Et ducim quos esti quam, qui delluptatem nosam, ommoluptatem exerita temquidebit, quasimoditae dolor remperi buscia ideruptiis et rerumqu iaspidellam ditasserum non rereris aut.</p>
+      <h3 class="heading-five">Another title</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+    <div class="md--w-one-third pt-8 md--pl-4 md--pt-0">
+      <div class="supporting supporting--red relative bg-unit-accent-dark md--bg-transparent text-white md--text-unit-grey-dark md--border-2 md--border-unit-red px-10 md--px-8 py-4">
+        <h3 class="supporting__heading text-white heading-five mt-0 pb-2 uppercase md--text-unit-red">Contact Information</h3>
+        <div class="card-small w-full relative overflow-hidden">
+          <div class="card-small__image image-overlay">
+            <img class="block" src="img/demo/profile2.jpg" />
+          </div>
+          <div class="card-small__heading card-small__heading--alternate pin-b pin-l relative w-full hover--pin-t z-20">
+            <h3 class="text-white heading-five font-normal z-10 mt-0 relative">Andrea Damascelli</h3>
+          </div>
+          <div class="card-small__content--dark px-4 text-white absolute pin z-10 h-full">
+            <div class="card-small__reveal movetext text-center flex items-center h-full w-full justify-center -mt-4"><button class="unit-button unit-button--transparent rounded-full normal-case text-xs">View Profile</button></div>
+          </div>
+          <p class="card__morelink absolute pin-b pin-r z-30 md--hidden"><button class="unit-button--alt unit-button--red leading-none"><svg role="presentation" class="svg-icon inline-block h-12 w-6 chevron-icon rotate-270"><use xlink:href="#icon-chevron"/></svg></button>
+          </p>
+        </div>
+        <div class="font-light text-sm">
+          <table class="table--plain table--condensed">
+            <tbody>
+              <tr>
+                <td>Manager</td>
+                <td>Andrea Damascelli</td>
+              </tr>
+              <tr>
+                <td>
+                  <svg role="presentation" class="inline-block h-6 w-6 pr-1 -mb-2">
+                    <use xlink:href="#icon-mail"></use>
+                  </svg>
+                </td>
+                <td>
+                  <a href="mailto:sbqmi@ubc.ca" class="inline-block">sbqmi@ubc.ca</a></td>
+              </tr>
+              <tr>
+                <td>Office</td>
+                <td>#420 Klinck, 1234 Main Mall</td>
+              </tr>
+              <tr>
+                <td>
+                  <svg role="presentation" class="inline-block h-6 w-6 pr-1 -mb-2">
+                    <use xlink:href="#icon-phone"/>
+                  </svg>
+                </td>
+                <td>604.822.3909</td>
+              </tr>
+              <tr>
+                <td>Hours</td>
+                <td>Office Hours</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="p-8 mt-4">
+        <h3 class="heading-five text--hug">Location</h3>
+        <p class="text--hug">#420 Klinck, 1234 Main Mall</p>
+        <h3 class="heading-five">Hours of operation</h3>
+        <p class="text--hug">9am to 4pm, Weekdays</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="container mx-auto p-4">
+  <div class="bg-unit-grey-light md--bg-white md--shadow-inside p-8">
+    <h3 class="heading-five text--hug">Facility Access</h3>
+    <p>Cabore plaut am nihicit, sant adiciis erum everit doluptate voloriam rem quiderspis nobitia pe sitatusdanis nonserum que vidi dolupti te adit dolupta sperum quam que perferempos quae res enistrum repudae pudios alitae omnis nulparchic te velibusa pratur sinctatus doloratur minti nit fugit.</p>
+    <p>Nam, odipsan totaquae. Et ducim quos esti quam, qui delluptatem nosam, ommoluptatem exerita temquidebit, quasimoditae dolor remperi buscia ideruptiis et rerumqu iaspidellam ditasserum non rereris aut.</p>
+    <p>
+      <a href="#" class="unit-button unit-button--red text-sm">Some Button Title</a>
+    </p>
+  </div>
+
+</section>
+
+{% endblock %}

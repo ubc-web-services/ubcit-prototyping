@@ -52,6 +52,7 @@ jQuery('.nav-trigger').click(function(e) {
   // add a class to the sibling dropdown
   jQuery('.primary-nav--dropdown').focus();
   jQuery(this).toggleClass('is-active');
+  //jQuery(this).not('.primary-nav--trigger').toggleClass('rotate-180');
   jQuery(this).siblings('.dropdown').slideToggle(120).prop('hidden', function(_, prop){ return !prop });
 
   var btn = jQuery('.primary-nav--trigger');
@@ -59,6 +60,12 @@ jQuery('.nav-trigger').click(function(e) {
     'Menu <svg role="presentation" class="svg-icon inline-block h-6 w-6 absolute close-icon" style="top: -.25em;right:.25em"><use xlink:href="#icon-close"/></svg>':
     'Menu <svg role="presentation" class="svg-icon inline-block h-8 w-8 absolute pin-r hamburger-icon"><use xlink:href="#icon-hamburger"/></svg>'
   );
+});
+
+jQuery('.subnav-trigger').click(function(e) {
+  e.preventDefault();
+  jQuery(this).toggleClass('active');
+  jQuery(this).parent().siblings('.dropdown').slideToggle(120).prop('hidden', function(_, prop){ return !prop });
 });
 
 jQuery('.primary-nav--dropdown').on('blur', function () {
@@ -78,12 +85,12 @@ jQuery('.filter-trigger').click(function(e) {
 });
 
 // Standard
-jQuery('.tabs .tab-links a').on('click', function(e)  {
+jQuery('.qmi-tabs .qmi-tab-links a').on('click', function(e)  {
   var currentAttrValue = jQuery(this).attr('href');
   // Show/Hide Tabs
-  jQuery('.tabs ' + currentAttrValue).show().siblings().hide();
+  jQuery('.qmi-tabs ' + currentAttrValue).show().siblings().hide();
   // Change/remove current tab to active
-  jQuery(this).parent('li').addClass('is-active').siblings().removeClass('is-active');
+  jQuery(this).parent('li').addClass('active').siblings().removeClass('active');
   e.preventDefault();
 });
 
@@ -92,6 +99,13 @@ jQuery("a.anchor-link[href^='#']").on('click', function(e) {
   jQuery('html, body').animate({
     scrollTop: jQuery(this.hash).offset().top
   }, 300, function(){
+  });
+});
+jQuery(window).load(function() {
+  jQuery('.accordion').find('.accordion__tab').click(function(e){
+    e.preventDefault();
+    jQuery(this).next().slideToggle('fast');
+    jQuery(this).parent().toggleClass('accordion--closed');
   });
 });
 </script>
