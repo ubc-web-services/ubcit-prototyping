@@ -156,7 +156,7 @@ gulp.task('deploy', ['css', 'html'], function() {
     }))
     .pipe(gulp.dest(paths.dist.css))
   return stream;
-})
+});
 
 /***************************************
  *
@@ -175,4 +175,4 @@ gulp.task('watch', ['css', 'html', 'deploy' ], function() {
  *  Run command "gulp" to start
  *
  ***************************************/
-gulp.task('default', ['css', 'html', 'deploy', 'watch'], function() {})
+gulp.task('default', ['css', 'html', 'deploy', 'watch'], function() {});
