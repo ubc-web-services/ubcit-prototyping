@@ -84,13 +84,14 @@ gulp.task('images', function() {
  *  Run command "gulp html" to start
  *
  ***************************************/
-gulp.task('html', function() {
+gulp.task('html', function(done) {
   var stream = gulp
     .src(paths.src.html + '*.twig')
     .pipe(twig())
     .pipe(gulp.dest(paths.build.html))
     .pipe(gulp.dest(paths.dist.html))
   return stream;
+  done();
 });
 
 /***************************************
@@ -99,7 +100,7 @@ gulp.task('html', function() {
  *  Run command "gulp css" to start
  *
  ***************************************/
-gulp.task('css', function() {
+gulp.task('css', ['html'], function(done) {
   var postcss = require('gulp-postcss');
   var tailwindcss = require('tailwindcss');
   var stream = gulp
@@ -117,6 +118,7 @@ gulp.task('css', function() {
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(paths.build.css))
   return stream;
+  done();
 });
 
 /***************************************
