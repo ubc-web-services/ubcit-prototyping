@@ -1,6 +1,6 @@
 // BRANDING
 @media (min-width: $breakpoint--md) {
-  .sbqmi-texture {
+  .unit-texture {
     position: fixed;
     top: 0;
     left: 0;
@@ -15,8 +15,8 @@
   }
 }
 
-.sbqmi-logo {
-  background-image: url('../img/svg/logo-sbqmi2.svg');
+.unit-logo {
+  background-image: url('../img/svg/logo.svg');
   background-repeat: no-repeat;
   background-position: center center;
   //@apply .bg-white;
@@ -36,7 +36,7 @@
 }
 
 @media (min-width: $breakpoint--md) {
-  .sbqmi-logo {
+  .unit-logo {
     &::after {
       @apply .absolute .block .bg-ubc-blue;
       top: 25%;
@@ -47,7 +47,7 @@
     }
   }
 
-  .sbqmi-logo,
+  .unit-logo,
   .ubc-logo {
     @apply .relative;
     background-size: 200px 200px;
@@ -57,7 +57,7 @@
     @apply .relative;
 
     &::before {
-      @apply .bg-unit-red .block .absolute;
+      @apply .bg-ubc-blue .block .absolute;
       top: 0;
       right: 0;
       width: 50%;
@@ -73,7 +73,7 @@
 }
 
 @media (min-width: $breakpoint--lg) {
-  .sbqmi-logo,
+  .unit-logo,
   .ubc-logo {
     background-size: 240px 240px;
   }
@@ -141,7 +141,7 @@
 
 @media (min-width: $breakpoint--md) {
   .page-title {
-    @apply .bg-transparent .text-unit-red .text-center;
+    @apply .bg-transparent .text-ubc-blue .text-center;
     margin-top: 3rem;
     line-height: 7.5rem;
     font-size: 6rem;
@@ -209,7 +209,7 @@
 
 // 'FEATURED' TITLE TREATMENT
 .title--featured {
-  @apply .bg-white .text-unit-red .uppercase .text-center .relative;
+  @apply .bg-white .text-ubc-blue .uppercase .text-center .relative;
 }
 
 @media (min-width: $breakpoint--md) {
@@ -245,6 +245,6 @@
 
 // CARDS
 /* purgecss ignore */
-.sbqmi-cards a:hover {
+.unit-cards a:hover {
     text-decoration: none;
 }

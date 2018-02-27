@@ -5,7 +5,7 @@
 .primary-nav--trigger {
   padding-right: 2.5rem;
   &:hover {
-    @apply .bg-unit-red;
+    @apply .bg-ubc-blue;
   }
 }
 
@@ -29,7 +29,7 @@
   @apply .no-underline .block .px-4 .py-2 .border-b .text-sm .relative;
 
   &:hover {
-    @apply .no-underline .bg-unit-red .text-white;
+    @apply .no-underline .bg-ubc-blue .text-white;
   }
 }
 
@@ -73,11 +73,11 @@ ul {
       @apply .no-underline .block .text-unit-grey .px-4 .py-2 .border-b .border-unit-grey .text-xs;
 
       &:hover {
-        @apply .no-underline .text-white .border-unit-red .bg-unit-red;
+        @apply .no-underline .text-white .border-ubc-blue .bg-ubc-blue;
       }
 
       &.active {
-        @apply .border-unit-red .bg-unit-red .text-white;
+        @apply .border-ubc-blue .bg-ubc-blue .text-white;
       }
     }
     .navlink--secondary {
@@ -88,7 +88,7 @@ ul {
       }
 
       &.active {
-        @apply .border-unit-red .bg-unit-red;
+        @apply .border-ubc-blue .bg-ubc-blue;
       }
     }
   }
@@ -103,7 +103,7 @@ ul {
   @apply .text-white .border-white;
 
   &.active {
-    @apply .border-unit-red .bg-unit-red;
+    @apply .border-ubc-blue .bg-ubc-blue;
   }
 
 
@@ -224,6 +224,6 @@ ul {
   }
 
   .pager-current {
-    @apply .block .py-2 .px-4 .border .border-white .bg-unit-red .font-bold .text-white .text-sm;
+    @apply .block .py-2 .px-4 .border .border-white .bg-ubc-blue .font-bold .text-white .text-sm;
   }
 }

@@ -1,8 +1,7 @@
 {
-  "name": "sbqmi",
+  "name": "ubcit-prototyping",
   "version": "1.0.2-alpha",
-  "description": "SBQMI prototype",
-  "main": "index.jade",
+  "description": "UBC IT Prototyping Tools",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

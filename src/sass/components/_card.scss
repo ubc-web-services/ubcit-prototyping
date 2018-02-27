@@ -93,7 +93,7 @@
 .md--flex .card--home {
 
   &:nth-child(1) {
-    @apply .border-b-4 .border-unit-red;
+    @apply .border-b-4 .border-ubc-blue;
     background-color: $card-red-background-color;
 
     .flex {

@@ -45,8 +45,12 @@ var defaultConfig = require('tailwindcss/defaultConfig')()
 
 var colors = {
   // custom colours
-  'unit-red': '#B22029',
   'ubc-blue': '#002145',
+  'ubc-blue-secondary': '#0055B7',
+  'ubc-blue-secondary-2': '#00A7E1',
+  'ubc-blue-secondary-3': '#40B4E5',
+  'ubc-blue-secondary-4': '#6EC4E8',
+  'ubc-blue-secondary-5': '#97D4E9',
   'unit-grey-dark': '#5B6267',
   'unit-grey': '#7D868C',
   'unit-grey-light': '#D6D6D6',
@@ -452,7 +456,7 @@ module.exports = {
   |
   | It's also worth mentioning that Tailwind automatically escapes
   | invalid CSS class name characters, which allows you to have
-  | awesome classes like .w-2/3.
+  | awesome classes like .w-two-thirds.
   |
   | Class name: .w-{size}
   |
