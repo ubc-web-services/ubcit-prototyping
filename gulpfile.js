@@ -10,6 +10,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var sasslint = require('gulp-sass-lint');
 var twig = require('gulp-twig');
 var imagemin = require('gulp-imagemin');
+var browserSync = require('browser-sync').create();
 var paths = {
   src: {
     html: 'src/html/',
@@ -53,6 +54,20 @@ gulp.task('lint', function() {
     .pipe(sasslint.format())
     .pipe(sasslint.failOnError())
   return stream;
+});
+
+/***************************************
+ *
+ *	Start up a local server environment
+ *  Run command "gulp browser-sync" to start
+ *
+ ***************************************/
+gulp.task('browser-sync', function() {
+  browserSync.init({
+      server: {
+          baseDir: "./dist/"
+      }
+  });
 });
 
 /***************************************
@@ -104,7 +119,7 @@ gulp.task('css', ['html'], function(done) {
   var postcss = require('gulp-postcss');
   var tailwindcss = require('tailwindcss');
   var stream = gulp
-    .src(paths.src.sass + '**/styles-all.scss')
+    .src(paths.src.sass + '**/*.s+(a|c)ss')
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss([
