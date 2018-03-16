@@ -3,7 +3,9 @@
   "version": "1.0.2-alpha",
   "description": "UBC IT Prototyping Tools",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "author": "James O'Toole",
   "license": "ISC",
@@ -23,6 +25,8 @@
   "dependencies": {
     "browser-sync": "^2.23.6",
     "gulp-purgecss": "^0.16.0",
-    "tailwindcss": "^0.4.3"
-  }
+    "tailwindcss": "^0.4.3",
+    "snyk": "^1.70.2"
+  },
+  "snyk": true
 }
