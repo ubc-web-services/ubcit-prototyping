@@ -1,11 +1,12 @@
 {% set unitName = "Unit Name" %}
 {% set facultyName = "Faculty of XYZ" %}
-{% set clfFull = false %} {# display the full or fixed width CLF #}
+{% set clfFull = true %} {# display the full or fixed width CLF #}
 {% set offCanvasDrawer = true %}
 {% if offCanvasDrawer %}
-  {% set offCanvasDrawerDirection = 'drawer-panel--push-right' %}
-  {# expected values are 'nav-panel--push-left' or 'nav-panel--push-right' #}
+  {% set offCanvasDrawerDirection = 'drawer-panel--push-left' %}
+  {# expected values are 'drawer-panel--push-left', 'drawer-panel--push-right' 'drawer-panel--cover-left', 'drawer-panel--cover-right' #}
 {% endif %}
+{% set stickyNavigation = false %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -17,7 +18,7 @@
 </head>
 <body {% if clfFull %}class="full-width"{% endif %}>
   {% if offCanvasDrawer %}
-  <div id="pushed-content" class="{{ offCanvasDrawerDirection }}">
+  <div id="pushed-content" class="{{ offCanvasDrawerDirection }} expand">
   {% endif %}
   {% if not clfFull %}
   <div class="container">
@@ -43,6 +44,9 @@
   {% include "../includes/scripts--off-canvas-drawer.twig" %}
   {% endif %}
   {% include "../includes/scripts.twig" %}
+  {% if stickyNavigation %}
+  {% include "../includes/scripts--sticky-navigation.twig" %}
+  {% endif %}
   {% block custom_javascript %}{% endblock %}
 </body>
 </html>

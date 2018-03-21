@@ -31,7 +31,7 @@ $push-nav--inner--font-size: 16px;
   z-index: $pushed-content--z-index;
   display: block;
   overflow: hidden;
-  transform: translate3D(0, 0, 0);
+  //transform: translate3D(0, 0, 0);
   transition: transform $transition-speed $transition-easing;
 }
 #pushed-content.drawer-panel--push-left.drawer-panel--primary-is-active {
@@ -54,14 +54,25 @@ $push-nav--inner--font-size: 16px;
   display: block;
   overflow: auto;
 }
+#drawer-panel--primary.drawer-panel--cover-left,
 #drawer-panel--primary.drawer-panel--push-left {
   right: 0;
   transform: translate3D($panel--width, 0, 0);
 }
+#drawer-panel--primary.drawer-panel--cover-right,
 #drawer-panel--primary.drawer-panel--push-right {
   left: 0;
   transform: translate3D(-$panel--width, 0, 0);
 }
+#drawer-panel--primary.drawer-panel--cover-left.drawer-panel--primary-is-animating,
+#drawer-panel--primary.drawer-panel--cover-right.drawer-panel--primary-is-animating,
+#drawer-panel--primary.drawer-panel--push-left.drawer-panel--primary-is-animating,
+#drawer-panel--primary.drawer-panel--push-right.drawer-panel--primary-is-animating {
+  width: $panel--width;
+  z-index: $panel--z-index;
+}
+#drawer-panel--primary.drawer-panel--cover-left.drawer-panel--primary-is-active,
+#drawer-panel--primary.drawer-panel--cover-right.drawer-panel--primary-is-active,
 #drawer-panel--primary.drawer-panel--push-left.drawer-panel--primary-is-active,
 #drawer-panel--primary.drawer-panel--push-right.drawer-panel--primary-is-active {
   transform: translate3D(0, 0, 0);

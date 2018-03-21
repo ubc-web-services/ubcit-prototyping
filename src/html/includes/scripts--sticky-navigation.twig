@@ -1,0 +1,14 @@
+<script>
+window.onscroll = function() { stickyNav() };
+var navbar = document.getElementById("ubc7-unit-menu");
+var sticky = navbar.offsetTop;
+function stickyNav() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("navigation-is-sticky");
+    document.body.classList.add("navigation-is-sticky");
+  } else {
+    navbar.classList.remove("navigation-is-sticky");
+    document.body.classList.remove("navigation-is-sticky");
+  }
+}
+</script>

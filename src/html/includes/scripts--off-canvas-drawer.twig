@@ -11,6 +11,19 @@ for (i = 0; i < pushTrigger.length; i++) {
       pushPanel.classList.toggle("drawer-panel--primary-is-active");
       pushContent.classList.toggle("drawer-panel--primary-is-active");
       pushMask.classList.toggle("drawer-panel--primary-is-active");
+      document.body.classList.add("drawer-panel--primary-is-animating");
+      pushPanel.classList.add("drawer-panel--primary-is-animating");
+      pushContent.classList.add("drawer-panel--primary-is-animating");
+      pushMask.classList.add("drawer-panel--primary-is-animating");
   });
+}
+/* Old Safari requires 'webkit' prefix */
+pushPanel.addEventListener("webkitTransitionEnd", finishedAnimating);
+pushPanel.addEventListener("transitionend", finishedAnimating);
+function finishedAnimating() {
+    document.body.classList.remove("drawer-panel--primary-is-animating");
+    pushPanel.classList.remove("drawer-panel--primary-is-animating");
+    pushContent.classList.remove("drawer-panel--primary-is-animating");
+    pushMask.classList.remove("drawer-panel--primary-is-animating");
 }
 </script>

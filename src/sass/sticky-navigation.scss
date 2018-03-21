@@ -1,0 +1,12 @@
+// VARIABLES
+$navigation-height: 40px;
+
+body.navigation-is-sticky {
+  padding-top: $navigation-height;
+}
+
+#ubc7-unit-menu.navigation-is-sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
