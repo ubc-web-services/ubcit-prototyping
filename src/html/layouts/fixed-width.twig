@@ -6,10 +6,12 @@
     {% include "../includes/head.twig" %}
 </head>
 <body>
-  {% include "../includes/header.twig" %}
-  {% include "../includes/menu.twig" %}
-  {% block content %}{% endblock %}
-  {% include "../includes/footer.twig" %}
+  <div class="container">
+    {% include "../includes/header--fixed-width.twig" %}
+    {% include "../includes/menu--fixed-width.twig" %}
+    {% block content %}{% endblock %}
+    {% include "../includes/footer--fixed-width.twig" %}
+  </div>
   {% include "../includes/scripts.twig" %}
 </body>
 </html>
