@@ -8,6 +8,22 @@ $mask--z-index: 2;
 $pushed-content--z-index: 1;
 $mask--background: rgba(255, 255, 255, 0.5);
 
+//+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+$unit-accent: #585858;
+$unit-primary: #f86808;
+$unit-secondary: #00457f;
+$sans-font-family: 'Whitney SSm A', 'Whitney SSm B', Arial, 'Helvetica Neue', sans-serif;
+$ubc-blue: rgb(0, 33, 69);
+
+$close-menu--background-color: #686868; //dark grey
+$close-menu--background-color--hover: darken($close-menu--background-color, 10%);
+$close-menu--background-color--focus: darken($close-menu--background-color, 15%);
+$close-menu--border-color: #414141;     //darker grey
+$close-menu--padding: 18px;
+$push-nav--inner--color: #fff;          //white
+$push-nav--inner--font-size: 16px;
+//+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
 #pushed-content {
   position: relative;
   z-index: $pushed-content--z-index;
@@ -69,4 +85,134 @@ $mask--background: rgba(255, 255, 255, 0.5);
 #off-canvas-mask.nav-panel--primary-is-active {
   width: 100% !important;
   opacity: .5;
+}
+//+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+#nav-panel--primary {
+  background-color: $close-menu--background-color;
+}
+.push-nav--inner {
+  color: $push-nav--inner--color;
+  font-size: $push-nav--inner--font-size;
+  background-color: $close-menu--background-color;
+}
+.sidebar,
+.sidebar a,
+.sidebar .dropdown-menu a {
+  color: $push-nav--inner--color;
+}
+.sidebar {
+  .menu__close {
+    background-color: $close-menu--background-color;
+    border-top: 1px solid $close-menu--border-color;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    color: $push-nav--inner--color;
+    padding: $close-menu--padding;
+    display: block;
+    font-family: $sans-font-family;
+    position: relative;
+    text-transform: uppercase;
+    text-align: right;
+    width: 100%;
+    &:hover {
+      background-color: $close-menu--background-color--hover;
+    }
+    &:focus {
+      background-color: $close-menu--background-color--focus;
+    }
+  }
+  a {
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-color: $close-menu--border-color;
+    box-shadow: none;
+    box-sizing: border-box;
+    padding: $close-menu--padding;
+    padding-right: 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    &:hover {
+      color: $push-nav--inner--color;
+      border-color: $close-menu--border-color;
+    }
+  }
+  .nav>li>a:focus,
+  .nav>li>a:hover,
+  .btn-group:hover>.btn,
+  .btn-group>a:focus {
+    background-color: $close-menu--background-color--hover;
+  }
+  .btn-group {
+    width: 100%;
+    .dropdown-toggle {
+      &:hover:after,
+      &:focus:after {
+        color: $push-nav--inner--color;
+      }
+      z-index: 2;
+      float: none;
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 55px;
+      box-shadow: none;
+      span {
+        &:hover,
+        &::after {
+          transform: rotate(90deg);
+        }
+        transition: all .3s ease;
+      }
+    }
+    .dropdown-menu {
+      border: none;
+      width: 100%;
+      li {
+        border-bottom: none;
+      }
+      a {
+        background-color: lighten($close-menu--background-color, 10%);
+        text-transform: none;
+        padding-top: $close-menu--padding;
+        padding-bottom: $close-menu--padding;
+      }
+    }
+    > a {
+      width: 100%;
+      z-index: 1;
+      font-size: $push-nav--inner--font-size;
+    }
+    > .btn {
+      background-color: $close-menu--background-color;
+      border-left: none;
+      border-right: none;
+      border-bottom: none;
+      border-color: $close-menu--border-color;
+      line-height: 18px;
+      box-shadow: none !important;
+      background-image: none !important;
+      text-align: left;
+    }
+    &:hover>.dropdown-toggle{
+      background-color: $close-menu--background-color--focus;
+    }
+    &.open {
+      span {
+        transform: rotate(90deg);
+        transition: all .3s ease;
+      }
+      .btn.dropdown-toggle {
+        background-color: $close-menu--background-color--hover;
+        border-color: $close-menu--background-color--hover;
+      }
+      > .dropdown-menu {
+        display: block;
+        position: relative;
+      }
+    }
+  }
+  button:focus {
+    outline: 0;
+  }
 }
