@@ -1,7 +1,5 @@
 {% extends "layouts/default.twig" %}
 {% set title = "Students" %}
-{% set unitName = "UBC Unit Name" %}
-{% set facultyName = "Faculty of XYZ" %}
 {% set pageTitle = "Students" %}
 {% set pageTeaser = "Test the Most Promising Ideas<br/>
 Give New Solutions to the World" %}
@@ -32,4 +30,10 @@ Give New Solutions to the World" %}
   {% include "components/cards-featured--students.twig" %}
 </section>
 
+{% endblock %}
+
+{% block custom_css %}
+{% endblock %}
+
+{% block custom_javascript %}
 {% endblock %}

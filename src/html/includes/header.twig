@@ -1,7 +1,9 @@
 <!-- UBC Global Utility Menu -->
 <div class="collapse expand" id="ubc7-global-menu">
   <div id="ubc7-search" class="expand">
+    {% if clfFull %}
     <div class="container">
+    {% endif %}
       <div id="ubc7-search-box">
         <form class="form-search" method="get" action="https://www.ubc.ca/search/refine/" role="search">
           <input type="text" name="q" placeholder="Search UBC CLF" class="input-xlarge search-query">
@@ -10,18 +12,26 @@
           <button type="submit" class="btn">Search</button>
         </form>
       </div>
+    {% if clfFull %}
     </div>
+    {% endif %}
   </div>
+  {% if clfFull %}
   <div class="container">
+  {% endif %}
     <div id="ubc7-global-header" class="expand">
         <!-- Global Utility Header from CDN -->
     </div>
+  {% if clfFull %}
   </div>
+  {% endif %}
 </div>
 <!-- End of UBC Global Utility Menu -->
 <!-- UBC Header -->
 <header id="ubc7-header" class="row-fluid expand" role="banner">
+  {% if clfFull %}
   <div class="container">
+  {% endif %}
     <div class="span1">
       <div id="ubc7-logo">
         <a href="https://www.ubc.ca">The University of British Columbia</a>
@@ -41,12 +51,16 @@
         <noscript><a id="ubc7-global-utility-no-script" href="https://www.ubc.ca/">UBC Search</a></noscript>
       </div>
     </div>
+  {% if clfFull %}
   </div>
+  {% endif %}
 </header>
 <!-- End of UBC Header -->
 <!-- UBC Unit Identifier -->
 <div id="ubc7-unit" class="row-fluid expand">
+  {% if clfFull %}
   <div class="container">
+  {% endif %}
     <div class="span12">
       <!-- Mobile Menu Icon -->
       <div class="navbar">
@@ -62,6 +76,8 @@
         <a href="/"><span id="ubc7-unit-faculty">{{ facultyName }}</span><span id="ubc7-unit-identifier">{{ unitName }}</span></a>
       </div>
     </div>
+  {% if clfFull %}
   </div>
+  {% endif %}
 </div>
 <!-- End of UBC Unit Identifier -->

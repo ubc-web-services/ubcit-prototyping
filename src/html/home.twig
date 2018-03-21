@@ -1,7 +1,5 @@
 {% extends "layouts/default.twig" %}
 {% set title = "homepage" %}
-{% set unitName = "UBC Unit Name" %}
-{% set facultyName = "Faculty of XYZ" %}
 {% set pageTitle = "Pursue Compelling Questions" %}
 {% set pageTeaser = "Test the Most Promising Ideas<br/>
 Give New Solutions to the World" %}
@@ -31,5 +29,10 @@ Give New Solutions to the World" %}
   {% include "components/partners.twig" %}
 </section>
 
+{% endblock %}
 
+{% block custom_css %}
+{% endblock %}
+
+{% block custom_javascript %}
 {% endblock %}
