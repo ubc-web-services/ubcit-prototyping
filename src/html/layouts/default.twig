@@ -1,15 +1,48 @@
+{% set unitName = "Unit Name" %}
+{% set facultyName = "Faculty of XYZ" %}
+{% set clfFull = false %} {# display the full or fixed width CLF #}
+{% set offCanvasDrawer = true %}
+{% if offCanvasDrawer %}
+  {% set offCanvasDrawerDirection = 'drawer-panel--push-right' %}
+  {# expected values are 'nav-panel--push-left' or 'nav-panel--push-right' #}
+{% endif %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>{{ title }}</title>
     {% include "../includes/head.twig" %}
+    {% block custom_css %}{% endblock %}
 </head>
-<body class="full-width">
-  {% include "../includes/header.twig" %}
-  {% include "../includes/menu.twig" %}
-  {% block content %}{% endblock %}
-  {% include "../includes/footer.twig" %}
+<body {% if clfFull %}class="full-width"{% endif %}>
+  {% if offCanvasDrawer %}
+  <div id="pushed-content" class="{{ offCanvasDrawerDirection }}">
+  {% endif %}
+  {% if not clfFull %}
+  <div class="container">
+  {% endif %}
+    {% include "../includes/header.twig" %}
+    {% if offCanvasDrawer %}
+    {% include "../includes/menu--off-canvas-drawer-trigger.twig" %}
+    {% endif %}
+    {% if not offCanvasDrawer %}
+    {% include "../includes/menu.twig" %}
+    {% endif %}
+    {% block content %}{% endblock %}
+    {% include "../includes/footer.twig" %}
+  {% if not clfFull %}
+  </div>
+  {% endif %}
+  {% if offCanvasDrawer %}
+  </div>
+  <section id="drawer-panel--primary" class="menu {{ offCanvasDrawerDirection }}">
+    {% include "../includes/menu--off-canvas-drawer.twig" %}
+  </section>
+  <div id="off-canvas-mask" class="drawer-toggle--primary"></div>
+  {% include "../includes/scripts--off-canvas-drawer.twig" %}
+  {% endif %}
   {% include "../includes/scripts.twig" %}
+  {% block custom_javascript %}{% endblock %}
 </body>
 </html>

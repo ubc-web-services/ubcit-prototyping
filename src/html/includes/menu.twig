@@ -1,6 +1,8 @@
 <nav id="ubc7-unit-menu" class="navbar expand" role="navigation">
   <div class="navbar-inner expand">
+    {% if clfFull %}
     <div class="container">
+    {% endif %}
       <div id="ubc7-unit-navigation" class="nav-collapse collapse">
         <ul id="menu-main-menu" class="nav">
           <li>
@@ -47,6 +49,8 @@
           <li><a href="#">Support</a></li>
         </ul>
       </div>
+    {% if clfFull %}
     </div>
-  </div><!-- /navbar-inner -->
+    {% endif %}
+  </div>
 </nav>

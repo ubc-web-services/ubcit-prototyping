@@ -1,0 +1,16 @@
+<script>
+/* Primary Drawer Toggle */
+var pushTrigger = document.getElementsByClassName("drawer-toggle--primary");
+var pushPanel = document.getElementById("drawer-panel--primary");
+var pushContent = document.getElementById("pushed-content");
+var pushMask = document.getElementById("off-canvas-mask");
+var i;
+for (i = 0; i < pushTrigger.length; i++) {
+  pushTrigger[i].addEventListener("click", function() {
+      document.body.classList.toggle("drawer-panel--primary-is-active");
+      pushPanel.classList.toggle("drawer-panel--primary-is-active");
+      pushContent.classList.toggle("drawer-panel--primary-is-active");
+      pushMask.classList.toggle("drawer-panel--primary-is-active");
+  });
+}
+</script>
