@@ -1,3 +1,7 @@
+{% if offCanvasDrawer %}
+  {% set offCanvasToggle = 'drawer-toggle--primary' %}
+{% endif %}
+
 <!-- UBC Global Utility Menu -->
 <div class="collapse expand" id="ubc7-global-menu">
   <div id="ubc7-search" class="expand">
@@ -64,7 +68,7 @@
     <div class="span12">
       <!-- Mobile Menu Icon -->
       <div class="navbar">
-        <a class="btn btn-navbar" data-toggle="collapse" data-target="#ubc7-unit-navigation">
+        <a class="btn btn-navbar {{ offCanvasToggle }}" data-toggle="collapse" data-target="#ubc7-unit-navigation">
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>

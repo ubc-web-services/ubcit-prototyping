@@ -7,6 +7,7 @@ var pushMask = document.getElementById("off-canvas-mask");
 var activeClass = "off-canvas-drawer--is-active";
 var animatingClass = "off-canvas-drawer--is-animating";
 var i;
+document.body.classList.add("has-off-canvas-drawer");
 for (i = 0; i < pushTrigger.length; i++) {
   pushTrigger[i].addEventListener("click", function() {
       document.body.classList.toggle(activeClass);

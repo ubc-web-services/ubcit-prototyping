@@ -1,24 +1,22 @@
 // VARIABLES
 $transition-speed: .125s;
 $transition-easing: ease;
+$hide-desktop-trigger-below: 979px;
 $drawer--width: 20rem;
+$drawer--padding: 18px;
 $drawer--z-index: 10;
 $mask--z-index: 2;
 $pushed-content--z-index: 1;
+
 $mask--background: rgba(255, 255, 255, 0.5);
-$unit-accent: #585858;
-$unit-primary: #f86808;
-$unit-secondary: #00457f;
-$sans-font-family: 'Whitney SSm A', 'Whitney SSm B', Arial, 'Helvetica Neue', sans-serif;
-$ubc-blue: rgb(0, 33, 69);
-$drawer--background-color: #686868; //dark grey
+$drawer--background-color: #686868;
 $drawer--background-color--hover: darken($drawer--background-color, 10%);
 $drawer--background-color--focus: darken($drawer--background-color, 15%);
-$drawer--border-color: #414141;     //darker grey
-$drawer--padding: 18px;
+$drawer--border-color: #414141;
 $drawer--inner--color: #fff;
 $drawer--inner--font-size: 16px;
 
+@import 'components/button-clf-hamburger';
 
 #pushed-content {
   position: relative;
@@ -85,9 +83,17 @@ $drawer--inner--font-size: 16px;
   opacity: .5;
 }
 
+@media screen and (max-width: $hide-desktop-trigger-below) {
+  .has-off-canvas-drawer #ubc7-unit-menu {
+    display: none;
+  }
+}
+
+// Custom Trigger
+.drawer-toggle--hamburger
+
 
 /* Alter CLF Navigation markup to work vertically */
-
 .off-canvas-drawer,
 .off-canvas-drawer a,
 .off-canvas-drawer .dropdown-menu a {
@@ -103,7 +109,6 @@ $drawer--inner--font-size: 16px;
     color: $drawer--inner--color;
     padding: $drawer--padding;
     display: block;
-    font-family: $sans-font-family;
     position: relative;
     text-transform: uppercase;
     text-align: right;
