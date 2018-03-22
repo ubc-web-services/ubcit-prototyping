@@ -28,15 +28,15 @@ $drawer--inner--font-size: 16px;
   //transform: translate3D(0, 0, 0);
   transition: transform $transition-speed $transition-easing;
 }
-#pushed-content.drawer-panel--push-left.drawer-panel--primary-is-active {
+#pushed-content.drawer--push-left.off-canvas-drawer--is-active {
   transform: translate3D(-$drawer--width, 0, 0);
   box-shadow: 2px 0 2px rgba(0, 0, 0, .15);
 }
-#pushed-content.drawer-panel--push-right.drawer-panel--primary-is-active {
+#pushed-content.drawer--push-right.off-canvas-drawer--is-active {
   transform: translate3D($drawer--width, 0, 0);
   box-shadow: 2px 0 2px rgba(0, 0, 0, .15);
 }
-#drawer-panel--primary {
+#off-canvas-drawer--primary {
   transition: transform $transition-speed $transition-easing, visibility $transition-speed $transition-easing;
   visibility: visible;
   height: 100% !important;
@@ -47,21 +47,21 @@ $drawer--inner--font-size: 16px;
   display: block;
   overflow: auto;
 }
-#drawer-panel--primary.drawer-panel--cover-left,
-#drawer-panel--primary.drawer-panel--push-left {
+#off-canvas-drawer--primary.drawer--cover-left,
+#off-canvas-drawer--primary.drawer--push-left {
   right: 0;
   transform: translate3D($drawer--width, 0, 0);
 }
-#drawer-panel--primary.drawer-panel--cover-right,
-#drawer-panel--primary.drawer-panel--push-right {
+#off-canvas-drawer--primary.drawer--cover-right,
+#off-canvas-drawer--primary.drawer--push-right {
   left: 0;
   transform: translate3D(-$drawer--width, 0, 0);
 }
-#drawer-panel--primary.drawer-panel--primary-is-animating {
+#off-canvas-drawer--primary.off-canvas-drawer--is-animating {
   width: $drawer--width;
   z-index: $drawer--z-index;
 }
-#drawer-panel--primary.drawer-panel--primary-is-active {
+#off-canvas-drawer--primary.off-canvas-drawer--is-active {
   transform: translate3D(0, 0, 0);
   z-index: $drawer--z-index;
   width: $drawer--width;
@@ -80,7 +80,7 @@ $drawer--inner--font-size: 16px;
   opacity: 0;
   transition: opacity $transition-speed;
 }
-#off-canvas-mask.drawer-panel--primary-is-active {
+#off-canvas-mask.off-canvas-drawer--is-active {
   width: 100% !important;
   opacity: .5;
 }
@@ -88,12 +88,12 @@ $drawer--inner--font-size: 16px;
 
 /* Alter CLF Navigation markup to work vertically */
 
-.sidebar,
-.sidebar a,
-.sidebar .dropdown-menu a {
+.off-canvas-drawer,
+.off-canvas-drawer a,
+.off-canvas-drawer .dropdown-menu a {
   color: $drawer--inner--color;
 }
-.sidebar {
+.off-canvas-drawer {
   .drawer__close {
     background-color: $drawer--background-color;
     border-top: 1px solid $drawer--border-color;
@@ -124,7 +124,6 @@ $drawer--inner--font-size: 16px;
     padding: $drawer--padding;
     padding-right: 0;
     text-decoration: none;
-    text-transform: uppercase;
     &:hover {
       color: $drawer--inner--color;
       border-color: $drawer--border-color;
@@ -151,22 +150,21 @@ $drawer--inner--font-size: 16px;
       height: 55px;
       box-shadow: none;
       span {
-        &:hover,
-        &::after {
-          transform: rotate(90deg);
-        }
         transition: all .3s ease;
+      }
+      &:hover span {
+        transform: rotate(90deg);
       }
     }
     .dropdown-menu {
       border: none;
       width: 100%;
+      margin-top: 0;
       li {
         border-bottom: none;
       }
       a {
         background-color: lighten($drawer--background-color, 10%);
-        text-transform: none;
         padding-top: $drawer--padding;
         padding-bottom: $drawer--padding;
       }
@@ -174,7 +172,6 @@ $drawer--inner--font-size: 16px;
     > a {
       width: 100%;
       z-index: 1;
-      font-size: $drawer--inner--font-size;
     }
     > .btn {
       background-color: $drawer--background-color;

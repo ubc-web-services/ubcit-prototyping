@@ -3,8 +3,8 @@
 {% set clfFull = true %} {# display the full or fixed width CLF #}
 {% set offCanvasDrawer = true %}
 {% if offCanvasDrawer %}
-  {% set offCanvasDrawerDirection = 'drawer-panel--push-left' %}
-  {# expected values are 'drawer-panel--push-left', 'drawer-panel--push-right' 'drawer-panel--cover-left', 'drawer-panel--cover-right' #}
+  {% set offCanvasDrawerDirection = 'drawer--push-left' %}
+  {# expected values are 'drawer--push-left', 'drawer--push-right' 'drawer--cover-left', 'drawer--cover-right' #}
 {% endif %}
 {% set stickyNavigation = false %}
 
@@ -37,7 +37,7 @@
   {% endif %}
   {% if offCanvasDrawer %}
   </div>
-  <section id="drawer-panel--primary" class="sidebar {{ offCanvasDrawerDirection }}">
+  <section id="off-canvas-drawer--primary" class="off-canvas-drawer {{ offCanvasDrawerDirection }}">
     {% include "../includes/menu--off-canvas-drawer.twig" %}
   </section>
   <div id="off-canvas-mask" class="drawer-toggle--primary"></div>
