@@ -21,7 +21,6 @@
     "purgecss": "^1.1.0"
   },
   "dependencies": {
-    "browser-sync": "^2.26.3",
     "gulp-purgecss": "^1.1.1",
     "tailwindcss": "^0.7.3"
   }
