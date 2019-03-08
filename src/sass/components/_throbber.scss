@@ -5,13 +5,13 @@
 - replace the default Drupal ajax throbber because it's ugly
 */
 .ajax-progress-throbber {
-	position: fixed;
-	z-index: 9999;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	background:  rgba(255,255,255,.5);
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background:  rgba(255,255,255,.5);
 }
 
 /* purgecss ignore */
@@ -64,5 +64,50 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+// DRUPAL 8 VERSION
+.ajax-progress,
+.ajax-progress-throbber,
+.ajax-progress-fullscreen {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  background: hsla(0, 0%, 100%, .5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10001;
+  transition: opacity .25s linear;
+}
+
+.ajax-progress-throbber:before,
+.ajax-progress-fullscreen:before {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 50px;
+  animation: a .75s linear infinite;
+  border-radius: 50px;
+  border: 5px solid rgba(51, 51, 51, .25);
+  border-bottom-color: $ubc-blue;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+@keyframes a {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(1turn);
   }
 }
