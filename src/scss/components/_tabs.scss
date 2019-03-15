@@ -1,0 +1,101 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the Tabcordion (get it?) component.
+// -----------------------------------------------------------------------------
+// Tabcordion
+.tabcordion__links {
+  display: none;
+}
+
+.tabcordion__tab {
+  @apply .flex-1 .px-1;
+}
+
+.tabcordion__tab button {
+  @apply .text-xs;
+  display: block;
+  border-width: 1px;
+  border-color: $ubc-blue;
+  background-color: $ubc-blue;
+  padding: .5rem;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 1.5rem;
+  color: $white;
+}
+
+.tabcordion__tab:hover {
+  text-decoration: none;
+}
+
+.tabcordion__tab:hover button {
+  background-color: $unit-blue-dark;
+}
+
+.tabcordion__tab.is-active button {
+  background-color: $white;
+  color: $ubc-blue;
+}
+
+// Mobile triggers
+.tabcordion__heading {
+  @apply .mt-2 .block .relative .py-4 .pl-4 .pr-12 .uppercase -mx-4;
+  transition: background-color .125s ease, color .125s ease;
+  border: 1px solid $ubc-blue;
+  background-color: $ubc-blue;
+  cursor: pointer;
+  overflow: hidden;
+  text-align: center;
+  color: $white;
+}
+
+.tabcordion__heading:hover {
+  background-color: $unit-blue-dark;
+  text-decoration: none;
+  color: $white;
+}
+
+.tabcordion__heading:focus {
+  outline: 0;
+}
+
+.tabcordion__heading.is-active {
+  background-color: $unit-grey-lighter-alt;
+  color: $ubc-blue;
+}
+
+.tabcordion__heading::after {
+  @apply .absolute .p-4;
+  top: 0;
+  right: 1rem;
+  background-image: url('../img/svg/accordion-open.svg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 100%;
+  content: '';
+}
+
+.tabcordion__heading.is-active::after {
+  background-image: none;
+}
+
+@media (min-width: $breakpoint--md) {
+  .tabcordion__links {
+    @apply .list-reset .flex .justify-between .-mx-1;
+  }
+
+  .tabcordion__heading,
+  .tabcordion__heading.is-active {
+    display: none;
+  }
+}
+
+// TAB CONTENT
+.tabcordion__content {
+  display: none;
+  padding-bottom: 1.5rem;
+
+  &.is-active {
+    display: block;
+  }
+}

@@ -1,0 +1,224 @@
+// -----------------------------------------------------------------------------
+// This file contains default typographic styles for text.
+// -----------------------------------------------------------------------------
+//
+
+// STAG webfort
+@font-face {
+  font-family: 'Stag Web';
+  font-stretch: normal;
+  font-weight: 600;
+  font-style: normal;
+  src: url('../fonts/stag/Stag-Semibold-Web.eot');
+  src: url('../fonts/stag/Stag-Semibold-Web.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/stag/Stag-Semibold-Web.woff2') format('woff2'),
+  url('../fonts/stag/Stag-Semibold-Web.woff') format('woff');
+}
+
+// Default
+html {
+  color: $unit-grey-darker;
+  font-family: $default-typeface;
+  font-size: ($base-font-size / 16) * 100%;
+}
+
+// Copy & Lists
+p {
+  margin-top: $leading;
+  margin-bottom: 0;
+  line-height: $leading;
+}
+
+ul,
+ol {
+  margin-top: $leading;
+  margin-bottom: $leading;
+
+  li {
+    line-height: $leading;
+  }
+
+  ul,
+  ol {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+b,
+strong {
+  font-weight: 700;
+}
+
+blockquote {
+  @apply .my-12 .px-12 .text-lg;
+  border-left: 4px solid $unit-green;
+  //line-height: 2 * $leading;
+  color: $unit-grey;
+  font-weight: 400;
+
+  p {
+    line-height: 1.4em;
+  }
+}
+
+// Headings
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.heading-one,
+.heading-two,
+.heading-three,
+.heading-four,
+.heading-five,
+.heading-six {
+  margin-bottom: 0;
+}
+
+h1,
+.heading-one {
+  margin-top: 2 * $leading;
+  line-height: 3.25 * $leading;
+  font-size: (3.25 * $scale) * 1rem;
+  font-weight: $h1-weight;
+}
+
+h2,
+.heading-two {
+  margin-top: 2 * $leading;
+  line-height: 2.75 * $leading;
+  font-size: (2.75 * $scale) * 1rem;
+  font-weight: $h2-weight;
+}
+
+h3,
+.heading-three {
+  margin-top: 2 * $leading;
+  line-height: 2 * $leading;
+  font-size: (2 * $scale) * 1rem;
+  font-weight: $h3-weight;
+}
+
+h4,
+.heading-four {
+  margin-top: $leading;
+  line-height: $leading;
+  font-size: (1 * $scale) * 1rem;
+  font-weight: $h4-weight;
+}
+
+h5,
+.heading-five {
+  margin-top: $leading;
+  line-height: $leading;
+  font-size: ($scale / 1.2) * 1rem;
+  font-weight: $h5-weight;
+}
+
+h6,
+.heading-six {
+  margin-top: $leading;
+  line-height: $leading;
+  font-size: ($scale / 1.5) * 1rem;
+  font-weight: $h6-weight;
+}
+
+.heading-alternate {
+  font-family: $alternate-typeface;
+  font-weight: 700;
+}
+
+.heading-block {
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  padding: 1rem;
+  line-height: 1.25;
+  font-weight: 400;
+}
+
+.heading-block--white-on-blue {
+  background-color: $ubc-blue;
+  color: $white;
+}
+
+.heading-block--white-on-grey {
+  background-color: $unit-grey;
+  color: $white;
+}
+
+.heading-block--white-on-green {
+  background-color: $unit-green;
+  color: $white;
+}
+
+// Horizontal Rule
+hr {
+  margin: 2rem 0;
+  border-top: 1px solid lighten($unit-grey-light, 20%);
+}
+
+// Code blocks
+code,
+.text--code {
+  // Forces text to constrain to the line-height. Not ideal, but works.
+  vertical-align: bottom;
+}
+
+// TEXT UTILITIES
+// -------------------
+// Sizes
+.text-lead {
+  @apply .text-lg .leading-normal;
+  margin-top: $leading;
+  margin-bottom: 0;
+  color: $unit-grey-dark;
+  font-weight: 400;
+}
+
+@media (min-width: $breakpoint--md) {
+  .text-lead {
+    @apply .text-2xl;
+  }
+}
+
+.text-small {
+  font-size: $scale * .75rem;
+}
+
+.text-xxs {
+  font-size: .625rem;
+}
+
+// Position
+// Hug the block above you
+.text-hug {
+  margin-top: 0;
+}
+
+.text-bold {
+  font-weight: 700;
+}
+
+.text-light {
+  font-weight: 400;
+}
+
+// List items with image bullets
+.list--arrows {
+  padding: 0;
+  list-style: none;
+}
+
+.list--arrows > li {
+  background-image: url('../img/svg/arrow-circle-o-right.svg');
+  background-repeat: no-repeat;
+  background-size: 1.25rem 1.25rem;
+  padding-left: 2.5rem;
+  background-position-x: .75rem;
+  background-position-y: .125rem;
+}

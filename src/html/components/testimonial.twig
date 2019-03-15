@@ -1,0 +1,20 @@
+{% set testimonialTitle = "Terry Kaplan" %}
+{% set testimonialProgram = "UBC Certficate in Project Mangement" %}
+{% set testimonialRole = "Senior Business Analyst" %}
+{% set testimonialCompany = "Telus" %}
+{% set testimonialText = '“For me, the most interesting aspect of my journey in obtaining my PMP and how it assisted my career path has to do with the work I am doing now with Telus.  My engineering background isn’t related with what I currently do at Telus, so I really believe having my PMP was essential in obtaining my new job and career path.”' %}
+
+<div class="testimonial">
+  <figure class="relative">
+    <img class="testimonial__image" src="img/feature-images/1-alt.jpg" />
+    <figcaption class="testimonial__caption">
+      <div class="gradient-image-overlay"></div>
+      <div class="testimonial__caption-container">
+        <h2 class="testimonial__title"><strong>{{ testimonialTitle }}</strong>, {{ testimonialProgram }}</h2>
+        <p class="text-lg text-hug leading-normal">{{ testimonialRole }}</p>
+        <p class="text-lg font-bold text-hug leading-normal">{{ testimonialCompany }}</p>
+        <p class="italic">{{ testimonialText }}</p>
+      </div>
+    </figcaption>
+  </figure>
+</div>

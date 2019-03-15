@@ -1,33 +1,36 @@
 {% extends "layouts/default.twig" %}
-{% set title = "homepage" %}
-{% set pageTitle = "Pursue Compelling Questions" %}
-{% set pageTeaser = "Test the Most Promising Ideas<br/>
-Give New Solutions to the World" %}
-{% set pageIntro = "Our world-renowned team of researchers are dedicated to accelerating scientific breakthroughs, push known boundaries, and create fundamentally new functionalities. Work that is supported by strong international collaborations, including formal agreements with the Max Planck Society of Germany and the University of Tokyo." %}
+{% set title = "Welcome | Continuing Business Studies" %}
+{% set pageTitle = "Discover your passions &amp; build your career" %}
+{% set pageIntro = "<p>Here we highlight key reasons to choose UBC’s CBS. We can write about how it’s globally renowned, and is an innovative and academically rigorous program taught by experts in their field of research who foster a values-based and community-minded culture.</p>
+<p>Want to learn more about the program? Attend an info session and discover first-hand where a UBC CBS can take you. </p>" %}
+{% set pageFeatureTitle = "It all starts here." %}
+{% set pageFeatureTeaser = "Join Students from across Canada and around the globe and see why they choose UBC CBS's world-class program." %}
+
 
 {% block content %}
-{% include "components/featured-home.twig" %}
+<section class="container pt-6">
+  {% include "components/featured-home.twig" %}
+</section>
 
-<main class="container mx-auto pt-16 pb-8 px-4">
-  <p class="text-center text-lg md--text-2xl leading-normal">{{ pageIntro }}</p>
+<main class="container py-6">
+  <div class="lg--flex -mx-4">
+    <div class="lg--w-three-quarters px-4">
+      <h1 class="heading-three text-hug">{{ pageTitle }}</h1>
+      {{ pageIntro }}
+      <div class="mt-4"><img alt="" title="" src="img/home-features-3.jpg" /></div>
+      <div class="pt-4">
+        <h4 class="heading-block heading-block--white-on-grey mt-6">Programs and Courses</h4>
+        {% include "components/content-cards-home.twig" %}
+        {% include "components/share.twig" %}
+      </div>
+    </div>
+    <div class="lg--w-one-quarter px-4">
+      {% include "components/supporting-image.twig" %}
+      {% include "components/supporting-upcoming-dates.twig" %}
+      {% include "components/supporting-upcoming-feature.twig" %}
+    </div>
+  </div>
 </main>
-
-<section class="container mx-auto p-4" id="test">
-  {% include "components/cards-home.twig" %}
-</section>
-<section class="container mx-auto p-4">
-  {% include "components/stats-home.twig" %}
-</section>
-<section class="container mx-auto px-4 pb-8 pt-16">
-  {% include "components/cards-featured--home.twig" %}
-</section>
-<section class="container mx-auto px-4 pb-8 pt-16">
-  {% include "components/teasers-mini.twig" %}
-</section>
-
-<section class="container mx-auto p-4">
-  {% include "components/partners.twig" %}
-</section>
 
 {% endblock %}
 

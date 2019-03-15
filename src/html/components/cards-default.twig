@@ -1,41 +1,158 @@
-<h4>No Image</h4>
+{% set card1Title = "Project Management" %}
+{% set card2Title = "Business Analysis" %}
+{% set card3Title = "Agile Leadership" %}
+{% set card4Title = "Change Management" %}
+{% set card5Title = "Exam and Test Preps" %}
+{% set card1Image = "img/feature-images/1.jpg" %}
+{% set card2Image = "img/feature-images/2.jpg" %}
+{% set card3Image = "img/feature-images/3.jpg" %}
+{% set card4Image = "img/feature-images/4.jpg" %}
+{% set card5Image = "img/feature-images/5.jpg" %}
+{% set card1Text = "Offered in a part-time blended format, this will&hellip;" %}
+{% set card2Text = "Offered in a part-time online format, this program will build you skills in&hellip;" %}
+{% set card3Text = "Offered in a part-time face-to-face format, this program will&hellip;" %}
+{% set card4Text = "Offered in a part-time blended format, this program will&hellip;" %}
+{% set card5Text = "Offering University test prep course in GMAT, GRE, LSAT &amp; MCaT as well as industry professional exam preps in PMP, CFA and CSM." %}
+{% set linkText = "Learn More" %}
 
-<div class="card--default w-full">
-  <div class="card__content border-b border-ubc-blue p-6 md--p-4">
-    <h3 class="text-ubc-blue border-t-2 border-l-8 m-0 py-2 px-4 -mx-6 border-ubc-blue md--border-0 md--text-white heading-five md--bg-ubc-blue md--p-4 md---mx-4 md--font-normal">Condensed Matter Physics<br />More text on second line.</h3>
-    <div class="border-l-8 py-2 px-4 -mx-6 border-ubc-blue text-ubc-blue md--border-0 md--bg-unit-grey md--text-white md---mx-4 uppercase inline-block"><span class="font-bold pr-4">41</span> Martober</div>
-    <p><strong>Speaker:</strong> Josephine Smith</p>
-    <p class="text--hug"><strong>Time:</strong> TBC</p>
-    <p class="text--hug"><strong>Location:</strong> TBC</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    <p><a href="#" class="link--more uppercase">Get Event Details</a></p>
-  </div>
-  <ul class="list-reset mt-0 inline-flex flex-row-reverse w-full">
-    <li class="py-2 px-4 ml-2 mb-2 bg-unit-accent text-ubc-blue text-xs">Tag Test 1</li>
-    <li class="py-2 px-4 ml-2 mb-2 bg-unit-accent text-ubc-blue text-xs">Tag Test 2</li>
-  <ul>
-</div>
+<h4>Single link inside card</h4>
 
-<h4>Image on Left</h4>
+<div class="sm--flex sm--flex-wrap -mx-4">
 
-<div class="card--default w-full">
-  <div class="flex flex-col md--flex-row md--card--imagefirst">
-    <div class="card__image h-48 border-t border-ubc-blue md--border-0 md--h-auto md--w-one-third bg-cover bg-center md---mx-0 overflow-hidden" style="background-image: url('img/demo/3.jpg')">
+  <div class="card--default p-4 sm--w-half md--w-one-third">
+    <div class="card__image">
+      <img alt="" title="" src="{{ card1Image }}" />
     </div>
-    <div class="card__content border-b border-ubc-blue ml-6 pb-4 md--w-two-thirds">
-      <h3 class="text-ubc-blue border-t-2 border-l-8 m-0 py-2 px-4 -ml-6 border-ubc-blue md--border-0 md--text-white heading-five md--bg-ubc-blue md--p-4 md---mx-0 md--font-normal ">Condensed Matter Physics<br />More text on second line.</h3>
-      <div class="border-l-8 py-2 px-4 -mx-6 border-ubc-blue text-ubc-blue md--border-0 md--bg-unit-grey md--text-white md---mx-0 uppercase inline-block"><span class="font-bold pr-4">41</span> Martober</div>
-      <p><strong>Speaker:</strong> Josephine Smith</p>
-      <p class="text--hug"><strong>Time:</strong> TBC</p>
-      <p class="text--hug"><strong>Location:</strong> TBC</p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    <p><a href="#" class="link--more uppercase">Get Event Details</a></p>
+    <h3 class="card__heading heading-five">{{ card1Title }}</h3>
+    <div class="card__content">
+      <p>{{ card1Text }}</p>
+    </div>
+    <div class="card__footer">
+      <a href="#" class="unit-button unit-button--blue text-sm">{{ linkText }}</a>
     </div>
   </div>
-  <ul class="list-reset mt-0 inline-flex flex-row-reverse w-full">
-    <li class="py-2 px-4 ml-2 mb-2 bg-unit-accent text-ubc-blue text-xs">Tag Test 1</li>
-    <li class="py-2 px-4 ml-2 mb-2 bg-unit-accent text-ubc-blue text-xs">Tag Test 2</li>
-  <ul>
+
+  <div class="card--default p-4 sm--w-half md--w-one-third">
+    <div class="card__image">
+      <img alt="" title="" src="{{ card2Image }}" />
+    </div>
+    <h3 class="card__heading heading-five">{{ card2Title }}</h3>
+    <div class="card__content">
+      <p>{{ card2Text }}</p>
+    </div>
+    <div class="card__footer">
+      <a href="#" class="unit-button unit-button--blue text-sm">{{ linkText }}</a>
+    </div>
+  </div>
+
+  <div class="card--default p-4 sm--w-half md--w-one-third">
+    <div class="card__image">
+      <img alt="" title="" src="{{ card3Image }}" />
+    </div>
+    <h3 class="card__heading heading-five">{{ card3Title }}</h3>
+    <div class="card__content">
+      <p>{{ card3Text }}</p>
+    </div>
+    <div class="card__footer">
+      <a href="#" class="unit-button unit-button--blue text-sm">{{ linkText }}</a>
+    </div>
+  </div>
+
+  <div class="card--default p-4 sm--w-half md--w-one-third">
+    <div class="card__image">
+      <img alt="" title="" src="{{ card4Image }}" />
+    </div>
+    <h3 class="card__heading heading-five">{{ card4Title }}</h3>
+    <div class="card__content">
+      <p>{{ card4Text }}</p>
+    </div>
+    <div class="card__footer">
+      <a href="#" class="unit-button unit-button--blue text-sm">{{ linkText }}</a>
+    </div>
+  </div>
+
+   <div class="card--default p-4 sm--w-half md--w-one-third">
+    <div class="card__image">
+      <img alt="" title="" src="{{ card5Image }}" />
+    </div>
+    <h3 class="card__heading heading-five">{{ card5Title }}</h3>
+    <div class="card__content">
+      <p>{{ card5Text }}</p>
+    </div>
+    <div class="card__footer">
+      <button class="unit-button unit-button--blue text-sm">{{ linkText }}</button>
+    </div>
+  </div>
+
 </div>
 
+<h4>Whole card links</h4>
+
+<div class="sm--flex sm--flex-wrap -mx-4">
+
+  <a class="card--default p-4 sm--w-half md--w-one-third" href="#">
+    <div class="card__image">
+      <img alt="" title="" src="{{ card1Image }}" />
+    </div>
+    <h3 class="card__heading heading-five">{{ card1Title }}</h3>
+    <div class="card__content">
+      <p>{{ card1Text }}</p>
+    </div>
+    <div class="card__footer">
+      <button class="unit-button unit-button--blue text-sm">{{ linkText }}</button>
+    </div>
+  </a>
+
+  <a class="card--default p-4 sm--w-half md--w-one-third" href="#">
+    <div class="card__image">
+      <img alt="" title="" src="{{ card2Image }}" />
+    </div>
+    <h3 class="card__heading heading-five">{{ card2Title }}</h3>
+    <div class="card__content">
+      <p>{{ card2Text }}</p>
+    </div>
+    <div class="card__footer">
+      <button class="unit-button unit-button--blue text-sm">{{ linkText }}</button>
+    </div>
+  </a>
+
+  <a class="card--default p-4 sm--w-half md--w-one-third" href="#">
+    <div class="card__image">
+      <img alt="" title="" src="{{ card3Image }}" />
+    </div>
+    <h3 class="card__heading heading-five">{{ card3Title }}</h3>
+    <div class="card__content">
+      <p>{{ card3Text }}</p>
+    </div>
+    <div class="card__footer">
+      <button class="unit-button unit-button--blue text-sm">{{ linkText }}</button>
+    </div>
+  </a>
+
+  <a class="card--default p-4 sm--w-half md--w-one-third" href="#">
+    <div class="card__image">
+      <img alt="" title="" src="{{ card4Image }}" />
+    </div>
+    <h3 class="card__heading heading-five">{{ card4Title }}</h3>
+    <div class="card__content">
+      <p>{{ card4Text }}</p>
+    </div>
+    <div class="card__footer">
+      <button class="unit-button unit-button--blue text-sm">{{ linkText }}</button>
+    </div>
+  </a>
+
+   <a class="card--default p-4 sm--w-half md--w-one-third" href="#">
+    <div class="card__image">
+      <img alt="" title="" src="{{ card5Image }}" />
+    </div>
+    <h3 class="card__heading heading-five">{{ card5Title }}</h3>
+    <div class="card__content">
+      <p>{{ card5Text }}</p>
+    </div>
+    <div class="card__footer">
+      <button class="unit-button unit-button--blue text-sm">{{ linkText }}</button>
+    </div>
+  </a>
+
+</div>

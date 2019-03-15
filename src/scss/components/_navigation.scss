@@ -1,0 +1,293 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to navigation.
+// -----------------------------------------------------------------------------
+// NAVIGATION
+
+
+// CART MENU
+.nav.user-info {
+  @apply .list-reset .my-0;
+}
+
+.user-info a {
+  @apply .text-white .block .px-4 .py-2 .text-sm;
+}
+
+.user-info a:hover {
+  background-color: $unit-green;
+  text-decoration: none;
+}
+
+.nav.user-info svg {
+  position: relative;
+  top: .125rem;
+  margin-right: .25rem;
+}
+
+@media (min-width: $breakpoint--lg) {
+
+  .nav.user-info {
+    @apply .float-right;
+  }
+}
+
+
+
+// SECONDARY LINK STYLES
+.navlink--secondary {
+  @apply .no-underline .block .px-4 .py-2 .text-sm .leading-tight .relative .bg-white .pl-8;
+}
+
+.navlink--secondary:hover {
+  @apply .no-underline .bg-ubc-blue .text-white;
+}
+
+#secondary-navigation li:last-child .navlink--secondary {
+  @apply .border-b-0;
+}
+
+.navlink--secondary:hover::after {
+  color: $white;
+}
+
+.navlink--secondary .subnav-arrow {
+  display: inline-block;
+  position: absolute;
+  top: calc(50% - .75rem);
+  left: .125rem;
+  transition: transform .125s ease, color .125s ease;
+  width: 1.5rem;
+  height: 1.5rem;
+  color: $ubc-blue;
+}
+
+.navlink--secondary:hover .subnav-arrow {
+  transform: translateX(.25rem);
+  color: $white;
+}
+
+.navlink--secondary.active-trail +.children {
+  display: block;
+}
+
+.navlink--secondary.active-trail .subnav-arrow {
+  transform: rotate(90deg);
+}
+
+ul ul .navlink--secondary,
+.navlink--secondary--alt {
+  @apply .block .relative .text-unit-grey-dark .border-b .px-1 .py-2 .text-xs;
+  border-color: darken($unit-grey-lighter, 10%);
+}
+
+ul ul .navlink--secondary:hover,
+.navlink--secondary--alt:hover {
+  @apply .bg-unit-grey .text-white .no-underline;
+}
+
+ul ul .navlink--secondary.active
+.navlink--secondary--alt.active {
+  @apply .border-ubc-blue .bg-ubc-blue;
+}
+
+// HIDE / SHOW SUBNAV ITEMS
+.children {
+  display: none;
+}
+
+.subnav-trigger {
+  @apply .absolute .inline-block .h-full .pr-4 .pin-r .pin-t .z-10;
+  width: 2.5em;
+}
+
+.subnav-trigger::after {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-image: url('../img/svg/chevron-white-01.svg');
+  background-repeat: no-repeat;
+  background-size: 24px;
+  width: 2.5em;
+  height: 100%;
+  content: '';
+  background-position-x: left;
+  background-position-y: center;
+}
+
+.subnav-trigger:hover::after {
+  cursor: pointer;
+}
+
+.subnav-trigger.active::after {
+  transform: rotate(180deg);
+  background-position-x: right;
+}
+
+
+.subnav--collapsing {
+  @apply .border-ubc-blue .border;
+}
+
+.subnav__links > ul {
+  @apply .p-4;
+}
+
+.subnav__toggle {
+  @apply .text-white .bg-ubc-blue .p-4 .text-xl .mx-0 .my-0 .leading-normal .relative;
+  padding-right: 2.5rem;
+  font-weight: 400;
+}
+
+.subnav__menu-handle {
+  @apply .inline-block .h-6 .w-6 .absolute;
+  top: calc(50% - .75rem);
+  right: .5rem;
+}
+
+@media (min-width: $breakpoint--md) {
+  .subnav--collapsing .collapse {
+    height: auto !important;
+  }
+}
+
+// LOGIN LINKS
+.login-links {
+  @apply .flex .list-reset .mt-0 .mb-0;
+}
+
+.login-links__link {
+  @apply .text-white .uppercase .mr-3;
+  font-size: .625rem;
+}
+
+.login-links__link:hover {
+  text-decoration: none;
+  color: $black;
+}
+
+.login-links > li:last-child .login-links__link {
+  @apply .mr-0;
+}
+
+.login-links__svg {
+  @apply .inline-block .h-3 .w-3 .text-black;
+  position: relative;
+  top: .125rem;
+}
+
+// PIPED LINKS FOR FOOTER / BREADCRUMBS
+.piped {
+  position: relative;
+  padding-right: 1.5rem;
+}
+
+.piped::after {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: .5rem;
+  content: '|';
+}
+
+.piped--grey::after {
+  color: $unit-grey;
+}
+
+.link--more {
+  display: inline-block;
+  position: relative;
+  padding-right: 2em;
+  text-decoration: none;
+  color: $unit-grey-dark;
+}
+
+.link--more:hover {
+  color: $unit-green;
+}
+
+.link--more:hover::after {
+  color: $unit-grey-dark;
+}
+
+.link--more::after {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  line-height: 1.25;
+  color: $unit-green;
+  content: '> >';
+}
+
+// Drupal Pagination
+.pager {
+  @apply .flex .justify-center .mt-4;
+  padding: 0;
+  list-style: none;
+}
+
+.pager li {
+  @apply .ml-0;
+}
+
+.pager a {
+  @apply .block .py-2 .px-4 .border .border-white .bg-unit-grey-light .text-white .text-sm;
+}
+
+.pager a:hover {
+  @apply .no-underline .bg-unit-grey-dark .text-white;
+}
+
+.pager .pager-current {
+  @apply .block .py-2 .px-4 .border .border-white .bg-ubc-blue .font-bold .text-white .text-sm;
+}
+
+// Bootstrap dropdown styles
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  float: left;
+  z-index: 1000;
+  margin: 1px 0 0;
+  border: 1px solid $unit-grey-light-alt;
+  border-radius:  0 0 .25rem .25rem;
+  box-shadow: 0 5px 5px $box-shadow-color;
+  background-clip: padding-box;
+  background-color: $white;
+  padding: 0;
+  min-width: 160px;
+  list-style: none;
+}
+
+.open .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li {
+  border-top: 1px solid $unit-grey-light-alt;
+}
+
+.dropdown-menu li:first-child {
+  border-top: 0;
+}
+
+.dropdown-menu a {
+  display: block;
+  clear: both;
+  padding: .25rem 1.5rem;
+  line-height: 1.5rem;
+  white-space: nowrap;
+  color: $text-color;
+  font-size: .875rem;
+  font-weight: normal;
+}
+
+.dropdown-menu a:hover {
+  background-color: $unit-grey-light-alt;
+  text-decoration: none;
+}

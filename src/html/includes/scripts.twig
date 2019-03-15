@@ -1,2 +1,87 @@
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.1.min.js"></script>
 <script src="https://cdn.ubc.ca/clf/7.0.4/js/ubc-clf.min.js"></script>
+<script>
+jQuery(document).on('click', 'a[href^=#]', function(e){
+  e.preventDefault();
+  var id = $(this).attr('href');
+  $('html,body').animate({scrollTop: $(id).offset().top}, 200);
+});
+jQuery(window).load(function() {
+  // Make tabcordion active when arriving from an anchored link
+  var loadanchor = location.hash.slice(1);
+  if(window.location.hash) {
+    jQuery('[data-tab=' + loadanchor + ']').addClass('is-active').siblings('[data-tab]').removeClass('is-active');
+    jQuery('[data-content=' + loadanchor + ']').addClass('is-active').siblings('[data-content]').removeClass('is-active');
+  };
+
+  jQuery('.tabcordion__trigger[data-tab]').on('click', function (e) {
+    e.preventDefault();
+    jQuery(this).closest('.tabcordion').find('[data-tab=' + $(this).data('tab') + ']').addClass('is-active').siblings('[data-tab]').removeClass('is-active');
+    jQuery(this).closest('.tabcordion').find('.tabcordion__content-wrapper [data-content=' + $(this).data('tab') + ']').addClass('is-active').siblings('[data-content]').removeClass('is-active');
+  });
+
+  jQuery('.info-grid--list').find('.info-grid__trigger').click(function(e){
+    e.preventDefault();
+    jQuery(this).toggleClass('is-active').siblings().find('.info-grid__details').toggleClass('is-active');
+  });
+
+  jQuery('.accordion').find('.accordion__tab').click(function(e){
+    e.preventDefault();
+    jQuery(this).next().slideToggle('fast');
+    jQuery(this).parent().toggleClass('accordion--closed');
+  });
+
+  jQuery('.panelgroup').find('.panel-tab').click(function(){
+    jQuery(this).next().slideToggle('fast');
+    jQuery(this).parent().toggleClass('panel-closed').toggleClass('panel-open');
+  });
+
+  jQuery('.view-section-drawer .panel').find('.panel-tab').click(function(){
+    jQuery(this).next().slideToggle('fast');
+    jQuery(this).parent().parent().parent().toggleClass('panel-closed').toggleClass('panel-open');
+  });
+
+  jQuery('table').wrap( "<div class='table--responsive'></div>");
+
+  // Open / Close All Button
+  $('#openall').on('click', function(e) {
+    //Expand or collapse this panel
+    $('.panel-content').slideDown('fast');
+    $('.panel-tab > i').removeClass('icon-plus-sign').addClass('icon-minus-sign');
+    $('.panel').removeClass('panel-closed').addClass('panel-open');
+    e.preventDefault();
+  });
+  $('#closeall').on('click', function(e) {
+    //Expand or collapse this panel
+    $('.panel-content').slideUp('fast');
+    $('.panel-tab > i').removeClass('icon-minus-sign').addClass('icon-plus-sign');
+    $('.panel').removeClass('panel-open').addClass('panel-closed');
+    e.preventDefault();
+  });
+
+  // ADJUSTED TO ADD HELPER TEXT / UX IMPROVEMENTS
+  var $course = $(".course-default #edit-field-related-section-field-section-computed-location-wrapper, .course-default #edit-field-related-section-field-section-schedule-wrapper, .course-default #edit-field-related-section-field-section-computed-term-wrapper");
+  var $program = $(".course-default #edit-field-program-type-wrapper");
+  var $filterhelp = $(".course-default .filter-help");
+  var $formelement = $("#views-exposed-form-content-search-page-2, #views-exposed-form-content-search-page-3");
+
+  // change form elements on click
+  $formelement.click(function() {
+      if ($('#edit-type-1').is(':checked')) {
+          $filterhelp.removeClass('hide').addClass('show');
+          $course.removeClass('show').addClass('hide').find('input:checkbox').attr('disabled', 'disabled');
+          $program.removeClass('show').addClass('hide').find('input:checkbox').attr('disabled', 'disabled');
+      }
+      if ($('#edit-type-2').is(':checked')) {
+          $filterhelp.removeClass('show').addClass('hide');
+          $course.removeClass('hide').addClass('show').find('input:checkbox').removeAttr('disabled');
+          $program.removeClass('show').addClass('hide').find('input:checkbox').attr('disabled', 'disabled');
+      }
+      if ($('#edit-type-3').is(':checked')) {
+          $filterhelp.removeClass('show').addClass('hide');
+          $course.removeClass('show').addClass('hide').find('input:checkbox').attr('disabled', 'disabled');
+          $program.removeClass('hide').addClass('show').find('input:checkbox').removeAttr('disabled');
+      }
+  });
+});
+</script>

@@ -1,127 +1,61 @@
 {% extends "layouts/default.twig" %}
-{% set title = "Components Page" %}
-{% set pageTitle = "Unit Web Styles" %}
+{% set title = "Components Page | Continuing Business Studies" %}
+{% set pageTitle = "CBS Web Styles" %}
 {% set pageTeaser = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor." %}
 {% set pageIntro = "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." %}
+{% set pageFeatureTitle = "It all starts here." %}
+{% set pageFeatureTeaser = "Join Students from across Canada and around the globe and see why they choose UBC CBS's world-class program." %}
+{% set pageFeatureTitle = "Plan. Manage. Collaborate." %}
+{% set pageFeatureImage = "4.jpg" %}
 
 {% block content %}
-<div class="page-title">
-  <h1 class="leading-tight text-xl mt-0 container mx-auto md--text-5xl uppercase">{{ pageTitle }}</h1>
+<div class="page-title container">
+  <h1 class="text-ubc-blue">{{ pageTitle }}</h1>
 </div>
 
-<h3 class="uppercase">Colours</h3>
+<h3 class="uppercase container mt-12">Colours</h3>
 <hr />
 <section class="container mx-auto p-4">
   {% include "components/colors.twig" %}
 </section>
 
-<h3 class="uppercase">Typography</h3>
+<h3 class="uppercase container mt-12">Typography</h3>
 <hr />
 <section class="container mx-auto p-4">
   {% include "components/type.twig" %}
 </section>
 
-<h3 class="uppercase">SVG Icons</h3>
+<h3 class="uppercase container mt-12">SVG Icons</h3>
 <hr />
 <section class="container mx-auto p-4">
   {% include "components/icons.twig" %}
 </section>
 
-<h3 class="uppercase">Navigation: Subnavigation</h3>
+<h3 class="uppercase container mt-12">Navigation: Subnavigation</h3>
 <hr />
 <section class="container mx-auto p-4">
   {% include "components/subnavigation.twig" %}
 </section>
 
-<h3 class="uppercase">Navigation: Breadcrumbs</h3>
+<h3 class="uppercase container mt-12">Navigation: Breadcrumbs</h3>
 <hr />
 <section class="container mx-auto p-4">
   {% include "components/breadcrumbs.twig" %}
 </section>
 
-<h3 class="uppercase">Buttons</h3>
+<h3 class="uppercase container mt-12">Buttons</h3>
 <hr />
 <section class="container mx-auto p-4">
   {% include "components/buttons.twig" %}
 </section>
 
-<h3 class="uppercase">Tables</h3>
+<h3 class="uppercase container mt-12">Tables</h3>
 <hr />
 <section class="container mx-auto p-4">
   {% include "components/tables.twig" %}
 </section>
 
-<h3 class="uppercase">Featured</h3>
-<hr />
-<section class="container mx-auto p-4">
-{% include "components/featured.twig" %}
-</section>
-
-<h3 class="uppercase">Featured: Homepage</h3>
-<hr />
-{% include "components/featured-home.twig" %}
-
-<h3 class="uppercase">Featured: Image</h3>
-<hr />
-<section class="container mx-auto p-4">
-  {% include "components/featured-image.twig" %}
-</section>
-
-<h3 class="uppercase">Teasers: Default Cards</h3>
-<hr />
-<section class="container mx-auto p-4">
-  {% include "components/cards-default.twig" %}
-</section>
-
-<h3 class="uppercase">Teasers: Featured Cards</h3>
-<hr />
-<section class="container mx-auto p-4">
-  {% include "components/cards-featured.twig" %}
-</section>
-
-<h3 class="uppercase">Teasers: Small Cards</h3>
-<hr />
-<section class="container mx-auto p-4">
-  {% include "components/cards-small.twig" %}
-</section>
-
-<h3 class="uppercase">Teasers: Mini</h3>
-<hr />
-<section class="container mx-auto p-4">
-  {% include "components/teasers-mini.twig" %}
-</section>
-
-<h3 class="uppercase">Teasers: Profiles</h3>
-<hr />
-<section class="container mx-auto p-4">
-  {% include "components/cards-profiles.twig" %}
-</section>
-
-<h3 class="uppercase">Teasers: Cards, Home</h3>
-<hr />
-<section class="container mx-auto">
-  {% include "components/cards-home.twig" %}
-</section>
-
-<h3 class="uppercase">Stats: Home</h3>
-<hr />
-<section class="container mx-auto p-4" id="test">
-  {% include "components/stats-home.twig" %}
-</section>
-
-<h3 class="uppercase">Partners: Home</h3>
-<hr />
-<section class="container mx-auto p-4">
-  {% include "components/partners.twig" %}
-</section>
-
-<h3 class="uppercase">Supporting Content</h3>
-<hr />
-<section class="container mx-auto p-4">
-  {% include "components/supporting.twig" %}
-</section>
-
-<h3 class="uppercase">Forms</h3>
+<h3 class="uppercase container mt-12">Forms</h3>
 <hr />
 <section class="container mx-auto p-4">
   {% include "components/forms.twig" %}
@@ -129,29 +63,78 @@
   <!-- {% include "components/throbber.twig" %} -->
 </section>
 
-<h3 class="uppercase">Accordions</h3>
+<h3 class="uppercase container mt-12">Accordions</h3>
 <hr />
 <section class="container mx-auto p-4">
   {% include "components/accordion.twig" %}
   {% include "components/accordion.twig" %}
 </section>
 
-<h3 class="uppercase">Figcaption</h3>
+<h3 class="uppercase container mt-12">Figcaption</h3>
 <hr />
 <section class="container mx-auto p-4">
 {% include "components/image-w-caption.twig" %}
 </section>
 
-<h3 class="uppercase">Blockquote</h3>
+<h3 class="uppercase container mt-12">Embedded Media</h3>
+<hr />
+<section class="container mx-auto p-4">
+<div class="media--wrapper mb-4">
+{% include "components/video.twig" %}
+</div>
+<div class="media--wrapper">
+{% include "components/map.twig" %}
+</div>
+</section>
+
+<h3 class="uppercase container mt-12">Blockquote</h3>
 <hr />
 <section class="container mx-auto p-4">
 {% include "components/blockquote.twig" %}
 </section>
 
-<h3 class="uppercase">Callout</h3>
+<h3 class="uppercase container mt-12">Featured: Homepage</h3>
 <hr />
 <section class="container mx-auto p-4">
+{% include "components/featured-home.twig" %}
+</section>
 
+<h3 class="uppercase container mt-12">Featured</h3>
+<hr />
+<section class="container mx-auto p-4">
+{% include "components/featured.twig" %}
+</section>
+
+<h3 class="uppercase container mt-12">Cards</h3>
+<hr />
+<section class="container mx-auto p-4">
+  {% include "components/cards-default.twig" %}
+</section>
+
+<h3 class="uppercase container mt-12">Supporting Content</h3>
+<hr />
+<section class="container mx-auto p-4">
+  {% include "components/supporting.twig" %}
+</section>
+
+<h3 class="uppercase container mt-12">Testimonial</h3>
+<hr />
+<section class="container mx-auto p-4">
+  {% include "components/testimonial.twig" %}
+</section>
+
+<h3 class="uppercase container mt-12">Tabcordions: Tabs (Desktop) to Accordions (Mobile)
+</h3>
+<hr />
+<section class="container mx-auto p-4">
+  {% include "components/tabs.twig" %}
+</section>
+
+<h3 class="uppercase container mt-12">Search and Search Results
+</h3>
+<hr />
+<section class="container mx-auto p-4">
+  {% include "components/search.twig" %}
 </section>
 
 {% endblock %}

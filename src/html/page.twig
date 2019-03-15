@@ -1,47 +1,29 @@
 {% extends "layouts/default.twig" %}
-{% set title = "A Fellowship" %}
-{% set pageTitle = "A Fellowship" %}
-{% set pageTeaser = "Test the Most Promising Ideas<br/>
-Give New Solutions to the World" %}
-{% set pageIntro = "The Quantum Electronic Science and Technology (QuEST) initiative offers an enriched experience for top-tier graduate students in Quantum Materials and Devices research." %}
+{% set title = "Page | Continuing Business Studies" %}
+{% set pageTitle = "A basic page" %}
+{% set pageFeatureTitle = "Plan. Manage. Collaborate." %}
+{% set pageFeatureImage = "4.jpg" %}
+{% set pageIntro = "<p>Behind every project delivered on time and on budget is a skilled project manager who can communicate effectively and manage a team from initiation through to planning execution, control and closing. The ability to juggle timelines, resources, team members, stakeholders, and deliverables makes project managers a valuable asset to any organization.</p>
+<p>Our project management offerings give you the essential skills needed to excel in successful project delivery in a wide variety of disciplines, along with a toolkit you can put to work immediately whether you are in industry, government or a community organization.</p>" %}
 
 {% block content %}
-<nav class="nav-breadcrumbs text-xs hidden md--block container mx-auto p-4">
+<nav class="nav-breadcrumbs text-xs container mx-auto p-4">
   <a href="#" class="text-unit-grey no-underline hover--underline piped piped--grey">Home</a>
-  <a href="#" class="text-unit-grey no-underline hover--underline piped piped--grey">Learn</a>
+  <a href="#" class="text-unit-grey no-underline hover--underline piped piped--grey">Some page</a>
   <a href="#" class="text-ubc-blue no-underline">{{ pageTitle }}</a>
 </nav>
 
-<div class="page-title md--hidden">
-  <h1 class="leading-tight text-xl mt-0 container mx-auto md--text-5xl uppercase">{{ pageTitle }}</h1>
-</div>
-
-<section class="container mx-auto px-4 pb-4">
-  {% include "components/featured-image--page.twig" %}
-</section>
-
-<main class="container mx-auto px-4 py-12">
-  <p class="text-center text-lg md--text-3xl font-light leading-normal">{{ pageIntro }}</p>
-  <p>QuEST consists of a highly integrated training program combining a top-level research environment with an emphasis on development of professional skills, and opportunities to experience different research environments.</p>
-  <p>QuEST program participants will:</p>
-  <ul>
-    <li>Learn a strong foundation of knowledge</li>
-    <li>Build a broad technical base</li>
-    <li>Develop the ability to devise innovative solutions to complex materials problems</li>
-    <li>Experience an open and highly-collaborative research network and environment that allows students to develop both breadth and depth in their field of research</li>
-  </ul>
-  <p>Additional QuEST program advantages:</p>
-  <ul>
-    <li>Access to innovative courses developed specifically to target areas of expertise related to Quantum Materials and Devices research</li>
-    <li>Opportunities for co-supervision in an interdisciplinary environment</li>
-    <li>Opportunities for professional development, career advice, panel discussions, mentoring, and networking</li>
-    <li>Access to highly-competitive scholarship funding</li>
-    <li>Access to travel subsidies to present research at international conferences</li>
-    <li>Additional funding and opportunities for research exchanges abroad, and internships & collaborations with industry partners</li>
-  </ul>
-
-  <p><a href="#" class="unit-button unit-button--red">How to Apply</a></p>
-  <p class="text-sm"><em>Have a question? Please email us at <a href="mailto:quest@qmi.ubc.ca" class="text-ubc-blue no-underline hover--underline">quest@qmi.ubc.ca</a>.</em></p>
+<main class="container py-6">
+  <div class="flex -mx-4 flex-wrap">
+    <div class="w-full md--w-two-thirds lg--w-three-quarters px-4 mb-6">
+      <h1 class="heading-three text-hug">{{ pageTitle }}</h1>
+      {{ pageIntro }}
+      {{ loremIpsum }}
+    </div>
+    <div class="w-full md--w-one-third lg--w-one-quarter px-4 mb-6 flex-order--1">
+      {% include "components/subnavigation.twig" %}
+    </div>
+  </div>
 </main>
 
 {% endblock %}

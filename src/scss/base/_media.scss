@@ -1,0 +1,51 @@
+// -----------------------------------------------------------------------------
+// This file contains base styles related to embedded media, such as iframes.
+// -----------------------------------------------------------------------------
+
+.media--wrapper {
+  position: relative;
+  padding-top: 30px;
+  padding-bottom: 56.25%;
+  height: 0 !important;
+  overflow: hidden;
+}
+
+.media--wrapper embed,
+.media--wrapper iframe,
+.media--wrapper object {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.img-and-caption {
+  @apply .my-6;
+}
+
+figcaption {
+  @apply .text-xs .text-unit-grey-light .text-right;
+}
+
+.texture--image-overlay {
+  position: absolute;
+  background-image: url('../img/svg/image-texture.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 60%;
+  background-position-x: left;
+  background-position-y: bottom;
+}
+
+.texture--image-overlay--home {
+  background-image: url('../img/svg/image-texture-homepage.svg');
+  background-size: cover;
+}
+
+@media (min-width: $breakpoint--xl) {
+  .texture--image-overlay--home {
+    background-size: contain;
+  }
+}
