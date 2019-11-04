@@ -31,3 +31,26 @@ patch:
   SNYK-JS-LODASH-450202:
     - tailwindcss > lodash:
         patched: '2019-07-04T07:14:01.026Z'
+    - snyk > lodash:
+        patched: '2019-11-04T21:42:18.345Z'
+    - snyk > @snyk/dep-graph > lodash:
+        patched: '2019-11-04T21:42:18.345Z'
+    - snyk > inquirer > lodash:
+        patched: '2019-11-04T21:42:18.345Z'
+    - snyk > @snyk/dep-graph > graphlib > lodash:
+        patched: '2019-11-04T21:42:18.345Z'
+    - snyk > snyk-nuget-plugin > lodash:
+        patched: '2019-11-04T21:42:18.345Z'
+    - snyk > snyk-nodejs-lockfile-parser > lodash:
+        patched: '2019-11-04T21:42:18.345Z'
+    - snyk > snyk-go-plugin > graphlib > lodash:
+        patched: '2019-11-04T21:42:18.345Z'
+    - snyk > snyk-nodejs-lockfile-parser > graphlib > lodash:
+        patched: '2019-11-04T21:42:18.345Z'
+    - snyk > snyk-config > lodash:
+        patched: '2019-11-04T21:42:18.345Z'
+  SNYK-JS-HTTPSPROXYAGENT-469131:
+    - snyk > proxy-agent > https-proxy-agent:
+        patched: '2019-11-04T21:42:18.345Z'
+    - snyk > proxy-agent > pac-proxy-agent > https-proxy-agent:
+        patched: '2019-11-04T21:42:18.345Z'
