@@ -9,7 +9,7 @@ const brotliSettings = {
     quality: 10, // 0 - 11,
     lgwin: 12 // default
 };
-var dirs = ['css', 'js'];
+var dirs = ['build/css', 'build/js'];
 dirs.forEach(dir => {
     fs.readdirSync(dir).forEach(file => {
         if (file.endsWith('.min.js') || file.endsWith('.min.css') || file.endsWith('.html')) {
