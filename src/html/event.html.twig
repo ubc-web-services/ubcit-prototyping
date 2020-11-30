@@ -1,0 +1,52 @@
+{% extends "layouts/default.twig" %}
+{% set title = "Page" %}
+{% set pageTitle = "Pension workshop title" %}
+{% set pageFeatureTitle = "Plan. Manage. Collaborate." %}
+{% set pageFeatureImage = "4.jpg" %}
+{% set pageIntro = "<p>Behind every project delivered on time and on budget is a skilled project manager who can communicate effectively and manage a team from initiation through to planning execution, control and closing. The ability to juggle timelines, resources, team members, stakeholders, and deliverables makes project managers a valuable asset to any organization.</p>
+<p>Our project management offerings give you the essential skills needed to excel in successful project delivery in a wide variety of disciplines, along with a toolkit you can put to work immediately whether you are in industry, government or a community organization.</p>" %}
+
+{% block content %}
+<main class="unit-content">
+	<div class="container mx-auto p-4 ">
+		{% include "components/navigation--breadcrumbs.twig" %}
+		<h1 class="text-ubc-blue-cobalt">{{ pageTitle }}</h1>
+		<div class="grid-container grid-container--basic">
+			<div class="grid-area-a mb-8">
+				<div class="meta meta__bg meta_big mt-12 text-base md--text-lg lg--text-2xl"><span
+						class="inline-block py-1 px-2 bg-ubc-blue-cornflower text-ubc-blue block text-xs">UBCV</span><br />Thursday,
+					June 20, 2019<br />The Nest, Room 135</div>
+				<p>Chupa chups tiramisu icing donut marzipan cookie wafer. Gummies donut topping brownie halvah tiramisu
+					liquorice cookie marzipan. Jelly-o brownie topping muffin lollipop chocolate jujubes jelly chocolate
+					cake. Tiramisu pudding topping jelly beans tart oat cake soufflé apple pie.</p>
+				<p>Cake croissant lollipop candy canes jelly powder jelly. Candy bear claw powder danish candy marzipan
+					chocolate. Gingerbread sugar plum danish. Sugar plum halvah ice cream fruitcake. Jelly-o toffee
+					dragée bear claw biscuit sugar plum. Halvah donut ice cream lemon drops soufflé pie sweet roll.
+					Candy pie biscuit. Oat cake jelly beans caramels jelly-o chocolate bar cupcake jelly-o cake brownie.
+					Wafer toffee tiramisu chocolate cake donut cake.</p>
+				<div class="media-wrapper my-6">
+					{% include "components/media--map.twig" %}
+				</div>
+				<p>
+					<a href="#"
+						class="unit-button unit-button--white text-ubc-blue-cobalt px-6 py-3 mr-6 border inline-block border-ubc-blue-cobalt hover--bg-ubc-blue-cobalt hover--text-white hover--no-underline hover--shadow-md group">Register
+						today <svg role="presentation"
+							class="unit-button__icon inline-block h-4 w-4 text-ubc-blue-cobalt group-hover--text-white ml-2 -mt-1 stroke-w-4"
+							viewBox="0 0 64 64">
+							<use xlink:href="#icon-arrow-circle"></use></svg></a>
+				</p>
+			</div>
+			<div class="grid-area-b mt-12 mb-8">
+				{% include "components/navigation--sub.twig" %}
+			</div>
+		</div>
+	</div>
+</main>
+
+{% endblock %}
+
+{% block custom_css %}
+{% endblock %}
+
+{% block custom_javascript %}
+{% endblock %}

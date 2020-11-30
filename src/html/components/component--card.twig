@@ -1,0 +1,662 @@
+{% set card1Title = "Professional Learning + Development" %}
+{% set card2Title = "Vacations, Leaves + Time Off" %}
+{% set card3Title = "Giving Back to Build a Thriving Community" %}
+{% set card4Title = "Career Navigation, Tenure + Promotion" %}
+{% set card1Cat = "Learning" %}
+{% set card2Cat = "Wellbeing" %}
+{% set card3Cat = "Community" %}
+{% set card4Cat = "Career Lifecycle" %}
+{% set cardAttribution = "by Santa Ono" %}
+{% set card1Image = "img/feature-images/1.jpg" %}
+{% set card2Image = "img/feature-images/2.jpg" %}
+{% set card3Image = "img/feature-images/3.jpg" %}
+{% set card4Image = "img/feature-images/4.jpg" %}
+{% set card1Text = "It's not your typical day to day and, if you want to be a part of it." %}
+{% set card2Text = "Offered in a part-time online format, this program will build you skills in&hellip;" %}
+{% set card3Text = "Offered in a part-time face-to-face format, this program will&hellip;" %}
+{% set card4Text = "Offered in a part-time blended format, this program will&hellip;" %}
+{% set linkText = "Explore" %}
+
+
+<h4>Links inside card [autogrid]</h4>
+<section class="md--auto-grid md--auto-grid--third">
+
+	<div class="auto-grid__cell">
+		<a href="#" class="ubc-card ubc-card--vert ubc-card--shadow text-black hover--no-underline group">
+			<div class="ubc-card__media min-h-64 bg-cover"
+				style="background-image: url(https://live.staticflickr.com/4584/38588637591_0241df7a93_z_d.jpg);"></div>
+			<div class="ubc-card__content">
+				<div class="card__meta">
+					{{ card1Cat }}</div>
+				<h2 class="card__title">{{ card1Title }}</h2>
+				<p>Whole card link. {{ card1Text }}</p>
+			</div>
+
+			<div class="ubc-card__actions text-right">
+				<div class="ubc-card__action-buttons inline-block">
+					<p class="unit-button unit-button--light group-hover--bg-ubc-blue-cobalt no-underline group-hover--text-white unit-button--has-icon-right unit-button--animate-icon"> {{ linkText }} <svg role="presentation" class="unit-button__icon" viewBox="0 0 64 64">
+						<use xlink:href="#icon-arrow-circle"></use>
+					</svg></p>
+				</div>
+			</div>
+		</a>
+	</div>
+
+	<div class="auto-grid__cell">
+		<div class="ubc-card ubc-card--vert ubc-card--shadow">
+		<a href="#" class="ubc-card__primary-action flex-1 text-black">
+			<div class="ubc-card__media min-h-64 bg-cover"
+				style="background-image: url(https://live.staticflickr.com/4584/38588637591_0241df7a93_z_d.jpg);"></div>
+			<div class="ubc-card__content">
+				<div class="card__meta">
+					{{ card1Cat }}</div>
+				<h2 class="card__title">{{ card1Title }}</h2>
+				<p>Split Links. {{ card1Text }}</p>
+			</div>
+
+		</a>
+		<div class="ubc-card__actions text-right">
+			<div class="ubc-card__action-buttons inline-block">
+				<p>
+					<a href="#" class="unit-button unit-button--mid">Different Link</a>
+				</p>
+			</div>
+		</div>
+	</div>
+	</div>
+
+	<div class="auto-grid__cell">
+		<div class="ubc-card ubc-card--vert ubc-card--shadow">
+			<div class="ubc-card__media block min-h-64 text-white bg-cover has-content--after has-gradient-bottom--after"
+				style="background-image: url(https://live.staticflickr.com/4584/38588637591_0241df7a93_z_d.jpg);">
+				<div class="ubc-card__media-content flex items-end flex-wrap p-4 min-h-64 relative z-30">
+					<div class="ubc-card__primary">
+						<h2 class="card__title text-white">{{ card1Title }}</h2>
+						<h3 class="card__subtitle">{{ cardAttribution }}</h3>
+					</div>
+				</div>
+			</div>
+			<div class="ubc-card__content">No link before footer. {{ card1Text }}</div>
+			<div class="ubc-card__actions border-t">
+				<div class="ubc-card__action-buttons inline-block">
+					<a href="#" class="unit-button unit-button--dark">Read</a>
+					<button class="unit-button unit-button--light">Bookmark</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</section>
+
+<hr />
+
+<h4>Cards with one link, stacked</h4>
+<section class="md--auto-grid md--auto-grid--half lg--auto-grid--quarter">
+
+	<div class="auto-grid__cell">
+		<a href="#" class="ubc-card ubc-card--vert ubc-card--shadow text-black hover--no-underline group">
+			<div class="ubc-card__media min-h-64 bg-cover"
+				style="background-image: url(https://live.staticflickr.com/4584/38588637591_0241df7a93_z_d.jpg);"></div>
+			<div class="ubc-card__content">
+				<div class="card__meta">
+					{{ card1Cat }}</div>
+				<h2 class="card__title">{{ card1Title }}</h2>
+				<p>Whole card link. {{ card1Text }}</p>
+			</div>
+			<div class="ubc-card__actions text-right">
+				<div class="ubc-card__action-buttons inline-block -mr-4">
+					<p class="unit-button unit-button--plain group-hover--bg-ubc-blue-cobalt no-underline group-hover--text-white unit-button--has-icon-right unit-button--animate-icon"> {{ linkText }} <svg role="presentation" class="unit-button__icon" viewBox="0 0 64 64">
+						<use xlink:href="#icon-arrow-circle"></use>
+					</svg></p>
+				</div>
+			</div>
+		</a>
+	</div>
+
+	<div class="auto-grid__cell">
+		<a href="#" class="ubc-card ubc-card--vert ubc-card--shadow bg-ubc-blue-cobalt text-white hover--no-underline group">
+			<div class="ubc-card__media min-h-64 bg-cover"
+				style="background-image: url(https://live.staticflickr.com/4584/38588637591_0241df7a93_z_d.jpg);"></div>
+			<div class="ubc-card__content">
+				<div class="card__meta text-black">
+					{{ card2Cat }}</div>
+				<h2 class="card__title text-white">{{ card2Title }}</h2>
+				<p>Whole card link. {{ card2Text }}</p>
+			</div>
+			<div class="ubc-card__actions text-right">
+				<div class="ubc-card__action-buttons inline-block -mr-4">
+					<p class="unit-button unit-button--mid group-hover--bg-ubc-blue-cornflower group-hover--text-ubc-blue unit-button--has-icon-right unit-button--animate-icon"> {{ linkText }} <svg role="presentation" class="unit-button__icon" viewBox="0 0 64 64">
+						<use xlink:href="#icon-arrow-circle"></use>
+					</svg></p>
+				</div>
+			</div>
+		</a>
+	</div>
+
+	<div class="auto-grid__cell">
+		<a href="#" class="ubc-card ubc-card--vert ubc-card--shadow bg-grey-100 text-black hover--no-underline group">
+			<div class="ubc-card__media min-h-64 bg-cover"
+				style="background-image: url(https://live.staticflickr.com/4584/38588637591_0241df7a93_z_d.jpg);"></div>
+			<div class="ubc-card__content">
+				<div class="card__meta">
+					{{ card3Cat }}</div>
+				<h2 class="card__title">{{ card3Title }}</h2>
+				<p>Whole card link. {{ card3Text }}</p>
+			</div>
+			<div class="ubc-card__actions text-right">
+				<div class="ubc-card__action-buttons inline-block -mr-4">
+					<p class="unit-button unit-button--plain group-hover--bg-ubc-blue-cobalt no-underline group-hover--text-white unit-button--has-icon-right unit-button--animate-icon"> {{ linkText }} <svg role="presentation" class="unit-button__icon" viewBox="0 0 64 64">
+						<use xlink:href="#icon-arrow-circle"></use>
+					</svg></p>
+				</div>
+			</div>
+		</a>
+	</div>
+
+	<div class="auto-grid__cell">
+		<a href="#" class="ubc-card ubc-card--vert ubc-card--shadow bg-ubc-blue-polar text-black hover--no-underline group">
+			<div class="ubc-card__media min-h-64 bg-cover"
+				style="background-image: url(https://live.staticflickr.com/4584/38588637591_0241df7a93_z_d.jpg);"></div>
+			<div class="ubc-card__content">
+				<div class="card__meta bg-ubc-blue-cornflower">
+					{{ card4Cat }}</div>
+				<h2 class="card__title">{{ card4Title }}</h2>
+				<p>Whole card link. {{ card4Text }}</p>
+			</div>
+			<div class="ubc-card__actions text-right">
+				<div class="ubc-card__action-buttons inline-block -mr-4">
+					<p class="unit-button unit-button--plain group-hover--bg-ubc-blue-cornflower no-underline group-hover--text-ubc-blue unit-button--has-icon-right unit-button--animate-icon"> {{ linkText }} <svg role="presentation" class="unit-button__icon" viewBox="0 0 64 64">
+						<use xlink:href="#icon-arrow-circle"></use>
+					</svg></p>
+				</div>
+			</div>
+		</a>
+	</div>
+
+</section>
+
+<hr />
+
+<h4>Cards with one link, horizontal, image right or left</h4>
+<section class="md--auto-grid md--auto-grid--half">
+
+	<div class="auto-grid__cell">
+		<a href="#" class="ubc-card ubc-card--horiz-media ubc-card--shadow text-black hover--no-underline group">
+			<div class="ubc-card__media bg-cover"
+				style="background-image: url(https://live.staticflickr.com/4584/38588637591_0241df7a93_z_d.jpg);"></div>
+			<div class="ubc-card__content self-end">
+				<div class="card__meta card__meta--wide">
+					{{ card1Cat }}</div>
+				<h2 class="card__title">{{ card1Title }}</h2>
+				<p>{{ card1Text }}</p>
+			</div>
+		</a>
+	</div>
+
+	<div class="auto-grid__cell">
+		<a href="#" class="ubc-card ubc-card--horiz-media-r ubc-card--shadow bg-ubc-blue-cobalt text-white hover--no-underline group">
+			<div class="ubc-card__media bg-cover"
+				style="background-image: url(https://live.staticflickr.com/4584/38588637591_0241df7a93_z_d.jpg);"></div>
+			<div class="ubc-card__content self-end">
+				<div class="card__meta card__meta--wide text-black">
+					{{ card2Cat }}</div>
+				<h2 class="card__title text-white">{{ card2Title }}</h2>
+				<p>{{ card2Text }}</p>
+			</div>
+		</a>
+	</div>
+
+	<div class="auto-grid__cell">
+		<a href="#" class="ubc-card ubc-card--horiz-media-r ubc-card--shadow bg-grey-100 text-black hover--no-underline group">
+			<div class="ubc-card__media bg-cover"
+				style="background-image: url(https://live.staticflickr.com/4584/38588637591_0241df7a93_z_d.jpg);"></div>
+			<div class="ubc-card__content self-end">
+				<div class="card__meta card__meta--wide">
+					{{ card3Cat }}</div>
+				<h2 class="card__title">{{ card3Title }}</h2>
+				<p>{{ card3Text }}</p>
+			</div>
+		</a>
+	</div>
+
+	<div class="auto-grid__cell">
+		<a href="#" class="ubc-card ubc-card--horiz-media ubc-card--shadow bg-ubc-blue-polar text-black hover--no-underline group">
+			<div class="ubc-card__media bg-cover"
+				style="background-image: url(https://live.staticflickr.com/4584/38588637591_0241df7a93_z_d.jpg);"></div>
+			<div class="ubc-card__content self-end">
+				<div class="card__meta card__meta--wide bg-ubc-blue-cornflower">
+					{{ card4Cat }}</div>
+				<h2 class="card__title">{{ card4Title }}</h2>
+				<p>{{ card4Text }}</p>
+			</div>
+		</a>
+	</div>
+
+</section>
+
+<hr />
+
+<h4>Cards with one link, image over text</h4>
+<section class="md--auto-grid md--auto-grid--third">
+
+	<div class="auto-grid__cell">
+		<a href="#"
+		class="ubc-card block ubc-card--image-w-overlay ubc-card--shadow hover--no-underline group">
+			<div class="ubc-card__media min-h-64 has-content--after has-gradient-bottom--after" style="background-image: url(https://live.staticflickr.com/4584/38588637591_0241df7a93_z_d.jpg);">
+				<div class="ubc-card__media-content flex items-end flex-wrap min-h-64 relative">
+					<div class="ubc-card__content w-full z-20">
+						<h2 class="card__title text-white">Profesional Learning + Development</h2>
+						<h3 class="card__subtitle text-white">by Santa Ono</h3>
+					</div>
+					<div class="ubc-card__secondary w-full text-right absolute top-0 right-0 pt-4">
+						<div class="unit-button unit-button--mid unit-button--has-icon-right unit-button--animate-icon group-hover--bg-ubc-blue-cornflower group-hover--text-black">
+							Explore <svg role="presentation" class="unit-button__icon" viewBox="0 0 64 64">
+						<use xlink:href="#icon-arrow-circle"></use>
+					</svg>
+						</div>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
+
+	<div class="auto-grid__cell">
+		<a href="#"
+		class="ubc-card block ubc-card--image-w-overlay ubc-card--shadow hover--no-underline group">
+			<div class="ubc-card__media min-h-64 has-content--after has-gradient-top--after" style="background-image: url(https://live.staticflickr.com/4584/38588637591_0241df7a93_z_d.jpg);">
+				<div class="ubc-card__media-content flex items-start flex-wrap min-h-64 relative">
+					<div class="ubc-card__content w-full z-20">
+						<h2 class="card__title text-white">Profesional Learning + Development</h2>
+						<h3 class="card__subtitle card__subtitle--lined text-white">by Santa Ono</h3>
+					</div>
+					<div class="ubc-card__secondary w-full text-right absolute bottom-0 right-0 pb-4 z-20">
+						<div class="unit-button unit-button--mid unit-button--has-icon-right unit-button--animate-icon group-hover--bg-ubc-blue-cornflower group-hover--text-black">
+							Explore <svg role="presentation" class="unit-button__icon" viewBox="0 0 64 64">
+						<use xlink:href="#icon-arrow-circle"></use>
+					</svg>
+						</div>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
+
+	<div class="auto-grid__cell">
+		<a href="#"
+		class="ubc-card block ubc-card--image-w-overlay ubc-card--shadow hover--no-underline group">
+			<div class="ubc-card__media min-h-64 has-content--after has-gradient-top--after" style="background-image: url(https://live.staticflickr.com/4584/38588637591_0241df7a93_z_d.jpg);">
+				<div class="ubc-card__media-content flex items-start flex-wrap min-h-64 relative">
+					<div class="ubc-card__content w-full z-20">
+						<h2 class="card__title text-white">Profesional Learning + Development</h2>
+						<h3 class="card__subtitle text-white">by Santa Ono</h3>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
+
+</section>
+
+<hr />
+
+<h4>Cards with one link, image over text, take 2</h4>
+<section class="md--auto-grid md--auto-grid--third">
+
+	<div class="auto-grid__cell">
+		<a href="#"
+		class="ubc-card block ubc-card--image-w-overlay ubc-card--shadow hover--no-underline group">
+			<div class="ubc-card__media min-h-64 has-content--after has-gradient-top--after" style="background-image: url(https://live.staticflickr.com/4584/38588637591_0241df7a93_z_d.jpg);">
+				<div class="ubc-card__media-content flex flex-wrap min-h-64 relative">
+					<div class="ubc-card__content w-full z-20 text-right">
+						<h2 class="card__title text-white border-b-2 border-white mb-2 uppercase text-base xl--text-xl text-hug group-hover--border-ubc-blue-cornflower inline-block has-content--after has-icon--arrow-circle">
+					Being Green at UBC</h2>
+						<p class="text-hug">{{ card1Text }}</p>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
+
+	<div class="auto-grid__cell">
+		<a href="#"
+		class="ubc-card block ubc-card--image-w-overlay ubc-card--shadow hover--no-underline group">
+			<div class="ubc-card__media min-h-64 has-content--after has-gradient-top--after" style="background-image: url(https://live.staticflickr.com/4584/38588637591_0241df7a93_z_d.jpg);">
+				<div class="ubc-card__media-content flex items-start flex-wrap min-h-64 relative">
+					<div class="ubc-card__content w-full z-20">
+						<h2 class="card__title text-white">Profesional Learning + Development</h2>
+						<h3 class="card__subtitle text-white">by Santa Ono</h3>
+					</div>
+					<div class="ubc-card__secondary w-full text-right absolute bottom-0 right-0 pb-4 z-20">
+						<div class="unit-button unit-button--mid unit-button--has-icon-right unit-button--animate-icon group-hover--bg-ubc-blue-cornflower group-hover--text-black">
+							Explore <svg role="presentation" class="unit-button__icon" viewBox="0 0 64 64">
+						<use xlink:href="#icon-arrow-circle"></use>
+					</svg>
+						</div>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
+
+	<div class="auto-grid__cell">
+		<a href="#"
+		class="ubc-card block ubc-card--image-w-overlay ubc-card--shadow hover--no-underline group">
+			<div class="ubc-card__media min-h-64 has-content--after has-gradient-top--after" style="background-image: url(https://live.staticflickr.com/4584/38588637591_0241df7a93_z_d.jpg);">
+				<div class="ubc-card__media-content flex flex-wrap min-h-64 relative">
+					<div class="ubc-card__content w-full z-20 text-right">
+						<h2 class="card__title text-white border-b-2 border-white mb-2 uppercase text-base xl--text-xl text-hug group-hover--border-ubc-blue-cornflower inline-block">
+					Being Green at UBC</h2>
+						<p class="text-hug">{{ card1Text }}</p>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
+
+</section>
+
+<hr />
+
+<h4>Cards with one link, icons, horizontal</h4>
+
+<section class="md--auto-grid md--auto-grid--half">
+
+	<div class="auto-grid__cell">
+		<a href="#"
+			class="ubc-card ubc-card--horiz text-ubc-blue hover--no-underline group ubc-card--shadow">
+			<div class="ubc-card__media min-h-64 flex">
+				<svg role="presentation"
+					class="inline-block h-24 w-24 self-center mx-auto text-ubc-blue-cobalt stroke-w-1">
+					<use xlink:href="#icon-alert"></use>
+				</svg>
+			</div>
+			<div class="ubc-card__content self-center">
+				<h2 class="card__title">Ergonomics</h2>
+				<p class="text-hug">{{ card1Text }}</p>
+			</div>
+		</a>
+	</div>
+
+	<div class="auto-grid__cell">
+		<a href="#"
+			class="ubc-card ubc-card--horiz-rev text-ubc-blue-polar hover--text-white hover--no-underline group ubc-card--shadow bg-ubc-blue-cobalt">
+			<div class="ubc-card__media min-h-64 flex">
+				<svg role="presentation"
+					class="inline-block h-24 w-24 self-center mx-auto stroke-w-1">
+					<use xlink:href="#icon-search"></use>
+				</svg>
+			</div>
+			<div class="ubc-card__content self-center">
+				<h2 class="card__title text-ubc-blue-polar group-hover--text-white">Occupantional + Preventative Health
+					Program</h2>
+				<p class="text-hug">{{ card1Text }}</p>
+			</div>
+		</a>
+	</div>
+
+	<div class="auto-grid__cell">
+		<a href="#"
+			class="ubc-card ubc-card--horiz-rev text-ubc-blue hover--no-underline group ubc-card--shadow bg-ubc-blue-polar">
+			<div class="ubc-card__media min-h-64 flex">
+				<svg role="presentation"
+					class="inline-block h-24 w-24 self-center mx-auto">
+					<use xlink:href="#logo-ubc"></use>
+				</svg>
+			</div>
+			<div class="ubc-card__content self-center">
+				<h2 class="card__title text-ubc-blue">Accidents at Work</h2>
+				<p class="text-hug">{{ card1Text }}</p>
+			</div>
+		</a>
+	</div>
+
+	<div class="auto-grid__cell">
+		<a href="#"
+			class="ubc-card ubc-card--horiz text-ubc-blue hover--no-underline group ubc-card--shadow bg-grey-100">
+			<div class="ubc-card__media min-h-64 flex">
+				<svg role="presentation"
+					class="inline-block h-24 w-24 self-center mx-auto">
+					<use xlink:href="#icon-phone"></use>
+				</svg>
+			</div>
+			<div class="ubc-card__content self-center">
+				<h2 class="card__title text-ubc-blue">Remain at Work / Return to Work Program</h2>
+				<p class="text-hug">{{ card1Text }}</p>
+			</div>
+		</a>
+	</div>
+
+</section>
+
+<hr />
+
+<h4>Cards, no image, horizontal</h4>
+<section>
+
+	<div class="ubc-card ubc-card--basic has-content--after hr--small">
+		<div class="ubc-card__content text-ubc-blue">
+			<h2 class="card__title"><a href="#" title="some words">Professional Learning and Development</a></h2>
+			<p>{{ card1Text }}</p>
+		</div>
+		<div class="ubc-card__actions">
+			<p>
+				<a href="#" title="some words" class="unit-button unit-button--simple unit-button--has-icon-right unit-button--animate-icon">Explore <svg role="presentation" class="unit-button__icon" viewBox="0 0 64 64">
+						<use xlink:href="#icon-arrow-circle"></use>
+					</svg></a>
+			</p>
+		</div>
+	</div>
+
+	<div class="ubc-card ubc-card--basic has-content--after hr--small">
+		<div class="ubc-card__content text-ubc-blue">
+			<h2 class="card__title"><a href="#" title="some words">Professional Learning and Development</a></h2>
+			<p>{{ card1Text }} Liquorice candy pastry brownie cotton candy wafer lollipop jelly beans. Cookie gummies chupa chups topping sesame snaps gummi bears carrot cake powder.</p>
+		</div>
+		<div class="ubc-card__actions">
+			<p>
+				<a href="#" title="some words" class="unit-button unit-button--simple unit-button--has-icon-right unit-button--animate-icon">Explore <svg role="presentation" class="unit-button__icon" viewBox="0 0 64 64">
+						<use xlink:href="#icon-arrow-circle"></use>
+					</svg></a>
+			</p>
+		</div>
+	</div>
+
+	<div class="ubc-card ubc-card--basic has-content--after hr--small">
+		<div class="ubc-card__content text-ubc-blue">
+			<h2 class="card__title"><a href="#" title="some words">Professional Learning and Development</a></h2>
+			<p>{{ card1Text }} Candy canes oat cake cake gummi bears topping carrot cake. Tootsie roll cupcake dragée wafer soufflé sweet wafer jelly.</p>
+		</div>
+		<div class="ubc-card__actions">
+			<p>
+				<a href="#" title="some words" class="unit-button unit-button--simple unit-button--has-icon-right unit-button--animate-icon">Explore <svg role="presentation" class="unit-button__icon" viewBox="0 0 64 64">
+						<use xlink:href="#icon-arrow-circle"></use>
+					</svg></a>
+			</p>
+		</div>
+	</div>
+
+</section>
+
+<h4>Cards, image, horizontal</h4>
+<ol class="unstyled-list">
+	<li>
+		<div class="ubc-card ubc-card--horiz-media py-8 has-content--after hr--small">
+			<a href="#" class="ubc-card__media bg-cover min-h-64"
+				style="background-image: url(https://live.staticflickr.com/4584/38588637591_0241df7a93_z_d.jpg);"></a>
+			<div class="ubc-card__content">
+				<h2 class="card__title"><a href="#" title="some words">Professional Learning + Development</a></h2>
+				<p>Candy canes oat cake cake gummi bears topping carrot cake. Tootsie roll cupcake dragée wafer
+					soufflé sweet wafer jelly. Liquorice candy pastry brownie cotton candy wafer lollipop jelly
+					beans. Cookie gummies chupa chups topping sesame snaps gummi bears carrot cake powder.</p>
+				<p>
+					<a href="#" title="some words" class="unit-button unit-button--simple unit-button--has-icon-right unit-button--animate-icon">Explore <svg role="presentation" class="unit-button__icon" viewBox="0 0 64 64">
+							<use xlink:href="#icon-arrow-circle"></use>
+						</svg></a>
+				</p>
+			</div>
+		</div>
+	</li>
+	<li>
+		<div class="ubc-card ubc-card--horiz-media py-8 has-content--after hr--small">
+			<a href="#" class="ubc-card__media bg-cover min-h-64"
+				style="background-image: url(https://live.staticflickr.com/4584/38588637591_0241df7a93_z_d.jpg);"></a>
+			<div class="ubc-card__content">
+				<h2 class="card__title"><a href="#" title="some words">Professional Learning + Development</a></h2>
+				<p>Candy canes oat cake cake gummi bears topping carrot cake. Tootsie roll cupcake dragée wafer
+					soufflé sweet wafer jelly. Liquorice candy pastry brownie cotton candy wafer lollipop jelly
+					beans. Cookie gummies chupa chups topping sesame snaps gummi bears carrot cake powder.</p>
+				<p>
+					<a href="#" title="some words" class="unit-button unit-button--simple unit-button--has-icon-right unit-button--animate-icon">Explore <svg role="presentation" class="unit-button__icon" viewBox="0 0 64 64">
+							<use xlink:href="#icon-arrow-circle"></use>
+						</svg></a>
+				</p>
+			</div>
+		</div>
+	</li>
+	<li>
+		<div class="ubc-card ubc-card--horiz-media py-8 has-content--after hr--small">
+			<a href="#" class="ubc-card__media bg-cover min-h-64"
+				style="background-image: url(https://live.staticflickr.com/4584/38588637591_0241df7a93_z_d.jpg);"></a>
+			<div class="ubc-card__content">
+				<h2 class="card__title"><a href="#" title="some words">Professional Learning + Development</a></h2>
+				<p>Candy canes oat cake cake gummi bears topping carrot cake. Tootsie roll cupcake dragée wafer
+					soufflé sweet wafer jelly. Liquorice candy pastry brownie cotton candy wafer lollipop jelly
+					beans. Cookie gummies chupa chups topping sesame snaps gummi bears carrot cake powder.</p>
+				<p>
+					<a href="#" title="some words" class="unit-button unit-button--simple unit-button--has-icon-right unit-button--animate-icon">Explore <svg role="presentation" class="unit-button__icon" viewBox="0 0 64 64">
+							<use xlink:href="#icon-arrow-circle"></use>
+						</svg></a>
+				</p>
+			</div>
+		</div>
+	</li>
+	<li>
+		<div class="ubc-card ubc-card--horiz-media py-8 has-content--after hr--small">
+			<a href="#" class="ubc-card__media bg-cover min-h-64"
+				style="background-image: url(https://live.staticflickr.com/4584/38588637591_0241df7a93_z_d.jpg);"></a>
+			<div class="ubc-card__content">
+				<h2 class="card__title"><a href="#" title="some words">Professional Learning + Development</a></h2>
+				<p>Candy canes oat cake cake gummi bears topping carrot cake. Tootsie roll cupcake dragée wafer
+					soufflé sweet wafer jelly. Liquorice candy pastry brownie cotton candy wafer lollipop jelly
+					beans. Cookie gummies chupa chups topping sesame snaps gummi bears carrot cake powder.</p>
+				<p>
+					<a href="#" title="some words" class="unit-button unit-button--simple unit-button--has-icon-right unit-button--animate-icon">Explore <svg role="presentation" class="unit-button__icon" viewBox="0 0 64 64">
+							<use xlink:href="#icon-arrow-circle"></use>
+						</svg></a>
+				</p>
+			</div>
+		</div>
+	</li>
+	<li>
+		<div class="ubc-card ubc-card--horiz-media py-8 has-content--after hr--small">
+			<a href="#" class="ubc-card__media bg-cover min-h-64"
+				style="background-image: url(https://live.staticflickr.com/4584/38588637591_0241df7a93_z_d.jpg);"></a>
+			<div class="ubc-card__content">
+				<h2 class="card__title"><a href="#" title="some words">Professional Learning + Development</a></h2>
+				<p>Candy canes oat cake cake gummi bears topping carrot cake. Tootsie roll cupcake dragée wafer
+					soufflé sweet wafer jelly. Liquorice candy pastry brownie cotton candy wafer lollipop jelly
+					beans. Cookie gummies chupa chups topping sesame snaps gummi bears carrot cake powder.</p>
+				<p>
+					<a href="#" title="some words" class="unit-button unit-button--simple unit-button--has-icon-right unit-button--animate-icon">Explore <svg role="presentation" class="unit-button__icon" viewBox="0 0 64 64">
+							<use xlink:href="#icon-arrow-circle"></use>
+						</svg></a>
+				</p>
+			</div>
+		</div>
+	</li>
+</ol>
+
+<h4>Banner Card with link, image over text</h4>
+
+<section class="my-8 ">
+	<a href="#" class="ubc-card block ubc-card--image-w-overlay ubc-card--shadow hover--no-underline group">
+		<div class="ubc-card__media min-h-96 has-content--after has-gradient-bottom--after" style="background-image: url(https://live.staticflickr.com/4584/38588637591_0241df7a93_z_d.jpg);">
+			<div class="ubc-card__media-content flex flex-wrap min-h-96 relative">
+				<div class="ubc-card__content max-w-3xl z-20">
+					<h2 class="card__title card__title--large text-white">Profesional Learning + Development</h2>
+					<h3 class="card__subtitle text-white">by Santa Ono</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+				</div>
+			</div>
+		</div>
+	</a>
+</section>
+
+<section class="my-8 ">
+	<a href="#" class="ubc-card block ubc-card--image-w-overlay ubc-card--shadow hover--no-underline group">
+		<div class="ubc-card__media min-h-96 has-content--after has-gradient-bottom--after" style="background-image: url(https://live.staticflickr.com/4584/38588637591_0241df7a93_z_d.jpg);">
+			<div class="ubc-card__media-content flex items-end flex-wrap min-h-96 relative">
+				<div class="ubc-card__content max-w-3xl z-20">
+					<h2 class="card__title card__title--large text-white">Moving to British Columbia?</h2>
+					<p class="text-hug">Sed do eiusmod tempor
+						incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+					<p
+						class="cta-button cta-button--underline cta-button--underline-cornflower text-white">
+						Get help <svg role="presentation" class="unit-button__icon" viewBox="0 0 64 64">
+							<use xlink:href="#icon-arrow-circle"></use>
+						</svg></p>
+				</div>
+			</div>
+		</div>
+	</a>
+</section>
+
+<section class="my-8 ">
+	<a href="#" class="ubc-card block ubc-card--image-w-overlay ubc-card--shadow hover--no-underline group">
+		<div class="ubc-card__media min-h-96 has-content--after has-gradient-bottom--after" style="background-image: url(https://live.staticflickr.com/4584/38588637591_0241df7a93_z_d.jpg);">
+			<div class="ubc-card__media-content flex items-end justify-end flex-wrap min-h-96 relative text-right">
+				<div class="ubc-card__content max-w-3xl z-20">
+					<h2 class="card__title card__title--large text-white">Moving to British Columbia?</h2>
+					<p class="text-hug">Sed do eiusmod tempor
+						incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+					<p
+						class="cta-button cta-button--underline cta-button--underline-cornflower text-white">
+						Get help <svg role="presentation" class="unit-button__icon" viewBox="0 0 64 64">
+							<use xlink:href="#icon-arrow-circle"></use>
+						</svg></p>
+				</div>
+			</div>
+		</div>
+	</a>
+</section>
+
+<section class="my-8 ">
+	<a href="#" class="ubc-card block ubc-card--image-w-overlay ubc-card--shadow hover--no-underline group">
+		<div class="ubc-card__media min-h-96 has-content--after has-gradient-bottom--after" style="background-image: url(https://live.staticflickr.com/4584/38588637591_0241df7a93_z_d.jpg);">
+			<div class="ubc-card__media-content flex justify-end flex-wrap min-h-96 relative text-right">
+				<div class="ubc-card__content max-w-3xl z-20">
+					<h2 class="card__title card__title--large text-white">Moving to British Columbia?</h2>
+					<p class="text-hug">Sed do eiusmod tempor
+						incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+					<p
+						class="cta-button cta-button--underline cta-button--underline-cornflower text-white">
+						Get help <svg role="presentation" class="unit-button__icon" viewBox="0 0 64 64">
+							<use xlink:href="#icon-arrow-circle"></use>
+						</svg></p>
+				</div>
+			</div>
+		</div>
+	</a>
+</section>
+
+<section class="my-8 ">
+	<a href="#" class="ubc-card block ubc-card--image-w-overlay ubc-card--shadow hover--no-underline group">
+		<div class="ubc-card__media min-h-96 has-content--after has-gradient-bottom--after" style="background-image: url(https://live.staticflickr.com/4584/38588637591_0241df7a93_z_d.jpg);">
+			<div class="ubc-card__media-content flex flex-wrap min-h-96 relative">
+				<div class="ubc-card__content max-w-3xl z-20">
+					<h2 class="card__title card__title--large text-white">Moving to British Columbia?</h2>
+					<p class="text-hug">Sed do eiusmod tempor
+						incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+					<p
+						class="cta-button cta-button--underline cta-button--underline-cornflower text-white">
+						Get help <svg role="presentation" class="unit-button__icon" viewBox="0 0 64 64">
+							<use xlink:href="#icon-arrow-circle"></use>
+						</svg></p>
+				</div>
+			</div>
+		</div>
+	</a>
+</section>
+
+
+

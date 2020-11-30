@@ -1,0 +1,32 @@
+{% extends "layouts/default.twig" %}
+{% set title = "Page" %}
+{% set pageTitle = "A basic page" %}
+{% set pageFeatureTitle = "Plan. Manage. Collaborate." %}
+{% set pageFeatureImage = "4.jpg" %}
+{% set pageIntro = "<p>Behind every project delivered on time and on budget is a skilled project manager who can communicate effectively and manage a team from initiation through to planning execution, control and closing. The ability to juggle timelines, resources, team members, stakeholders, and deliverables makes project managers a valuable asset to any organization.</p>
+<p>Our project management offerings give you the essential skills needed to excel in successful project delivery in a wide variety of disciplines, along with a toolkit you can put to work immediately whether you are in industry, government or a community organization.</p>" %}
+
+{% block content %}
+<main class="unit-content">
+	<div class="container mx-auto p-4 ">
+		{% include "components/navigation--breadcrumbs.twig" %}
+		<h1 class="text-ubc-blue-cobalt">{{ pageTitle }}</h1>
+		<div class="grid-container grid-container--basic">
+			<div class="grid-area-a mb-8">
+				{{ pageIntro }}
+				{{ loremIpsum }}
+			</div>
+			<div class="grid-area-b mb-8 text-lead--mt">
+				{% include "components/navigation--sub.twig" %}
+			</div>
+		</div>
+	</div>
+</main>
+
+{% endblock %}
+
+{% block custom_css %}
+{% endblock %}
+
+{% block custom_javascript %}
+{% endblock %}

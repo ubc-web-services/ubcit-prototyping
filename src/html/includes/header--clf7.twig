@@ -1,0 +1,108 @@
+<div id="clf7__header">
+  <slide-up-down :active="showSearch" :duration="125" v-cloak>
+    <div class="collapse expand" id="ubc7-global-menu" v-cloak>
+      <div id="ubc7-search" class="expand">
+        <div class="clf-container">
+          <div id="ubc7-search-box">
+            <form class="form-search" method="get" action="https://www.ubc.ca/search/refine/" role="search">
+              {% if searchlabel_option %}
+              <input type="text" name="q" placeholder="{{ searchlabel_option }}" class="inline-block mr-2" style="width:auto;">
+              {% else %}
+              <input type="text" name="q" placeholder="Search this website" class="inline-block w-auto mr-2" style="width:auto;">
+              {% endif %}
+              <input type="hidden" name="label" value="Search" />
+              {% if searchdomain_option %}
+              <input type="hidden" name="site" value="{{ searchdomain_option }}" />
+              {% else %}
+              <input type="hidden" name="site" value="hr.ubc.ca" />
+              {% endif %}
+              <button type="submit" class="btn">Search</button>
+            </form>
+          </div>
+        </div> <!-- /clf-container -->
+      </div>
+      <div class="clf-container">
+        <div id="ubc7-global-header" class="expand">
+          <div class="row-fluid">
+            <div class="span8 offset2">
+              <ul class="clearfix reverse">
+                <li><a href="https://cdn.ubc.ca/clf/ref/calendar">Academic Calendar</a></li>
+                <li><a href="https://cdn.ubc.ca/clf/ref/campus-services">Campus Services</a></li>
+                <li><a href="https://cdn.ubc.ca/clf/ref/faculties">Faculties &amp; Schools</a></li>
+                <li><a href="https://cdn.ubc.ca/clf/ref/library">Library</a></li>
+                <li><a href="https://cdn.ubc.ca/clf/ref/maps">Maps</a></li>
+                <li><a href="https://cdn.ubc.ca/clf/ref/quicklinks">Quicklinks</a></li>
+                <li><a href="https://cdn.ubc.ca/clf/ref/ssc">Student Service Centre</a></li>
+                <li><a href="https://cdn.ubc.ca/clf/ref/directories">UBC Directory</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div> <!-- /clf-container -->
+    </div>
+  </slide-up-down>
+  <header id="ubc7-header" class="row-fluid expand" role="banner">
+    <div class="clearfix clf-container">
+      <div class="span1">
+        <div id="ubc7-logo">
+          <a href="https://www.ubc.ca">The University of British Columbia</a>
+        </div>
+      </div>
+      <div class="span2">
+        <div id="ubc7-apom">
+          <a href="https://cdn.ubc.ca/clf/ref/aplaceofmind">UBC - A Place of Mind</a>
+        </div>
+      </div>
+      <div class="span9" id="ubc7-wordmark-block">
+        <div id="ubc7-wordmark">
+          <a href="https://www.ubc.ca">The University of British Columbia</a>
+          {% if campus == 'vancouver' %}
+            <span class="ubc7-campus" id="ubc7-vancouver-campus">Vancouver Campus</span>
+          {% endif %}
+          {% if campus == 'okanagan' %}
+            <span class="ubc7-campus" id="ubc7-okanagan-campus">Okanagan Campus</span>
+          {% endif %}
+        </div>
+        <div id="ubc7-global-utility">
+          <button type="button" data-toggle="collapse" @click="toggleSearch" data-target="#ubc7-global-menu"><span :class="{ opened : showSearch }">UBC Search</span></button>
+          <noscript>&lt;a id="ubc7-global-utility-no-script" href="https://www.ubc.ca/"&gt;UBC
+            Search&lt;/a&gt;</noscript>
+        </div>
+      </div>
+    </div> <!-- /clf-container -->
+  </header>
+  <div id="ubc7-unit" class="row-fluid expand" style="">
+    <div class="clf-container">
+      <div class="relative span12">
+        <!-- Mobile Menu Icon -->
+        <div class="navbar">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target="#ubc7-unit-navigation" @click="toggleMobileNav">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+        </div>
+        <div id="ubc7-unit-name" {{ facultyName == '' ? ' class="ubc7-single-element"' }}>
+          <a href="/">
+            {% if facultyName != '' %}
+              <span id="ubc7-unit-faculty">{{ facultyName }}</span>
+            {% endif %}
+            <span id="ubc7-unit-identifier">{{ unitName }}</span></a>
+        </div>
+      </div>
+    </div> <!-- /clf-container -->
+  </div>
+</div>
+{% if clf_sticky %}
+<nav class="sticky top-0 z-50 navbar expand clf-required" v-show="showMobileNav" role="navigation" id="ubc7-unit-menu">
+{% else %}
+<nav class="navbar expand clf-required" v-show="showMobileNav" role="navigation" id="ubc7-unit-menu">
+{% endif %}
+  <div class="navbar-inner expand">
+    <div class="clf-container">
+      <div class="nav-collapse collapse" id="ubc7-unit-navigation">
+        {% include "navigation--main--clf7.twig" %}
+      </div>
+    </div>
+  </div>
+</nav>

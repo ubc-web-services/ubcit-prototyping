@@ -1,0 +1,235 @@
+{% extends "layouts/default.twig" %}
+{% set title = "Landing page - cmasthead" %}
+{% set pageTitle = "Health and Wellbeing" %}
+
+{% block content %}
+<main class="unit-content">
+	<section class="masthead overflow-hidden">
+		<div class="relative min-h-64 md--min-h-96 ">
+			<div
+				class="block min-h-64 md--min-h-96 absolute w-full h-full has-content--after has-gradient-bottom--after">
+				<img src="https://live.staticflickr.com/4584/38588637591_0241df7a93_z_d.jpg" alt="UBC I day"
+					class="object-cover w-full h-full">
+			</div>
+			<div class="relative flex min-h-64 md--min-h-96 ">
+				<div class="flex-1 self-end container mx-auto px-4 grid-container grid-container--featured">
+					<h1 class="grid-area-b masthead__page-title--alt decoration-startline">You do you, we'll <span
+							class="block">provide the support.</span></h1>
+					<p class="grid-area-c masthead__action">
+						<a href="#"
+							class="cta-button cta-button--underline cta-button--underline-neptune cta-button--light cta-button--underline-heavy mr-6">Learn
+							how <svg role="presentation" class="unit-button__icon text-white" viewBox="0 0 19 19">
+								<use xlink:href="#icon-arrow-circle2"></use>
+							</svg>
+						</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<div class="container mx-auto px-4 pb-4 grid-container grid-container--home">
+
+		<div class="grid-area-a meta meta__bg meta--blue">
+			<h2 class="heading-four normal-case text-white mt-4">Work with us. <span class="text-base font-normal">View
+					all opportunities</span></h2>
+			<p class="mb-4"><a href="#"
+					class="unit-button unit-button--transparent unit-button--has-icon-right xl--text-lg">Faculty
+					openings <svg role="presentation"
+						class="unit-button__icon text-ubc-blue-neptune"
+						viewBox="0 0 64 64">
+						<use xlink:href="#icon-arrow-circle"></use>
+					</svg></a>
+				<a href="#"
+					class="unit-button unit-button--transparent unit-button--has-icon-right xl--text-lg">Staff
+					openings <svg role="presentation"
+						class="unit-button__icon text-ubc-blue-neptune"
+						viewBox="0 0 64 64">
+						<use xlink:href="#icon-arrow-circle"></use>
+					</svg></a>
+			</p>
+		</div>
+
+		<div class="grid-area-c">{% include "components/component--tabcordions.twig" %}</div>
+
+		<section class="grid-area-d md--flex md---mx-4 md--flex-wrap">
+			<h2 class="w-full text-right text-ubc-blue px-4 mb-8">Working Life at UBC</h2>
+			<div class="ubc-card md--w-half lg--w-one-quarter py-4 md--p-4">
+				<a href="#"
+					class="ubc-card__primary-action flex-1 text-black hover--no-underline group shadow hover--shadow-lg flex flex-col h-full">
+					<div class="ubc-card__media h-64 bg-cover"
+						style="background-image: url(https://live.staticflickr.com/266/19901880670_5dfd479ba2_b.jpg);">
+					</div>
+					<div class="ubc-card__content p-4">
+						<div class="meta uppercase text-xs xl--text-base inline-block p-1 pl-4 pr-2 -ml-4 mb-4">
+							Learning</div>
+						<h2 class="card__title">Professional Learning + Development</h2>
+					</div>
+					<div class="ubc-card__secondary px-4 flex-1">It's not your typical day to day and, if you want to be
+						a part of it.</div>
+					<div class="ubc-card__secondary-actions py-4 text-right flex-none">
+						<div class="ubc-card__action-buttons inline-block ">
+							<p
+								class="unit-button unit-button--plain unit-button--has-icon-right unit-button--animate-icon mr-0">
+								Explore <svg role="presentation" class="unit-button__icon">
+									<use xlink:href="#icon-arrow-circle"></use>
+								</svg></p>
+						</div>
+					</div>
+				</a>
+			</div>
+
+			<div class="ubc-card md--w-half lg--w-one-quarter py-4 md--p-4">
+				<a href="#"
+					class="ubc-card__primary-action flex-1 hover--no-underline group shadow hover--shadow-lg flex flex-col h-full">
+					<div class="ubc-card__media h-64 bg-cover"
+						style="background-image: url(https://live.staticflickr.com/4584/38588637591_0241df7a93_z_d.jpg);">
+					</div>
+					<div class="ubc-card__content p-4">
+						<div
+							class="meta uppercase text-xs xl--text-base text-black inline-block p-1 pl-4 pr-2 -ml-4 mb-4">
+							Wellbeing</div>
+						<h2 class="card__title">Vacations, Leaves + Time Off</h2>
+					</div>
+					<div class="ubc-card__secondary px-4 flex-1">It's not your typical day to day and, if you want to be
+						a part of it.</div>
+					<div class="ubc-card__secondary-actions py-4 text-right flex-none">
+						<div class="ubc-card__action-buttons inline-block ">
+							<p
+								class="unit-button unit-button--plain unit-button--has-icon-right unit-button--animate-icon mr-0">
+								Explore <svg role="presentation" class="unit-button__icon">
+									<use xlink:href="#icon-arrow-circle"></use>
+								</svg></p>
+						</div>
+					</div>
+				</a>
+			</div>
+
+			<div class="ubc-card md--w-half lg--w-one-quarter py-4 md--p-4">
+				<a href="#"
+					class="ubc-card__primary-action flex-1 hover--no-underline group shadow hover--shadow-lg flex flex-col h-full">
+					<div class="ubc-card__media h-64 bg-cover"
+						style="background-image: url(https://live.staticflickr.com/603/23144566274_e6133da0ee_b.jpg);">
+					</div>
+					<div class="ubc-card__content p-4">
+						<div
+							class="meta uppercase text-xs xl--text-base inline-block p-1 pl-4 pr-2 -ml-4 mb-4">
+							Community</div>
+						<h2 class="card__title">Giving Back to Build a Thriving Community</h2>
+					</div>
+					<div class="ubc-card__secondary px-4 flex-1">It's not your typical day to day and, if you want to be
+						a part of it.</div>
+					<div class="ubc-card__secondary-actions py-4 text-right flex-none">
+						<div class="ubc-card__action-buttons inline-block ">
+							<p
+								class="unit-button unit-button--plain unit-button--has-icon-right unit-button--animate-icon mr-0">
+								Explore <svg role="presentation" class="unit-button__icon">
+									<use xlink:href="#icon-arrow-circle"></use>
+								</svg></p>
+						</div>
+					</div>
+				</a>
+			</div>
+
+			<div class="ubc-card md--w-half lg--w-one-quarter py-4 md--p-4">
+				<a href="#"
+					class="ubc-card__primary-action flex-1 hover--no-underline group shadow hover--shadow-lg flex flex-col h-full">
+					<div class="ubc-card__media h-64 bg-cover"
+						style="background-image: url(https://live.staticflickr.com/3776/19936844258_51b56c4606_b.jpg);">
+					</div>
+					<div class="ubc-card__content p-4">
+						<div class="meta uppercase text-xs xl--text-base inline-block p-1 pl-4 pr-2 -ml-4 mb-4">Career Lifecycle</div>
+						<h2 class="card__title">Career Navigation, Tenure + Promotion</h2>
+					</div>
+					<div class="ubc-card__secondary px-4 flex-1">It's not your typical day to day and, if you want to be
+						a part of it.</div>
+					<div class="ubc-card__secondary-actions py-4 text-right flex-none">
+						<div class="ubc-card__action-buttons inline-block ">
+							<p
+								class="unit-button unit-button--plain unit-button--has-icon-right unit-button--animate-icon mr-0">
+								Explore <svg role="presentation" class="unit-button__icon">
+									<use xlink:href="#icon-arrow-circle"></use>
+								</svg></p>
+						</div>
+					</div>
+				</a>
+			</div>
+		</section>
+
+		<div class="grid-area-e mt-8">
+			<p class="text-lead text-ubc-blue has-content--before has-content--after pt-20 pb-8 pullquote--big my-16">
+				UBC has consistently been recognized as one of BC’s top employers, and one of Canada’s greenest
+				employers, best diversity employers, and top employers for young people.</p>
+		</div>
+
+		<div class="grid-area-f md--flex md---mx-4">
+			<a href="#"
+				class="ubc-card md--w-half md--mx-4 my-8 hover--no-underline shadow hover--shadow-lg flex flex-col group text-white">
+				<div class="ubc-card__primary-action relative flex min-h-64 ">
+					<div
+						class="ubc-card__media block min-h-64 absolute w-full h-full has-content--after has-gradient-top--after">
+						<img src="https://live.staticflickr.com/394/20089915475_32ee2672e3_b.jpg" alt="UBC I day"
+							class="object-cover w-full h-full">
+					</div>
+					<div class="ubc-card__content relative p-8 text-right flex-1">
+						<h2
+							class="heading-four border-b-2 border-white mb-2 uppercase text-base text-hug group-hover--border-ubc-blue-cornflower inline-block has-content--after has-icon--arrow-circle">
+							Being Green at UBC</h2>
+						<p class="text-hug">It's not your typical day to day and, if you want to be a part of it.</p>
+					</div>
+				</div>
+			</a>
+			<a href="#"
+				class="ubc-card md--w-half md--mx-4 my-8 hover--no-underline shadow hover--shadow-lg flex flex-col group text-white">
+				<div class="ubc-card__primary-action relative flex min-h-64 ">
+					<div
+						class="ubc-card__media block min-h-64 absolute w-full h-full has-content--after has-gradient-top--after">
+						<img src="https://live.staticflickr.com/4612/40597723442_cde3f39a44_b.jpg" alt="UBC I day"
+							class="object-cover w-full h-full">
+					</div>
+					<div class="ubc-card__content relative p-8 text-right flex-1">
+						<h2
+							class="heading-four border-b-2 border-white mb-2 uppercase text-base text-hug group-hover--border-ubc-blue-cornflower inline-block has-content--after has-icon--arrow-circle">
+							Being Green at UBC</h2>
+						<p class="text-hug">It's not your typical day to day and, if you want to be a part of it.</p>
+					</div>
+				</div>
+			</a>
+		</div>
+
+		<div class="grid-area-b">
+			<div class="px-8 pt-2 pb-6 shadow-md hover--shadow-lg bg-white relative md---mt-12">
+				<h3 class="heading-five uppercase text-ubc-blue-cobalt">Quicklinks</h3>
+				<ul class="list-style-none mb-0">
+					<li class="py-2 text-ubc-blue-cobalt hover--text-ubc-blue flex"><span
+							class="inline-block py-1 px-2 bg-ubc-blue-cornflower text-ubc-blue block text-xs mr-4 self-start no-underline">UBCV</span><a
+							href="#" title="some title" class="underline">Campus
+							Health Authority</a></li>
+					<li class="py-2 text-ubc-blue-cobalt hover--text-ubc-blue flex"><span
+							class="inline-block py-1 px-2 bg-ubc-blue-sea text-white block text-xs mr-4 self-start no-underline">UBCO</span><a
+							href="#" title="some title" class="underline">Free
+							yoga class for staff</a></li>
+					<li class="py-2 text-ubc-blue-cobalt hover--text-ubc-blue flex"><span
+							class="inline-block py-1 px-2 bg-ubc-blue-cornflower text-ubc-blue block text-xs mr-4 self-start no-underline">UBCV</span><a
+							href="#" title="some title" class="underline">Swim
+							afternoon at the Aquatic Centre</a></li>
+					<li class="py-2 text-ubc-blue-cobalt hover--text-ubc-blue flex"><span
+							class="inline-block py-1 px-2 bg-ubc-blue-cornflower text-ubc-blue block text-xs mr-4 self-start no-underline">UBCV</span><a
+							href="#" title="some title" class="underline">Fourth
+							link title that goes on and on and wraps around a bit</a></li>
+					<li class="py-2 text-ubc-blue-cobalt hover--text-ubc-blue flex"><span
+							class="inline-block py-1 px-2 bg-ubc-blue-sea text-white block text-xs mr-4 self-start no-underline">UBCO</span><a
+							href="#" title="some title" class="underline">Fifth
+							link title</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</main>
+{% endblock %}
+
+{% block custom_css %}
+{% endblock %}
+
+{% block custom_javascript %}
+{% endblock %}

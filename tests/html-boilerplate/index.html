@@ -1,0 +1,52 @@
+<!-- html5 doctype -->
+<!doctype html>
+<!-- 'no-js' class is used so we can replace it with the 'has-js' class to know that javascript has been loaded successfully -->
+<html class="no-js" lang="en">
+
+<head>
+	<!-- character set -->
+	<meta charset="UTF-8">
+	<!-- title in format of Page Title | Unit Name (or, alternatively, University Name) -->
+	<title>Sample Page | UBC</title>
+	<!-- metatag to allow for responsive layout and sizing-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- theme color used by various websites to apply your brand colours on mobile - https://developers.google.com/web/updates/2014/11/Support-for-theme-color-in-Chrome-39-for-Android -->
+	<meta name="theme-color" content="#002145">
+	<!-- link to local XML file that defines how your site looks when saved as a tile in Windows - https://technet.microsoft.com/en-us/windows/dn255024(v=vs.60) -->
+	<meta name="msapplication-config" content="ieconfig.xml" />
+	<!-- preconnect to needed domains (such as Google Fonts) - https://css-tricks.com/prefetching-preloading-prebrowsing/ -->
+	<!-- TODO - test actual domains on multiple browsers to trace needed domains for Google Fonts -->
+	<link rel="preconnect" href="https://fonts.gstatic.com/">
+	<!-- Google Fonts actually load from another domain, so we preconnect to it - https://www.smashingmagazine.com/2019/06/optimizing-google-fonts-performance/ -->
+	<link rel="preconnect" href="https://themes.googleusercontent.com/" crossorigin>
+	<!-- preload Google Fonts as we will need it for sure - https://css-tricks.com/prefetching-preloading-prebrowsing/ -->
+	<link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&amp;display=swap" as="font" crossorigin="anonymous">
+
+	<!-- manifest defines how your page looks when saved / pinned to your mobile desktop - https://developers.google.com/web/fundamentals/web-app-manifest/-->
+	<link rel="manifest" href="/site.webmanifest">
+	<!-- similarly to the manifest, the apple touch icon defines the icon used when the site is saved to an iOS desktop - multiple sizes can be defined for various devices - https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html -->
+	<link rel="apple-touch-icon" href="/img/icon.png">
+	<!-- the favicon is the icon displayed in the url bar or tab for various desktop browsers - this favicon should ideally be placed at the web root -->
+	<link rel="shortcut icon" href="/favicon.ico">
+	<!-- custom stylesheet -->
+	<link rel="stylesheet" href="/css/styles.css">
+	<!-- Google webfont - TBC - may want to investigate Font Face Observer - https://github.com/bramstein/fontfaceobserver - or other optimizations  - add display=swap to enable future implementation - https://www.smashingmagazine.com/2019/06/optimizing-google-fonts-performance -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap">
+</head>
+
+<body>
+
+	<!-- content starts here -->
+
+	<!-- content ends here -->
+
+	<!-- a CDN delivered version of a javascript library, such as jQuery, should include SRI (Sub Resource Integrity) sha to protect js in transit. CDNs not blocked by China are preferred - https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/sample/x.x.x/sample.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<!-- a local fallback of the same CDN resource should be provided for when the resource is unaviable for any reason -->
+	<script>window.jQuery || document.write('<script src="js/vendor/sample.min.js"><\/script>')</script>
+	<!-- local custom javascript -->
+	<script src="/js/main.js"></script>
+
+</body>
+
+</html>

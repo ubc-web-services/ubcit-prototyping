@@ -1,31 +1,86 @@
 {
-  "name": "ubcit-prototyping",
-  "version": "1.0.3-alpha",
-  "description": "UBC IT Prototyping Tools",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "snyk-protect": "snyk protect",
-    "prepare": "npm run snyk-protect"
-  },
-  "author": "James O'Toole",
-  "license": "MIT",
-  "devDependencies": {
-    "gulp": "^4.0.0",
-    "gulp-autoprefixer": "^6.0.0",
-    "gulp-cssnano": "^2.1.3",
-    "gulp-imagemin": "^5.0.3",
-    "gulp-postcss": "^8.0.0",
-    "gulp-rename": "^1.4.0",
-    "gulp-sass": "^4.0.2",
-    "gulp-sass-lint": "^1.4.0",
-    "gulp-sourcemaps": "^2.6.4",
-    "gulp-twig": "^1.2.0",
-    "purgecss": "^1.1.0"
-  },
-  "dependencies": {
-    "gulp-purgecss": "^1.1.1",
-    "tailwindcss": "^0.7.3",
-    "snyk": "^1.242.0"
-  },
-  "snyk": true
+	"name": "ubc-prototypng",
+	"version": "2.0.0-beta2",
+	"description": "UBC Prototyping scaffolding",
+	"private": true,
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/ubc-web-services/ubcit-prototyping.git"
+	},
+	"keywords": [
+		"clf",
+		"ubc"
+	],
+	"author": "James O'Toole, UBC IT, Web Services",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/ubc-web-services/ubcit-prototyping/issues"
+	},
+	"homepage": "https://github.com/ubc-web-services/ubcit-prototyping#readme",
+	"engines": {
+		"yarn": ">= 1.6",
+		"node": ">= 8.11"
+	},
+	"scripts": {
+		"test": "snyk test",
+		"serve": "cross-env NODE_ENV=development concurrently \"postcss src/css/*.css -d build/css --watch\" \"live-server ./build --watch\" ",
+		"lint:css": "stylelint \"src/**/*.css\" || exit 0",
+		"lint:fix-css": "stylelint \"src/**/*.css\" --fix || exit 0",
+		"dev": "npm run development",
+		"html": "npm run build:html",
+		"build:dev": "npm run development",
+		"build:html": "cross-env NODE_ENV=production twig-cli \"src/html/*.html.twig\" --base src/html/ --output build/",
+		"development": "cross-env NODE_ENV=development postcss src/css/*.css -d build/css && webpack --config webpack.dev.js -p",
+		"prod": "npm run production",
+		"build:prod": "npm run production",
+		"production": "cross-env NODE_ENV=production postcss src/css/*.css -d build/css --ext min.css && webpack --config webpack.prod.js -p && node compress.js"
+	},
+	"dependencies": {
+		"@babel/polyfill": "^7.11.5",
+		"autoprefixer": "^9.8.6",
+		"clickout-event": "^1.0.2",
+		"postcss": "^7.0.35",
+		"tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.1",
+		"twig-cli-tmpl": "^1.0.1",
+		"vue": "^2.6.12",
+		"vue-headroom": "^0.10.1",
+		"vue-scrollto": "^2.19.1",
+		"vue-slide-up-down": "^2.0.1",
+		"vueperslides": "^2.12.1"
+	},
+	"devDependencies": {
+		"@babel/cli": "^7.10.5",
+		"@babel/core": "^7.10.5",
+		"@babel/plugin-transform-runtime": "^7.12.1",
+		"@babel/preset-env": "^7.11.5",
+		"babel-loader": "^8.1.0",
+		"babel-preset-minify": "^0.5.1",
+		"brotli": "^1.3.2",
+		"concurrently": "^5.2.0",
+		"cross-env": "^5.2.1",
+		"css-loader": "^5.0.1",
+		"cssnano": "^4.1.10",
+		"live-server": "^1.2.1",
+		"postcss-cli": "^7.1.1",
+		"postcss-import": "^12.0.1",
+		"postcss-loader": "^4.0.4",
+		"postcss-simple-vars": "^5.0.2",
+		"snyk": "^1.305.0",
+		"stylelint": "^13.6.1",
+		"stylelint-config-rational-order": "^0.1.2",
+		"stylelint-config-standard": "^18.3.0",
+		"stylelint-order": "^3.1.1",
+		"vue-loader": "^15.9.5",
+		"vue-template-compiler": "^2.6.12",
+		"webpack": "^4.44.1",
+		"webpack-cli": "^3.3.12",
+		"webpack-merge": "^5.3.0",
+		"zlib": "^1.0.5"
+	},
+	"browserslist": [
+		"> 1%",
+		"not edge <= 18",
+		"not ie 11",
+		"not op_mini all"
+	]
 }

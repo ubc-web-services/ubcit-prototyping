@@ -1,0 +1,11 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-labelledby="title"
+aria-describedby="desc" role="img" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <title>Location Pin</title>
+  <desc>A line styled icon from Orion Icon Library.</desc>
+  <path stroke-width="2"
+  stroke-miterlimit="10" stroke="#202020" fill="none" d="M32 62c0-17.1 16.3-25.2 17.8-39.7A18 18 0 1 0 14 20a18.1 18.1 0 0 0 .2 2.2C15.7 36.8 32 44.9 32 62z"
+  data-name="layer2" stroke-linejoin="round" stroke-linecap="round"></path>
+  <circle stroke-width="2" stroke-miterlimit="10" stroke="#202020"
+  fill="none" r="6" cy="20" cx="32" data-name="layer1" stroke-linejoin="round"
+  stroke-linecap="round"></circle>
+</svg>

@@ -1,0 +1,11 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-labelledby="title"
+aria-describedby="desc" role="img" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <title>Pencil</title>
+  <desc>A line styled icon from Orion Icon Library.</desc>
+  <path stroke-width="2"
+  stroke-miterlimit="10" stroke="#202020" fill="none" d="M55.737 16.309l3.674-3.67a5.675 5.675 0 1 0-8.025-8.025l-3.674 3.669"
+  data-name="layer2" stroke-linejoin="round" stroke-linecap="round"></path>
+  <path d="M17.337 54.667l38.4-38.358-8.025-8.026L9.307 46.642 2.926 61.049l14.411-6.382zm-8.03-8.025l8.03 8.025"
+  stroke-width="2" stroke-miterlimit="10" stroke="#202020" fill="none" data-name="layer1"
+  stroke-linejoin="round" stroke-linecap="round"></path>
+</svg>

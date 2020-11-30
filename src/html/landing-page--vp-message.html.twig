@@ -1,0 +1,76 @@
+{% extends "layouts/default.twig" %}
+{% set title = "Landing page - masthead" %}
+{% set pageTitle = "Health and Wellbeing" %}
+
+{% block content %}
+<main class="unit-content">
+	<section class="masthead overflow-hidden">
+		<div class="relative min-h-96 md--min-h-160 ">
+			<div
+				class="block min-h-96 md--min-h-160 absolute w-full h-full has-content--after has-gradient-bottom--after">
+				<img src="https://live.staticflickr.com/4584/38588637591_0241df7a93_z_d.jpg" alt="UBC I day"
+					class="object-cover w-full h-full">
+			</div>
+			<div class="relative flex min-h-96 md--min-h-160">
+				<div class="flex-1 self-end container mx-auto px-4">
+					<h1 class="masthead__page-title decoration-startline">Message from the <span class="block">Vice
+							President.</span></h1>
+				</div>
+			</div>
+		</div>
+	</section>
+	<div class="container mx-auto p-4 ">
+		{% include "components/navigation--breadcrumbs.twig" %}
+		<div class="grid-container grid-container--landing-vp">
+			<div class="grid-area-a my-16 has-content--before introquote--big pb-20">
+				<p class="text-lead text-ubc-blue-cobalt ">Welcome to UBC! Our vision in Human Resources is to enable
+					people excellence in the UBC workplace through supporting the faculty and staff, and ultimately
+					students, at one of the world’s best universities for research, education, and community engagement.
+					I encourage you to connect with us and learn about the services and supports we offer to faculty and
+					staff (including leaders and administrators), and to the community.</p>
+			</div>
+			<div class="grid-area-b">
+				<p>UBC is a global centre for research and teaching, consistently ranked among the top 20 public
+					universities in the world. Since 1915, UBC’s entrepreneurial spirit has embraced innovation and
+					challenged the status quo. UBC encourages its students, staff and faculty to challenge convention,
+					lead discovery and explore new ways of learning. At UBC, bold thinking has a place to develop into
+					ideas that can change the world.</p>
+				<p>UBC has two main campuses (Vancouver and Kelowna), with nearly 16,000 employees working in British
+					Columbia, making us one of the largest employers in the province.</p>
+				<p>In HR, we foster an atmosphere of respect, professionalism, and collegiality that serves as the
+					foundation for an outstanding work environment at UBC.
+					HR provides a wide range of services within our portfolios, all with the goal of actively
+					attracting, engaging, retaining, and developing employees. We work closely with our partners in
+					departments and faculties across UBC to understand their needs for strategic human resources support
+					in order to provide excellence in research, teaching, and student experiences. By embracing
+					innovation, collaboration and inclusion in HR policies, practices, partnerships and relationships,
+					we actively support UBC’s strategic vision and plan.</p>
+				<p>We invite you to learn about HR and how we support equity, diversity &amp; inclusion, wellbeing,
+					recruitment, learning and leadership, employee engagement, workplace health, career development,
+					housing and relocation, stakeholder relationships, and benefits and pensions. If you can’t find what
+					you’re looking for on our website, please call our Service Centre at 604-822-8111, and our staff
+					will be happy to help answer your questions.</p>
+				<p class="attribution uppercase text-sm text-grey-700 pb-4 has-content--after hr--small-blue">&mdash;
+					Barbara Meens Thistle</p>
+			</div>
+		</div>
+		<div class="full-bleed">
+			<div class="mt-20 clearfix">
+				<figure class="img-and-caption float-right my-0">
+					<div data-widget-image="img">
+						<img alt="" alt="Martha Piper Plaza at sunset"
+							src="https://live.staticflickr.com/394/20089915475_32ee2672e3_b.jpg" loading="lazy" />
+					</div>
+					<figcaption>Image credit &mdash; Peter Nikon</figcaption>
+				</figure>
+			</div>
+		</div>
+	</div>
+</main>
+{% endblock %}
+
+{% block custom_css %}
+{% endblock %}
+
+{% block custom_javascript %}
+{% endblock %}

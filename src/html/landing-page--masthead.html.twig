@@ -1,0 +1,139 @@
+{% extends "layouts/default.twig" %}
+{% set title = "Landing page - masthead" %}
+{% set pageTitle = "Health and Wellbeing" %}
+
+{% block content %}
+<main class="unit-content">
+	<section class="masthead overflow-hidden">
+		<div class="relative min-h-64 md--min-h-96 ">
+			<div
+				class="block min-h-64 md--min-h-96 absolute w-full h-full has-content--after has-gradient-bottom--after">
+				<img src="https://live.staticflickr.com/3776/19936844258_51b56c4606_b.jpg" alt="UBC I day"
+					class="object-cover w-full h-full">
+			</div>
+			<div class="relative flex min-h-64 md--min-h-96">
+				<div class="flex-1 self-end container mx-auto px-4">
+					<h1 class="masthead__page-title">Health &amp; <span
+							class="block decoration-endline decoration-endline--large">Wellbeing.</span></h1>
+				</div>
+			</div>
+		</div>
+	</section>
+	<div class="container mx-auto p-4 ">
+		{% include "components/navigation--breadcrumbs.twig" %}
+		<div class="grid-container grid-container--basic">
+			<section class="grid-area-a mb-8">
+				<h2>Taking care of our entire selves makes sense.</h2>
+				<p class="text-lead text-ubc-blue-cobalt">We're committed to ensuring that our UBC workplaces are safe,
+					healthy and respectful, and we offer many programs and resources to keep you healthy at work.</p>
+				<p><a href="#"
+						class="cta-button cta-button--underline cta-button--underline-neptune cta-button--underline-heavy font-bold uppercase text-ubc-blue-sea py-3 hover--no-underline mr-6">Learn
+						how <svg role="presentation"
+							class="unit-button__icon inline-block h-4 w-4 text-ubc-blue-neptune ml-2 -mt-1 stroke-w-1"
+							viewBox="0 0 19 19">
+							<use xlink:href="#icon-arrow-circle2"></use>
+						</svg></a>
+				</p>
+				<p>Gummies dessert gummies topping pie brownie. Brownie pastry sugar plum brownie gingerbread. Jujubes
+					cheesecake tart jujubes. Bonbon jelly beans liquorice I love sugar <i>plum jelly chocolate bar
+						carrot cake</i>. Cake toffee marzipan sugar plum. Tiramisu marshmallow halvah dessert tart.
+					Dessert tootsie roll sweet roll I love. Apple pie biscuit powder I love. Tiramisu cake cake sesame
+					snaps. Pastry I love cotton candy jujubes apple pie jelly I love croissant sweet roll.</p>
+				<p>Dessert bonbon macaroon sesame snaps soufflé carrot cake liquorice brownie liquorice. Pastry
+					marshmallow chupa chups cake croissant croissant candy. Candy canes ice cream donut ice cream. Sweet
+					roll cheesecake jelly. Caramels donut cake <strong>dragée gummies bear claw</strong> carrot cake.
+					Sweet liquorice lollipop. Chocolate marzipan tiramisu donut chocolate cake sugar plum. Pudding
+					dragée bear claw. Toffee tiramisu pastry sesame snaps bear claw.</p>
+			</section>
+			<div class="grid-area-c md--flex md---mx-4 md--flex-wrap mb-8">
+				<div class="ubc-card md--w-half py-4 md--p-4">
+					<a href="#"
+						class="ubc-card__primary-action flex-1 text-black hover--no-underline group shadow hover--shadow-lg flex h-full bg-ubc-blue-polar">
+						<div class="ubc-card__media w-one-third bg-cover order-last min-h-64"
+							style="background-image: url(https://live.staticflickr.com/4584/38588637591_0241df7a93_z_d.jpg);">
+						</div>
+						<div class="ubc-card__content p-8 self-end w-two-thirds">
+							<h2 class="card__title">Ergonomics</h2>
+							<p class="text-hug">It's not your typical day to day and, if you want to be a part of it.
+							</p>
+						</div>
+					</a>
+				</div>
+				<div class="ubc-card md--w-half py-4 md--p-4">
+					<a href="#"
+						class="ubc-card__primary-action flex-1 text-black hover--no-underline group shadow hover--shadow-lg flex h-full bg-ubc-blue-polar">
+						<div class="ubc-card__media w-one-third bg-cover order-last min-h-64"
+							style="background-image: url(https://live.staticflickr.com/603/23144566274_e6133da0ee_b.jpg);">
+						</div>
+						<div class="ubc-card__content p-8 self-end w-two-thirds">
+							<h2 class="card__title">Occupantional &amp; Preventative Health Program</h2>
+							<p class="text-hug">It's not your typical day to day and, if you want to be a part of it.
+							</p>
+						</div>
+					</a>
+				</div>
+				<div class="ubc-card md--w-half py-4 md--p-4">
+					<a href="#"
+						class="ubc-card__primary-action flex-1 text-black hover--no-underline group shadow hover--shadow-lg flex h-full bg-ubc-blue-polar">
+						<div class="ubc-card__media w-one-third bg-cover order-last min-h-64"
+							style="background-image: url(https://live.staticflickr.com/4527/37965347504_f63c420360_b.jpg);">
+						</div>
+						<div class="ubc-card__content p-8 self-end w-two-thirds">
+							<h2 class="card__title">Accidents at work</h2>
+							<p class="text-hug">It's not your typical day to day and, if you want to be a part of it.
+							</p>
+						</div>
+					</a>
+				</div>
+				<div class="ubc-card md--w-half py-4 md--p-4">
+					<a href="#"
+						class="ubc-card__primary-action flex-1 text-black hover--no-underline group shadow hover--shadow-lg flex h-full bg-ubc-blue-polar">
+						<div class="ubc-card__media w-one-third bg-cover order-last min-h-64"
+							style="background-image: url(https://live.staticflickr.com/481/19901880860_921901ff1f_b.jpg);">
+						</div>
+						<div class="ubc-card__content p-8 self-end w-two-thirds">
+							<h2 class="card__title">Remain at work / Return to work program</h2>
+							<p class="text-hug">It's not your typical day to day and, if you want to be a part of it.
+							</p>
+						</div>
+					</a>
+				</div>
+			</div>
+			<section class="grid-area-b mb-8">
+				<div class="p-8 shadow-md hover--shadow-lg heading-two--mt">
+					<h3 class="heading-five uppercase text-ubc-blue-cobalt">Upcoming Activities</h3>
+					<ul class="list-style-none mb-0">
+						<li class="py-2 text-ubc-blue-cobalt hover--text-ubc-blue flex"><span
+								class="inline-block py-1 px-2 bg-ubc-blue-cornflower text-ubc-blue block text-xs mr-4 self-start no-underline">UBCV</span><a
+								href="#" title="some title" class="underline">Campus
+								Health Authority</a></li>
+						<li class="py-2 text-ubc-blue-cobalt hover--text-ubc-blue flex"><span
+								class="inline-block py-1 px-2 bg-ubc-blue-sea text-white block text-xs mr-4 self-start no-underline">UBCO</span><a
+								href="#" title="some title" class="underline">Free
+								yoga class for staff</a></li>
+						<li class="py-2 text-ubc-blue-cobalt hover--text-ubc-blue flex"><span
+								class="inline-block py-1 px-2 bg-ubc-blue-cornflower text-ubc-blue block text-xs mr-4 self-start no-underline">UBCV</span><a
+								href="#" title="some title" class="underline">Swim
+								afternoon at the Aquatic Centre</a></li>
+						<li class="py-2 text-ubc-blue-cobalt hover--text-ubc-blue flex"><span
+								class="inline-block py-1 px-2 bg-ubc-blue-cornflower text-ubc-blue block text-xs mr-4 self-start no-underline">UBCV</span><a
+								href="#" title="some title" class="underline">Fourth
+								link title that goes on and on and wraps around a bit</a></li>
+						<li class="py-2 text-ubc-blue-cobalt hover--text-ubc-blue flex"><span
+								class="inline-block py-1 px-2 bg-ubc-blue-sea text-white block text-xs mr-4 self-start no-underline">UBCO</span><a
+								href="#" title="some title" class="underline">Fifth
+								link title</a></li>
+					</ul>
+				</div>
+			</section>
+		</div>
+
+	</div>
+</main>
+{% endblock %}
+
+{% block custom_css %}
+{% endblock %}
+
+{% block custom_javascript %}
+{% endblock %}

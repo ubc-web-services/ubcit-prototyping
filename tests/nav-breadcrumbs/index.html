@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="utf-8" />
+	<title>The University of British Columbia | BREADCRUMBS TEST</title>
+	<meta name="description" content="TEST" />
+	<meta name="author" content="Someone" />
+	<meta name="handheldfriendly" content="true" />
+	<meta name="mobileoptimized" content="320" />
+	<meta name="viewport" content="width=device-width" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<link rel="shortcut icon" href="https://cdn.ubc.ca/clf/7.0.4/img/favicon.ico" />
+	<link rel="stylesheet" href="../css/styles-tailwind.css" />
+	<link rel="stylesheet" href="../css/base/base.typography.css" />
+	<style>
+	.breadcrumb::after {
+		content: ' /'
+	}
+	.breadcrumb--current::after {
+		content: ''
+	}
+	</style>
+</head>
+<body class="">
+	<main style="padding: 0 .5rem;">
+		<nav aria-label="breadcrumbs">
+			<ol class="list-reset flex text-grey-light text-sm">
+				<li class="breadcrumb pr-1"><a href="#" class="text-ubc-blue">Home</a></li>
+				<li class="breadcrumb pr-1"><a href="#" class="text-ubc-blue">Parent</a></li>
+				<li class="breadcrumb breadcrumb--current"><a href="#" aria-current="page">Child</a></li>
+			</ol>
+		</nav>
+		<h1 class="heading-three">Breadcrumbs</h1>
+		<section class="">
+			<p class="text-lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			<hr />
+		</section>
+	</main>
+	<footer style="padding: 0 .5rem;">
+		<p class="text-small">Some footer text</p>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,100 @@
+{% extends "layouts/default.twig" %}
+{% set title = "Landing page - list" %}
+{% set pageTitle = "Health and Wellbeing" %}
+
+{% block content %}
+<main class="unit-content">
+	<section class="masthead overflow-hidden">
+		<div class="relative min-h-64 md--min-h-96 ">
+			<div
+				class="block min-h-64 md--min-h-96 absolute w-full h-full has-content--after has-gradient-bottom--after">
+				<img src="https://live.staticflickr.com/4584/38588637591_0241df7a93_z_d.jpg" alt="UBC I day"
+					class="object-cover w-full h-full">
+			</div>
+			<div class="relative flex min-h-64 md--min-h-96">
+				<div class="flex-1 self-end container mx-auto px-4">
+					<h1 class="masthead__page-title">Pension <span
+							class="block decoration-endline decoration-endline--large">Workshops.</span></h1>
+				</div>
+			</div>
+		</div>
+	</section>
+	<div class="container mx-auto p-4 ">
+		{% include "components/navigation--breadcrumbs.twig" %}
+		<div class="grid-container grid-container--landing">
+			<article class="grid-area-a mb-8">
+				<p class="text-lead text-ubc-blue-cobalt">As an employee of the University, there are several resources
+					that the University and the Plan provide for new and current employees. Pension plans are complex
+					and may not be easy to understand, which is why the Plan provides the following information sessions
+					and workshops to help you understand pension plans, the Staff Pension Plan, and how they might help
+					you with your financial and retirement planning.</p>
+				<p>Understanding Your Staff Pension Plan (UYSPP) is an informative workshop session designed for both
+					potential and current members of the UBC Staff Pension Plan. All ages are welcome to attend. If you
+					are close to retiring, you may want to consider booking a Retirement Information Session (RIS)
+					rather than attending the workshop, as we’ll be able to review your specific situation including
+					pension estimates.</p>
+				<p>If you are already a Plan member, regardless of age, this workshop will help you learn more about the
+					Plan, pensions in general, and related retirement considerations. If you are interested in
+					retirement planning, this workshop will help you understand your retirement options. If you are not
+					yet a member, this workshop will provide enrolment information and an opportunity to have all of
+					your pension-related questions answered.</p>
+				<p>Advance registration is required. Please note that registration cut-off time is 24 hours before the
+					workshop.</p>
+				<section>
+					<h2>Workshop sessions</h2>
+					<ul class="list-style-none mb-0">
+						<li>
+							<span
+								class="inline-block py-1 px-2 bg-ubc-blue-cornflower text-ubc-blue block text-xs">UBCV</span>
+							<span class="block text-xs meta__date pt-2">Thursday, June 14, 2019</span>
+							<a href="#" title="some title"
+								class="block pb-4 mb-4 underline text-ubc-blue-cobalt hover--text-ubc-blue border-b-2 border-grey-300">UBC
+								Staff Pension Plan Fair</a>
+						</li>
+						<li>
+							<span class="inline-block py-1 px-2 bg-ubc-blue-sea text-white block text-xs">UBCO</span>
+							<span class="block text-xs meta__date pt-2">Monday, June 20, 2019</span>
+							<a href="#" title="some title"
+								class="block pb-4 mb-4 underline text-ubc-blue-cobalt hover--text-ubc-blue border-b-2 border-grey-300">Apply
+								for Community Leadership Program or a really long title for an event because this
+								container should adjust</a>
+						<li>
+							<span
+								class="inline-block py-1 px-2 bg-ubc-blue-cornflower text-ubc-blue block text-xs">UBCV</span>
+							<span class="block text-xs meta__date pt-2">Sunday, June 19, 2019</span>
+							<a href="#" title="some title"
+								class="block pb-4 mb-4 underline text-ubc-blue-cobalt hover--text-ubc-blue border-b-2 border-grey-300">UBC
+								Staff Pension Plan 2018: Annual Report</a>
+						</li>
+						<li>
+							<span
+								class="inline-block py-1 px-2 bg-ubc-blue-cornflower text-ubc-blue block text-xs">UBCV</span>
+							<span class="block text-xs meta__date pt-2">Thursday, June 14, 2019</span>
+							<a href="#" title="some title"
+								class="block pb-4 mb-4 underline text-ubc-blue-cobalt hover--text-ubc-blue border-b-2 border-grey-300">UBC
+								Staff Pension Plan Fair</a>
+						</li>
+						<li>
+							<span class="inline-block py-1 px-2 bg-ubc-blue-sea text-white block text-xs">UBCO</span>
+							<span class="block text-xs meta__date pt-2">Monday, June 20, 2019</span>
+							<a href="#" title="some title"
+								class="block pb-4 mb-4 underline text-ubc-blue-cobalt hover--text-ubc-blue border-b-2 border-grey-300">Apply
+								for Community Leadership Program or a really long title for an event because this
+								container should adjust</a>
+						</li>
+					</ul>
+				</section>
+			</article>
+			<section class="grid-area-b text-lead--mt mb-8">
+				{% include "components/navigation--sub.twig" %}
+			</section>
+		</div>
+	</div>
+</main>
+{% endblock %}
+
+{% block custom_css %}
+{% endblock %}
+
+{% block custom_javascript %}
+{% endblock %}

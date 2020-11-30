@@ -1,0 +1,131 @@
+{% extends "layouts/default.twig" %}
+{% set title = "Landing page - cards" %}
+{% set pageTitle = "Illness &amp; Injury" %}
+
+{% block content %}
+<main class="unit-content">
+	<div class="container mx-auto p-4 ">
+		{% include "components/navigation--breadcrumbs.twig" %}
+		<h1 class="text-ubc-blue-cobalt">{{ pageTitle }}</h1>
+		<div class="grid-container grid-container--basic">
+			<section class="grid-area-a mb-8">
+				<h2>Things happen. We're here to help.</h2>
+				<p class="text-lead text-ubc-blue-cobalt">We can connect you to programs and support that can help you
+					navigate the transitions of your life and career, from getting married and welcoming a new baby to
+					retiring or dealing with the death of a loved one.</p>
+				<p><a href="#"
+						class="cta-button cta-button--underline cta-button--underline-neptune cta-button--underline-heavy font-bold uppercase text-ubc-blue-sea py-3 hover--no-underline mr-6">Learn
+						how <svg role="presentation"
+							class="unit-button__icon inline-block h-4 w-4 text-ubc-blue-neptune ml-2 -mt-1 stroke-w-1"
+							viewBox="0 0 19 19">
+							<use xlink:href="#icon-arrow-circle2"></use>
+						</svg></a>
+				</p>
+				<p>Gummies dessert gummies topping pie brownie. Brownie pastry sugar plum brownie gingerbread. Jujubes
+					cheesecake tart jujubes. Bonbon jelly beans liquorice I love sugar <i>plum jelly chocolate bar
+						carrot cake</i>. Cake toffee marzipan sugar plum. Tiramisu marshmallow halvah dessert tart.
+					Dessert tootsie roll sweet roll I love. Apple pie biscuit powder I love. Tiramisu cake cake sesame
+					snaps. Pastry I love cotton candy jujubes apple pie jelly I love croissant sweet roll.</p>
+			</section>
+			<section class="grid-area-c md--flex md---mx-4 md--flex-wrap mb-8">
+
+				<div class="ubc-card md--w-half py-4 md--p-4">
+					<a href="#"
+						class="ubc-card__primary-action flex-1 bg-ubc-blue-polar hover--no-underline group shadow hover--shadow-lg flex h-full text-ubc-blue">
+						<div class="ubc-card__media w-one-third order-last min-h-64 flex">
+							<svg role="presentation"
+								class="inline-block h-24 w-24 self-center mx-auto text-ubc-blue-cobalt stroke-w-1">
+								<use xlink:href="#icon-alert"></use>
+							</svg>
+						</div>
+						<div class="ubc-card__content p-8 self-center w-two-thirds">
+							<h2 class="card__title">Ergonomics</h2>
+							<p class="text-hug">It's not your typical day to day and, if you want to be a part of it.
+							</p>
+						</div>
+					</a>
+				</div>
+
+				<div class="ubc-card md--w-half py-4 md--p-4">
+					<a href="#"
+						class="ubc-card__primary-action flex-1 bg-ubc-blue-polar hover--no-underline group shadow hover--shadow-lg flex h-full text-ubc-blue">
+						<div class="ubc-card__media w-one-third order-last min-h-64 flex">
+							<svg role="presentation"
+								class="inline-block h-24 w-24 self-center mx-auto stroke-w-1 text-ubc-blue-cobalt">
+								<use xlink:href="#icon-search"></use>
+							</svg>
+						</div>
+						<div class="ubc-card__content p-8 self-center w-two-thirds">
+							<h2 class="card__title">Occupantional + Preventative Health Program</h2>
+							<p class="text-hug">It's not your typical day to day and, if you want to be a part of it.
+							</p>
+						</div>
+					</a>
+				</div>
+
+				<div class="ubc-card md--w-half py-4 md--p-4">
+					<a href="#"
+						class="ubc-card__primary-action flex-1 bg-ubc-blue-polar hover--no-underline group shadow hover--shadow-lg flex h-full text-ubc-blue">
+						<div class="ubc-card__media w-one-third order-last min-h-64 flex">
+							<svg role="presentation"
+								class="inline-block h-24 w-24 self-center mx-auto stroke-w-1 text-ubc-blue-cobalt">
+								<use xlink:href="#icon-discussion"></use>
+							</svg>
+						</div>
+						<div class="ubc-card__content p-8 self-center w-two-thirds">
+							<h2 class="card__title">Accidents at Work</h2>
+							<p class="text-hug">It's not your typical day to day and, if you want to be a part of it.
+							</p>
+						</div>
+					</a>
+				</div>
+
+				<div class="ubc-card md--w-half py-4 md--p-4">
+					<a href="#"
+						class="ubc-card__primary-action flex-1 bg-ubc-blue-polar hover--no-underline group shadow hover--shadow-lg flex h-full text-ubc-blue">
+						<div class="ubc-card__media w-one-third order-last min-h-64 flex">
+							<svg role="presentation"
+								class="inline-block h-24 w-24 self-center mx-auto stroke-w-1 text-ubc-blue-cobalt">
+								<use xlink:href="#icon-user"></use>
+							</svg>
+						</div>
+						<div class="ubc-card__content p-8 self-center w-two-thirds">
+							<h2 class="card__title">Remain at Work / Return to Work Program</h2>
+							<p class="text-hug">It's not your typical day to day and, if you want to be a part of it.
+							</p>
+						</div>
+					</a>
+				</div>
+
+			</section>
+		</div>
+
+		<div>
+			<a href="#" class="ubc-card mt-12 hover--no-underline flex flex-col group text-white">
+				<div class="ubc-card__primary-action relative flex min-h-96 ">
+					<div
+						class="ubc-card__media block min-h-96 absolute w-full h-full has-content--after has-gradient-bottom--after">
+						<img src="https://live.staticflickr.com/4584/38588637591_0241df7a93_z_d.jpg" alt="UBC I day"
+							class="object-cover w-full h-full">
+					</div>
+					<div class="ubc-card__content relative p-8 flex-1 self-end max-w-2xl">
+						<h2 class="heading-four">Moving to British Columbia?</h2>
+						<p class="text-hug">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+						<p
+							class="border-b-2 border-white mb-2 uppercase text-base group-hover--border-ubc-blue-cornflower inline-block has-content--after has-icon--arrow-circle">
+							Get help</p>
+
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+</main>
+{% endblock %}
+
+{% block custom_css %}
+{% endblock %}
+
+{% block custom_javascript %}
+{% endblock %}

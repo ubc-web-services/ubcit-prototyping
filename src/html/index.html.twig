@@ -1,0 +1,83 @@
+{% extends "layouts/default.twig" %}
+{% set title = "Web Styles" %}
+{% set pageTitle = "Unit Web Styles" %}
+{% set pageTeaser = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor." %}
+{% set pageIntro = "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." %}
+
+{% block content %}
+<main class="unit-content">
+	<div class="container p-4 mx-auto ">
+		<h1>{{ pageTitle }}</h1>
+		<div class="relative flex items-center py-4 pl-4 pr-12 my-6 shadow-lg message message--warning xl--py-8 xl--pl-8 bg-ubc-warning"
+			role="status" aria-live="polite">
+			<a class="absolute top-0 right-0 px-4 py-3 leading-none close hover--bg-white-transparent hover--no-underline hover--text-black"
+				data-dismiss="message" href="#">×</a>
+			<svg role="presentation"
+				class="flex-none inline-block w-12 h-12 mr-4 xl--w-20 xl--h-20 text-ubc-blue xl--mr-8">
+				<use xlink:href="#icon-alert"></use>
+			</svg>
+			<p class="text-hug">Note: these pages have not been fully tested for cross-browser compatability, so display
+				issues may be present. Please use current versions of Chrome or Safari at this time.</p>
+		</div>
+		<ul class="list-none">
+			<li class="block bg-ubc-blue">
+				<h2 class="p-4 mt-0 text-white uppercase heading-five">Prototype pages</h2>
+			</li>
+			<li class="block border border-t-0 border-unit-grey-light"><a href="components.html"
+					class="block p-4 no-underline hover--underline text-ubc-blue hover--unit-grey">Components Page
+					(contains a list of all web styles).</a></li>
+			<li class="block border border-t-0 border-unit-grey-light"><a href="home.html"
+					class="block p-4 no-underline hover--underline text-ubc-blue hover--unit-grey">Home Page</a></li>
+			<li class="block border border-t-0 border-unit-grey-light"><a href="landing-page--masthead.html"
+					class="block p-4 no-underline hover--underline text-ubc-blue hover--unit-grey">Landing Page -
+					masthead</a></li>
+			<li class="block border border-t-0 border-unit-grey-light"><a href="landing-page--w-list.html"
+					class="block p-4 no-underline hover--underline text-ubc-blue hover--unit-grey">Landing Page - with
+					listings</a></li>
+			<li class="block border border-t-0 border-unit-grey-light"><a href="landing-page--cards.html"
+					class="block p-4 no-underline hover--underline text-ubc-blue hover--unit-grey">Landing Page - with
+					cards</a></li>
+			<li class="block border border-t-0 border-unit-grey-light"><a href="landing-page--vp-message.html"
+					class="block p-4 no-underline hover--underline text-ubc-blue hover--unit-grey">Landing Page - VP
+					message</a></li>
+			<li class="block border border-t-0 border-unit-grey-light"><a href="event.html"
+					class="block p-4 no-underline hover--underline text-ubc-blue hover--unit-grey">Event</a></li>
+			<li class="block border border-t-0 border-unit-grey-light"><a href="article-blog-post.html"
+					class="block p-4 no-underline hover--underline text-ubc-blue hover--unit-grey">Article / Blog Post
+					with masthead</a></li>
+			<li class="block border border-t-0 border-unit-grey-light"><a href="article-blog-post-noimg.html"
+					class="block p-4 no-underline hover--underline text-ubc-blue hover--unit-grey">Article / Blog Post
+					without masthead</a></li>
+			<li class="block border border-t-0 border-unit-grey-light"><a href="article-blog-post--story.html.twig"
+					class="block p-4 no-underline hover--underline text-ubc-blue hover--unit-grey">Article / Blog Post
+					- Story</a></li>
+			<li class="block border border-t-0 border-unit-grey-light"><a href="page--listing.html"
+					class="block p-4 no-underline hover--underline text-ubc-blue hover--unit-grey">Listing Page</a></li>
+			<li class="block border border-t-0 border-unit-grey-light"><a href="page--listing-w-img.html"
+					class="block p-4 no-underline hover--underline text-ubc-blue hover--unit-grey">Listing Page with
+					images</a></li>
+			<li class="block border border-t-0 border-unit-grey-light"><a href="page.html"
+					class="block p-4 no-underline hover--underline text-ubc-blue hover--unit-grey">Basic Page</a></li>
+		</ul>
+		<h3 class="text-sm text-grey-500 heading-five">* Misc Notes:</h3>
+		<ul class="pl-4 text-sm list-disc text-grey-500">
+			<li>CLF header and footer are not yet finalized, so the header and footer present are placeholders only.
+			</li>
+			<li>Horizontal desktop navigation is tied to the CLF header, so this has been omitted.</li>
+			<li><em>TEST</em> pages have been included to show some of the experiments taking place, but are not
+				necessarily representative of the HR prototype.</li>
+			<li>All written content and images are for placeholder purposes only and are not intended to represent final
+				content.</li>
+			<li>Types sizes for large breakpoints (1720px+) are still not finalized, so text will appear distorted on
+				large screens.</li>
+		</ul>
+	</div>
+</main>
+
+{% endblock %}
+
+{% block custom_css %}
+{% endblock %}
+
+{% block custom_javascript %}
+{% endblock %}

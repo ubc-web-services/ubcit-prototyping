@@ -1,52 +1,64 @@
-{% set unitName = "Unit Name" %}
-{% set facultyName = "Faculty of XYZ" %}
-{% set clfFull = true %} {# display the full or fixed width CLF #}
-{% set offCanvasDrawer = false %}
-{% if offCanvasDrawer %}
-  {% set offCanvasDrawerDirection = 'drawer--push-left' %}
-  {# expected values are 'drawer--push-left', 'drawer--push-right' 'drawer--cover-left', 'drawer--cover-right' #}
-{% endif %}
-{% set stickyNavigation = true %}
+{# CONFIG #}
+{% set unitName = "Unit" %}
+{% set siteURL = "unit.ubc.ca" %}
+{% set facultyName = "" %}
+{% set campus = 'vancouver' %}
+{% set slideshow = FALSE %}
+{% set clfversion = 7 %}
+{% set clf_sticky = TRUE %}
+{% set colorPrimary = "#cc3d3d" %}
+{% set colorSecondary = "#e0e0e0" %}
+{% set colorAccent = "#003a79" %}
+{% set leading = "1.625" %}
+{% set baseFontSize = "1rem" %}
 
-<!DOCTYPE html>
-<html lang="en">
+{% set loremIpsum = '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis <a href="#">nostrud exercitation ullamco</a> laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <a href="#">Excepteur sint occaecat</a> cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+<p>Nostrud <strong>exercitation ullamco</strong> laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>' %}
+
+<!doctype html>
+<html class="overflow-x-hidden no-js" lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>{{ title }}</title>
-    {% include "../includes/head.twig" %}
-    {% block custom_css %}{% endblock %}
+	<meta charset="UTF-8">
+	<title>{{ title }} | {{ unitName }}</title>
+	{% include "../includes/head.twig" %}
+	{% block custom_css %}{% endblock %}
+	<style>
+	 :root {
+        --color-primary: {{ colorPrimary }};
+        --color-secondary: {{ colorSecondary }};
+        --color-accent: {{ colorAccent }};
+        --leading: {{ leading }};
+        --base-font-size: {{ baseFontSize }};
+      }
+      #ubc7-unit { background-color: var(--color-primary); }
+	</style>
 </head>
-<body {% if clfFull %}class="full-width"{% endif %}>
-  {% if offCanvasDrawer %}
-  <div id="pushed-content" class="{{ offCanvasDrawerDirection }} expand">
-  {% endif %}
-  {% if not clfFull %}
-  <div class="container">
-  {% endif %}
-    {% include "../includes/header.twig" %}
-    {% if offCanvasDrawer %}
-    {% include "../includes/menu--off-canvas-drawer-trigger.twig" %}
-    {% endif %}
-    {% if not offCanvasDrawer %}
-    {% include "../includes/menu.twig" %}
-    {% endif %}
-    {% block content %}{% endblock %}
-    {% include "../includes/footer.twig" %}
-  {% if not clfFull %}
-  </div>
-  {% endif %}
-  {% if offCanvasDrawer %}
-  </div>
-  <section id="off-canvas-drawer--primary" class="off-canvas-drawer {{ offCanvasDrawerDirection }}">
-    {% include "../includes/menu--off-canvas-drawer.twig" %}
-  </section>
-  <div id="off-canvas-mask" class="drawer-toggle--primary"></div>
-  {% include "../includes/scripts--off-canvas-drawer.twig" %}
-  {% endif %}
-  {% include "../includes/scripts.twig" %}
-  {% if stickyNavigation %}
-  {% include "../includes/scripts--sticky-navigation.twig" %}
-  {% endif %}
-  {% block custom_javascript %}{% endblock %}
+
+<body class="layout--full-width">
+	<div id="main-content">
+		{% if clfversion == 7 %}
+			{% include "../includes/header--clf7.twig" %}
+		{% else %}
+			{% include "../includes/header.twig" %}
+		{% endif %}
+		{% block content %}{% endblock %}
+		<footer>
+			{% if clfversion == 7 %}
+				{% include "../includes/footer--unit.twig" %}
+				{% include "../includes/footer--clf7.twig" %}
+			{% else %}
+				{% include "../includes/footer--unit.twig" %}
+				{% include "../includes/footer.twig" %}
+			{% endif %}
+		</footer>
+		<div id="totop-mask"></div>
+		<button id="totop" v-scroll-to="{ el: 'body'}">to top</button>
+	</div>
+	{% include "../includes/svg.twig" %}
+	{% include "../includes/scripts.twig" %}
+	{% block custom_javascript %}{% endblock %}
 </body>
+
 </html>
