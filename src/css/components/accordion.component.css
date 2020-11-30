@@ -1,0 +1,67 @@
+/** @define accordion */
+
+/*
+* This file contains all styles related to the accordion component.
+*/
+
+.accordion__trigger {
+	@apply relative w-full mt-6 text-left border-b border-ubc-blue-cobalt text-ubc-blue-cobalt;
+	background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" %3E%3Cpath d="M53 29H35V11a3 3 0 0 0-6 0v18H11a3 3 0 0 0 0 6h18v18a3 3 0 0 0 6 0V35h18a3 3 0 0 0 0-6z" fill="%23002145" stroke-width="0" stroke-miterlimit="10" stroke-linejoin="round" stroke-linecap="round" %3E%3C/path%3E%3C/svg%3E');
+	background-repeat: no-repeat;
+	background-position: right 1rem top 50%;
+	background-size: 1rem 1rem;
+}
+
+.accordion__trigger.is-open,
+.accordion__trigger:hover {
+	color: $ubc-blue-cobalt;
+}
+
+.accordion__trigger:hover {
+	cursor: pointer;
+}
+
+.accordion__trigger.is-open {
+	@apply border-b-4;
+	background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" %3E%3Cpath d="M53 34H11a3 3 0 0 1 0-6h42a3 3 0 0 1 0 6z" fill="%230055b7" stroke-width="0" stroke-miterlimit="10" stroke-linejoin="round" stroke-linecap="round" %3E%3C/path%3E%3C/svg%3E');
+}
+
+.accordion__trigger h3 {
+	margin-top: calc($leading * 1.25rem);
+	margin-bottom: 0;
+	padding-right: 2em;
+	font-weight: 400;
+	font-size: $text-2xl;
+	font-family: $default-typeface;
+	line-height: 1.4;
+	letter-spacing: .025em;
+}
+
+@media (min-width: $breakpoint--xxl) {
+
+	.accordion__trigger h3 {
+		margin-top: calc($leading * 1rem);
+		font-size: $text-5xl;
+	}
+
+}
+
+/* summary element */
+summary {
+	margin-top: calc(1.625 * 1rem);
+	font-weight: 600;
+	list-style-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" %3E%3Cpath d="M53 29H35V11a3 3 0 0 0-6 0v18H11a3 3 0 0 0 0 6h18v18a3 3 0 0 0 6 0V35h18a3 3 0 0 0 0-6z" fill="%23002145" stroke-width="0" stroke-miterlimit="10" stroke-linejoin="round" stroke-linecap="round" %3E%3C/path%3E%3C/svg%3E');
+}
+
+summary:focus {
+	list-style-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" %3E%3Cpath d="M53 34H11a3 3 0 0 1 0-6h42a3 3 0 0 1 0 6z" fill="%230055b7" stroke-width="0" stroke-miterlimit="10" stroke-linejoin="round" stroke-linecap="round" %3E%3C/path%3E%3C/svg%3E');
+}
+
+summary::-webkit-details-marker {
+	color: transparent;
+	background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" %3E%3Cpath d="M53 29H35V11a3 3 0 0 0-6 0v18H11a3 3 0 0 0 0 6h18v18a3 3 0 0 0 6 0V35h18a3 3 0 0 0 0-6z" fill="%23002145" stroke-width="0" stroke-miterlimit="10" stroke-linejoin="round" stroke-linecap="round" %3E%3C/path%3E%3C/svg%3E');
+}
+
+summary:focus::-webkit-details-marker {
+	background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" %3E%3Cpath d="M53 34H11a3 3 0 0 1 0-6h42a3 3 0 0 1 0 6z" fill="%230055b7" stroke-width="0" stroke-miterlimit="10" stroke-linejoin="round" stroke-linecap="round" %3E%3C/path%3E%3C/svg%3E');
+}

@@ -1,0 +1,56 @@
+/** @define ubc-gradient */
+
+/* variables in file */
+$gradient-ubc-blue-transparent: rgba(0, 33, 69, 0);
+$gradient-ubc-blue-opaque: rgba(0, 33, 69, 1);
+$gradient-grey-transparent: rgba(244, 244, 244, 0);
+$gradient-grey-opaque: rgba(244, 244, 244, 1);
+
+/* gradients */
+.gradient-bottom--ubc-blue {
+	background: linear-gradient(to bottom, $gradient-ubc-blue-transparent 45%, $gradient-ubc-blue-opaque 100%);
+}
+
+.gradient-top--ubc-blue {
+	background: linear-gradient(to bottom, $gradient-ubc-blue-opaque 0%, $gradient-ubc-blue-transparent 55%);
+}
+
+.gradient-bottom--ubc-blue-full {
+	background: linear-gradient(to bottom, $gradient-ubc-blue-transparent 2%, $gradient-ubc-blue-opaque 100%);
+}
+
+.gradient-top--ubc-blue-full {
+	background: linear-gradient(to bottom, $gradient-ubc-blue-opaque 0%, $gradient-ubc-blue-transparent 100%);
+}
+
+.gradient-bottom--grey {
+	background: linear-gradient(to bottom, $gradient-grey-transparent 45%, $gradient-grey-opaque 100%);
+}
+
+.gradient-top--grey {
+	background: linear-gradient(to bottom, $gradient-grey-opaque 0%, $gradient-grey-transparent 55%);
+}
+
+.gradient-bottom--grey-full {
+	background: linear-gradient(to bottom, $gradient-grey-transparent 2%, $gradient-grey-opaque 100%);
+}
+
+.gradient-top--grey-full {
+	background: linear-gradient(to bottom, $gradient-grey-opaque 0%, $gradient-grey-transparent 100%);
+}
+
+.has-gradient-bottom--after::after {
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to bottom, $gradient-ubc-blue-transparent 45%, $gradient-ubc-blue-opaque 100%);
+}
+
+.has-gradient-top--after::after {
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to bottom, $gradient-ubc-blue-opaque 0%, $gradient-ubc-blue-transparent 55%);
+}

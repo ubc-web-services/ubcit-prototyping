@@ -1,0 +1,22 @@
+/** @define drupal.node.preview */
+
+/*
+* This styles the node preview form.
+*/
+
+.node-preview-container {
+	background-color: rgba(255, 255, 255, .5);
+	border-bottom: 1px #003a79 solid;
+}
+
+.node-preview-backlink {
+	display: inline-block;
+	margin: .5rem 0;
+	padding: .5rem 1rem;
+	color: #fff;
+	background-color: rgba(0, 58, 121, .85);
+	border-color: #003a79;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: .25rem;
+}

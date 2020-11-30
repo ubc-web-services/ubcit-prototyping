@@ -1,0 +1,47 @@
+/** @define links */
+
+/*
+* This file contains basic link styles.
+*/
+a,
+button {
+	transition: background-color .125s ease, color .125s ease;
+}
+
+a {
+	color: $default-link-color;
+	text-decoration: underline;
+}
+
+a:hover {
+	color: $default-link-color-hover;
+}
+
+a:active {
+	color: $default-link-color-active;
+}
+
+/* accessibly hidden links and content */
+.element-invisible,
+.skip-link:link,
+.skip-link:visited,
+.skip-link:hover,
+.visually-hidden {
+	position: absolute;
+	top: auto;
+	left: -300%;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}
+
+/* allow the link to stretch to fill the first parent with relative positioning */
+.link-expand::before,
+.unit-button--simple.link-expand::before {
+	@apply absolute inset-0;
+	content: '';
+}
+
+.link-expand-break {
+	@apply relative z-50;
+}

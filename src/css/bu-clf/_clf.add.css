@@ -1,0 +1,334 @@
+/* type */
+blockquote p:first-child {
+  margin-top: 0;
+}
+
+.text-lowercase {
+  text-transform: lowercase;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-grey-300 {
+  color: #e0e0e0;
+}
+
+.text-grey-500 {
+  color: #9e9e9e;
+}
+
+/* card styles - lock em down */
+.ubc-card--basic .ubc-card__actions,
+.ubc-card--basic .ubc-card__content {
+  padding: 1rem;
+}
+
+.ubc-card,
+.ubc-card.bg-grey-100 .card__title,
+.ubc-card.bg-ubc-blue-neptune .card__title,
+.ubc-card.bg-ubc-blue-cornflower .card__title,
+.ubc-card.bg-ubc-blue-polar .card__title,
+.ubc-card.bg-ubc-blue .card__meta,
+.ubc-card.bg-ubc-blue-sea .card__meta,
+.ubc-card.bg-ubc-blue-cobalt .card__meta {
+  color: #002145;
+}
+
+.ubc-card.bg-ubc-blue,
+.ubc-card.bg-ubc-blue-sea,
+.ubc-card.bg-ubc-blue-cobalt,
+.ubc-card.bg-ubc-blue .card__title,
+.ubc-card.bg-ubc-blue-sea .card__title,
+.ubc-card.bg-ubc-blue-cobalt .card__title,
+.ubc-card.bg-ubc-blue .ubc-card__media svg,
+.ubc-card.bg-ubc-blue-sea .ubc-card__media svg,
+.ubc-card.bg-ubc-blue-cobalt .ubc-card__media svg {
+  color: #e1f3f9;
+}
+
+.ubc-card.bg-ubc-blue-polar .card__meta {
+  background-color: #f5f5f5;
+}
+
+.ubc-card.bg-white .unit-button,
+.ubc-card.bg-grey-100 .unit-button {
+  border-color: #0055b7;
+  color: #0055b7;
+}
+
+.ubc-card.bg-white:hover .unit-button,
+.ubc-card.bg-grey-100:hover .unit-button {
+  background-color: #0055b7;
+  color: #fff;
+}
+
+.ubc-card.bg-ubc-blue .unit-button,
+.ubc-card.bg-ubc-blue-sea .unit-button,
+.ubc-card.bg-ubc-blue-cobalt .unit-button {
+  border-color: #fff;
+}
+
+.ubc-card.bg-ubc-blue:hover .unit-button,
+.ubc-card.bg-ubc-blue-sea:hover .unit-button,
+.ubc-card.bg-ubc-blue-cobalt:hover .unit-button {
+  border-color: #e1f3f9;
+  background-color: #e1f3f9;
+  color: #002145;
+}
+
+.ubc-card.bg-ubc-blue-neptune .unit-button,
+.ubc-card.bg-ubc-blue-cornflower .unit-button,
+.ubc-card.bg-ubc-blue-polar .unit-button {
+  border-color: #002145;
+}
+
+.ubc-card.bg-ubc-blue-neptune:hover .unit-button,
+.ubc-card.bg-ubc-blue-cornflower:hover .unit-button,
+.ubc-card.bg-ubc-blue-polar:hover .unit-button {
+  background-color: #002145;
+  color: #fff;
+}
+
+.ubc-card--vert .ubc-card__media img {
+  width: 100%;
+}
+
+.ubc-card--image-w-overlay.top-right .ubc-card__media::after,
+.ubc-card--image-w-overlay.top-left .ubc-card__media::after {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg,#002145 0,rgba(0,33,69,0) 55%);
+}
+
+.ubc-card--image-w-overlay.bottom-right .ubc-card__media::after,
+.ubc-card--image-w-overlay.bottom-left .ubc-card__media::after {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg,rgba(0,33,69,0) 45%,#002145);
+}
+
+.paragraph .ubc-card--horiz-media .card__meta,
+.paragraph .ubc-card--horiz-media-r .card__meta {
+  padding-left: 2rem;
+  margin-left: -2rem;
+}
+
+.ubc-card--image-w-overlay .ubc-card__media {
+  height: 100%;
+  background-position: center;
+}
+
+.ubc-card--image-w-overlay.top-right .ubc-card__content,
+.ubc-card--image-w-overlay.bottom-right .ubc-card__content {
+  text-align: right;
+}
+
+.ubc-card--image-w-overlay.bottom-right .ubc-card__media-content,
+.ubc-card--image-w-overlay.bottom-left .ubc-card__media-content {
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+}
+
+/* Paragraphs */
+.paragraph--type--text {
+  padding-bottom: 1.625rem;
+}
+
+.paragraph--type--text.bg-ubc-blue,
+.paragraph--type--text.bg-ubc-blue-sea,
+.paragraph--type--text.bg-ubc-blue-cobalt {
+  color: #e1f3f9;
+}
+
+.paragraph--type--text.bg-grey-100,
+.paragraph--type--text.bg-ubc-blue-neptune,
+.paragraph--type--text.bg-ubc-blue-cornflower,
+.paragraph--type--text.bg-ubc-blue-polar {
+  color: #002145;
+}
+
+/* grid */
+.grid-container--footer {
+  grid-template-areas:
+    'a'
+    'b';
+  grid-template-rows: auto auto;
+  grid-template-columns: auto;
+}
+
+@media (min-width: 640px) {
+  .grid-container--footer {
+    grid-template-areas:
+      'a a b';
+    grid-template-rows: auto;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+}
+
+@media (min-width: 960px) {
+
+  .md--pr-4 {
+    padding-right: 1rem;
+  }
+
+  .md--pl-4 {
+    padding-left: 1rem;
+  }
+
+  .md--h-6 {
+    height: 1.5rem;
+  }
+
+  .md--w-6 {
+    width: 1.5rem;
+  }
+
+  .md--text-right {
+    text-align: right;
+  }
+
+}
+
+.self-end {
+  align-self: flex-end;
+}
+
+.text-ubc-blue-sea {
+  color: #0055b7;
+}
+
+.pager__items {
+  display: flex;
+  max-width: 28rem;
+  margin-top: 4rem;
+}
+
+.pager__item a {
+  display: block;
+  padding: .25rem .75rem;
+  color: #0055b7;
+  border: 1px solid #fff;
+  border-width: 1px;
+  text-decoration: none;
+}
+
+.pager__item a:hover {
+  text-decoration: none;
+  border-color: #002145;
+  background-color: #002145;
+  color: #fff;
+}
+
+.pager__item.is-active a {
+  border-color: #97d4e9;
+  color: #002145;
+}
+
+.pager__item.is-active a:hover {
+  border-color: #002145;
+  color: #fff;
+}
+
+.ajax-progress,
+.ajax-progress-throbber,
+.ajax-progress-fullscreen {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  background: hsla(0, 0%, 100%, .5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10001;
+  transition: opacity .25s linear;
+}
+
+.ajax-progress-throbber:before,
+.ajax-progress-fullscreen:before {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 50px;
+  animation: a .75s linear infinite;
+  border-radius: 50px;
+  border: 5px solid rgba(51, 51, 51, .25);
+  border-bottom-color: #70b3e3;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+@keyframes a {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.z-10 {
+  z-index: 1;
+}
+
+.js-header-scroll.is-scrolled {
+  height: 4rem;
+}
+
+.text-top-right {
+  text-align: right;
+}
+
+.text-bottom-right {
+  text-align: right;
+  align-self: flex-end;
+}
+
+.text-bottom-left {
+  align-self: flex-end;
+}
+
+.paragraph--type--feature-image .has-gradient::after,
+.ubc-card--image-w-overlay .ubc-card__media::after {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left:0;
+  background:linear-gradient(180deg,rgba(0,33,69,0) 2%,#002145);
+}
+
+.paragraph--type--feature-image.text-top-right .has-gradient::after,
+.paragraph--type--feature-image.text-top-left .has-gradient::after,
+.ubc-card--image-w-overlay .ubc-card__media.text-top-right::after
+.ubc-card--image-w-overlay .ubc-card__media.text-top-left::after, {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left:0;
+  background:linear-gradient(180deg,#002145 0,rgba(0,33,69,0) 98%);
+}
+
+@media (min-width: 1280px) {
+  .w-narrow {
+    max-width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+}
+

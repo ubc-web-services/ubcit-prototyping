@@ -1,0 +1,61 @@
+/** @define list styles */
+
+/*
+* This file contains rules for adjusting the presentation of lists and list items
+*/
+
+/* styles for formatted text (since we don't style lists automatically) */
+ul.list-unstyled,
+ol.list-unstyled,
+.list-unstyled ul,
+.list-unstyled ol,
+ul.item-list,
+ol.item-list,
+.item-list ul,
+.item-list ol {
+	padding-left: 0;
+	list-style: none;
+}
+
+/* inline list */
+.list-inline li {
+	display: inline;
+}
+
+@media (min-width: $breakpoint--sm) {
+
+	.sm--list-inline li {
+		display: inline;
+	}
+
+}
+
+@media (min-width: $breakpoint--md) {
+
+	.md--list-inline li {
+		display: inline;
+	}
+
+}
+
+/* Lists with extra space that isn't leading */
+.list-relaxed li {
+	@apply py-1;
+}
+
+/* bordered list */
+.list-bordered {
+	@apply border border-grey-500;
+}
+
+.list-bordered li {
+	@apply px-6 py-3;
+}
+
+.list-bordered > li {
+	@apply border-t border-grey-300;
+}
+
+.list-bordered li:first-child {
+	@apply border-t-0;
+}

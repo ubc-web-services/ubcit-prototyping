@@ -1,0 +1,101 @@
+/** @define drupal.local.tasks */
+
+/*
+* This file contains styles for the default drupal tabs
+*/
+
+.tabs {
+	margin: 1rem 0 .5rem 0;
+	font-size: 1rem;
+}
+
+.tabs--primary,
+.tabs--secondary {
+	width: 99%;
+}
+
+.tabs--primary {
+	margin: 0 0 .5em 0;
+	padding: 0;
+	line-height: normal;
+	white-space: nowrap;
+	list-style: none;
+	box-shadow: inset 0 -3px #999;
+}
+
+.tabs--primary li {
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+
+.tabs--primary a.is-active {
+	color: #005ca7;
+	background-color: #f3f3f3;
+	box-shadow: inset 0 -3px #005ca7;
+}
+
+.tabs--primary a.is-active:hover {
+	color: #01a7e1;
+	box-shadow: inset 0 -3px #01a7e1;
+}
+
+.tabs--primary a {
+	display: inline-block;
+	margin: 0 3px 0 0;
+	padding: .25em 1em .5em;
+	color: #999;
+	text-decoration: none;
+	transition: color .3s, box-shadow .3s;
+}
+
+.tabs--primary a:hover {
+	color: #005ca7;
+}
+
+.tabs--primary a .tab {
+	display: block;
+	height: 24px;
+	margin: 0;
+	padding: 4px 13px 4px 6px;
+	line-height: 20px;
+}
+
+.tabs--secondary {
+	margin: 0;
+	padding: 0 0 0 5px;
+	white-space: nowrap;
+	list-style: none;
+	border-bottom: 1px solid #c0c0c0;
+}
+
+.tabs--secondary li {
+	float: left;
+	margin: 0 5px 0 0;
+	padding: 5px 0;
+	border-right: none;
+}
+
+.tabs--secondary a {
+	display: block;
+	height: 24px;
+	margin: 0;
+	padding: 0;
+	color: #777;
+	text-decoration: none;
+	border: 1px solid  #c0c0c0;
+}
+
+.tabs--secondary a.is-active,
+.tabs--secondary a.is-active:hover {
+	color: #000;
+	border: 1px solid  #c0c0c0;
+}
+
+.tabs--secondary a .tab {
+	display: block;
+	height: 18px;
+	margin: 0;
+	padding: 3px 8px;
+	line-height: 18px;
+}

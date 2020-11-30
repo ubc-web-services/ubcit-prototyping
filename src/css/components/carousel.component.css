@@ -1,0 +1,171 @@
+/** @define carousel */
+
+/*
+* This file contains all styles related to the carousel component.
+*/
+
+/* variables in file */
+$carousel-button--disabled: $grey-500;
+$carousel-item--focus-outline: $ubc-blue-cobalt;
+$carousel-item--focus-border: $white;
+$carousel-caption--text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+$carousel-gradient-transparent: rgba(0, 0, 0, .0001);
+$carousel-gradient-translucent: rgba(0, 0, 0, .7);
+
+.vueperslide {
+	@apply no-underline bg-black;
+}
+
+.vueperslides__progress>* {
+	background: $unit-primary;
+}
+
+.vueperslide__content-wrapper {
+	background-color: rgba(0,33,69,.3);
+}
+
+.vueperslide__title {
+	@apply text-4xl text-white;
+}
+
+.vueperslide__content {
+	@apply text-xl text-white;
+}
+
+.vueperslides__bullet,
+.vueperslides__bullets button {
+	border-radius: 50px;
+	color: $unit-primary;
+}
+/*
+.carousel-item {
+	position: relative;
+	display: none;
+	width: 100%;
+	overflow: hidden;
+}
+
+.carousel .carousel-item.active {
+	display: block;
+}
+
+.carousel .carousel-inner {
+	position: relative;
+}
+
+.carousel button.pause {
+	position: relative;
+	top: 5px;
+	right: -20px;
+	left: -300em;
+	display: block;
+	width: auto;
+	height: auto;
+	margin-bottom: 10px;
+	font-size: 1.25rem;
+	border: thin solid outset;
+}
+
+.carousel button[aria-disabled='true'] {
+	color: $carousel-button--disabled;
+}
+
+.carousel button.pause:focus {
+	position: relative;
+	top: 5px;
+	right: -20px;
+	left: 0;
+	display: block;
+	width: auto;
+	height: auto;
+	margin-bottom: 10px;
+	font-size: 20px;
+}
+
+.carousel .carousel-items {
+	border: solid 2px transparent;
+}
+
+.carousel .carousel-items.focus {
+	border-color: $carousel-item--focus-border;
+	outline: solid 1px $carousel-item--focus-outline;
+}
+
+.carousel .carousel-inner .carousel-image a img {
+	width: 100%;
+	height: 100%;
+}
+
+.carousel .carousel-inner .carousel-caption a:focus,
+.carousel .carousel-inner .carousel-caption a:hover {
+	outline: solid 2px $carousel-item--focus-outline;
+	outline-offset: 1px;
+}
+
+.carousel .carousel-caption {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	padding: 1.5rem 10%;
+	color: $white;
+	text-shadow: $carousel-caption--text-shadow;
+}
+
+.carousel .carousel-inner .carousel-caption {
+	right: 0;
+	bottom: 0;
+	left: 0;
+	padding: 3rem 10%;
+	text-shadow: none;
+}
+
+.carousel .carousel-control {
+	position: absolute;
+	top: 0;
+	z-index: 10;
+	color: $white;
+	font-weight: 700;
+	font-size: 200%;
+	text-align: center;
+	text-shadow: $carousel-caption--text-shadow;
+}
+
+.carousel .carousel-control svg {
+	position: relative;
+	top: 45%;
+	display: inline-block;
+}
+
+.carousel .carousel-control:focus {
+	border: 3px solid $white;
+	outline: 1px solid $carousel-item--focus-outline;
+}
+
+.carousel .carousel-control.previous {
+	bottom: 0;
+	width: 10%;
+}
+
+.carousel .carousel-control.previous:focus,
+.carousel .carousel-control.previous:hover {
+	bottom: 0;
+	width: 10%;
+	background-image: linear-gradient(to right, $carousel-gradient-translucent 0, $carousel-gradient-transparent 100%);
+}
+
+.carousel .carousel-control.next {
+	right: 0;
+	bottom: 0;
+	width: 10%;
+}
+
+.carousel .carousel-control.next:focus,
+.carousel .carousel-control.next:hover {
+	right: 0;
+	bottom: 0;
+	width: 10%;
+	background-image: linear-gradient(to right, $carousel-gradient-transparent 0, $carousel-gradient-translucent 100%);
+}
+
+*/

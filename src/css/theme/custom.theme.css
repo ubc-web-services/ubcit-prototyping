@@ -1,0 +1,120 @@
+/** @define custom */
+
+/*
+* This file contains all styles related to the custom theme.
+*/
+
+.pullquote--big::before {
+	@apply h-16 border-t-4 border-l-4 border-ubc-blue-cobalt;
+	top: 0;
+	right: -90%;
+	width: 100%;
+}
+
+.pullquote--big::after {
+	@apply h-2 border-t-4 border-ubc-blue-cornflower;
+	bottom: 0;
+	left: -90%;
+	width: 100%;
+}
+
+.introquote--big::before {
+	@apply h-2 border-t-4 border-ubc-blue-cornflower;
+	right: -30%;
+	bottom: 0;
+	width: 100%;
+}
+
+.hr--small::after {
+	@apply h-2 border-b-2 border-grey-300;
+	bottom: 0;
+	left: 0;
+	width: 40%;
+}
+
+.hr--small-blue::after {
+	@apply h-2 border-b-2 border-ubc-blue-neptune;
+	bottom: 0;
+	left: 0;
+	width: 40%;
+}
+
+/* Group Hover */
+.group:hover .group-hover--border-ubc-blue-cornflower {
+	border-color: $ubc-blue-cornflower;
+}
+
+.list-inline {
+	margin-left: 0;
+	list-style: none;
+}
+
+.list-inline > li {
+	display: inline-block;
+	padding-left: 0;
+}
+
+/* Min heights */
+.min-h-64 {
+	min-height: 16rem;
+}
+
+.min-h-96 {
+	min-height: 24rem;
+}
+
+@media (min-width: $breakpoint--md) {
+
+	.md--min-h-96 {
+		min-height: 24rem;
+	}
+
+	.md--min-h-160 {
+		min-height: 40rem;
+	}
+
+}
+
+.flex-grid {
+	display: grid;
+	margin-right: -1rem;
+	margin-left: -1rem;
+}
+
+.hover--bg-white-transparent:hover {
+	background-color: $white-transparent;
+}
+
+.styled-hr {
+	@apply relative border-none;
+}
+
+.styled-hr::after {
+	top: -.125rem;
+	display: block;
+	width: 40%;
+	height: .25rem;
+	background-color: $ubc-blue-cornflower;
+	content: '';
+}
+
+.link-audience {
+	color: #fff !important;
+}
+
+.link-audience:hover {
+	color: $ubc-blue-polar !important;
+	background-color: $ubc-blue !important;
+}
+
+.bg-ubc-blue.text-white a,
+.bg-ubc-blue-sea.text-white a,
+.bg-ubc-blue-cobalt.text-white a {
+	color: #fff;
+}
+
+.bg-ubc-blue.text-white a:hover,
+.bg-ubc-blue-sea.text-white a:hover,
+.bg-ubc-blue-cobalt.text-white a:hover {
+	color: $ubc-blue-polar;
+}

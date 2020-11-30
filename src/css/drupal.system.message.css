@@ -1,0 +1,76 @@
+/** @define drupal.node.preview */
+
+/*
+* This styles the system messages.
+*/
+
+.message {
+	position: relative;
+	display: flex;
+	align-items: center;
+	margin-top: 1.5rem;
+	margin-bottom: 1.5rem;
+	padding-top: 1rem;
+	padding-right: 3rem;
+	padding-bottom: 1rem;
+	padding-left: 1rem;
+	padding-left: 3rem;
+	box-shadow: 0 10px 15px -3px rgba(0, 0, 0, .1), 0 4px 6px -2px rgba(0, 0, 0, .05);
+}
+
+.message--success {
+	background-color: #57edae;
+}
+
+.message--warning {
+	background-color: #f8e605;
+}
+
+.message--error {
+	background-color: #ff7c7c;
+}
+
+.message--status {
+	background-color: #40b4e5;
+}
+
+.message__close {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding-top: .75rem;
+	padding-right: 1rem;
+	padding-bottom: .75rem;
+	padding-left: 1rem;
+	line-height: 1;
+}
+
+.message__close:hover {
+	color: #000;
+	text-decoration: none;
+	background-color: rgba(255, 255, 255, .5);
+}
+
+.message__icon {
+	display: inline-block;
+	flex: none;
+	width: 3rem;
+	height: 3rem;
+	margin-right: 1rem;
+	color: #002145;
+}
+
+@media (min-width: 1720px:) {
+	.message {
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+		padding-left: 2rem;
+	}
+
+	.message__icon {
+		width: 5rem;
+		height: 5rem;
+		margin-right: 2rem;
+	}
+
+}

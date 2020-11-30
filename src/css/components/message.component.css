@@ -1,0 +1,55 @@
+/** @define message */
+
+$ubc-error: #ff7c7c; /* rgb - (255,124,124) */
+$ubc-warning: #f8e605; /* rgb - (248,230,5) */
+$ubc-success: #57edae; /* rgb - (87,237,174) */
+$ubc-status: #40b4e5; /* rgb - (64,180,229) */
+
+/*
+* This file contains all styles related to the message component.
+*/
+
+.message {
+	@apply relative flex items-center px-12 py-4 pl-4 my-6 shadow-lg;
+}
+
+.message--success {
+	background-color: $ubc-success;
+}
+
+.message--warning {
+	background-color: $ubc-warning;
+}
+
+.message--error {
+	background-color: $ubc-error;
+}
+
+.message--status {
+	background-color: $ubc-status;
+}
+
+.message__close {
+	@apply absolute top-0 right-0 px-4 py-3 font-bold leading-none no-underline;
+}
+
+.message__close:hover {
+	@apply text-black no-underline;
+	background-color: rgba(255, 255, 255, .5);
+}
+
+.message__icon {
+	@apply flex-none inline-block w-12 h-12 mr-4 text-ubc-blue;
+}
+
+@media (min-width: $breakpoint--xl) {
+
+	.message {
+		@apply py-8 pl-8;
+	}
+
+	.message__icon {
+		@apply w-20 h-20 mr-8;
+	}
+
+}

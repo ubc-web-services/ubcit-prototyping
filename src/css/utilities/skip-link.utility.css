@@ -1,0 +1,15 @@
+/** @define skip-link */
+
+/* accessibly hidden links and content */
+.element-invisible,
+.skip-link:link,
+.skip-link:visited,
+.skip-link:hover,
+.visually-hidden {
+	position: absolute;
+	top: auto;
+	left: -300%;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}

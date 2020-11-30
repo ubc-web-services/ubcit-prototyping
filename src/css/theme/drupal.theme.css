@@ -1,0 +1,260 @@
+/** @define Drupal Theme */
+
+/*
+* This file contains all styles used to modify Drupal makrup to match the theme.
+*/
+
+/* drupal media */
+.media--type-image {
+	@apply mt-leading;
+}
+
+figure .media--type-image {
+	@apply mt-0;
+}
+
+figure .media--type-image img {
+	@apply w-full;
+}
+
+figure.align-left,
+.align-left.media--type-image {
+	@apply mt-0 mr-leading mb-leading;
+}
+
+figure.align-right,
+.align-right.media--type-image {
+	@apply mt-0 ml-leading mb-leading;
+}
+
+.align-right.media--type-image,
+.align-left.media--type-image {
+	@apply inline-block;
+}
+
+.align-center.media--type-image img {
+	@apply mx-auto;
+}
+
+figure.align-center {
+	display: table;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+figure.align-center > article,
+figure.align-center > div {
+	display: block;
+	max-width: 100%;
+}
+
+
+/* paragraphs */
+.paragraph--type--text__inner > :first-child,
+.paragraph--type--text > div > div > :first-child {
+	@apply mt-0;
+}
+
+.paragraph.bg-ubc-blue {
+	color: #fff;
+}
+
+.paragraph.bg-ubc-blue a {
+	color: $ubc-blue-polar;
+}
+
+.paragraph.bg-ubc-blue a:hover {
+	color: $ubc-blue-cornflower;
+}
+
+.paragraph.bg-ubc-blue .unit-button--light {
+	color: $ubc-blue-cobalt;
+}
+
+.paragraph.bg-ubc-blue .unit-button--dark {
+	border-color: $ubc-blue-polar;
+}
+
+.paragraph.bg-ubc-blue .unit-button--light:hover,
+.paragraph.bg-ubc-blue .unit-button--dark:hover {
+	color: #fff;
+}
+
+.paragraph.bg-ubc-blue .unit-button--simple::after {
+	content: url('../img/svg/icon-arrow--polar.svg');
+}
+
+.paragraph.bg-ubc-blue .unit-button--simple:hover::after {
+	content: url('../img/svg/icon-arrow--cornflower.svg');
+}
+
+/* views pager */
+.pager__items {
+	@apply inline-flex;
+	line-height: 2.5;
+}
+
+.pager__items a,
+.pager__items .pager__item--current {
+	@apply block w-12 h-12 mx-1 text-center no-underline border-2 rounded-full text-ubc-blue;
+	border-color: transparent;
+}
+
+.pager__items a:hover {
+	@apply border-grey-300;
+}
+
+.pager__items .pager__item--current,
+.pager__items .is-active a {
+	@apply font-bold text-center border-ubc-blue-neptune text-grey-900;
+}
+
+@media (min-width: $breakpoint--xxl) {
+
+	.pager__items {
+		line-height: 2;
+	}
+
+}
+
+/* jquery datepicker */
+.ui-datepicker {
+	font-size: 75%;
+}
+
+.ui-state-highlight,
+.ui-widget-content .ui-state-highlight,
+.ui-widget-header .ui-state-highlight {
+	color: #fff;
+	background: $ubc-blue-cobalt;
+	border: 1px solid $ubc-blue;
+}
+
+/* webform */
+.webform-submission-form legend {
+	padding-bottom: 0;
+	font-size: .875em;
+	border-bottom: none;
+	border-bottom: .25rem solid $ubc-blue-neptune;
+}
+
+.webform-submission-form .fieldset-legend.form-required {
+	color: inherit;
+	font-weight: inherit;
+}
+
+.webform-submission-form .fieldset-legend.form-required::after {
+	color: $input-required-color;
+	font-weight: 700;
+	content: ' *';
+}
+
+.webform-type-checkboxes > legend {
+	@apply text-ubc-blue;
+	text-transform: none;
+	border-bottom: none;
+}
+
+.webform-submission-form .form-actions {
+	margin-top: 3rem;
+}
+
+fieldset.webform-type-checkboxes,
+fieldset.webform-type-radios {
+	box-shadow: none;
+}
+
+.webform-submission-form .fieldset-wrapper {
+	padding: 2rem;
+}
+
+fieldset fieldset {
+	margin-top: 3rem !important;
+	margin-bottom: 0 !important;
+	padding-top: 0;
+	padding-right: 0;
+	padding-bottom: 0;
+	padding-left: 0;
+	box-shadow: none;
+}
+
+fieldset fieldset legend {
+	text-transform: none;
+	border-bottom-width: .125rem;
+}
+
+.webform-submission-form .webform-type-radios .fieldset-wrapper,
+.webform-submission-form .webform-type-checkboxes .fieldset-wrapper {
+	padding: 0;
+}
+
+.webform-submission-form .fieldset-wrapper .form-item.form-radio,
+.webform-submission-form .fieldset-wrapper .form-item.form-checkbox {
+	margin-top: 0;
+}
+
+.webform-submission-form .webform-type-radios > legend,
+.webform-submission-form .webform-type-checkboxes > legend {
+	border-bottom: none;
+}
+
+.text-count-message,
+.description {
+	@apply text-sm text-grey-700;
+}
+
+@media (min-width: 400px) {
+	.webform-options-display-two-columns,
+	.webform-options-display-three-columns {
+		display: flex;
+		flex-wrap: wrap;
+		margin-top: 0;
+		-moz-column-count: initial;
+		-webkit-column-count: initial;
+		column-count: initial;
+	}
+	.webform-options-display-two-columns div.form-item {
+		width: 50%;
+	}
+	.webform-options-display-three-columns div.form-item {
+		width: calc(100% / 3);
+	}
+
+}
+
+/* misc */
+.text-uppercase {
+	text-transform: uppercase;
+}
+
+.text-lowercase {
+	text-transform: lowercase;
+}
+
+/* jquery date picker picks up default table styles */
+.ui-datepicker-calendar thead,
+.ui-datepicker-calendar tr {
+	@apply border-0;
+}
+
+.ui-datepicker-calendar th {
+	@apply normal-case text-grey-900;
+}
+
+/* quickedit divs (gah!) */
+[data-quickedit-field-id] {
+	display: inline;
+}
+
+/* Drupal inline images */
+.node__content .field--name-field-media-image img {
+	margin-top: calc(var(--leading) * 1rem);
+}
+
+/* Drupal messages */
+.message p:first-of-type {
+	margin-top: 0;
+}
+.message p {
+	margin-top: .75rem;
+}

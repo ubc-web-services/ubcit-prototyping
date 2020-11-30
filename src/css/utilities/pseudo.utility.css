@@ -1,0 +1,14 @@
+/** @define pseudo */
+
+/* Before and After pseudo-element classes */
+.has-content--before,
+.has-content--after {
+	position: relative;
+}
+
+.has-content--before::before,
+.has-content--after::after {
+	position: absolute;
+	display: block;
+	content: '';
+}

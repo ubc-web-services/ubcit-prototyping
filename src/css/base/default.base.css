@@ -1,0 +1,39 @@
+/** @define layouts */
+
+/* variables in file */
+$focus-bg: rgba(64, 180, 229, .5);
+$focus-inner-bg: rgba(0, 33, 69, 1);
+
+/* Set up a decent box model on the root element */
+html {
+	box-sizing: border-box;
+}
+
+/*
+* Make all elements from the DOM inherit from the parent box-sizing
+* Since `*` has a specificity of 0, it does not override the `html` value
+* making all elements inheriting from the root box-sizing value
+* See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+*/
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+:focus,
+button:focus {
+	outline: none;
+	box-shadow:
+		0 0 0 6px $focus-bg,
+		0 0 0 1px $focus-inner-bg !important;
+}
+
+[tabindex='-1']:focus {
+	outline: none !important;
+}
+
+[v-cloak],
+[hidden] {
+	display: none;
+}

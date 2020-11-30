@@ -1,0 +1,121 @@
+/** @define navigation */
+
+/*
+* This file contains all styles related to the navigation component.
+*/
+
+.piped {
+	position: relative;
+	display: inline-block;
+	padding-right: 1rem;
+}
+
+.piped::after {
+	position: absolute;
+	top: 0;
+	right: .25rem;
+	display: block;
+	line-height: 1.5;
+	content: '/';
+}
+
+/* subnavigation */
+.subnav__heading {
+	@apply mt-0 mb-4 text-xs font-normal text-ubc-blue-sea;
+}
+
+.subnav__heading::after {
+	display: block;
+	width: 30%;
+	height: 1px;
+	margin-top: .5rem;
+	background-color: $ubc-blue-neptune;
+	content: '';
+}
+
+@media (min-width: $breakpoint--md) {
+
+	.subnav__heading {
+		@apply text-sm;
+	}
+
+}
+
+@media (min-width: $breakpoint--lg) {
+
+	.subnav__heading {
+		@apply text-base;
+	}
+
+}
+
+.subnav__links {
+	margin-top: 0;
+	margin-bottom: 0;
+	list-style: none;
+}
+
+.subnav--nested {
+	@apply list-none;
+}
+
+.nav--split {
+	display: flex;
+}
+
+.navlink--secondary {
+	@apply block py-2 pr-12 no-underline text-ubc-blue;
+}
+
+.navlink--secondary:hover {
+	@apply no-underline text-ubc-blue-cobalt;
+}
+
+.navlink--secondary.has-children {
+	@apply flex-1;
+}
+
+.nav--split.is-open > .navlink--secondary {
+	@apply text-ubc-blue-cobalt;
+}
+
+.subnav--nested .navlink--secondary {
+	@apply block py-2 pl-4 pr-12 text-sm font-normal text-ubc-blue-sea;
+}
+
+.navlink--secondary.is-active,
+.menu-item--active-trail.active .nav--split a,
+.menu-item--active-trail.active .nav--split button,
+.subnav--nested .navlink--secondary:hover {
+	@apply text-ubc-blue-cobalt;
+}
+
+@media (min-width: $breakpoint--xxl) {
+
+	.navlink--secondary {
+		@apply text-lg;
+	}
+
+	.subnav--nested .navlink--secondary {
+		@apply text-base;
+	}
+
+}
+
+.subnav--nested .subnav--nested {
+	@apply bg-grey-50;
+}
+
+.subnav--nested .subnav--nested .navlink--secondary {
+	@apply pl-8 font-normal;
+}
+
+.subnav--nested .subnav--nested .subnav--nested .navlink--secondary {
+	@apply pl-12 font-normal;
+}
+
+.nav--split .js-reveal__trigger {
+	@apply flex-none w-6 px-4;
+}
+
+/* nested subnav - remove bold, bigger at xl breakpoint, change bg color and icon size */

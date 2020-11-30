@@ -1,0 +1,24 @@
+/** @define icon */
+
+/*
+* This file contains all styles related to the icon component.
+*/
+
+.has-icon--arrow-circle::after {
+	top: 0;
+	right: 0;
+	width: 1em;
+	height: 100%;
+	margin-right: -1.5em;
+	line-height: 0;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' stroke='%23ffffff' fill='none' stroke-miterlimit='10' stroke-linejoin='round' stroke-linecap='round' stroke-width='4'%3E%3C/circle%3E%3Cpath stroke='currentColor' stroke-miterlimit='10' d='M14.002 32.002h35M36 21l13 11-13 11' stroke='%23ffffff' stroke-width='4' fill='none' stroke-linejoin='round' stroke-linecap='round'%3E%3C/path%3E%3C/svg%3E");
+	background-repeat: no-repeat;
+	background-position: 0 50%;
+	background-size: 1em 1em;
+	transform: translateX(0);
+	transition: transform .125s ease;
+}
+
+.group:hover .has-icon--arrow-circle::after {
+	transform: translateX(.25rem);
+}

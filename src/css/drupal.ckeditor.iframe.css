@@ -1,0 +1,163 @@
+/** @define drupal.ckeditor.iframe */
+
+/*
+* This approximates the CLF's style in CKEditor instances on the Drupal back-end.
+*/
+
+@charset "UTF-8";
+
+/* Adjust body padding and focus styles */
+body {
+	padding: 1rem;
+}
+
+body:focus {
+	outline: none;
+	box-shadow: none;
+}
+
+/* Captions */
+.caption > * {
+	padding: .5em;
+	background: #f3f3f3;
+	border: 1px solid #ccc;
+}
+
+.caption > figcaption {
+	padding-top: .5em;
+	font-size: small;
+	text-align: center;
+	border: 1px solid #ccc;
+	border-top: none;
+}
+
+/* Override clf's default blockquote and pre styles when captioned. */
+.caption-pre > pre,
+.caption-blockquote > blockquote {
+	margin: 0;
+}
+
+.caption-blockquote > figcaption::before {
+	content: "— ";
+}
+
+.caption-blockquote > figcaption {
+	text-align: left;
+}
+
+[dir="rtl"] .caption-blockquote > figcaption {
+	text-align: right;
+}
+
+/* buttons - add styles here as they're added with data attributes instead of classes in the editor */
+[data-drupal-button-link="unit-button"] {
+	display: inline-flex;
+	padding: .75rem 1.5rem;
+	border-width: 1px;
+}
+
+[data-drupal-button-link="unit-button"]:hover {
+	text-decoration: none;
+	box-shadow: 0 4px 6px -1px rgba(0, 0, 0, .1), 0 2px 4px -1px rgba(0, 0, 0, .06);
+}
+
+/* button sizes */
+[data-drupal-button-link-size="text-xs"] {
+	font-size: .75rem;
+}
+
+[data-drupal-button-link-size="text-sm"] {
+	font-size: .875rem;
+}
+
+[data-drupal-button-link-size="text-lg"] {
+	font-size: 1.125rem;
+}
+
+[data-drupal-button-link-size="text-xl"] {
+	font-size: 1.5rem;
+}
+
+[data-drupal-button-link-size="text-2x"] {
+	font-size: 1.75rem;
+}
+
+/* button style variations */
+[data-drupal-button-link-style="unit-button--light-gradient"] {
+	background: linear-gradient(180deg, transparent 60%, rgba(0, 0, 0, .2));
+}
+
+[data-drupal-button-link-style="unit-button--dark-gradient"] {
+	background: linear-gradient(180deg, transparent 2%, #000);
+}
+
+[data-drupal-button-link-style="unit-button--light"] {
+	color: #0055b7;
+	background-color: #fff;
+	border-color: #0055b7;
+}
+
+[data-drupal-button-link-style="unit-button--mid"],
+[data-drupal-button-link-style="unit-button--light"]:hover {
+	color: #0055b7;
+	background-color: #fff;
+	border-color: #0055b7;
+}
+
+[data-drupal-button-link-style="unit-button--mid"]:hover {
+	color: #000;
+	background-color: #97d4e9;
+	border-color: #97d4e9;
+}
+
+[data-drupal-button-link-style="unit-button--dark"] {
+	color: #fff;
+	background-color: #002145;
+	border-color: #002145;
+}
+
+[data-drupal-button-link-style="unit-button--dark"]:hover {
+	color: #fff;
+	background-color: #003a79;
+	border-color: #003a79;
+}
+
+[data-drupal-button-link-style="unit-button--transparent"] {
+	color: #fff;
+	background-color: transparent;
+	border-color: #fff;
+}
+
+[data-drupal-button-link-style="unit-button--transparent"]:hover {
+	color: #002145;
+	background-color: #fff;
+	border-color: #fff;
+}
+
+[data-drupal-button-link-style="unit-button--plain"] {
+	color: #0055b7;
+	background-color: transparent;
+	border-color: transparent;
+}
+
+[data-drupal-button-link-style="unit-button--plain"]:hover {
+	color: #fff;
+	background-color: #0055b7;
+	border-color: transparent;
+}
+
+[data-drupal-button-link-style="unit-button--simple"] {
+	padding-top: 0;
+	padding-bottom: 0;
+	padding-left: 0;
+	color: #5c6ac4;
+	color: var(--color-primary);
+	border-width: 0;
+}
+
+[data-drupal-button-link-style="unit-button--simple"]:hover {
+	color: #002145;
+	text-decoration: underline;
+	background: transparent;
+	box-shadow: none;
+}
