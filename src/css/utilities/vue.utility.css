@@ -1,0 +1,39 @@
+/** @define vue.utility */
+
+/* adds a set of utilities for inclusion in vue.js */
+
+[v-cloak] {
+  display: none;
+}
+
+/* Vue Component Transitions */
+.slide-enter-active,
+.slide-leave-active {
+	transition: transform .15s ease;
+}
+
+.slide-enter,
+.slide-leave-to {
+	transform: translateX(100%);
+	transition: all .15s ease-in 0s;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+	transition: opacity .15s cubic-bezier(.25, .46, .45, .94);
+}
+.fade-enter,
+.fade-leave-to {
+	opacity: 0;
+}
+
+.drop-enter-active,
+.drop-leave-active {
+	transition: opacity .15s cubic-bezier(.25, .46, .45, .94), transform .15s ease;
+}
+.drop-enter,
+.drop-leave-to {
+	transform: translateY(-100%);
+	opacity: 0;
+	transition: all .15s ease-in 0s;
+}

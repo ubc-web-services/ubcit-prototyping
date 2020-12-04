@@ -33,7 +33,6 @@ button:focus {
 	outline: none !important;
 }
 
-[v-cloak],
 [hidden] {
 	display: none;
 }

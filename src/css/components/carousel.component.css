@@ -24,19 +24,75 @@ $carousel-gradient-translucent: rgba(0, 0, 0, .7);
 	background-color: rgba(0,33,69,.3);
 }
 
+/* responsive type for title between 320 and 1200px */
 .vueperslide__title {
-	@apply text-4xl text-white;
+	@apply text-xl font-bold leading-none tracking-wider text-white;
+}
+
+@media screen and (min-width: $breakpoint--clf7-xs) {
+
+  .vueperslide__title {
+		/* betweem the two breakpoints, increase base 20px size to a max of 54px */
+    font-size: calc(20px + 34 * ((100vw - $breakpoint--clf7-xs) / $breakpoint--clf7-lg));
+	}
+
+}
+
+@media screen and (min-width: $breakpoint--clf7-lg) {
+
+  .vueperslide__title {
+    font-size: 54px;
+	}
+
 }
 
 .vueperslide__content {
 	@apply text-xl text-white;
 }
 
+.vueperslides__arrow svg {
+	padding: 0;
+}
+
 .vueperslides__bullet,
 .vueperslides__bullets button {
 	border-radius: 50px;
-	color: $unit-primary;
 }
+
+.vueperslides--bullets-outside .vueperslides__bullet,
+.vueperslides--bullets-outside .vueperslides__bullets button {
+	@apply text-unit-primary;
+}
+
+.slide-content--bottom .vueperslide__content-wrapper {
+	align-items: flex-start !important;
+	justify-content: flex-end  !important;
+	text-align: left  !important;
+	padding: 3rem 2rem;
+}
+
+@media (max-width: $breakpoint--clf7-md--max) {
+	.slide-content--bottom .vueperslides__arrows {
+		display: none;
+	}
+}
+
+
+@media (min-width: $breakpoint--clf7-md) {
+
+	.slide-indicator--right .vueperslides__bullets {
+		justify-content: flex-end;
+		padding: 1rem 3rem;
+	}
+
+	.slide-content--bottom .vueperslide__content-wrapper {
+		padding: 6rem 8rem;
+	}
+
+}
+
+
+
 /*
 .carousel-item {
 	position: relative;

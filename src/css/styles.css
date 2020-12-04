@@ -31,11 +31,13 @@
 @import "components/carousel.component.css";
 @import "components/chosen.component.css";
 @import "components/icon.component.css";
+@import "components/link.component.css";
 @import "components/masthead.component.css";
 @import "components/message.component.css";
 @import "components/meta.component.css";
 @import "components/navigation.component.css";
-@import "components/tabs.component.css";
+@import "components/tag.component.css";
+@import "components/tabcordion.component.css";
 @import "components/totop.component.css";
 @import "components/throbber.component.css";
 
@@ -50,6 +52,7 @@
 @import "utilities/svg.utility.css";
 @import "utilities/text-truncate.utility.css";
 @import "utilities/ubc-gradient.utility.css";
+@import "utilities/vue.utility.css";
 
 /* Add utility classes last so that they take precedence */
 @import "tailwindcss/utilities";

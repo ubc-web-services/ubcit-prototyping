@@ -5,7 +5,7 @@
 */
 
 /* variables in file */
-$table-row-striping-color: $ubc-blue-polar;
+$table-row-striping-color: rgba(225, 243, 249, .5);
 $table-row-hover-color: rgba(225, 243, 249, .5);
 
 table {
@@ -15,23 +15,23 @@ table {
 	border-spacing: 0;
 }
 
-thead {
-	@apply border-b-4 border-ubc-blue-cobalt;
+thead tr {
+	@apply border-t border-b border-ubc-blue;
 }
 
 tr {
-	@apply border-b border-ubc-blue-neptune;
+	@apply border-b border-grey-300;
 }
 
 td,
 th {
-	@apply py-4 pr-4;
+	@apply p-4;
 	line-height: 1.2;
 	vertical-align: top;
 }
 
 th {
-	@apply uppercase text-ubc-blue-cobalt;
+	@apply font-semibold text-ubc-blue;
 }
 
 /* table element variants */

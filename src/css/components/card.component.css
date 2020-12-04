@@ -214,6 +214,11 @@ $gradient-grey-opaque: rgba(244, 244, 244, 1);
 	@apply text-white;
 }
 
+.ubc-card.bg-unit-primary,
+.ubc-card.bg-unit-primary a {
+	@apply text-white;
+}
+
 .ubc-card .card__meta,
 .ubc-card:hover .card__meta {
 	@apply text-grey-900 !important;

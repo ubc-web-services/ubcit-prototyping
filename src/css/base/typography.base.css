@@ -263,15 +263,12 @@ table {
 	font-size: .875em;
 }
 
-th {
-	font-size: .75em;
-}
-
 /* horizontal rule element */
 hr,
 .hr {
-	margin: calc($leading * 1rem) 0 0;
-	border-top: 1px solid $grey-300;
+	margin: calc($leading * 1rem) 0;
+	border-top: .25rem solid $ubc-blue;
+	max-width: 7rem;
 }
 
 /* Text utilities */
@@ -281,6 +278,7 @@ hr,
 	margin-bottom: 0;
 	font-size: $text-2xl;
 	line-height: $leading;
+	color: $ubc-blue-sea;
 }
 
 .text-lead--mt {
@@ -394,4 +392,56 @@ hr,
 
 .text-measure-lg {
 	max-width: 70ch;
+}
+
+@media (min-width: $breakpoint--xxl) {
+
+	.text-xs {
+		font-size: 1.125rem !important; /* 18px */
+	}
+
+	.text-sm {
+		font-size: 1.313rem !important; /* 21px */
+	}
+
+	.text-lg {
+		font-size: 1.688rem !important;/* 27px */
+	}
+
+	.text-xl {
+		font-size: 1.875rem !important; /* 30px */
+	}
+
+	.text-2xl {
+		font-size: 2.25rem !important; /* 36px */
+	}
+
+	.text-3xl {
+		font-size: 2.625rem !important; /* 42px */
+	}
+
+	.text-4xl {
+		font-size: 3rem !important; /* 48px */
+	}
+
+	.text-5xl {
+		font-size: 3.375rem !important; /* 54px */
+	}
+
+	.text-6xl {
+		font-size: 5.063rem !important; /* 81px */
+	}
+
+	.text-7xl {
+		font-size: 6rem !important; /* 96px */
+	}
+
+	.text-8xl {
+		font-size: 7.5rem !important; /* 120px */
+	}
+
+	.text-9xl {
+		font-size: 11.438rem !important; /* 183px */
+	}
+
 }

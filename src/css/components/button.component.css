@@ -8,124 +8,65 @@
 $gradient-black-transparent: rgba(0, 0, 0, 0);
 $gradient-black-translucent: rgba(0, 0, 0, .2);
 $gradient-black-opaque: rgba(0, 0, 0, 1);
+$button-text: $ubc-blue;
+$button-bg: $white;
+$button-border: $ubc-blue;
+$button-text--hover: $white;
+$button-bg--hover: $ubc-blue;
+$button-border--hover: $ubc-blue;
+$button-text--active: $white;
+$button-bg--active: $ubc-blue-sea;
+$button-border--active: $ubc-blue;
 $button-light-bg: $white;
 $button-light-border: $ubc-blue-cobalt;
 $button-light-text: $ubc-blue-cobalt;
 $button-light-bg--hover: $ubc-blue-cobalt;
 $button-light-border--hover: $ubc-blue-cobalt;
 $button-light-text--hover: $white;
-$button-mid-bg: $ubc-blue-cobalt;
-$button-mid-border: $ubc-blue-cobalt;
-$button-mid-text: $white;
-$button-mid-bg--hover: $ubc-blue-cornflower;
-$button-mid-border--hover: $ubc-blue-cornflower;
-$button-mid-text--hover: $black;
+$button-light-bg--active: $ubc-blue-cobalt;
+$button-light-border--active: $ubc-blue-cobalt;
+$button-light-text--active: $white;
 $button-dark-bg: $ubc-blue;
 $button-dark-border: $ubc-blue;
 $button-dark-text: $white;
-$button-dark-bg--hover: $ubc-blue-sea;
-$button-dark-border--hover: $ubc-blue-sea;
-$button-dark-text--hover: $white;
+$button-dark-bg--hover: $white;
+$button-dark-border--hover: $ubc-blue;
+$button-dark-text--hover: $ubc-blue;
+$button-dark-bg--active: rgba(0, 33, 69, .2);
+$button-dark-border--active: $ubc-blue;
+$button-dark-text--active: $ubc-blue;
 $button-transparent-bg: transparent;
 $button-transparent-border: $white;
 $button-transparent-text: $white;
-$button-transparent-bg--hover: $white;
+$button-transparent-bg--hover: rgba(255, 255, 255, .2);
 $button-transparent-border--hover: $white;
-$button-transparent-text--hover: $ubc-blue;
-$cta-button-light-text: $white;
-$cta-button-light-text--hover: $ubc-blue-polar;
-$cta-button-dark-text: $ubc-blue-cobalt;
-$cta-button-dark-text--hover: $ubc-blue-sea;
-
-.cta-button {
-	position: relative;
-	display: inline-flex;
-	padding-top: .5rem;
-	padding-bottom: .5rem;
-	font-weight: 700;
-	line-height: 1.5;
-	text-transform: uppercase;
-	text-decoration: none;
-	vertical-align: middle;
-	background-color: inherit;
-	transition: color .125s ease-in-out, background-color .125s ease-in-out;
-}
-
-.cta-button:hover {
-	text-decoration: none;
-}
-
-.cta-button--light {
-	color: $cta-button-light-text;
-}
-
-.cta-button--light:hover {
-	color: $cta-button-light-text--hover;
-}
-
-.cta-button--dark {
-	color: $cta-button-dark-text;
-}
-
-.cta-button--dark:hover {
-	color: $cta-button-dark-text--hover;
-}
-
-/* underlined buttons w animation */
-.cta-button--underline::before {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	height: 2px;
-	background-color: $ubc-blue;
-	transform: scaleX(0);
-	visibility: hidden;
-	transition: all .125s ease-in-out 0s;
-	content: '';
-}
-
-.cta-button--underline:hover::before {
-	transform: scaleX(1);
-	visibility: visible;
-}
-
-.cta-button--underline-sea::before {
-	background-color: $ubc-blue-sea;
-}
-
-.cta-button--underline-cobalt::before {
-	background-color: $ubc-blue-cobalt;
-}
-
-.cta-button--underline-neptune::before {
-	background-color: $ubc-blue-neptune;
-}
-
-.cta-button--underline-cornflower::before {
-	background-color: $ubc-blue-cornflower;
-}
-
-.cta-button--underline-polar::before {
-	background-color: $ubc-blue-polar;
-}
-
-.cta-button--underline-white::before {
-	background-color: $white;
-}
-
-.cta-button--underline-heavy::before {
-	height: 4px;
-}
+$button-transparent-text--hover: $white;
+$button-transparent-bg--active: transparent;
+$button-transparent-border--active: $white;
+$button-transparent-text--active: $white;
 
 /* flex button */
 .unit-button {
-	@apply inline-flex no-underline border;
-	padding: .75em 1.5em;
+	@apply inline-flex no-underline uppercase border;
+	padding: .75em 2em .5em;
+	color: $button-text;
+	background-color: $button-bg;
+	border-color: $button-border;
+	cursor: pointer;
 }
 
 .unit-button:hover {
 	@apply no-underline shadow-md;
+	color: $button-text--hover;
+	background-color: $button-bg--hover;
+	border-color: $button-border--hover;
+}
+
+.unit-button:active {
+	@apply no-underline shadow-md;
+	color: $button-text--active;
+	background-color: $button-bg--active;
+	border-color: $button-border--active;
 }
 
 .unit-button--block {
@@ -135,6 +76,7 @@ $cta-button-dark-text--hover: $ubc-blue-sea;
 }
 
 /* Gradient buttons */
+/*
 .unit-button--light-gradient {
 	background: linear-gradient(to bottom, $gradient-black-transparent 60%, $gradient-black-translucent 100%);
 }
@@ -142,21 +84,9 @@ $cta-button-dark-text--hover: $ubc-blue-sea;
 .unit-button--dark-gradient {
 	background: linear-gradient(to bottom, $gradient-black-transparent 2%, $gradient-black-opaque 100%);
 }
+*/
 
 /* button colour variations */
-.unit-button--plain {
-	color: $button-light-text;
-	background-color: transparent;
-	border-color: transparent;
-}
-
-.group:hover .unit-button--plain,
-.unit-button--plain:hover {
-	color: $button-light-text--hover;
-	background-color: $button-light-bg--hover;
-	border-color: transparent;
-}
-
 .unit-button--light {
 	color: $button-light-text;
 	background-color: $button-light-bg;
@@ -169,6 +99,14 @@ $cta-button-dark-text--hover: $ubc-blue-sea;
 	border-color: $button-light-border--hover;
 }
 
+.unit-button--light:active {
+	color: $button-light-text--active;
+	background-color: $button-light-bg--active;
+	border-color: $button-light-border--active;
+	box-shadow: inset 0 0 1em $ubc-blue-sea;
+}
+
+/*
 .unit-button--mid {
 	color: $button-mid-text;
 	background-color: $button-mid-bg;
@@ -180,6 +118,7 @@ $cta-button-dark-text--hover: $ubc-blue-sea;
 	background-color: $button-mid-bg--hover;
 	border-color: $button-mid-border--hover;
 }
+*/
 
 .unit-button--dark {
 	color: $button-dark-text;
@@ -191,6 +130,12 @@ $cta-button-dark-text--hover: $ubc-blue-sea;
 	color: $button-dark-text--hover;
 	background-color: $button-dark-bg--hover;
 	border-color: $button-dark-border--hover;
+}
+
+.unit-button--dark:active {
+	color: $button-dark-text--active;
+	background-color: $button-dark-bg--active;
+	border-color: $button-dark-border--active;
 }
 
 .unit-button--transparent {
@@ -205,6 +150,12 @@ $cta-button-dark-text--hover: $ubc-blue-sea;
 	border-color: $button-transparent-border--hover;
 }
 
+.unit-button--transparent:active {
+	color: $button-transparent-text--active;
+	background-color: $button-transparent-bg--active;
+	border-color: $button-transparent-border--active;
+}
+
 /* button icons */
 .unit-button__icon {
 	@apply self-center flex-none;
@@ -212,6 +163,7 @@ $cta-button-dark-text--hover: $ubc-blue-sea;
 	height: 1em;
 	transition: transform .125s ease-in-out;
 	stroke-width: 4;
+	margin-top: -.25em;
 }
 
 .cta-button .unit-button__icon {
@@ -318,4 +270,28 @@ $cta-button-dark-text--hover: $ubc-blue-sea;
 	text-decoration: underline;
 	background: transparent;
 	box-shadow: none;
+}
+
+.share-button:hover .share-links {
+	display: block;
+}
+
+.share-links {
+	padding-top: 1rem;
+}
+
+.share-buttons {
+	@apply relative;
+}
+
+.share-buttons::before {
+	@apply absolute block;
+	content: '';
+	left: 1rem;
+	top: -1rem;
+	width: 0;
+  height: 0;
+  border-left: 1rem solid transparent;
+  border-right: 1rem solid transparent;
+  border-bottom: 1rem solid $ubc-blue;
 }

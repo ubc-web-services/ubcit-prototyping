@@ -1,14 +1,31 @@
 {# CONFIG #}
-{% set unitName = "Unit" %}
-{% set siteURL = "unit.ubc.ca" %}
+{% set unitName = "APSC / ENG" %}
+{% set siteURL = "apsc.ubc.ca" %}
 {% set facultyName = "" %}
 {% set campus = 'vancouver' %}
 {% set slideshow = FALSE %}
 {% set clfversion = 7 %}
 {% set clf_sticky = TRUE %}
-{% set colorPrimary = "#cc3d3d" %}
+{# APSC #}
+{#
+{% set colorPrimary = "#a6192e" %}
 {% set colorSecondary = "#e0e0e0" %}
 {% set colorAccent = "#003a79" %}
+#}
+{# ENG #}
+{% set colorPrimary = "#a6192e" %}
+{% set colorSecondary = "#e0e0e0" %}
+{% set colorAccent = "#00a7e1" %}
+{# APSC #}
+{#
+{% set colorGradDark = "#002145" %}
+{% set colorGradMid = "#0055b7" %}
+{% set colorGradLight = "#00a7e1" %}
+#}
+{# ENG #}
+{% set colorGradDark = "#a6192e" %}
+{% set colorGradMid = "#c8102e" %}
+{% set colorGradLight = "#da291c" %}
 {% set leading = "1.625" %}
 {% set baseFontSize = "1rem" %}
 
@@ -29,6 +46,9 @@
         --color-primary: {{ colorPrimary }};
         --color-secondary: {{ colorSecondary }};
         --color-accent: {{ colorAccent }};
+				--color-grad--dark: {{ colorGradDark }};
+        --color-grad--mid: {{ colorGradMid }};
+        --color-grad--light: {{ colorGradLight }};
         --leading: {{ leading }};
         --base-font-size: {{ baseFontSize }};
       }

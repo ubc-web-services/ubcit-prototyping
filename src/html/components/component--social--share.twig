@@ -1,0 +1,42 @@
+<div class="inline-block share-button">
+  <button class="text-sm font-semibold unit-button group"><svg role="presentation" class="inline-block w-6 h-6 mr-2 text-ubc-blue group-hover--text-white">
+		<use xlink:href="#icon-share"></use>
+	</svg>Share</button>
+  <div class="absolute hidden shadow share-links">
+    <ul class="flex justify-around px-8 py-2 my-0 share-buttons list-inline bg-ubc-blue">
+      <li class="mx-4">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fapsc.ubc.ca&quote=" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&quote=' + encodeURIComponent(document.URL)); return false;">
+          <svg role="presentation" class="inline-block w-6 h-6 text-white">
+            <use xlink:href="#icon-facebook"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="mx-4">
+        <a href="https://twitter.com/intent/tweet?source=https%3A%2F%2Fapsc.ubc.ca&text=:%20https%3A%2F%2Fapsc.ubc.ca" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;">
+          <svg role="presentation" class="inline-block w-6 h-6 text-white">
+            <use xlink:href="#icon-twitter"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="mx-4">
+        <a href="http://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fapsc.ubc.ca&title=&summary=&source=https%3A%2F%2Fapsc.ubc.ca" target="_blank" title="Share on LinkedIn" onclick="window.open('http://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;">
+          <svg role="presentation" class="inline-block w-6 h-6 text-white">
+            <use xlink:href="#icon-linkedin"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="mx-4">
+        <a href="mailto:?subject=&body=:%20https%3A%2F%2Fapsc.ubc.ca" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;">
+          <svg role="presentation" class="inline-block w-6 h-6 text-white">
+            <use xlink:href="#icon-mail"></use>
+          </svg>
+        </a>
+      </li>
+      <!--
+      <li class="mx-4">
+        <button @click="copyUrl" class="py-1 m-2 mx-4 text-xs unit-button unit-button--light"><% copyLink %></button>
+      </li>
+      -->
+    </ul>
+  </div>
+</div>

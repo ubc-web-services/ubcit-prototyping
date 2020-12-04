@@ -1,0 +1,19 @@
+/** @define tag */
+
+/*
+* This file contains all styles related to the tag component.
+*/
+
+.tag {
+	@apply inline-block mr-4 text-xs text-white bg-ubc-blue;
+	padding: .5em .5em .25em;
+	line-height: 1;
+}
+
+.tag--grey {
+	@apply text-black bg-grey-300;
+}
+
+.tag--white {
+	@apply bg-white text-ubc-blue;
+}

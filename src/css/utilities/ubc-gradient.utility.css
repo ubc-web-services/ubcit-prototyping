@@ -54,3 +54,11 @@ $gradient-grey-opaque: rgba(244, 244, 244, 1);
 	height: 100%;
 	background: linear-gradient(to bottom, $gradient-ubc-blue-opaque 0%, $gradient-ubc-blue-transparent 55%);
 }
+
+.bg-gradient {
+	background: linear-gradient(225deg, var(--color-grad--mid) 5%, var(--color-grad--dark) 96%);
+}
+
+.bg-gradient--big {
+	background: linear-gradient(227deg, var(--color-grad--light) 2.5%, var(--color-grad--mid) 33%, var(--color-grad--dark) 80%);
+}

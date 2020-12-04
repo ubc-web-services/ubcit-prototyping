@@ -17,16 +17,16 @@
 }
 
 .tabcordion__tab button {
-	@apply block w-full h-full py-2 text-sm text-left uppercase border-b-2 text-ubc-blue border-ubc-blue-cornflower;
+	@apply block w-full h-full py-2 text-sm text-center border-b-2 text-ubc-blue border-unit-secondary;
 	line-height: 1.5rem;
 }
 
 .tabcordion__tab:hover button {
-	@apply border-ubc-blue-cobalt;
+	@apply border-unit-accent;
 }
 
 .tabcordion__tab.is-active button {
-	@apply font-bold border-b-4 text-ubc-blue-sea border-ubc-blue-sea;
+	@apply font-bold border-b-4 text-ubc-blue-sea border-unit-accent;
 }
 
 /* mobile triggers */

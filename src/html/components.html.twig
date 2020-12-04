@@ -83,10 +83,38 @@
 		<h3 class="mt-12 uppercase" id="callout">Callouts</h3>
 		<hr />
 		{% include "components/component--callout.twig" %}
+		<div class="md--flex md---mx-4">
+			<div class="md--flex-1 md--px-4">
+				<h4 class="my-4">Share button</h4>
+				{% include "components/component--social--share.twig" %}
+			</div>
+			<div class="md--flex-1 md--px-4">
+				<h4 class="my-4">Twitter stream</h4>
+				{% include "components/component--social--twitter.twig" %}
+			</div>
+		</div>
 
-		<h3 class="mt-12 uppercase" id="cards">Cards</h3>
+		<h3 class="mt-12 uppercase" id="cards" >Cards</h3>
 		<hr />
-		{% include "components/component--card.twig" %}
+		<h4 id="cards-featurette">Card: Featurette</h4>
+		{% include "components/component--card--featurette.twig" %}
+		<h4 id="cards-image">Card: Image Card</h4>
+		{% include "components/component--card--image-card.twig" %}
+		<p> </p>
+		{% include "components/component--card--image-card--text-right.twig" %}
+		<h4 id="cards-vertical">Card: Vertical Card Styles</h4>
+		{% include "components/component--cards--vertical.twig" %}
+		<h4 id="cards-horizontal">Card: Horizontal Card Styles</h4>
+		<div class="bg-grey-100 full-bleed">
+			<div class="container px-6 py-12 mx-auto sm--px-4">
+			<h2 class="mt-0 mb-4">Featured Profile</h2>
+			{% include "components/component--card--horizontal.twig" %}
+			</div>
+		</div>
+
+		<h3 class="mt-12 uppercase" id="layout">Layout</h3>
+		<hr />
+		{% include "components/layout--grid.twig" %}
 
 		<h3 class="mt-12 uppercase" id="carousel">Carousel</h3>
 		<hr />
@@ -128,10 +156,8 @@
 	.stroke-noscale {
 		vector-effect: non-scaling-stroke;
 	}
-
 </style>
 {% endblock %}
 
 {% block custom_javascript %}
-<!-- <script src="js/ubc.all.js"></script> -->
 {% endblock %}

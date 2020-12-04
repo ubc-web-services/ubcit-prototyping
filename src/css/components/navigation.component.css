@@ -19,6 +19,15 @@
 	content: '/';
 }
 
+.crumb {
+	padding-right: 2em;
+	margin-right: .5em;
+	background-image: url('../img/svg/icon-angle.svg');
+	background-repeat: no-repeat;
+	background-position: right center;
+	background-size: 1.5em 1.5em;
+}
+
 /* subnavigation */
 .subnav__heading {
 	@apply mt-0 mb-4 text-xs font-normal text-ubc-blue-sea;
