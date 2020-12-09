@@ -103,7 +103,7 @@ $gradient-grey-opaque: rgba(69, 69, 69, 1);
 $gradient-grey-lighter-opaque: rgba(125, 134, 140, 1);
 $gradient-grey-lighter-intermediate: rgba(125, 134, 140, .5);
 
-/* Breakpoints map */
+/* CLF 8 Breakpoints map */
 $breakpoint--sm: 640px;
 $breakpoint--md: 960px;
 $breakpoint--lg: 1280px;
@@ -116,7 +116,7 @@ $breakpoint--lg--max: 1279px;
 $breakpoint--xl--max: 1719px;
 $breakpoint--xxl--max: 2399px;
 
-/* breakpoint to control version 7 of the CLF separately */
+/* CLF 7 Breakpoints map to control version 7 of the CLF separately */
 $breakpoint--clf7-xs: 360px;
 $breakpoint--clf7-sm: 768px;
 $breakpoint--clf7-md: 980px;
@@ -130,3 +130,13 @@ $breakpoint--clf7-md--max: 979px;
 $breakpoint--clf7-lg--max: 1199px;
 $breakpoint--clf7-xl--max: 1719px;
 $breakpoint--clf7-xxl--max: 2399px;
+
+/* overwrite the theme breakpoints for this CLF7 implementation */
+$breakpoint--sm: $breakpoint--clf7-sm;
+$breakpoint--md: $breakpoint--clf7-md;
+$breakpoint--lg: $breakpoint--clf7-lg;
+
+
+$breakpoint--sm--max: $breakpoint--clf7-sm--max;
+$breakpoint--md--max: $breakpoint--clf7-md--max;
+$breakpoint--lg--max: $breakpoint--clf7-lg--max;

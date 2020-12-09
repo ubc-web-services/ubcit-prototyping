@@ -1,67 +1,40 @@
-<vueper-slides class="slide-indicator--right slide-content--bottom">
-	<template v-slot:arrow-left>
-    <svg role="presentation" class="inline-block w-24 h-24 text-white transform rotate-180"><use xlink:href="#icon-caret"></use></svg>
-  </template>
-  <template v-slot:arrow-right>
-    <svg role="presentation" class="inline-block w-24 h-24 text-white"><use xlink:href="#icon-caret"></use></svg>
-  </template>
-  <vueper-slide id="slide-1" title="The Nest there are more words to look at that will fill the area and grow!" link="https://ubc.ca" image='https://live.staticflickr.com/65535/50597755733_3cdaa2d920_k_d.jpg'>
-  </vueper-slide>
-	<vueper-slide id="slide-2" title="Steep Stairs" image='https://live.staticflickr.com/65535/50597762528_787a6f2f88_k_d.jpg'></vueper-slide>
-</vueper-slides>
+<tiny-slider speed="200">
+  <div class="relative carousel__cell img-cover bg-gradient--screen">
+    <img src="img/demo/50597755733_3cdaa2d920_k_d.jpg" height="1363" width="2048" alt="" loading="lazy">
+    <div class="absolute inset-0 z-40 flex flex-col justify-end px-24 py-24 text-white carousel__content">
+      <h2 class="text-7xl">UBC Applied Science</h2>
+      <p class="text-hug">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+  </div>
+  <div class="carousel__cell">
+    <img src="img/demo/50669032231_0ea66d58a2_k_d.jpg" height="1363" width="2048" alt="" loading="lazy">
+  </div>
+  <div class="carousel__cell img-cover">
+    <img src="img/demo/50597762528_787a6f2f88_k_d.jpg" height="1363" width="2048" alt="" loading="lazy">
+  </div>
+  <div class="carousel__cell">
+    <img src="img/demo/50668514703_da6755f226_k_d.jpg" height="1363" width="2048" alt="" loading="lazy">
+  </div>
+</tiny-slider>
 
-<hr />
-
-<vueper-slides :slide-ratio="337/599" arrows-outside>
-	<template v-slot:arrow-left>
-    <svg role="presentation" class="inline-block w-24 h-24 transform rotate-180 text-ubc-blue"><use xlink:href="#icon-caret"></use></svg>
-  </template>
-  <template v-slot:arrow-right>
-    <svg role="presentation" class="inline-block w-24 h-24 text-ubc-blue"><use xlink:href="#icon-caret"></use></svg>
-  </template>
-  <vueper-slide id="slide-1" title="The Nest" content="I eat here sometimes." link="https://ubc.ca" image='https://live.staticflickr.com/65535/50597755733_3cdaa2d920_k_d.jpg'></vueper-slide>
-	<vueper-slide id="slide-2" title="Steep Stairs" image='https://live.staticflickr.com/65535/50597762528_787a6f2f88_k_d.jpg'></vueper-slide>
-</vueper-slides>
-
-<hr />
-
-<vueper-slides bullets-outside :slide-ratio="1/3" fractions progress>
-  <template v-slot:arrow-left>
-    <svg role="presentation" class="inline-block w-24 h-24 transform rotate-180"><use xlink:href="#icon-caret"></use></svg>
-  </template>
-  <template v-slot:arrow-right>
-    <svg role="presentation" class="inline-block w-24 h-24"><use xlink:href="#icon-caret"></use></svg>
-  </template>
-  <vueper-slide id="slide-3" title="The Nest" link="https://ubc.ca" image='https://live.staticflickr.com/65535/50597755733_3cdaa2d920_k_d.jpg'></vueper-slide>
-	<vueper-slide id="slide-4" title="Steep Stairs" image='https://live.staticflickr.com/65535/50597762528_787a6f2f88_k_d.jpg'></vueper-slide>
-</vueper-slides>
-
-<hr />
-
-<vueper-slides 3d fixed-height="400px" arrows-outside bullets-outside>
-  <template v-slot:arrow-left>
-    <svg role="presentation" class="inline-block w-24 h-24 transform rotate-180 text-ubc-blue"><use xlink:href="#icon-caret"></use></svg>
-  </template>
-  <template v-slot:arrow-right>
-    <svg role="presentation" class="inline-block w-24 h-24 text-ubc-blue"><use xlink:href="#icon-caret"></use></svg>
-  </template>
-  <vueper-slide id="slide-7" title="The Nest" link="https://ubc.ca" image='https://live.staticflickr.com/65535/50597755733_3cdaa2d920_k_d.jpg'></vueper-slide>
-	<vueper-slide id="slide-8" title="Steep Stairs" image='https://live.staticflickr.com/65535/50597762528_787a6f2f88_k_d.jpg'></vueper-slide>
-	<vueper-slide id="slide-9" title="The Nest" link="https://ubc.ca" image='https://live.staticflickr.com/65535/50597755733_3cdaa2d920_k_d.jpg'></vueper-slide>
-	<vueper-slide id="slide-10" title="Steep Stairs" image='https://live.staticflickr.com/65535/50597762528_787a6f2f88_k_d.jpg'></vueper-slide>
-	<vueper-slide id="slide-11" title="The Nest" link="https://ubc.ca" image='https://live.staticflickr.com/65535/50597755733_3cdaa2d920_k_d.jpg'></vueper-slide>
-	<vueper-slide id="slide-12" title="Steep Stairs" image='https://live.staticflickr.com/65535/50597762528_787a6f2f88_k_d.jpg'></vueper-slide>
-</vueper-slides>
-
-<hr />
-
-<vueper-slides bullets-outside :dragging-distance="50">
-  <template v-slot:arrow-left>
-    <svg role="presentation" class="inline-block w-24 h-24 transform rotate-180 "><use xlink:href="#icon-caret"></use></svg>
-  </template>
-  <template v-slot:arrow-right>
-    <svg role="presentation" class="inline-block w-24 h-24 "><use xlink:href="#icon-caret"></use></svg>
-  </template>
-  <vueper-slide id="slide-5" video='https://player.vimeo.com/video/300829054'></vueper-slide>
-	<vueper-slide id="slide-6" title="Steep Stairs" image='https://live.staticflickr.com/65535/50597762528_787a6f2f88_k_d.jpg'></vueper-slide>
-</vueper-slides>
+<h4 class="font-mono text-grey-500">Carousel Code</h4>
+<script type="text/plain" class="language-markup">
+<tiny-slider speed="200">
+  <div class="relative carousel__cell img-cover bg-gradient--screen">
+    <img src="img/demo/50597755733_3cdaa2d920_k_d.jpg" height="1363" width="2048" alt="" loading="lazy">
+    <div class="absolute inset-0 z-40 flex flex-col justify-end px-24 py-24 text-white carousel__content">
+      <h2 class="text-7xl">UBC Applied Science</h2>
+      <p class="text-hug">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+  </div>
+  <div class="carousel__cell">
+    <img src="img/demo/50669032231_0ea66d58a2_k_d.jpg" height="1363" width="2048" alt="" loading="lazy">
+  </div>
+  <div class="carousel__cell img-cover">
+    <img src="img/demo/50597762528_787a6f2f88_k_d.jpg" height="1363" width="2048" alt="" loading="lazy">
+  </div>
+  <div class="carousel__cell">
+    <img src="img/demo/50668514703_da6755f226_k_d.jpg" height="1363" width="2048" alt="" loading="lazy">
+  </div>
+</tiny-slider>
+</script>

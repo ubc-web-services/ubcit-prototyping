@@ -5,8 +5,8 @@
 */
 
 .tag {
-	@apply inline-block mr-4 text-xs text-white bg-ubc-blue;
-	padding: .5em .5em .25em;
+	@apply inline-block mr-4 text-xs text-white shadow bg-ubc-blue;
+	padding: .75em .75em .5em;
 	line-height: 1;
 }
 

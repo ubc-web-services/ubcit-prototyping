@@ -11,7 +11,8 @@ import Vue from 'vue';
 import ClickoutEvent from 'clickout-event';
 import VueScrollto from 'vue-scrollto';
 import SlideUpDown from 'vue-slide-up-down';
-import { VueperSlides, VueperSlide } from 'vueperslides';
+//import { VueperSlides, VueperSlide } from 'vueperslides';
+import VueTinySlider from 'vue-tiny-slider';
 
 /* Import custom components globally */
 import Accordion from './components/accordion';
@@ -33,8 +34,9 @@ Vue.component('dropdown', Dropdown);
 Vue.component('message', Message);
 Vue.component('stickynav', Stickynav);
 Vue.component('tabcordion', Tabcordion);
-Vue.component('vueper-slides', VueperSlides);
-Vue.component('vueper-slide', VueperSlide);
+//Vue.component('vueper-slides', VueperSlides);
+//Vue.component('vueper-slide', VueperSlide);
+Vue.component('tiny-slider', VueTinySlider);
 
 /* Declare plugins */
 Vue.use(VueScrollto);

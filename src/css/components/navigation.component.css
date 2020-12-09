@@ -73,11 +73,24 @@
 }
 
 .navlink--secondary {
-	@apply block py-2 pr-12 no-underline text-ubc-blue;
+	@apply relative block py-2 pl-6 pr-12 no-underline text-ubc-blue;
 }
 
 .navlink--secondary:hover {
 	@apply no-underline text-ubc-blue-cobalt;
+}
+
+.navlink--secondary.is-active::before,
+.navlink--secondary:hover::before {
+	@apply absolute w-1 bg-grey-100;
+	content: '';
+	left: 0em;
+	top: .3em;
+	height: 1.5em;
+}
+
+.navlink--secondary.is-active::before {
+	@apply bg-unit-accent;
 }
 
 .navlink--secondary.has-children {
@@ -96,19 +109,7 @@
 .menu-item--active-trail.active .nav--split a,
 .menu-item--active-trail.active .nav--split button,
 .subnav--nested .navlink--secondary:hover {
-	@apply text-ubc-blue-cobalt;
-}
-
-@media (min-width: $breakpoint--xxl) {
-
-	.navlink--secondary {
-		@apply text-lg;
-	}
-
-	.subnav--nested .navlink--secondary {
-		@apply text-base;
-	}
-
+	@apply font-bold ;
 }
 
 .subnav--nested .subnav--nested {

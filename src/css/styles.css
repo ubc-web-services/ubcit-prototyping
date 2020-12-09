@@ -21,6 +21,7 @@
 
 /* Import any node assets */
 @import "../../node_modules/vueperslides/dist/vueperslides.css";
+@import "../../node_modules/tiny-slider/dist/tiny-slider.css";
 
 /* Add styles for specific components */
 @import "tailwindcss/components";
@@ -56,3 +57,56 @@
 
 /* Add utility classes last so that they take precedence */
 @import "tailwindcss/utilities";
+
+:root {
+  --color-primary: #a6192e;
+  --color-secondary: #e0e0e0;
+  --color-accent: #00a7e1;
+  --color-grad--dark: #a6192e;
+  --color-grad--mid: #c8102e;
+  --color-grad--light: #da291c;
+  --leading: 1.625;
+  --base-font-size: 1rem;
+}
+
+/*
+{# APSC #}
+--color-primary: #a6192e;
+--color-secondary: #e0e0e0;
+--color-accent: #003a79;
+--color-grad--dark: #002145;
+--color-grad--mid: #0055b7;
+--color-grad--light: #00a7e1;
+{# ENG #}
+--color-primary: #a6192e;
+--color-secondary: #e0e0e0;
+--color-accent: #00a7e1;
+--color-grad--dark: #a6192e;
+--color-grad--mid: #c8102e;
+--color-grad--light: #da291c;
+{# Common #}
+--leading: 1.625;
+--base-font-size: 1rem;
+*/
+
+/* prototype only */
+/* reset tag class for prism code highlighting */
+.token.tag {
+	display: initial;
+	margin-right: initial;
+	font-size: initial;
+	color: initial;
+	background-color: initial;
+	padding: initial;
+	line-height: initial;
+}
+
+/* match container sizes to CLF7 */
+@media (max-width: $breakpoint--clf7-md--max) {
+
+  .container {
+    width: 100%;
+    max-width: 100%;
+  }
+
+}

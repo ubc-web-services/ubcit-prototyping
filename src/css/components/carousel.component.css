@@ -12,6 +12,50 @@ $carousel-caption--text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
 $carousel-gradient-transparent: rgba(0, 0, 0, .0001);
 $carousel-gradient-translucent: rgba(0, 0, 0, .7);
 
+/* tiny-slider styles */
+.tns-outer {
+	@apply relative;
+}
+
+/* previous / next buttons */
+.tns-controls {
+	@apply absolute inset-0 z-40 flex justify-between;
+}
+
+.tns-controls button {
+	@apply self-center block w-20 h-20;
+	background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 22L12 12L2 2' stroke='%23fff' stroke-opacity='0.4' fill='none' stroke-width='5'/%3E%3C/svg%3E%0A");
+	background-repeat: no-repeat;
+	background-size: 2rem;
+	background-position: center center;
+	text-indent: -300%;
+}
+
+.tns-controls button:hover {
+	background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 22L12 12L2 2' stroke='%23fff' fill='none' stroke-width='5'/%3E%3C/svg%3E%0A");
+}
+
+.tns-controls button[data-controls=prev] {
+	@apply rotate-180;
+}
+
+/* page indicators */
+.tns-nav {
+	@apply absolute z-40;
+	bottom: 2rem;
+	right: 6rem;
+}
+
+.tns-nav button {
+	@apply inline-block w-4 h-4 m-2 rounded-full cursor-pointer bg-unit-accent;
+}
+
+.tns-nav .tns-nav-active {
+	@apply bg-ubc-blue;
+}
+
+/** vueperslide styles */
+/*
 .vueperslide {
 	@apply no-underline bg-black;
 }
@@ -23,21 +67,28 @@ $carousel-gradient-translucent: rgba(0, 0, 0, .7);
 .vueperslide__content-wrapper {
 	background-color: rgba(0,33,69,.3);
 }
+*/
 
-/* responsive type for title between 320 and 1200px */
+/** responsive type for title between 320 and 1200px */
+/*
 .vueperslide__title {
 	@apply text-xl font-bold leading-none tracking-wider text-white;
 }
+*/
 
+
+/** betweem the two breakpoints, increase base 20px size to a max of 54px */
+/*
 @media screen and (min-width: $breakpoint--clf7-xs) {
 
   .vueperslide__title {
-		/* betweem the two breakpoints, increase base 20px size to a max of 54px */
     font-size: calc(20px + 34 * ((100vw - $breakpoint--clf7-xs) / $breakpoint--clf7-lg));
 	}
 
 }
+*/
 
+/*
 @media screen and (min-width: $breakpoint--clf7-lg) {
 
   .vueperslide__title {
@@ -90,8 +141,7 @@ $carousel-gradient-translucent: rgba(0, 0, 0, .7);
 	}
 
 }
-
-
+*/
 
 /*
 .carousel-item {

@@ -4,6 +4,9 @@
 * This file overrides some default CLF styles
 */
 
+/* Add CSS variables (uses postcss-simple-vars) */
+@import "config/variables.config.css";
+
 fieldset {
 	border-width: 0;
 }
@@ -134,7 +137,7 @@ input[type="search"] {
 }
 
 /* for UBC Ckeditor Widgets styles - need to create a new branch before committing */
-@media (min-width: 960px) {
+@media (min-width: $breakpoint--md) {
 
 	.flex-item,
 	.flex-1 {
@@ -229,7 +232,7 @@ input[type="search"] {
 	margin: 1.5rem auto;
 }
 
-@media (min-width: 640px) {
+@media (min-width: $breakpoint--sm) {
 
 	.entity-moderation-form {
 		display: flex;

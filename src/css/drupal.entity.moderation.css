@@ -4,6 +4,9 @@
 * This file contains styles for the drupal content moderation form
 */
 
+/* Add CSS variables (uses postcss-simple-vars) */
+@import "config/variables.config.css";
+
 .entity-moderation-form {
 	position: relative;
 	display: block;
@@ -38,7 +41,7 @@
 	border: 1px solid #003a79;
 }
 
-@media (min-width: 640px) {
+@media (min-width: $breakpoint--sm) {
 
 	.entity-moderation-form {
 		display: flex;

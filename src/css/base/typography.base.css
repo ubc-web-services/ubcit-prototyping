@@ -84,7 +84,6 @@ h4,
 	font-family: $default-typeface;
 	line-height: 1.4;
 	letter-spacing: .025em;
-	text-transform: uppercase;
 }
 
 h5,
@@ -266,6 +265,11 @@ table {
 /* horizontal rule element */
 hr,
 .hr {
+	margin: calc($leading * 1rem) 0;
+	border-top: 1px solid $grey-300;
+}
+
+.hr--styled {
 	margin: calc($leading * 1rem) 0;
 	border-top: .25rem solid $ubc-blue;
 	max-width: 7rem;

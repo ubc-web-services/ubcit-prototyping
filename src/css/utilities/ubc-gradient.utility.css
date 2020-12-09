@@ -3,6 +3,8 @@
 /* variables in file */
 $gradient-ubc-blue-transparent: rgba(0, 33, 69, 0);
 $gradient-ubc-blue-opaque: rgba(0, 33, 69, 1);
+$gradient-ubc-blue-cobalt-transparent: rgba(0, 85, 183, 0);
+$gradient-ubc-blue-cobalt-opaque: rgba(0, 85, 183, 1);
 $gradient-grey-transparent: rgba(244, 244, 244, 0);
 $gradient-grey-opaque: rgba(244, 244, 244, 1);
 
@@ -56,9 +58,31 @@ $gradient-grey-opaque: rgba(244, 244, 244, 1);
 }
 
 .bg-gradient {
-	background: linear-gradient(225deg, var(--color-grad--mid) 5%, var(--color-grad--dark) 96%);
+	background: linear-gradient(225deg, $gradient-ubc-blue-cobalt-opaque 5%, $gradient-ubc-blue-opaque 96%);
 }
 
-.bg-gradient--big {
+.bg-gradient--unit {
+	background: linear-gradient(227deg, var(--color-grad--light) 2.5%, var(--color-grad--mid) 33%, var(--color-grad--dark) 80%);
+}
+
+.bg-gradient--screen,
+.bg-gradient--unit--screen {
+	position: relative;
+}
+
+.bg-gradient--screen::after,
+.bg-gradient--big--screen::after {
+	background: linear-gradient(225deg, $gradient-ubc-blue-cobalt-opaque 5%, $gradient-ubc-blue-opaque 96%);
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	opacity: .3;
+	content: '';
+	display: block;
+	top: 0;
+	left: 0;
+}
+
+.bg-gradient--big--screen::after {
 	background: linear-gradient(227deg, var(--color-grad--light) 2.5%, var(--color-grad--mid) 33%, var(--color-grad--dark) 80%);
 }
