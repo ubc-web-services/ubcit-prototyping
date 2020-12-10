@@ -8,17 +8,9 @@
 
 {% block content %}
 
-<div class="relative flex items-center py-4 pl-4 pr-12 my-6 shadow-lg message message--warning xl--py-8 xl--pl-8 bg-ubc-warning"
-	role="status" aria-live="polite">
-	<a class="absolute top-0 right-0 px-4 py-3 leading-none close hover--bg-white-transparent hover--no-underline hover--text-black"
-		data-dismiss="message" href="#">×</a>
-	<svg role="presentation"
-		class="flex-none inline-block w-12 h-12 mr-4 xl--w-20 xl--h-20 text-ubc-blue xl--mr-8">
-		<use xlink:href="#icon-alert"></use>
-	</svg>
-	<p class="text-hug">Note: these pages have not been fully tested for cross-browser compatability, so display
-		issues may be present. Please use current versions of Chrome or Safari at this time.</p>
-</div>
+<Message title="Please note" classes="message--warning" svgicon="icon-alert">
+	<p>These pages have not been fully tested for cross-browser compatability, so display issues may be present. Please use current versions of Chrome or Safari at this time.</p>
+</Message>
 <ul class="list-none">
 	<li class="block bg-ubc-blue">
 		<h2 class="p-4 mt-0 text-white uppercase heading-five">Prototype pages</h2>
@@ -26,6 +18,20 @@
 	<li class="block border border-t-0 border-unit-grey-light"><a href="components.html"
 			class="block p-4 no-underline hover--underline text-ubc-blue hover--unit-grey">Components Page
 			(contains a list of all web styles).</a></li>
+	<li class="block border border-t-0 border-unit-grey-light"><a href="layout--default.html"
+			class="block p-4 no-underline hover--underline text-ubc-blue hover--unit-grey">Default Page Layout</a></li>
+	<li class="block border border-t-0 border-unit-grey-light"><a href="layout--basic.html"
+			class="block p-4 no-underline hover--underline text-ubc-blue hover--unit-grey">Basic Page Layout</a></li>
+	<li class="block border border-t-0 border-unit-grey-light"><a href="layout--centered.html"
+			class="block p-4 no-underline hover--underline text-ubc-blue hover--unit-grey">Centered Page Layout</a></li>
+	<li class="block border border-t-0 border-unit-grey-light"><a href="layout--home.html"
+			class="block p-4 no-underline hover--underline text-ubc-blue hover--unit-grey">Home Page Layout</a></li>
+	<li class="block border border-t-0 border-unit-grey-light"><a href="layout--landing.html"
+			class="block p-4 no-underline hover--underline text-ubc-blue hover--unit-grey">Landing Page Layout</a></li>
+	<li class="block border border-t-0 border-unit-grey-light"><a href="layout--sidel.html"
+			class="block p-4 no-underline hover--underline text-ubc-blue hover--unit-grey">Sidebar Left Page Layout</a></li>
+	<li class="block border border-t-0 border-unit-grey-light"><a href="layout--sider.html"
+			class="block p-4 no-underline hover--underline text-ubc-blue hover--unit-grey">Sidebar Right Page Layout</a></li>
 	<li class="block border border-t-0 border-unit-grey-light"><a href="home.html"
 			class="block p-4 no-underline hover--underline text-ubc-blue hover--unit-grey">Home Page</a></li>
 	<li class="block border border-t-0 border-unit-grey-light"><a href="landing-page--masthead.html"

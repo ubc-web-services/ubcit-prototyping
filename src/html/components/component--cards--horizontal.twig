@@ -1,106 +1,60 @@
-
-
 <ul class="md--flex md--flex-wrap md---mx-6">
   <li class="w-full my-6 md--px-6">
-    {% include "component--card--horizontal.twig" %}
+    {% include "component--card--horizontal--1.twig" %}
   </li>
 </ul>
 
-<h4 class="font-mono text-grey-500">Horizontal Card Code</h4>
+<h4 class="font-mono text-grey-500">Card Code</h4>
 <script type="text/plain" class="language-markup">
-<article class="bg-white shadow ubc-card ubc-card--horiz hover--shadow-lg">
-  <div class="ubc-card__media img-cover">
-    <img alt="some alternate text" src="img/demo/headshot.jpg" height="355" width="355" loading="lazy" />
-  </div>
-  <div class="px-6 py-12 md--flex ubc-card__content">
-    <div class="md--w-1/3 md--self-center md--pr-4">
-      <h3 class="mt-0 font-semibold h4"><a href="#" class="no-underline link-expand text-ubc-blue">Susan Anderson</a></h3>
-      <p class="mt-0">Department of Mechanical Engineering</p>
-    </div>
-    <div class="md--w-2/3 md--self-center md--pl-4">
-      <p class="md--mt-0">Mechanics of functional materials, such as gecko-inspired adhesives, high toughness elastomers, hydrogels, and nanostructured metal alloys.</p>
-    </div>
-  </div>
-</article>
+  {% include "component--card--horizontal--1.twig" %}
 </script>
 
 <ul class="md--flex md--flex-wrap md---mx-6">
   <li class="w-full my-6 md--px-6">
-    <article class="bg-white shadow ubc-card ubc-card--horiz-rev hover--shadow-lg">
-      <div class="ubc-card__media img-cover">
-        <img alt="some alternate text" src="img/demo/headshot.jpg" height="355" width="355" loading="lazy" />
-      </div>
-      <div class="px-6 py-12 md--flex ubc-card__content">
-        <div class="md--w-1/3 md--self-center md--pr-4">
-          <h3 class="mt-0 font-semibold h4"><a href="#" class="no-underline link-expand text-ubc-blue">Susan Anderson</a></h3>
-          <p class="mt-0">Department of Mechanical Engineering</p>
-        </div>
-        <div class="md--w-2/3 md--self-center md--pl-4">
-          <p class="md--mt-0">Mechanics of functional materials, such as gecko-inspired adhesives, high toughness elastomers, hydrogels, and nanostructured metal alloys.</p>
-        </div>
-      </div>
+    {% include "component--card--horizontal--2.twig" %}
+  </li>
+</ul>
+
+<h4 class="font-mono text-grey-500">Card Code</h4>
+<script type="text/plain" class="language-markup">
+  {% include "component--card--horizontal--2.twig" %}
+</script>
+
+
+<ul class="md--flex md--flex-wrap md---mx-6">
+  <li class="w-full my-6 md--px-6 md--w-1/2">
+    {% include "component--card--horizontal--3.twig" %}
     </article>
   </li>
   <li class="w-full my-6 md--px-6 md--w-1/2">
-    <article class="bg-white shadow ubc-card ubc-card--horiz--equal hover--shadow-lg group">
-      <div class="ubc-card__media img-cover">
-        <img alt="some alternate text" src="img/demo/headshot.jpg" height="355" width="355" loading="lazy" />
-      </div>
-      <div class="px-6 py-12 ubc-card__content md--self-center">
-        <h3 class="mt-0 font-semibold h4"><a href="#" class="no-underline link-expand text-ubc-blue">Susan Anderson</a></h3>
-        <p class="mt-0">Department of Mechanical Engineering</p>
-        <p>Mechanics of functional materials, such as gecko-inspired adhesives, high toughness elastomers, hydrogels, and nanostructured metal alloys. And some more text to make the line length different.</p>
-        <p class="text-center">
-          <span class="unit-button group-hover--text-white group-hover--bg-ubc-blue">Check it out</span>
-        </p>
-      </div>
+    <h4 class="font-mono text-grey-500">Card Code</h4>
+    <script type="text/plain" class="language-markup">
+      {% include "component--card--horizontal--3.twig" %}
+    </script>
+  </li>
+</ul>
+
+<ul class="md--flex md--flex-wrap md---mx-6">
+  <li class="w-full my-6 md--px-6 md--w-1/2">
+    {% include "component--card--horizontal--4.twig" %}
     </article>
   </li>
   <li class="w-full my-6 md--px-6 md--w-1/2">
-    <article class="bg-white shadow ubc-card ubc-card--horiz--equal-rev hover--shadow-lg group">
-      <div class="ubc-card__media img-cover">
-        <img alt="some alternate text" src="img/demo/headshot.jpg" height="355" width="355" loading="lazy" />
-      </div>
-      <div class="px-6 py-12 ubc-card__content md--self-center">
-        <h3 class="mt-0 font-semibold h4"><a href="#" class="no-underline link-expand text-ubc-blue">Susan Anderson</a></h3>
-        <p class="mt-0">Department of Mechanical Engineering</p>
-        <p>Mechanics of functional materials, such as gecko-inspired adhesives, high toughness elastomers, hydrogels, and nanostructured metal alloys.</p>
-        <p class="text-center">
-          <span class="unit-button unit-button--dark group-hover--bg-white group-hover--text-ubc-blue">Check it out</span>
-        </p>
-      </div>
-    </article>
+    <h4 class="font-mono text-grey-500">Card Code</h4>
+    <script type="text/plain" class="language-markup">
+      {% include "component--card--horizontal--4.twig" %}
+    </script>
   </li>
-  <li class="my-6 md--px-6 md--w-1/3">
-    <article class="shadow bg-ubc-blue ubc-card ubc-card--vert hover--shadow-lg">
-      <div class="ubc-card__media img-cover">
-        <img alt="some alternate text" src="img/demo/headshot.jpg" height="355" width="355" loading="lazy" />
-      </div>
-      <div class="p-6 ubc-card__content md--self-center">
-        <h3 class="mt-0 font-semibold text-center h4"><a href="#" class="text-white no-underline link-expand">Architecture &amp; Landscape Architecture</a></h3>
-      </div>
-    </article>
-  </li>
-  <li class="my-6 md--px-6 md--w-1/3">
-    <article class="shadow bg-ubc-blue-cobalt ubc-card ubc-card--vert hover--shadow-lg">
-      <div class="ubc-card__media img-cover">
-        <img alt="some alternate text" src="img/demo/headshot.jpg" height="355" width="355" loading="lazy" />
-      </div>
-      <div class="p-6 ubc-card__content md--self-center">
-        <h3 class="mt-0 font-semibold text-center h4"><a href="#" class="text-white no-underline link-expand">Engineering</a></h3>
-      </div>
+</ul>
+
+<ul class="md--flex md--flex-wrap md---mx-6">
+  <li class="w-full my-6 md--px-6">
+    {% include "component--card--horizontal--5.twig" %}
     </article>
   </li>
 </ul>
 
 <h4 class="font-mono text-grey-500">Card Code</h4>
 <script type="text/plain" class="language-markup">
-<article class="shadow bg-ubc-blue-cobalt ubc-card ubc-card--vert hover--shadow-lg">
-  <div class="ubc-card__media img-cover">
-    <img alt="some alternate text" src="img/demo/headshot.jpg" height="355" width="355" loading="lazy" />
-  </div>
-  <div class="p-6 ubc-card__content md--self-center">
-    <h3 class="mt-0 font-semibold text-center h4"><a href="#" class="text-white no-underline link-expand">Engineering</a></h3>
-  </div>
-</article>
+  {% include "component--card--horizontal--5.twig" %}
 </script>

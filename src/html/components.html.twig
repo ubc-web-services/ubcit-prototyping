@@ -1,7 +1,7 @@
 {% extends "layouts/default.twig" %}
 {% set title = "Components Page" %}
 {% set pageTitle = "Web Styles" %}
-{% set showTitle = TRUE %}
+{% set showTitle = FALSE %}
 
 {% block masthead %}
 {% endblock %}
@@ -11,108 +11,107 @@
 {% include "includes/toc.twig" %}
 
 <h1 class="text-ubc-blue">{{ unitName }} {{ pageTitle }}</h1>
-<h2 class="text-ubc-blue-cobalt">Base Styles</h2>
 
-<h3 class="mt-12 uppercase" id="colors">Colours</h3>
+<h2 class="mt-12 uppercase" id="colors">Colours</h2>
 <hr />
 {% include "components/color.twig" %}
 
-<h3 class="mt-12 uppercase" id="typography">Typography</h3>
+<h2 class="mt-12 uppercase" id="typography">Typography</h2>
 <hr />
 {% include "components/type.twig" %}
 
-<h3 id="buttons">Buttons</h3>
+<h2 id="buttons">Buttons</h2>
 <hr />
 {% include "components/component--button.twig" %}
 
-<h3 id="tables">Tables</h3>
+<h2 id="tables">Tables</h2>
 <hr />
 {% include "components/component--table.twig" %}
 
-<h3 id="icons">SVG Icons</h3>
+<h2 id="icons">SVG Icons</h2>
 <hr />
 {% include "components/component--icon.twig" %}
 
-<h3 id="forms">Forms</h3>
+<h2 id="forms">Forms</h2>
 <hr />
 {% include "components/form--sample.twig" %}
 
-<h3 class="mt-12 uppercase" id="messages">Messages</h3>
+<h2 class="mt-12 uppercase" id="messages">Messages</h2>
 <hr />
 {% include "components/component--message.twig" %}
 
-<h3 class="mt-12 uppercase" id="boxes">Boxes</h3>
+<h2 class="mt-12 uppercase" id="boxes">Boxes</h2>
 <hr />
 {% include "components/component--box.twig" %}
 
-<h3 class="mt-12 uppercase" id="tags">Tags / Badges</h3>
+<h2 class="mt-12 uppercase" id="tags">Tags / Badges</h2>
 <hr />
 {% include "components/component--tag.twig" %}
 
-<h3 class="mt-12 uppercase" id="media">Media</h3>
+<h2 class="mt-12 uppercase" id="media">Media</h2>
 <hr />
+<h3 >Image with Caption</h3>
 {% include "components/media--image-w-caption.twig" %}
-<h4 id="media-video" tabindex="-1">Embedded Video</h4>
+<h3 id="media-video" tabindex="-1">Embedded Video</h3>
 <div class="mb-4 media-wrapper">
 	{% include "components/media--video.twig" %}
 </div>
-<h4 id="media-map" tabindex="-1">Embedded iFrame</h4>
+<h3 id="media-map" tabindex="-1">Embedded iFrame</h3>
 <div class="media-wrapper">
 	{% include "components/media--map.twig" %}
 </div>
-<h4 id="media-styles" tabindex="-1">Image Styles</h4>
+<h3 id="media-styles" tabindex="-1">Image Styles</h3>
 {% include "components/media--image-style.twig" %}
 
-<h3 id="navigation-subnav" class="mt-12 uppercase">Navigation: Subnavigation</h3>
+<h2 id="navigation-subnav" class="mt-12 uppercase">Navigation: Subnavigation</h2>
 <hr />
 {% include "components/navigation--sub.twig" %}
 
-<h3 id="navigation-breadcrumbs" class="mt-12 uppercase">Navigation: Breadcrumbs</h3>
+<h2 id="navigation-breadcrumbs" class="mt-12 uppercase">Navigation: Breadcrumbs</h2>
 <hr />
 {% include "components/navigation--breadcrumb.twig" %}
 <p>[<a
 		href="https://www.w3.org/TR/wai-aria-practices-1.1/#breadcrumb">https://www.w3.org/TR/wai-aria-practices-1.1/#breadcrumb</a>]
 </p>
-<h3 id="navigation-pager" class="mt-12 uppercase">Navigation: Pager</h3>
+<h2 id="navigation-pager" class="mt-12 uppercase">Navigation: Pager</h2>
 {% include "components/navigation--pager.twig" %}
 <!-- {% include "components/component--throbber.twig" %} -->
 
-<h3 class="mt-12 uppercase" id="callout">Callouts</h3>
+<h2 class="mt-12 uppercase" id="callout">Callouts</h2>
 <hr />
 {% include "components/component--callout.twig" %}
 <div class="md--flex md---mx-4">
 	<div class="md--flex-1 md--px-4">
-		<h4 class="my-4">Share button</h4>
+		<h3 class="my-4">Share button</h3>
 		{% include "components/component--social--share.twig" %}
 	</div>
 	<div class="md--flex-1 md--px-4">
-		<h4 class="my-4">Twitter stream</h4>
+		<h3 class="my-4">Twitter stream</h3>
 		{% include "components/component--social--twitter.twig" %}
 	</div>
 </div>
 
-<h3 class="mt-12 uppercase" id="cards" >Cards</h3>
+<h2 class="mt-12 uppercase" id="cards" >Cards</h2>
 <hr />
-<h4 id="cards-featurette">Card: Featurette</h4>
-{% include "components/component--card--featurette.twig" %}
-<h4 id="cards-image">Card: Image Card</h4>
+<h3 id="cards-vertical">Cards: Vertical Card Styles</h3>
+{% include "components/component--cards--vertical.twig" %}
+<h3 id="cards-horizontal" class="mb-leading">Card: Horizontal Card Styles</h3>
+{% include "components/component--cards--horizontal.twig" %}
+<h3 id="cards-image">Card: Image Card</h3>
 {% include "components/component--card--image-card.twig" %}
 <p> </p>
 {% include "components/component--card--image-card--text-right.twig" %}
-<h4 id="cards-vertical">Card: Vertical Card Styles</h4>
-{% include "components/component--cards--vertical.twig" %}
-<h4 id="cards-horizontal" class="mb-leading">Card: Horizontal Card Styles</h4>
-{% include "components/component--cards--horizontal.twig" %}
 
-<h3 class="mt-12 uppercase" id="layout">Layout</h3>
+
+<h2 class="mt-12 uppercase" id="layout">Layout</h2>
 <hr />
 {% include "components/layout--grid.twig" %}
 
-<h3 class="mt-12 uppercase" id="carousel">Carousel</h3>
+<h2 class="mt-12 uppercase" id="carousel">Carousel</h2>
 <hr />
 {% include "components/component--carousel.twig" %}
 
-<h3 class="mt-12 uppercase" id="accordions">Accordions</h3>
+<h2 class="mt-12 uppercase" id="accordions">Accordions</h2>
 <hr />
 {% include "components/component--accordion.twig" %}
 <p>[<a
@@ -121,7 +120,7 @@
 <p>[<a
 		href="https://www.w3.org/TR/wai-aria-practices-1.1/examples/accordion/accordion.html">https://www.w3.org/TR/wai-aria-practices-1.1/examples/accordion/accordion.html</a>]
 </p>
-<h3 class="mt-12 uppercase" id="details-summary">Details and Summary elements</h3>
+<h2 class="mt-12 uppercase" id="details-summary">Details and Summary elements</h2>
 <hr />
 <details>
 	<summary>Copyright 1999-2019.</summary>
@@ -130,8 +129,8 @@
 <p class="text-grey-500">Note that there are support issues with the summary / details elements: [<a
 		href="https://caniuse.com/#search=details">https://caniuse.com/#search=details</a>]</p>
 
-<h3 class="mt-12 uppercase" id="tabcordions">Tabcordions: Tabs (Desktop) to Accordions (Mobile)
-</h3>
+<h2 class="mt-12 uppercase" id="tabcordions">Tabcordions: Tabs (Desktop) to Accordions (Mobile)
+</h2>
 <hr />
 {% include "components/component--tabcordion.twig" %}
 <p>[<a href="https://www.w3.org/TR/wai-aria-practices-1.1/#tabpanel">https://www.w3.org/TR/wai-aria-practices-1.1/#tabpanel</a>]
