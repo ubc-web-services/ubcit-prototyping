@@ -1,6 +1,6 @@
-{% extends "layouts/home.twig" %}
-{% set title = "Home page" %}
-{% set pageTitle = "Home Page Layout" %}
+{% extends "layouts/side-l-r.twig" %}
+{% set title = "Two Sidebar Page" %}
+{% set pageTitle = "Two Sidebar Page Layout" %}
 {% set showTitle = TRUE %}
 
 {% block masthead %}
@@ -10,8 +10,8 @@
 {% endblock %}
 
 {% block content %}
-  <section class="h-20 p-12 text-center">
-    <p class="mt-0">Content Area <span class="font-mono">[Area A]</span></p>
+  <section class="h-20 p-12 text-center border-2 border-dashed bg-grey-100 border-grey-500">
+    <p class="mt-0">Content Area <code>[Area A]</code></p>
   </section>
 {% endblock %}
 
@@ -28,20 +28,8 @@
 {% endblock %}
 
 {% block aread %}
-  <section class="w-full h-20 p-12 text-center border-2 border-dashed bg-grey-100 border-grey-500">
-    <p class="mt-0">Area D</p>
-  </section>
-{% endblock %}
-
-{% block areae %}
   <section class="h-20 p-12 text-center border-2 border-dashed bg-grey-100 border-grey-500">
-    <p class="mt-0">Area E</p>
-  </section>
-{% endblock %}
-
-{% block areaf %}
-  <section class="w-full h-20 p-12 text-center border-2 border-dashed bg-grey-100 border-grey-500">
-    <p class="mt-0">Area F</p>
+    <p class="mt-0">Area D</p>
   </section>
 {% endblock %}
 

@@ -61,86 +61,6 @@
 	grid-area: f;
 }
 
-.grid-area-g {
-	grid-area: g;
-}
-
-.grid-area-h {
-	grid-area: h;
-}
-
-.grid-area-i {
-	grid-area: i;
-}
-
-.grid-area-j {
-	grid-area: j;
-}
-
-.grid-area-k {
-	grid-area: k;
-}
-
-.grid-area-l {
-	grid-area: l;
-}
-
-.grid-area-m {
-	grid-area: m;
-}
-
-.grid-area-n {
-	grid-area: n;
-}
-
-.grid-area-o {
-	grid-area: o;
-}
-
-.grid-area-p {
-	grid-area: p;
-}
-
-.grid-area-q {
-	grid-area: q;
-}
-
-.grid-area-r {
-	grid-area: r;
-}
-
-.grid-area-s {
-	grid-area: s;
-}
-
-.grid-area-t {
-	grid-area: t;
-}
-
-.grid-area-u {
-	grid-area: u;
-}
-
-.grid-area-v {
-	grid-area: v;
-}
-
-.grid-area-w {
-	grid-area: w;
-}
-
-.grid-area-x {
-	grid-area: x;
-}
-
-.grid-area-y {
-	grid-area: y;
-}
-
-.grid-area-z {
-	grid-area: z;
-}
-
 .grid-container {
 	display: grid;
 	grid-row-gap: 32px;
@@ -234,7 +154,7 @@
 	.grid-container--side-r,
 	.grid-container--landing {
 		grid-template-areas:
-			'a a a a a a a . b b b b'
+			'a a a a a a a a b b b b'
 			'c c c c c c c c c c c c'
 			'd d d d d d d d d d d d';
 		grid-template-rows: auto auto auto;
@@ -243,7 +163,7 @@
 
 	.grid-container--side-l {
 		grid-template-areas:
-			'b b b b . a a a a a a a'
+			'b b b b a a a a a a a a'
 			'c c c c c c c c c c c c'
 			'd d d d d d d d d d d d';
 		grid-template-rows: auto auto auto;
@@ -252,7 +172,7 @@
 
 	.grid-container--text-focus {
 		grid-template-areas:
-			'. . a a a a a a a a . .'
+			'. a a a a a a a a a a .'
 			'b b b b b b b b b b b b'
 			'c c c c c c c c c c c c'
 			'd d d d d d d d d d d d';
@@ -285,6 +205,15 @@
 		grid-template-columns: repeat(12, 1fr);
 	}
 
+	.grid-container--side-l {
+		grid-template-areas:
+			'b b b . . a a a a a a a'
+			'c c c c c c c c c c c c'
+			'd d d d d d d d d d d d';
+		grid-template-rows: auto auto auto;
+		grid-template-columns: repeat(12, 1fr);
+	}
+
 	.grid-container--home {
 		grid-template-areas:
 			'a a a a a a a . . b b b'
@@ -293,6 +222,16 @@
 			'. . e e e e e e e e . .'
 			'f f f f f f f f f f f f';
 		grid-template-rows: auto 1fr auto auto auto;
+		grid-template-columns: repeat(12, 1fr);
+	}
+
+	.grid-container--text-focus {
+		grid-template-areas:
+			'. . a a a a a a a a . .'
+			'b b b b b b b b b b b b'
+			'c c c c c c c c c c c c'
+			'd d d d d d d d d d d d';
+		grid-template-rows: auto auto auto auto;
 		grid-template-columns: repeat(12, 1fr);
 	}
 
