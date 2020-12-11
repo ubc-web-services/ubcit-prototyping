@@ -18,6 +18,7 @@
 
 <h2 class="mt-12 uppercase" id="typography">Typography</h2>
 <hr />
+
 {% include "components/type.twig" %}
 
 <h2 id="buttons">Buttons</h2>
@@ -52,14 +53,17 @@
 <hr />
 <h3 >Image with Caption</h3>
 {% include "components/media--image-w-caption.twig" %}
+
 <h3 id="media-video" tabindex="-1">Embedded Video</h3>
 <div class="mb-4 media-wrapper">
 	{% include "components/media--video.twig" %}
 </div>
-<h3 id="media-map" tabindex="-1">Embedded iFrame</h3>
+
+<h3 id="media-map" class="mb-4" tabindex="-1">Embedded iFrame</h3>
 <div class="media-wrapper">
 	{% include "components/media--map.twig" %}
 </div>
+
 <h3 id="media-styles" tabindex="-1">Image Styles</h3>
 {% include "components/media--image-style.twig" %}
 
@@ -77,9 +81,9 @@
 {% include "components/navigation--pager.twig" %}
 <!-- {% include "components/component--throbber.twig" %} -->
 
-<h2 class="mt-12 uppercase" id="callout">Callouts</h2>
+
+<h2 class="mt-12 uppercase" id="social">Social</h2>
 <hr />
-{% include "components/component--callout.twig" %}
 <div class="md--flex md---mx-4">
 	<div class="md--flex-1 md--px-4">
 		<h3 class="my-4">Share button</h3>
@@ -93,15 +97,16 @@
 
 <h2 class="mt-12 uppercase" id="cards" >Cards</h2>
 <hr />
+
 <h3 id="cards-vertical">Cards: Vertical Card Styles</h3>
 {% include "components/component--cards--vertical.twig" %}
+
 <h3 id="cards-horizontal" class="mb-leading">Card: Horizontal Card Styles</h3>
 {% include "components/component--cards--horizontal.twig" %}
+
 <h3 id="cards-image">Card: Image Card</h3>
 {% include "components/component--card--image-card.twig" %}
-<p> </p>
 {% include "components/component--card--image-card--text-right.twig" %}
-
 
 <h2 class="mt-12 uppercase" id="layout">Layout</h2>
 <hr />

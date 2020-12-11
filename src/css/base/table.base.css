@@ -9,7 +9,7 @@ $table-row-striping-color: rgba(225, 243, 249, .5);
 $table-row-hover-color: rgba(225, 243, 249, .5);
 
 table {
-	@apply w-full text-left;
+	@apply text-left;
 	margin-top: $leading;
 	border-collapse: collapse;
 	border-spacing: 0;
@@ -35,6 +35,7 @@ th {
 }
 
 /* table element variants */
+/*
 .table--responsive {
 	@apply block min-w-full;
 }
@@ -42,9 +43,16 @@ th {
 @media (max-width: $breakpoint--md--max) {
 
 	.table--responsive table {
-		@apply block overflow-x-scroll whitespace-nowrap;
+		@apply block overflow-x-auto whitespace-nowrap;
 	}
 
+}
+*/
+
+.table--responsive {
+	max-width: 100%;
+	overflow-x: auto;
+	margin: 0;
 }
 
 .table--plain tr {

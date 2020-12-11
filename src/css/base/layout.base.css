@@ -37,6 +37,17 @@
 
 }
 
+/* Grid */
+/* https://css-tricks.com/preventing-a-grid-blowout/ */
+.grid-area-a,
+.grid-area-b,
+.grid-area-c,
+.grid-area-d,
+.grid-area-e,
+.grid-area-f {
+  min-width: 0;
+}
+
 .grid-area-a {
 	grid-area: a;
 }
@@ -82,7 +93,6 @@
 
 .grid-container--plain,
 .grid-container--text-focus {
-	grid-column-gap: 0;
 	grid-template-areas:
 		'a'
 		'b'

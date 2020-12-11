@@ -4,7 +4,7 @@
 * we need to turn off autoprefixer for the block of css as it automatically strips the -webkit-box-orient property
 */
 
-.truncate {
+.text-truncate {
 
 	/* autoprefixer: off */
 	display: -webkit-box;
@@ -13,7 +13,7 @@
 	-webkit-line-clamp: 1;
 }
 
-.truncate-2 {
+.text-truncate-2 {
 
 	/* autoprefixer: off */
 	display: -webkit-box;
@@ -22,7 +22,7 @@
 	-webkit-line-clamp: 2;
 }
 
-.truncate-3 {
+.text-truncate-3 {
 
 	/* autoprefixer: off */
 	display: -webkit-box;
