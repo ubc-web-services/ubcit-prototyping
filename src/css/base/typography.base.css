@@ -79,8 +79,8 @@ h4,
 .heading-four {
 	margin-top: calc($leading * 1.25rem);
 	margin-bottom: 0;
-	font-weight: 700;
-	font-size: $text-2xl;
+	font-weight: $h4-weight;
+	font-size: $text-xl;
 	font-family: $default-typeface;
 	line-height: 1.4;
 	letter-spacing: .025em;
@@ -109,23 +109,12 @@ h6,
 	letter-spacing: .05em;
 }
 
-.heading-display {
-	font-weight: 700;
-	font-size: $text-8xl;
+.heading-display,
+.page-title {
+	font-weight: $h1-weight;
+	font-size: $text-5xl;
 	font-family: $default-typeface;
-	line-height: 1.2;
-}
-
-.h1--mt {
-	margin-top: calc($leading * 3.5rem);
-}
-
-.h2--mt {
-	margin-top: calc($leading * 2.25rem);
-}
-
-.h3--mt {
-	margin-top: calc($leading * 1.75rem);
+	line-height: 1.25;
 }
 
 /* text and list elements */
@@ -349,29 +338,18 @@ hr,
 		font-size: $text-9xl;
 	}
 
-	.h1--mt {
-		margin-top: calc($leading * 3rem);
-	}
-
-	.h2--mt {
-		margin-top: calc($leading * 2.5rem);
-	}
-
-	.h3--mt {
-		margin-top: calc($leading * 2.5rem);
-	}
-
 	blockquote {
 		@apply text-2xl;
+	}
+
+	cite,
+	.cite {
+		@apply text-xl;
 	}
 
 	.text-lead {
 		margin-top: calc($leading * 2.5rem);
 		font-size: $text-5xl;
-	}
-
-	.text-lead--mt {
-		margin-top: calc($leading * 2.5rem);
 	}
 
 }
@@ -448,4 +426,26 @@ hr,
 		font-size: 11.438rem !important; /* 183px */
 	}
 
+}
+
+/* non-responsive text utilities */
+
+/* placed last to allow to take precedence in the cascade */
+.text-hug {
+	margin-top: 0;
+}
+
+/* we use the 'ch' unit, which is the width of the '0' [zero] character in the current font. */
+
+/* https://meyerweb.com/eric/thoughts/2018/06/28/what-is-the-css-ch-unit/ */
+.text-measure {
+	max-width: 60ch;
+}
+
+.text-measure-sm {
+	max-width: 50ch;
+}
+
+.text-measure-lg {
+	max-width: 70ch;
 }

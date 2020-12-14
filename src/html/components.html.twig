@@ -12,11 +12,11 @@
 
 <h1 class="text-ubc-blue">{{ unitName }} {{ pageTitle }}</h1>
 
-<h2 class="mt-12 uppercase" id="colors">Colours</h2>
+<h2 class="mt-12 " id="colors">Colours</h2>
 <hr />
 {% include "components/color.twig" %}
 
-<h2 class="mt-12 uppercase" id="typography">Typography</h2>
+<h2 class="mt-12 " id="typography">Typography</h2>
 <hr />
 
 {% include "components/type.twig" %}
@@ -37,22 +37,20 @@
 <hr />
 {% include "components/form--sample.twig" %}
 
-<h2 class="mt-12 uppercase" id="messages">Messages</h2>
+<h2 class="mt-12 " id="messages">Messages</h2>
 <hr />
 {% include "components/component--message.twig" %}
 
-<h2 class="mt-12 uppercase" id="boxes">Boxes</h2>
+<h2 class="mt-12 " id="boxes">Boxes</h2>
 <hr />
 {% include "components/component--box.twig" %}
 
-<h2 class="mt-12 uppercase" id="tags">Tags / Badges</h2>
+<h2 class="mt-12 " id="tags">Tags / Badges</h2>
 <hr />
 {% include "components/component--tag.twig" %}
 
-<h2 class="mt-12 uppercase" id="media">Media</h2>
+<h2 class="mt-12 " id="media">Media</h2>
 <hr />
-<h3 >Image with Caption</h3>
-{% include "components/media--image-w-caption.twig" %}
 
 <h3 id="media-video" tabindex="-1">Embedded Video</h3>
 <div class="mb-4 media-wrapper">
@@ -65,24 +63,21 @@
 </div>
 
 <h3 id="media-styles" tabindex="-1">Image Styles</h3>
-{% include "components/media--image-style.twig" %}
+{% include "components/media--image-styles.twig" %}
 
-<h2 id="navigation-subnav" class="mt-12 uppercase">Navigation: Subnavigation</h2>
+<h2 id="navigation-subnav" class="mt-12 ">Navigation: Subnavigation</h2>
 <hr />
 {% include "components/navigation--sub.twig" %}
 
-<h2 id="navigation-breadcrumbs" class="mt-12 uppercase">Navigation: Breadcrumbs</h2>
+<h2 id="navigation-breadcrumbs" class="mt-12 ">Navigation: Breadcrumbs</h2>
 <hr />
 {% include "components/navigation--breadcrumb.twig" %}
-<p>[<a
-		href="https://www.w3.org/TR/wai-aria-practices-1.1/#breadcrumb">https://www.w3.org/TR/wai-aria-practices-1.1/#breadcrumb</a>]
-</p>
-<h2 id="navigation-pager" class="mt-12 uppercase">Navigation: Pager</h2>
+
+<h2 id="navigation-pager" class="mt-12 ">Navigation: Pager</h2>
 {% include "components/navigation--pager.twig" %}
-<!-- {% include "components/component--throbber.twig" %} -->
 
 
-<h2 class="mt-12 uppercase" id="social">Social</h2>
+<h2 class="mt-12 " id="social">Social</h2>
 <hr />
 <div class="md--flex md---mx-4">
 	<div class="md--flex-1 md--px-4">
@@ -95,7 +90,7 @@
 	</div>
 </div>
 
-<h2 class="mt-12 uppercase" id="cards" >Cards</h2>
+<h2 class="mt-12 " id="cards" >Cards</h2>
 <hr />
 
 <h3 id="cards-vertical">Cards: Vertical Card Styles</h3>
@@ -104,42 +99,26 @@
 <h3 id="cards-horizontal" class="mb-leading">Card: Horizontal Card Styles</h3>
 {% include "components/component--cards--horizontal.twig" %}
 
-<h3 id="cards-image">Card: Image Card</h3>
-{% include "components/component--card--image-card.twig" %}
-{% include "components/component--card--image-card--text-right.twig" %}
+<h3 id="cards-image">Card: Image Card Styles</h3>
+{% include "components/component--cards--image.twig" %}
 
-<h2 class="mt-12 uppercase" id="layout">Layout</h2>
+<p class="text-sm text-grey-500">Note: these styles can have accessibility issues as the text has poor and variable readbility over the image.</p>
+
+<h2 class="mt-12 " id="layout">Layout</h2>
 <hr />
 {% include "components/layout--grid.twig" %}
 
-<h2 class="mt-12 uppercase" id="carousel">Carousel</h2>
+<h2 class="mt-12 " id="carousel">Carousel</h2>
 <hr />
 {% include "components/component--carousel.twig" %}
 
-<h2 class="mt-12 uppercase" id="accordions">Accordions</h2>
+<h2 class="mt-12 " id="accordions">Accordions</h2>
 <hr />
 {% include "components/component--accordion.twig" %}
-<p>[<a
-		href="https://www.w3.org/TR/wai-aria-practices-1.1/#disclosure">https://www.w3.org/TR/wai-aria-practices-1.1/#disclosure</a>]
-</p>
-<p>[<a
-		href="https://www.w3.org/TR/wai-aria-practices-1.1/examples/accordion/accordion.html">https://www.w3.org/TR/wai-aria-practices-1.1/examples/accordion/accordion.html</a>]
-</p>
-<h2 class="mt-12 uppercase" id="details-summary">Details and Summary elements</h2>
-<hr />
-<details>
-	<summary>Copyright 1999-2019.</summary>
-	<p>&mdash; by the University of British Columbia. All Rights Reserved.</p>
-</details>
-<p class="text-grey-500">Note that there are support issues with the summary / details elements: [<a
-		href="https://caniuse.com/#search=details">https://caniuse.com/#search=details</a>]</p>
 
-<h2 class="mt-12 uppercase" id="tabcordions">Tabcordions: Tabs (Desktop) to Accordions (Mobile)
-</h2>
+<h2 class="mt-12 " id="tabcordions">Tabcordions: Tabs (Desktop) to Accordions (Mobile)</h2>
 <hr />
 {% include "components/component--tabcordion.twig" %}
-<p>[<a href="https://www.w3.org/TR/wai-aria-practices-1.1/#tabpanel">https://www.w3.org/TR/wai-aria-practices-1.1/#tabpanel</a>]
-</p>
 
 {% endblock %}
 

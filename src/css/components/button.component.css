@@ -53,6 +53,7 @@ $button-transparent-text--active: $white;
 	background-color: $button-bg;
 	border-color: $button-border;
 	cursor: pointer;
+	transition: all .125s ease-out;
 }
 
 .unit-button:hover {
@@ -166,12 +167,7 @@ $button-transparent-text--active: $white;
 	margin-top: -.25em;
 }
 
-.cta-button .unit-button__icon {
-	margin-left: .5em;
-}
-
 .group:hover .unit-button__icon,
-.cta-button:hover .unit-button__icon,
 .unit-button:hover .unit-button__icon {
 	transform: translateX(4px);
 }
@@ -229,12 +225,10 @@ $button-transparent-text--active: $white;
 	margin-left: 1em;
 }
 
-.unit-button--plain.unit-button--has-icon-left .unit-button__icon,
 .unit-button--simple.unit-button--has-icon-left .unit-button__icon {
 	margin-right: .5em;
 }
 
-.unit-button--plain.unit-button--has-icon-right .unit-button__icon,
 .unit-button--simple.unit-button--has-icon-right .unit-button__icon {
 	@apply ml-2;
 	margin-left: .5em;

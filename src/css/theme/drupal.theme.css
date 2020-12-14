@@ -6,48 +6,52 @@
 
 /* drupal media */
 .media--type-image {
-	@apply mt-leading;
+  margin-top:calc(var(--leading) * var(--base-font-size))
 }
 
+/*
 figure .media--type-image {
-	@apply mt-0;
+  margin-top:0
 }
+*/
 
 figure .media--type-image img {
-	@apply w-full;
+  width:100%
 }
 
-figure.align-left,
-.align-left.media--type-image {
-	@apply mt-0 mr-leading mb-leading;
-}
-
-figure.align-right,
-.align-right.media--type-image {
-	@apply mt-0 ml-leading mb-leading;
+.align-left.media--type-image,
+figure.align-left {
+  margin-right: calc(var(--leading) * var(--base-font-size));
+	margin-bottom:calc(var(--leading) * var(--base-font-size));
+	float: left;
 }
 
 .align-right.media--type-image,
-.align-left.media--type-image {
-	@apply inline-block;
+figure.align-right {
+  margin-left: calc(var(--leading) * var(--base-font-size));
+	margin-bottom:calc(var(--leading) * var(--base-font-size));
+	float: right;
 }
 
-.align-center.media--type-image img {
-	@apply mx-auto;
+.align-left.media--type-image,
+.align-right.media--type-image {
+  display:inline-block
+}
+
+.align-center.media--type-image img,
+figure.align-center {
+  margin-left: auto;
+  margin-right:auto
 }
 
 figure.align-center {
-	display: table;
-	margin-right: auto;
-	margin-left: auto;
+  display:table
 }
 
-figure.align-center > article,
-figure.align-center > div {
-	display: block;
-	max-width: 100%;
+figure.align-center > article, figure.align-center > div {
+  display: block;
+  max-width:100%
 }
-
 
 /* paragraphs */
 .paragraph--type--text__inner > :first-child,
@@ -89,6 +93,31 @@ figure.align-center > div {
 }
 
 /* views pager */
+/* Pager */
+.bg-caret--blue,
+.pager__item--next a,
+.pager__item--previous a {
+  overflow: hidden;
+  text-indent: -200em;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%23002145' d='M65.67 36.36L34.32 5 20.68 18.64 52 50 20.68 81.35 34.32 95l45-45z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size:1em 1em
+}
+
+.pager__item--previous a {
+  transform:rotate(180deg)
+}
+
+.bg-caret--white,
+.pager__item--next a:hover,
+.pager__item--previous a:hover {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%23fff' d='M65.67 36.36L34.32 5 20.68 18.64 52 50 20.68 81.35 34.32 95l45-45z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size:1em 1em
+}
+/*
 .pager__items {
 	@apply inline-flex;
 	line-height: 2.5;
@@ -106,7 +135,7 @@ figure.align-center > div {
 
 .pager__items .pager__item--current,
 .pager__items .is-active a {
-	@apply font-bold text-center border-ubc-blue-neptune text-grey-900;
+	@apply font-semibold text-center border-ubc-blue-neptune text-grey-900;
 }
 
 @media (min-width: $breakpoint--xxl) {
@@ -116,6 +145,26 @@ figure.align-center > div {
 	}
 
 }
+*/
+
+/* node unpublished styles */
+.node--unpublished .unpublished {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	height: 0;
+	overflow: visible;
+	color: #d8d8d8;
+	font-weight: bold;
+	font-size: 5em;
+	font-family: Impact, "Arial Narrow", Helvetica, sans-serif;
+	line-height: 1;
+	text-align: center;
+	text-transform: uppercase;
+	word-wrap: break-word;
+}
+
 
 /* jquery datepicker */
 .ui-datepicker {

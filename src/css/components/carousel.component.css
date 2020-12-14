@@ -41,17 +41,18 @@ $carousel-gradient-translucent: rgba(0, 0, 0, .7);
 
 /* page indicators */
 .tns-nav {
-	@apply absolute z-40;
+	@apply absolute z-40 flex;
 	bottom: 2rem;
 	right: 6rem;
 }
 
 .tns-nav button {
-	@apply inline-block w-4 h-4 m-2 rounded-full cursor-pointer bg-unit-accent;
+	@apply inline-block w-4 h-4 m-2 border-2 rounded-full cursor-pointer border-unit-accent;
+	transition: .4s ease-in-out;
 }
 
 .tns-nav .tns-nav-active {
-	@apply bg-ubc-blue;
+	@apply border-8;
 }
 
 /** vueperslide styles */
@@ -72,7 +73,7 @@ $carousel-gradient-translucent: rgba(0, 0, 0, .7);
 /** responsive type for title between 320 and 1200px */
 /*
 .vueperslide__title {
-	@apply text-xl font-bold leading-none tracking-wider text-white;
+	@apply text-xl font-semibold leading-none tracking-wider text-white;
 }
 */
 
