@@ -5,15 +5,22 @@
 */
 
 /* drupal media */
+figure.align-center,
+figure.align-left,
+figure.align-right {
+	display: table;
+}
+
+figure.align-center figcaption,
+figure.align-left figcaption,
+figure.align-right figcaption {
+	display: table-caption;
+	caption-side: bottom;
+}
+
 .media--type-image {
   margin-top:calc(var(--leading) * var(--base-font-size))
 }
-
-/*
-figure .media--type-image {
-  margin-top:0
-}
-*/
 
 figure .media--type-image img {
   width:100%
@@ -42,10 +49,6 @@ figure.align-right {
 figure.align-center {
   margin-left: auto;
   margin-right:auto
-}
-
-figure.align-center {
-  display:table
 }
 
 figure.align-center > article, figure.align-center > div {
