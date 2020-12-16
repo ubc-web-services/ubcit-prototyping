@@ -19,7 +19,7 @@
 	</style>
 </head>
 
-<body class="layout--full-width">
+<body class="overflow-x-hidden layout--full-width">
 	<div id="main-content">
 		{% if clfversion == 7 %}
 			{% include "../includes/header--clf7.twig" %}
@@ -28,25 +28,15 @@
 		{% endif %}
 		{% block masthead %}{% endblock %}
 		<main class="unit-content">
-			<div class="container p-4 mx-auto">
+			<div class="container px-5 mx-auto md--px-4">
 				{% include "components/navigation--breadcrumb.twig" %}
 				{% if showTitle %}
         	<h1>{{ pageTitle }}</h1>
 				{% endif %}
-				<div class="grid-container grid-container--plain">
-					<div class="grid-area-a">
-						{% block content %}{% endblock %}
-					</div>
-					<div class="grid-area-b">
-						{% block areab %}{% endblock %}
-					</div>
-					<div class="grid-area-c">
-						{% block areac %}{% endblock %}
-					</div>
-					<div class="grid-area-d">
-						{% block aread %}{% endblock %}
-					</div>
-				</div>
+				{% block content %}{% endblock %}
+				{% block areab %}{% endblock %}
+				{% block areac %}{% endblock %}
+				{% block aread %}{% endblock %}
 			</div>
 		</main>
 		{% block prefooter %}{% endblock %}

@@ -47,7 +47,8 @@
 @import "theme/custom.theme.css";
 
 /* Add site specific utilities */
-@import "utilities/pseudo.utility.css";
+@import "utilities/full-bleed.utility.css";
+@import "utilities/margin.utility.css";
 @import "utilities/rotate.utility.css";
 @import "utilities/skip-link.utility.css";
 @import "utilities/svg.utility.css";
@@ -90,23 +91,24 @@
 */
 
 /* prototype only */
+
 /* reset tag class for prism code highlighting */
 .token.tag {
 	display: initial;
 	margin-right: initial;
-	font-size: initial;
-	color: initial;
-	background-color: initial;
 	padding: initial;
+	color: initial;
+	font-size: initial;
 	line-height: initial;
+	background-color: initial;
 }
 
 /* match container sizes to CLF7 */
 @media (max-width: $breakpoint--clf7-md--max) {
 
-  .container {
-    width: 100%;
-    max-width: 100%;
-  }
+	.container {
+		width: 100%;
+		max-width: 100%;
+	}
 
 }

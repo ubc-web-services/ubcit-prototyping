@@ -3,7 +3,7 @@
 /* adds a set of utilities for inclusion in vue.js */
 
 [v-cloak] {
-  display: none;
+	display: none;
 }
 
 /* Vue Component Transitions */

@@ -108,10 +108,6 @@
 <hr />
 {% include "components/layout--grid.twig" %}
 
-<h2 class="mt-12 " id="carousel">Carousel</h2>
-<hr />
-{% include "components/component--carousel.twig" %}
-
 <h2 class="mt-12 " id="accordions">Accordions</h2>
 <hr />
 {% include "components/component--accordion.twig" %}
@@ -123,6 +119,7 @@
 {% endblock %}
 
 {% block areab %}
+
 {% endblock %}
 
 {% block areac %}
@@ -132,6 +129,24 @@
 {% endblock %}
 
 {% block prefooter %}
+<div class="container px-5 mx-auto md--px-4">
+	<h2 id="carousel">Carousel</h2>
+	<hr />
+</div>
+{% include "components/component--carousel.twig" %}
+<div class="container px-5 mx-auto md--px-4">
+	<h4 class="font-mono text-grey-500">Carousel Code</h4>
+	<script type="text/plain" class="language-markup">
+	{% include "components/component--carousel.twig" %}
+	</script>
+</div>
+
+<div class="container px-5 mx-auto md--px-4">
+	<h2 id="image-region">Image Region</h2>
+	<hr />
+</div>
+{% include "components/region--image--regions.twig" %}
+
 {% endblock %}
 
 {% block custom_css %}

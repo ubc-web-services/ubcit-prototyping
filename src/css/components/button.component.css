@@ -76,17 +76,6 @@ $button-transparent-text--active: $white;
 	text-align: center;
 }
 
-/* Gradient buttons */
-/*
-.unit-button--light-gradient {
-	background: linear-gradient(to bottom, $gradient-black-transparent 60%, $gradient-black-translucent 100%);
-}
-
-.unit-button--dark-gradient {
-	background: linear-gradient(to bottom, $gradient-black-transparent 2%, $gradient-black-opaque 100%);
-}
-*/
-
 /* button colour variations */
 .unit-button--light {
 	color: $button-light-text;
@@ -106,20 +95,6 @@ $button-transparent-text--active: $white;
 	border-color: $button-light-border--active;
 	box-shadow: inset 0 0 1em $ubc-blue-sea;
 }
-
-/*
-.unit-button--mid {
-	color: $button-mid-text;
-	background-color: $button-mid-bg;
-	border-color: $button-mid-border;
-}
-
-.unit-button--mid:hover {
-	color: $button-mid-text--hover;
-	background-color: $button-mid-bg--hover;
-	border-color: $button-mid-border--hover;
-}
-*/
 
 .unit-button--dark {
 	color: $button-dark-text;
@@ -157,14 +132,47 @@ $button-transparent-text--active: $white;
 	border-color: $button-transparent-border--active;
 }
 
+.unit-button--simple {
+	@apply relative p-0 overflow-hidden border-0;
+	color: $default-link-color;
+}
+
+.unit-button--simple:before {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: -1;
+	height: 4px;
+	background: #2098d1;
+	transform: translateY(4px);
+	transition-timing-function: ease-out;
+	transition-duration: .2s;
+	transition-property: transform;
+	content: "";
+}
+
+.unit-button--simple:hover {
+	color: $default-link-color-hover;
+	text-decoration: none;
+	background: transparent;
+	box-shadow: none;
+}
+
+.unit-button--simple:hover:before,
+.unit-button--simple:focus:before,
+.unit-button--simple:active:before {
+	transform: translateY(0);
+}
+
 /* button icons */
 .unit-button__icon {
 	@apply self-center flex-none;
 	width: 1em;
 	height: 1em;
+	margin-top: -.25em;
 	transition: transform .125s ease-in-out;
 	stroke-width: 4;
-	margin-top: -.25em;
 }
 
 .group:hover .unit-button__icon,
@@ -201,8 +209,6 @@ $button-transparent-text--active: $white;
 	background-color: $ubc-blue-cobalt;
 }
 
-.unit-button--mid.unit-button--has-separator-left::after,
-.unit-button--mid.unit-button--has-separator-right::after,
 .unit-button--dark.unit-button--has-separator-left::after,
 .unit-button--dark.unit-button--has-separator-right::after {
 	background-color: $white;
@@ -210,8 +216,6 @@ $button-transparent-text--active: $white;
 
 .unit-button--light.unit-button--has-separator-left:hover::after,
 .unit-button--light.unit-button--has-separator-right:hover::after,
-.unit-button--mid.unit-button--has-separator-left:hover::after,
-.unit-button--mid.unit-button--has-separator-right:hover::after,
 .unit-button--dark.unit-button--has-separator-left:hover::after,
 .unit-button--dark.unit-button--has-separator-right:hover::after {
 	background-color: $white;
@@ -254,18 +258,7 @@ $button-transparent-text--active: $white;
 	transition: transform .125s ease-in-out;
 }
 
-.unit-button--simple {
-	@apply py-0 pl-0 border-0;
-	color: $default-link-color;
-}
-
-.unit-button--simple:hover {
-	color: $default-link-color-hover;
-	text-decoration: underline;
-	background: transparent;
-	box-shadow: none;
-}
-
+/* Share button */
 .share-button:hover .share-links {
 	display: block;
 }
@@ -280,12 +273,12 @@ $button-transparent-text--active: $white;
 
 .share-buttons::before {
 	@apply absolute block;
-	content: '';
-	left: 1rem;
 	top: -1rem;
+	left: 1rem;
 	width: 0;
-  height: 0;
-  border-left: 1rem solid transparent;
-  border-right: 1rem solid transparent;
-  border-bottom: 1rem solid $ubc-blue;
+	height: 0;
+	border-right: 1rem solid transparent;
+	border-bottom: 1rem solid $ubc-blue;
+	border-left: 1rem solid transparent;
+	content: '';
 }

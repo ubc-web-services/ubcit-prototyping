@@ -78,7 +78,7 @@ $gradient-grey-opaque: rgba(244, 244, 244, 1);
 
 /* Card styles */
 .card__title {
-	@apply mt-0 text-lg font-bold uppercase;
+	@apply mt-0 text-lg font-semibold uppercase;
 	letter-spacing: .025em;
 }
 

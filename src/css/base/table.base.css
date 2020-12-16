@@ -37,8 +37,8 @@ th {
 /* table element variants */
 .table--responsive {
 	max-width: 100%;
-	overflow-x: auto;
 	margin: 0;
+	overflow-x: auto;
 }
 
 .table--plain tr {

@@ -83,13 +83,6 @@ body:focus {
 }
 
 /* button style variations */
-[data-drupal-button-link-style="unit-button--light-gradient"] {
-	background: linear-gradient(180deg, transparent 60%, rgba(0, 0, 0, .2));
-}
-
-[data-drupal-button-link-style="unit-button--dark-gradient"] {
-	background: linear-gradient(180deg, transparent 2%, #000);
-}
 
 [data-drupal-button-link-style="unit-button--light"] {
 	color: #0055b7;
@@ -97,17 +90,10 @@ body:focus {
 	border-color: #0055b7;
 }
 
-[data-drupal-button-link-style="unit-button--mid"],
 [data-drupal-button-link-style="unit-button--light"]:hover {
 	color: #0055b7;
 	background-color: #fff;
 	border-color: #0055b7;
-}
-
-[data-drupal-button-link-style="unit-button--mid"]:hover {
-	color: #000;
-	background-color: #97d4e9;
-	border-color: #97d4e9;
 }
 
 [data-drupal-button-link-style="unit-button--dark"] {
@@ -132,18 +118,6 @@ body:focus {
 	color: #002145;
 	background-color: #fff;
 	border-color: #fff;
-}
-
-[data-drupal-button-link-style="unit-button--plain"] {
-	color: #0055b7;
-	background-color: transparent;
-	border-color: transparent;
-}
-
-[data-drupal-button-link-style="unit-button--plain"]:hover {
-	color: #fff;
-	background-color: #0055b7;
-	border-color: transparent;
 }
 
 [data-drupal-button-link-style="unit-button--simple"] {

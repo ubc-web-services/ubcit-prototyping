@@ -19,8 +19,9 @@
 	</style>
 </head>
 
-<body class="layout--full-width">
+<body class="overflow-x-hidden layout--full-width">
 	<div id="main-content">
+
 		{% if clfversion == 7 %}
 			{% include "../includes/header--clf7.twig" %}
 		{% else %}
@@ -28,32 +29,21 @@
 		{% endif %}
 		{% block masthead %}{% endblock %}
 		<main class="unit-content">
-			<div class="container p-4 mx-auto">
+			<div class="container px-5 mx-auto md--px-4 md--grid md--gap-x-8 md--grid-cols-12">
 				{% if showTitle %}
-        	<h1>{{ pageTitle }}</h1>
+				<div class="md--col-span-full">
+					<h1>{{ pageTitle }}</h1>
+				</div>
 				{% endif %}
-				<div class="pb-4 grid-container grid-container--home">
-					<div class="grid-area-a meta meta__bg meta--blue">
-						{% block content %}{% endblock %}
-					</div>
-          <div class="grid-area-b">
-					{% block areab %}{% endblock %}
-          </div>
-					<div class="grid-area-c">
-						{% block areac %}{% endblock %}
-					</div>
-					<div class="grid-area-d md--flex md---mx-4 md--flex-wrap">
-						{% block aread %}{% endblock %}
-					</div>
-          <div class="mt-8 grid-area-e">
-						{% block areae %}{% endblock %}
-					</div>
-          <div class="grid-area-f md--flex md---mx-4">
-						{% block areaf %}{% endblock %}
-					</div>
+				<div class="md--col-span-10 md--col-start-2 lg--col-span-8 lg--col-start-3">
+					{% block content %}{% endblock %}
 				</div>
 			</div>
+			{% block areab %}{% endblock %}
+			{% block areac %}{% endblock %}
+			{% block aread %}{% endblock %}
 		</main>
+
 		{% block prefooter %}{% endblock %}
 		<footer>
 			{% if clfversion == 7 %}

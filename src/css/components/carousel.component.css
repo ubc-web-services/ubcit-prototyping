@@ -23,12 +23,12 @@ $carousel-gradient-translucent: rgba(0, 0, 0, .7);
 }
 
 .tns-controls button {
-	@apply self-center block w-20 h-20;
+	@apply self-center block w-20 h-20 overflow-hidden;
+	text-indent: -300%;
 	background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 22L12 12L2 2' stroke='%23fff' stroke-opacity='0.4' fill='none' stroke-width='5'/%3E%3C/svg%3E%0A");
 	background-repeat: no-repeat;
-	background-size: 2rem;
 	background-position: center center;
-	text-indent: -300%;
+	background-size: 2rem;
 }
 
 .tns-controls button:hover {
@@ -42,237 +42,15 @@ $carousel-gradient-translucent: rgba(0, 0, 0, .7);
 /* page indicators */
 .tns-nav {
 	@apply absolute z-40 flex;
-	bottom: 2rem;
 	right: 6rem;
+	bottom: 2rem;
 }
 
 .tns-nav button {
-	@apply inline-block w-4 h-4 m-2 border-2 rounded-full cursor-pointer border-unit-accent;
+	@apply inline-block w-4 h-4 m-2 border-2 border-white rounded-full cursor-pointer;
 	transition: .4s ease-in-out;
 }
 
 .tns-nav .tns-nav-active {
-	@apply border-8;
+	@apply border-8 border-ubc-blue;
 }
-
-/** vueperslide styles */
-/*
-.vueperslide {
-	@apply no-underline bg-black;
-}
-
-.vueperslides__progress>* {
-	background: $unit-primary;
-}
-
-.vueperslide__content-wrapper {
-	background-color: rgba(0,33,69,.3);
-}
-*/
-
-/** responsive type for title between 320 and 1200px */
-/*
-.vueperslide__title {
-	@apply text-xl font-semibold leading-none tracking-wider text-white;
-}
-*/
-
-
-/** betweem the two breakpoints, increase base 20px size to a max of 54px */
-/*
-@media screen and (min-width: $breakpoint--clf7-xs) {
-
-  .vueperslide__title {
-    font-size: calc(20px + 34 * ((100vw - $breakpoint--clf7-xs) / $breakpoint--clf7-lg));
-	}
-
-}
-*/
-
-/*
-@media screen and (min-width: $breakpoint--clf7-lg) {
-
-  .vueperslide__title {
-    font-size: 54px;
-	}
-
-}
-
-.vueperslide__content {
-	@apply text-xl text-white;
-}
-
-.vueperslides__arrow svg {
-	padding: 0;
-}
-
-.vueperslides__bullet,
-.vueperslides__bullets button {
-	border-radius: 50px;
-}
-
-.vueperslides--bullets-outside .vueperslides__bullet,
-.vueperslides--bullets-outside .vueperslides__bullets button {
-	@apply text-unit-primary;
-}
-
-.slide-content--bottom .vueperslide__content-wrapper {
-	align-items: flex-start !important;
-	justify-content: flex-end  !important;
-	text-align: left  !important;
-	padding: 3rem 2rem;
-}
-
-@media (max-width: $breakpoint--clf7-md--max) {
-	.slide-content--bottom .vueperslides__arrows {
-		display: none;
-	}
-}
-
-
-@media (min-width: $breakpoint--clf7-md) {
-
-	.slide-indicator--right .vueperslides__bullets {
-		justify-content: flex-end;
-		padding: 1rem 3rem;
-	}
-
-	.slide-content--bottom .vueperslide__content-wrapper {
-		padding: 6rem 8rem;
-	}
-
-}
-*/
-
-/*
-.carousel-item {
-	position: relative;
-	display: none;
-	width: 100%;
-	overflow: hidden;
-}
-
-.carousel .carousel-item.active {
-	display: block;
-}
-
-.carousel .carousel-inner {
-	position: relative;
-}
-
-.carousel button.pause {
-	position: relative;
-	top: 5px;
-	right: -20px;
-	left: -300em;
-	display: block;
-	width: auto;
-	height: auto;
-	margin-bottom: 10px;
-	font-size: 1.25rem;
-	border: thin solid outset;
-}
-
-.carousel button[aria-disabled='true'] {
-	color: $carousel-button--disabled;
-}
-
-.carousel button.pause:focus {
-	position: relative;
-	top: 5px;
-	right: -20px;
-	left: 0;
-	display: block;
-	width: auto;
-	height: auto;
-	margin-bottom: 10px;
-	font-size: 20px;
-}
-
-.carousel .carousel-items {
-	border: solid 2px transparent;
-}
-
-.carousel .carousel-items.focus {
-	border-color: $carousel-item--focus-border;
-	outline: solid 1px $carousel-item--focus-outline;
-}
-
-.carousel .carousel-inner .carousel-image a img {
-	width: 100%;
-	height: 100%;
-}
-
-.carousel .carousel-inner .carousel-caption a:focus,
-.carousel .carousel-inner .carousel-caption a:hover {
-	outline: solid 2px $carousel-item--focus-outline;
-	outline-offset: 1px;
-}
-
-.carousel .carousel-caption {
-	position: absolute;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	padding: 1.5rem 10%;
-	color: $white;
-	text-shadow: $carousel-caption--text-shadow;
-}
-
-.carousel .carousel-inner .carousel-caption {
-	right: 0;
-	bottom: 0;
-	left: 0;
-	padding: 3rem 10%;
-	text-shadow: none;
-}
-
-.carousel .carousel-control {
-	position: absolute;
-	top: 0;
-	z-index: 10;
-	color: $white;
-	font-weight: 700;
-	font-size: 200%;
-	text-align: center;
-	text-shadow: $carousel-caption--text-shadow;
-}
-
-.carousel .carousel-control svg {
-	position: relative;
-	top: 45%;
-	display: inline-block;
-}
-
-.carousel .carousel-control:focus {
-	border: 3px solid $white;
-	outline: 1px solid $carousel-item--focus-outline;
-}
-
-.carousel .carousel-control.previous {
-	bottom: 0;
-	width: 10%;
-}
-
-.carousel .carousel-control.previous:focus,
-.carousel .carousel-control.previous:hover {
-	bottom: 0;
-	width: 10%;
-	background-image: linear-gradient(to right, $carousel-gradient-translucent 0, $carousel-gradient-transparent 100%);
-}
-
-.carousel .carousel-control.next {
-	right: 0;
-	bottom: 0;
-	width: 10%;
-}
-
-.carousel .carousel-control.next:focus,
-.carousel .carousel-control.next:hover {
-	right: 0;
-	bottom: 0;
-	width: 10%;
-	background-image: linear-gradient(to right, $carousel-gradient-transparent 0, $carousel-gradient-translucent 100%);
-}
-
-*/

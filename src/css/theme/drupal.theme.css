@@ -7,54 +7,60 @@
 /* drupal media */
 figure.align-center,
 figure.align-left,
-figure.align-right {
+figure.align-right,
+figure.img-and-caption {
 	display: table;
 }
 
 figure.align-center figcaption,
 figure.align-left figcaption,
-figure.align-right figcaption {
+figure.align-right figcaption,
+figure.img-and-caption figcaption {
 	display: table-caption;
 	caption-side: bottom;
 }
 
 .media--type-image {
-  margin-top:calc(var(--leading) * var(--base-font-size))
+	margin-top: calc(var(--leading) * var(--base-font-size));
 }
 
 figure .media--type-image img {
-  width:100%
+	width: 100%;
 }
 
 .align-left.media--type-image,
 figure.align-left {
-  margin-right: calc(var(--leading) * var(--base-font-size));
-	margin-bottom:calc(var(--leading) * var(--base-font-size));
 	float: left;
+	margin-right: calc(var(--leading) * var(--base-font-size));
+	margin-bottom: calc(var(--leading) * var(--base-font-size));
 }
 
 .align-right.media--type-image,
 figure.align-right {
-  margin-left: calc(var(--leading) * var(--base-font-size));
-	margin-bottom:calc(var(--leading) * var(--base-font-size));
 	float: right;
+	margin-bottom: calc(var(--leading) * var(--base-font-size));
+	margin-left: calc(var(--leading) * var(--base-font-size));
 }
 
 .align-left.media--type-image,
 .align-right.media--type-image {
-  display:inline-block
+	display: inline-block;
 }
 
 .align-center.media--type-image img,
 figure.align-center {
-  margin-left: auto;
-  margin-right:auto
+	margin-right: auto;
+	margin-left: auto;
 }
 
-figure.align-center > article, figure.align-center > div {
-  display: block;
-  max-width:100%
+figure.align-center > article,
+figure.align-center > div {
+	display: block;
+	max-width: 100%;
 }
+
+
+
 
 /* paragraphs */
 .paragraph--type--text__inner > :first-child,
@@ -96,59 +102,31 @@ figure.align-center > article, figure.align-center > div {
 }
 
 /* views pager */
+
 /* Pager */
 .bg-caret--blue,
 .pager__item--next a,
 .pager__item--previous a {
-  overflow: hidden;
-  text-indent: -200em;
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%23002145' d='M65.67 36.36L34.32 5 20.68 18.64 52 50 20.68 81.35 34.32 95l45-45z'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-size:1em 1em
+	overflow: hidden;
+	text-indent: -200em;
+	background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%23002145' d='M65.67 36.36L34.32 5 20.68 18.64 52 50 20.68 81.35 34.32 95l45-45z'/%3E%3C/svg%3E");
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: 1em 1em;
 }
 
 .pager__item--previous a {
-  transform:rotate(180deg)
+	transform: rotate(180deg);
 }
 
 .bg-caret--white,
 .pager__item--next a:hover,
 .pager__item--previous a:hover {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%23fff' d='M65.67 36.36L34.32 5 20.68 18.64 52 50 20.68 81.35 34.32 95l45-45z'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-size:1em 1em
+	background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%23fff' d='M65.67 36.36L34.32 5 20.68 18.64 52 50 20.68 81.35 34.32 95l45-45z'/%3E%3C/svg%3E");
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: 1em 1em;
 }
-/*
-.pager__items {
-	@apply inline-flex;
-	line-height: 2.5;
-}
-
-.pager__items a,
-.pager__items .pager__item--current {
-	@apply block w-12 h-12 mx-1 text-center no-underline border-2 rounded-full text-ubc-blue;
-	border-color: transparent;
-}
-
-.pager__items a:hover {
-	@apply border-grey-300;
-}
-
-.pager__items .pager__item--current,
-.pager__items .is-active a {
-	@apply font-semibold text-center border-ubc-blue-neptune text-grey-900;
-}
-
-@media (min-width: $breakpoint--xxl) {
-
-	.pager__items {
-		line-height: 2;
-	}
-
-}
-*/
 
 /* node unpublished styles */
 .node--unpublished .unpublished {
@@ -167,7 +145,6 @@ figure.align-center > article, figure.align-center > div {
 	text-transform: uppercase;
 	word-wrap: break-word;
 }
-
 
 /* jquery datepicker */
 .ui-datepicker {
@@ -197,7 +174,7 @@ figure.align-center > article, figure.align-center > div {
 
 .webform-submission-form .fieldset-legend.form-required::after {
 	color: $input-required-color;
-	font-weight: 700;
+	font-weight: 600;
 	content: ' *';
 }
 

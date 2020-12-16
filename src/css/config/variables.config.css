@@ -11,7 +11,7 @@ $default-typeface: $text-font-stack;
 $alternate-typeface: $serif-font-stack;
 
 /* Type Sizes */
-$base-line-height: 1.625;
+$base-line-height: var(--leading);
 $leading: $base-line-height;
 $scale: 1.2;
 
@@ -43,9 +43,7 @@ $text-64: $text-7xl; /* 64px */
 $text-80: $text-8xl; /* 80px */
 $text-122: $text-9xl; /* 122px */
 
-/* Colors (preference is given to HSLA format) */
-
-/* Online color converter: https://www.w3schools.com/colors/colors_converter.asp */
+/* Colors */
 $transparent: transparent;
 $black: #000;
 $white: #fff;
@@ -83,7 +81,7 @@ $white--translucent: rgba(255, 255, 255, .2);
 $ubc-blue--transparent: rgba(0, 33, 69, .9);
 $ubc-blue--tint: rgba(0, 33, 69, .25);
 
-/* Copy text color */
+/* Default text color */
 $text-color: $grey-900;
 
 $default-link-color: $ubc-blue-cobalt;
@@ -93,15 +91,6 @@ $default-link-color-active: $ubc-blue;
 $box-shadow-color: rgba(0, 0, 0, .1);
 $image-overlay-bg-colour: rgba(69, 69, 69, 1);
 $image-overlay-screen-colour: rgba(125, 134, 140, .2);
-$page-title-bg-mobile: rgba(255, 255, 255, .5);
-
-/* Gradient Colours */
-$gradient-grey-transparent: rgba(69, 69, 69, 0);
-$gradient-grey-intermediate: rgba(69, 69, 69, .6);
-$gradient-grey-intermediate-dark: rgba(69, 69, 69, .8);
-$gradient-grey-opaque: rgba(69, 69, 69, 1);
-$gradient-grey-lighter-opaque: rgba(125, 134, 140, 1);
-$gradient-grey-lighter-intermediate: rgba(125, 134, 140, .5);
 
 /* CLF 8 Breakpoints map */
 $breakpoint--sm: 640px;
@@ -135,7 +124,6 @@ $breakpoint--clf7-xxl--max: 2399px;
 $breakpoint--sm: $breakpoint--clf7-sm;
 $breakpoint--md: $breakpoint--clf7-md;
 $breakpoint--lg: $breakpoint--clf7-lg;
-
 
 $breakpoint--sm--max: $breakpoint--clf7-sm--max;
 $breakpoint--md--max: $breakpoint--clf7-md--max;

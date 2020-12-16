@@ -1,29 +1,38 @@
 /** @define layouts */
 
 /*
-* This file contains css grid based layouts using a 12 column grid
+* This file contains css for layouts
 */
 
-/* Add a narrow container */
-.container-narrow {
+.container-narrow,
+.container-sm {
 	width: 100%;
 }
 
 @media (min-width: $breakpoint--sm) {
-	.container-narrow {
+
+	.container-narrow,
+	.container-sm {
 		max-width: 640px;
 	}
 
 }
 
 @media (min-width: $breakpoint--md) {
-	.container-narrow {
+
+	.container-narrow,
+	.container-sm {
 		max-width: 960px;
 	}
 
 }
 
 @media (min-width: $breakpoint--lg) {
+
+	.container-sm {
+		@apply max-w-4xl;
+	}
+
 	.container-narrow {
 		@apply max-w-5xl;
 	}
@@ -31,227 +40,13 @@
 }
 
 @media (min-width: $breakpoint--xl) {
+
+	.container-sm {
+		@apply max-w-5xl;
+	}
+
 	.container-narrow {
-		@apply max-w-6xl;
-	}
-
-}
-
-/* Grid */
-/* https://css-tricks.com/preventing-a-grid-blowout/ */
-.grid-area-a,
-.grid-area-b,
-.grid-area-c,
-.grid-area-d,
-.grid-area-e,
-.grid-area-f {
-  min-width: 0;
-}
-
-.grid-area-a {
-	grid-area: a;
-}
-
-.grid-area-b {
-	grid-area: b;
-}
-
-.grid-area-c {
-	grid-area: c;
-}
-
-.grid-area-d {
-	grid-area: d;
-}
-
-.grid-area-e {
-	grid-area: e;
-}
-
-.grid-area-f {
-	grid-area: f;
-}
-
-.grid-container {
-	display: grid;
-	grid-row-gap: 32px;
-	grid-column-gap: 32px;
-}
-
-.grid-container--basic,
-.grid-container--side-l,
-.grid-container--side-r,
-.grid-container--landing {
-	grid-template-areas:
-		'a'
-		'c'
-		'd'
-		'b';
-	grid-template-rows: auto auto auto auto;
-	grid-template-columns: 1fr;
-}
-
-.grid-container--plain,
-.grid-container--text-focus {
-	grid-template-areas:
-		'a'
-		'b'
-		'c'
-		'd';
-	grid-template-rows: auto auto auto auto;
-	grid-template-columns: 1fr;
-}
-
-.grid-container--home {
-	grid-template-areas:
-		'a'
-		'c'
-		'd'
-		'e'
-		'f'
-		'b';
-	grid-template-rows: auto;
-	grid-template-columns: 1fr;
-}
-
-.grid-container--featured {
-	grid-column-gap: 0;
-	grid-template-areas:
-		'b'
-		'c';
-	grid-template-rows: 1fr auto;
-	grid-template-columns: auto;
-}
-
-.grid-container--footer {
-	grid-template-areas:
-		'a'
-		'b';
-	grid-template-rows: auto auto;
-	grid-template-columns: auto;
-}
-
-@media (min-width: $breakpoint--sm) {
-
-	.grid-container--footer {
-		grid-template-areas: 'a a b';
-		grid-template-rows: auto;
-		grid-template-columns: repeat(3, 1fr);
-	}
-
-}
-
-@media (min-width: $breakpoint--md) {
-
-	.grid-container--plain {
-		grid-template-areas:
-			'a a a a a a a a a a a a'
-			'b b b b b b b b b b b b'
-			'c c c c c c c c c c c c'
-			'd d d d d d d d d d d d';
-		grid-template-rows: auto auto auto auto;
-		grid-template-columns: repeat(12, 1fr);
-	}
-
-	.grid-container--basic {
-		grid-template-areas:
-			'b b b a a a a a a c c c'
-			'd d d d d d d d d d d d';
-		grid-template-rows: auto auto;
-		grid-template-columns: repeat(12, 1fr);
-	}
-
-	.grid-container--side-r,
-	.grid-container--landing {
-		grid-template-areas:
-			'a a a a a a a a b b b b'
-			'c c c c c c c c c c c c'
-			'd d d d d d d d d d d d';
-		grid-template-rows: auto auto auto;
-		grid-template-columns: repeat(12, 1fr);
-	}
-
-	.grid-container--side-l {
-		grid-template-areas:
-			'b b b b a a a a a a a a'
-			'c c c c c c c c c c c c'
-			'd d d d d d d d d d d d';
-		grid-template-rows: auto auto auto;
-		grid-template-columns: repeat(12, 1fr);
-	}
-
-	.grid-container--text-focus {
-		grid-template-areas:
-			'. a a a a a a a a a a .'
-			'b b b b b b b b b b b b'
-			'c c c c c c c c c c c c'
-			'd d d d d d d d d d d d';
-		grid-template-rows: auto auto auto auto;
-		grid-template-columns: repeat(12, 1fr);
-	}
-
-	.grid-container--home {
-		grid-template-areas:
-			'a a a a a a a . b b b b'
-			'c c c c c c c . b b b b'
-			'd d d d d d d d d d d d'
-			'. . e e e e e e e e . .'
-			'f f f f f f f f f f f f';
-		grid-template-rows: auto 1fr auto auto auto;
-		grid-template-columns: repeat(12, 1fr);
-	}
-
-}
-
-@media (min-width: $breakpoint--lg) {
-
-	.grid-container--side-r,
-	.grid-container--landing {
-		grid-template-areas:
-			'a a a a a a a . . b b b'
-			'c c c c c c c c c c c c'
-			'd d d d d d d d d d d d';
-		grid-template-rows: auto auto auto;
-		grid-template-columns: repeat(12, 1fr);
-	}
-
-	.grid-container--side-l {
-		grid-template-areas:
-			'b b b . . a a a a a a a'
-			'c c c c c c c c c c c c'
-			'd d d d d d d d d d d d';
-		grid-template-rows: auto auto auto;
-		grid-template-columns: repeat(12, 1fr);
-	}
-
-	.grid-container--home {
-		grid-template-areas:
-			'a a a a a a a . . b b b'
-			'c c c c c c . . . b b b'
-			'd d d d d d d d d d d d'
-			'. . e e e e e e e e . .'
-			'f f f f f f f f f f f f';
-		grid-template-rows: auto 1fr auto auto auto;
-		grid-template-columns: repeat(12, 1fr);
-	}
-
-	.grid-container--text-focus {
-		grid-template-areas:
-			'. . a a a a a a a a . .'
-			'b b b b b b b b b b b b'
-			'c c c c c c c c c c c c'
-			'd d d d d d d d d d d d';
-		grid-template-rows: auto auto auto auto;
-		grid-template-columns: repeat(12, 1fr);
-	}
-
-	.grid-container--featured {
-		grid-column-gap: 0;
-		grid-template-areas:
-			'b . .'
-			'. c .';
-		grid-template-rows: 1fr auto;
-		grid-template-columns: 7fr 2fr 3fr;
+		@apply max-w-7xl;
 	}
 
 }
