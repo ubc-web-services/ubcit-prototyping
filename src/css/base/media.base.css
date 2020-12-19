@@ -14,11 +14,11 @@ figure {
 }
 
 figcaption {
-	@apply pt-2 pr-2 text-sm text-right text-grey-700;
+	@apply px-3 pt-2 text-sm text-grey-700;
 }
 
-figcaption::before {
-	content: '— ';
+figure.w-full img {
+	width: 100%;
 }
 
 .img-and-caption {
@@ -35,10 +35,10 @@ svg {
 
 /* embedded media (iframes) */
 .media-embed-letterbox,
-.media-wrapper {
+.media-wrapper,
+.video-w-caption article {
 	position: relative;
 	height: 0 !important;
-	padding-top: 30px;
 	padding-bottom: 56.25%;
 	overflow: hidden;
 }
@@ -48,12 +48,19 @@ svg {
 .media-embed-letterbox object,
 .media-wrapper embed,
 .media-wrapper iframe,
-.media-wrapper object {
+.media-wrapper object,
+.video-w-caption embed,
+.video-w-caption iframe,
+.video-w-caption object {
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100% !important;
 	height: 100% !important;
+}
+
+.video-w-caption figure {
+	width: 100%;
 }
 
 .img-cover img {

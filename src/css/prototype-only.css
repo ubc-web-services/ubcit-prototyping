@@ -1,0 +1,60 @@
+/* prototype only styles */
+
+/* Cards */
+.flex-item .card {
+  height: 100%;
+  position: relative;
+}
+
+.widget-card {
+  margin-top: 2rem;
+}
+
+@media (min-width: 960px) {
+
+  .md--flex-grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -1rem;
+    margin-left: -1rem;
+  }
+
+  .md--flex-grid .md--flex-1 {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+  .md--flex-grid .md--flex-2 {
+    -ms-flex: 2;
+    flex: 2;
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+}
+
+.unit-icon {
+  display: inline;
+}
+
+.widget-svgicon {
+  display: inline-block;
+  margin-right: auto;
+  margin-left: auto;
+  -ms-grid-row-align: center;
+  align-self: center;
+}
+
+/* reset tag class for prism code highlighting */
+.token.tag {
+	display: initial;
+	margin-right: initial;
+	padding: initial;
+	color: initial;
+	font-size: initial;
+	line-height: initial;
+	background-color: initial;
+}

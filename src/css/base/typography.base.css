@@ -41,8 +41,7 @@ body {
 
 /* heading elements */
 h1,
-.h1,
-.heading-one {
+.h1 {
 	margin-top: calc($leading * 3.5rem);
 	margin-bottom: 0;
 	font-weight: $h1-weight;
@@ -52,8 +51,7 @@ h1,
 }
 
 h2,
-.h2,
-.heading-two {
+.h2 {
 	margin-top: calc($leading * 2.25rem);
 	margin-bottom: 0;
 	font-weight: $h2-weight;
@@ -63,8 +61,7 @@ h2,
 }
 
 h3,
-.h3,
-.heading-three {
+.h3 {
 	margin-top: calc($leading * 1.75rem);
 	margin-bottom: 0;
 	font-weight: $h3-weight;
@@ -75,8 +72,7 @@ h3,
 }
 
 h4,
-.h4,
-.heading-four {
+.h4 {
 	margin-top: calc($leading * 1.25rem);
 	margin-bottom: 0;
 	font-weight: $h4-weight;
@@ -87,8 +83,7 @@ h4,
 }
 
 h5,
-.h5,
-.heading-five {
+.h5 {
 	margin-top: calc($leading * 1rem);
 	margin-bottom: 0;
 	font-weight: $h5-weight;
@@ -99,7 +94,7 @@ h5,
 }
 
 h6,
-.heading-six {
+.h6 {
 	margin-top: calc($leading * 1rem);
 	margin-bottom: 0;
 	font-weight: $h6-weight;
@@ -109,8 +104,7 @@ h6,
 	letter-spacing: .05em;
 }
 
-.heading-display,
-.page-title {
+.heading-display {
 	font-weight: $h1-weight;
 	font-size: $text-5xl;
 	font-family: $default-typeface;
@@ -167,7 +161,6 @@ sub {
 }
 
 /* Lists */
-
 ul,
 ol,
 dl {
@@ -183,12 +176,12 @@ ol ul {
 	margin-bottom: 0;
 }
 
-.text-formatted ul {
+ul {
 	@apply pl-6;
 	list-style-type: disc;
 }
 
-.text-formatted ol {
+ol {
 	@apply pl-6;
 	list-style-type: decimal;
 }
@@ -198,7 +191,6 @@ dt {
 }
 
 /* Blockquote */
-
 blockquote {
 	@apply relative py-4 m-8 text-xl font-bold text-ubc-blue-sea;
 	margin-bottom: calc($leading * 1rem);
@@ -244,8 +236,8 @@ cite::before,
 }
 
 
-/* Tables */
 
+/* Tables */
 table {
 	margin-top: calc($leading * 1rem);
 	font-size: .875em;
@@ -259,78 +251,62 @@ hr,
 }
 
 .hr--styled {
+	max-width: 7rem;
 	margin: calc($leading * 1rem) 0;
 	border-top: .25rem solid $ubc-blue;
-	max-width: 7rem;
 }
 
 /* Text utilities */
-
 .text-lead {
 	margin-top: calc($leading * 1.5rem);
 	margin-bottom: 0;
-	font-size: $text-2xl;
+	font-size: $text-xl;
 	line-height: $leading;
 	color: $ubc-blue-sea;
 }
 
-.text-lead--mt {
-	margin-top: calc($leading * 1.5rem);
-}
-
-.text--small {
-	font-size: $scale * .875rem;
-}
-
-@media (min-width: $breakpoint--xxl) {
+@media (min-width: $breakpoint--sm) {
 
 	body {
 		font-size: $text-2xl;
 	}
 
 	/* heading elements */
-
 	h1,
-	.h1,
-	.heading-one {
+	.h1 {
 		margin-top: calc($leading * 3rem);
 		font-size: $text-8xl;
 		letter-spacing: -.01em;
 	}
 
 	h2,
-	.h2,
-	.heading-two {
+	.h2 {
 		margin-top: calc($leading * 2.5rem);
 		font-size: $text-7xl;
 	}
 
 	h3,
-	.h3,
-	.heading-three {
+	.h3 {
 		margin-top: calc($leading * 2.5rem);
 		font-size: $text-6xl;
 		line-height: 1.25;
 	}
 
 	h4,
-	.h4,
-	.heading-four {
+	.h4 {
 		margin-top: calc($leading * 1rem);
 		font-size: $text-5xl;
 	}
 
 	h5,
-	.h5,
-	.heading-five {
+	.h5 {
 		margin-top: calc($leading * .875rem);
 		font-size: $text-3xl;
 		line-height: 1.4;
 	}
 
 	h6,
-	.h6,
-	.heading-six {
+	.h6 {
 		font-size: $text-2xl;
 	}
 
@@ -352,28 +328,6 @@ hr,
 		font-size: $text-5xl;
 	}
 
-}
-
-/* non-responsive text utilities */
-
-/* placed last to allow to take precedence in the cascade */
-.text-hug {
-	margin-top: 0;
-}
-
-/* we use the 'ch' unit, which is the width of the '0' [zero] character in the current font. */
-
-/* https://meyerweb.com/eric/thoughts/2018/06/28/what-is-the-css-ch-unit/ */
-.text-measure {
-	max-width: 60ch;
-}
-
-.text-measure-sm {
-	max-width: 50ch;
-}
-
-.text-measure-lg {
-	max-width: 70ch;
 }
 
 @media (min-width: $breakpoint--xxl) {

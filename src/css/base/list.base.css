@@ -18,6 +18,10 @@ ol.item-list,
 }
 
 /* inline list */
+.list-inline {
+	@apply pl-0 list-none;
+}
+
 .list-inline li {
 	display: inline;
 }
@@ -45,7 +49,7 @@ ol.item-list,
 
 /* bordered list */
 .list-bordered {
-	@apply border border-grey-500;
+	@apply pl-0 list-none border border-grey-500;
 }
 
 .list-bordered li {

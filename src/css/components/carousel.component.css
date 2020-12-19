@@ -19,16 +19,16 @@ $carousel-gradient-translucent: rgba(0, 0, 0, .7);
 
 /* previous / next buttons */
 .tns-controls {
-	@apply absolute inset-0 z-40 flex justify-between;
+	@apply absolute inset-0 z-40 flex justify-between pointer-events-none;
 }
 
 .tns-controls button {
-	@apply self-center block w-20 h-20 overflow-hidden;
+	@apply self-center block w-20 h-20 overflow-hidden pointer-events-auto;
 	text-indent: -300%;
 	background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 22L12 12L2 2' stroke='%23fff' stroke-opacity='0.4' fill='none' stroke-width='5'/%3E%3C/svg%3E%0A");
 	background-repeat: no-repeat;
 	background-position: center center;
-	background-size: 2rem;
+	background-size: 1.5rem;
 }
 
 .tns-controls button:hover {
@@ -53,4 +53,27 @@ $carousel-gradient-translucent: rgba(0, 0, 0, .7);
 
 .tns-nav .tns-nav-active {
 	@apply border-8 border-ubc-blue;
+}
+
+/* alternate slider style for cards */
+.slider--alt .tns-controls {
+	@apply px-6;
+}
+
+.slider--alt .tns-nav {
+	@apply absolute bottom-auto right-auto z-40 flex justify-center w-full mx-auto;
+	top: 2.5rem;
+}
+
+.slider--alt .tns-nav button {
+	@apply border-8;
+	border-color: rgba(255, 255, 255, .6);
+}
+
+.slider--alt .tns-nav .tns-nav-active {
+	@apply border-ubc-blue;
+}
+
+.slider--alt .carousel__cell {
+	@apply p-6;
 }
