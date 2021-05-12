@@ -39,7 +39,7 @@
 		"@babel/polyfill": "^7.11.5",
 		"autoprefixer": "^9.8.6",
 		"clickout-event": "^1.0.2",
-		"postcss": "^7.0.35",
+		"postcss": "^8.2.10",
 		"tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.1",
 		"tiny-slider": "^2.9.3",
 		"twig-cli-tmpl": "^1.0.1",
