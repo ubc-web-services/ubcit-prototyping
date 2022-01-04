@@ -4,29 +4,29 @@
 * we need to turn off autoprefixer for the block of css as it automatically strips the -webkit-box-orient property
 */
 
-.text-truncate {
+.truncate {
 
-	/* autoprefixer: off */
-	display: -webkit-box;
-	overflow: hidden;
-	-webkit-box-orient: vertical;
-	-webkit-line-clamp: 1;
+  /* autoprefixer: off */
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
 }
 
-.text-truncate-2 {
+.truncate-2 {
 
-	/* autoprefixer: off */
-	display: -webkit-box;
-	overflow: hidden;
-	-webkit-box-orient: vertical;
-	-webkit-line-clamp: 2;
+  /* autoprefixer: off */
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 
-.text-truncate-3 {
+.truncate-3 {
 
-	/* autoprefixer: off */
-	display: -webkit-box;
-	overflow: hidden;
-	-webkit-box-orient: vertical;
-	-webkit-line-clamp: 3;
+  /* autoprefixer: off */
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
 }

@@ -6,29 +6,28 @@
 
 @media (prefers-color-scheme: dark) {
 
-	body {
-		color: #ccc !important;
-		background-color: #222;
-	}
+  body {
+    color: #ccc !important;
+    background-color: #222;
+  }
 
-	.tabcordion__tab button,
-	.text-lead,
-	.text-black,
-	.card__title,
-	.text-ubc-blue {
-		color: #ccc !important;
-	}
+  .tabcordion__tab button,
+  .text-lead,
+  .text-black,
+  .card__title,
+  .text-ubc-blue {
+    color: #ccc !important;
+  }
 
-	.card__meta {
-		color: #000 !important;
-	}
+  .card__meta {
+    color: #000 !important;
+  }
 
-	.ubc-card {
-		border: 1px solid #ccc;
-	}
+  .ubc-card {
+    border: 1px solid #ccc;
+  }
 
-	.bg-white {
-		background-color: inherit;
-	}
-
+  .bg-white {
+    background-color: inherit;
+  }
 }

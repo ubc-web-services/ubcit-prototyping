@@ -1,7 +1,7 @@
 <template>
   <div class="tooltip" :class="[classes]">
     <button aria-describedby="tooltip-desc" @click="toggle" class="tooltip__trigger" :class="[triggerclasses]">
-      <svg role="presentation" class="pointer-events-none tooltip__icon" :class="[svgiconclasses]">
+      <svg role="img" class="pointer-events-none tooltip__icon" :class="[svgiconclasses]">
         <use :xlink:href="iconPath"></use>
       </svg>{{title}}
     </button>

@@ -3,17 +3,20 @@
 /*
 * This file contains all styles related to the tag component.
 */
-
 .tag {
-	@apply inline-block mr-4 text-xs text-white shadow bg-ubc-blue;
-	padding: .75em .75em .5em;
-	line-height: 1;
+  @apply mr-4 text-xs text-white no-underline rounded;
+
+  padding: 0.35em 0.75em 0.25em;
+  background-color: rgba(0, 33, 69, 1);
 }
 
-.tag--grey {
-	@apply text-black bg-grey-300;
+.tag::before {
+  content: "# ";
+  font-size: 1.25em;
+  line-height: 0;
 }
 
-.tag--white {
-	@apply bg-white text-ubc-blue;
+.tag a,
+.tag a:hover {
+  @apply text-white no-underline;
 }

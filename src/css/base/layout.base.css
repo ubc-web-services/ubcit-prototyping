@@ -4,268 +4,153 @@
 * This file contains css for layouts
 */
 
-.container-narrow,
-.container-sm {
-	width: 100%;
+.container-narrow {
+  width: 100%;
+}
+
+.w-constrain {
+  max-width: 1920px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 @media (min-width: $breakpoint--sm) {
-
-	.container-narrow,
-	.container-sm {
-		max-width: 640px;
-	}
-
+  .container-narrow {
+    max-width: 640px;
+  }
 }
 
 @media (min-width: $breakpoint--md) {
-
-	.container-narrow,
-	.container-sm {
-		max-width: 960px;
-	}
-
+  .container-narrow {
+    max-width: 960px;
+  }
 }
 
 @media (min-width: $breakpoint--lg) {
-
-	.container-sm {
-		@apply max-w-4xl;
-	}
-
-	.container-narrow {
-		@apply max-w-5xl;
-	}
-
-}
-
-@media (min-width: $breakpoint--xl) {
-
-	.container-sm {
-		@apply max-w-5xl;
-	}
-
-	.container-narrow {
-		@apply max-w-7xl;
-	}
-
+  .container-narrow {
+    @apply max-w-5xl;
+  }
 }
 
 /* automatic layouts for grid */
 .auto-grid {
-	@apply flex flex-row flex-wrap;
-	margin: 0 -1rem;
-}
-
-.auto-grid .auto-grid__cell {
-	@apply m-4;
+  @apply flex flex-row flex-wrap gap-4;
 }
 
 .auto-grid--full .auto-grid__cell {
-	width: calc(100% - 2rem);
+  width: 100%;
 }
 
 .auto-grid--half .auto-grid__cell {
-	width: calc(50% - 2rem);
+  width: 50%;
 }
 
 .auto-grid--third .auto-grid__cell {
-	width: calc(33.33333% - 2rem);
+  width: 33.33333%;
 }
 
 .auto-grid--quarter .auto-grid__cell {
-	width: calc(25% - 2rem);
+  width: 25%;
 }
 
 .auto-grid--fifth .auto-grid__cell {
-	width: calc(20% - 2rem);
+  width: 20%;
 }
 
 .auto-grid--sixth .auto-grid__cell {
-	width: calc(16.66666% - 2rem);
+  width: 16.66666%;
 }
 
 @media (min-width: $breakpoint--sm) {
 
-	.sm--auto-grid {
-		@apply flex flex-row flex-wrap;
-		margin: 0 -1rem;
-	}
+  .sm--auto-grid {
+    @apply flex flex-row flex-wrap gap-4;
+  }
 
-	.sm--auto-grid .auto-grid__cell {
-		@apply m-4;
-	}
+  .sm--auto-grid--full .auto-grid__cell {
+    width: 100%;
+  }
 
-	.sm--auto-grid--full .auto-grid__cell {
-		width: calc(100% - 2rem);
-	}
+  .sm--auto-grid--half .auto-grid__cell {
+    width: 50%;
+  }
 
-	.sm--auto-grid--half .auto-grid__cell {
-		width: calc(50% - 2rem);
-	}
+  .sm--auto-grid--third .auto-grid__cell {
+    width: 33.33333%;
+  }
 
-	.sm--auto-grid--third .auto-grid__cell {
-		width: calc(33.33333% - 2rem);
-	}
+  .sm--auto-grid--quarter .auto-grid__cell {
+    width: 25%;
 
-	.sm--auto-grid--quarter .auto-grid__cell {
-		width: calc(25% - 2rem);
-	}
+  }
 
-	.sm--auto-grid--fifth .auto-grid__cell {
-		width: calc(20% - 2rem);
-	}
+  .sm--auto-grid--fifth .auto-grid__cell {
+    width: 20%;
+  }
 
-	.sm--auto-grid--sixth .auto-grid__cell {
-		width: calc(16.66666% - 2rem);
-	}
-
+  .sm--auto-grid--sixth .auto-grid__cell {
+    width: 16.66666%;
+  }
 }
 
 @media (min-width: $breakpoint--md) {
 
-	.md--auto-grid {
-		@apply flex flex-row flex-wrap;
-		margin: 0 -1rem;
-	}
+  .md--auto-grid {
+    @apply flex flex-row flex-wrap gap-4;
+  }
 
-	.md--auto-grid .auto-grid__cell {
-		@apply m-4;
-	}
+  .md--auto-grid--full .auto-grid__cell {
+    width: 100%;
+  }
 
-	.md--auto-grid--full .auto-grid__cell {
-		width: calc(100% - 2rem);
-	}
+  .md--auto-grid--half .auto-grid__cell {
+    width: 50%;
+  }
 
-	.md--auto-grid--half .auto-grid__cell {
-		width: calc(50% - 2rem);
-	}
+  .md--auto-grid--third .auto-grid__cell {
+    width: 33.33333%;
+  }
 
-	.md--auto-grid--third .auto-grid__cell {
-		width: calc(33.33333% - 2rem);
-	}
+  .md--auto-grid--quarter .auto-grid__cell {
+    width: 25%;
+  }
 
-	.md--auto-grid--quarter .auto-grid__cell {
-		width: calc(25% - 2rem);
-	}
+  .md--auto-grid--fifth .auto-grid__cell {
+    width: 20%;
+  }
 
-	.md--auto-grid--fifth .auto-grid__cell {
-		width: calc(20% - 2rem);
-	}
-
-	.md--auto-grid--sixth .auto-grid__cell {
-		width: calc(16.66666% - 2rem);
-	}
-
+  .md--auto-grid--sixth .auto-grid__cell {
+    width: 16.66666%;
+  }
 }
 
 @media (min-width: $breakpoint--lg) {
 
-	.lg--auto-grid {
-		@apply flex flex-row flex-wrap;
-		margin: 0 -1rem;
-	}
+  .lg--auto-grid {
+    @apply flex flex-row flex-wrap gap-4;
+  }
 
-	.lg--auto-grid .auto-grid__cell {
-		@apply m-4;
-	}
+  .lg--auto-grid--full .auto-grid__cell {
+    width: 100%;
+  }
 
-	.lg--auto-grid--full .auto-grid__cell {
-		width: calc(100% - 2rem);
-	}
+  .lg--auto-grid--half .auto-grid__cell {
+    width: 50%;
+  }
 
-	.lg--auto-grid--half .auto-grid__cell {
-		width: calc(50% - 2rem);
-	}
+  .lg--auto-grid--third .auto-grid__cell {
+    width: 33.33333%;
+  }
 
-	.lg--auto-grid--third .auto-grid__cell {
-		width: calc(33.33333% - 2rem);
-	}
+  .lg--auto-grid--quarter .auto-grid__cell {
+    width: 25%;
+  }
 
-	.lg--auto-grid--quarter .auto-grid__cell {
-		width: calc(25% - 2rem);
-	}
+  .lg--auto-grid--fifth .auto-grid__cell {
+    width: 20%;
+  }
 
-	.lg--auto-grid--fifth .auto-grid__cell {
-		width: calc(20% - 2rem);
-	}
-
-	.lg--auto-grid--sixth .auto-grid__cell {
-		width: calc(16.66666% - 2rem);
-	}
-
-}
-
-@media (min-width: $breakpoint--xl) {
-
-	.xl--auto-grid {
-		@apply flex flex-row flex-wrap;
-		margin: 0 -1rem;
-	}
-
-	.xl--auto-grid .auto-grid__cell {
-		@apply m-4;
-	}
-
-	.xl--auto-grid--full .auto-grid__cell {
-		width: calc(100% - 2rem);
-	}
-
-	.xl--auto-grid--half .auto-grid__cell {
-		width: calc(50% - 2rem);
-	}
-
-	.xl--auto-grid--third .auto-grid__cell {
-		width: calc(33.33333% - 2rem);
-	}
-
-	.xl--auto-grid--quarter .auto-grid__cell {
-		width: calc(25% - 2rem);
-	}
-
-	.xl--auto-grid--fifth .auto-grid__cell {
-		width: calc(20% - 2rem);
-	}
-
-	.xl--auto-grid--sixth .auto-grid__cell {
-		width: calc(16.66666% - 2rem);
-	}
-
-}
-
-@media (min-width: $breakpoint--xxl) {
-
-	.xxl--auto-grid {
-		@apply flex flex-row flex-wrap;
-		margin: 0 -1rem;
-	}
-
-	.xxl--auto-grid .auto-grid__cell {
-		@apply m-4;
-	}
-
-	.xxl--auto-grid--full .auto-grid__cell {
-		width: calc(100% - 2rem);
-	}
-
-	.xxl--auto-grid--half .auto-grid__cell {
-		width: calc(50% - 2rem);
-	}
-
-	.xxl--auto-grid--third .auto-grid__cell {
-		width: calc(33.33333% - 2rem);
-	}
-
-	.xxl--auto-grid--quarter .auto-grid__cell {
-		width: calc(25% - 2rem);
-	}
-
-	.xxl--auto-grid--fifth .auto-grid__cell {
-		width: calc(20% - 2rem);
-	}
-
-	.xxl--auto-grid--sixth .auto-grid__cell {
-		width: calc(16.66666% - 2rem);
-	}
-
+  .lg--auto-grid--sixth .auto-grid__cell {
+    width: 16.66666%;
+  }
 }

@@ -3,37 +3,55 @@
 /* adds a set of utilities for inclusion in vue.js */
 
 [v-cloak] {
-	display: none;
+  display: none;
 }
 
 /* Vue Component Transitions */
 .slide-enter-active,
 .slide-leave-active {
-	transition: transform .15s ease;
+  transition: transform 0.15s ease;
 }
 
 .slide-enter,
 .slide-leave-to {
-	transform: translateX(100%);
-	transition: all .15s ease-in 0s;
+  transition: all 0.15s ease-in 0s;
+  transform: translateX(100%);
 }
 
 .fade-enter-active,
 .fade-leave-active {
-	transition: opacity .15s cubic-bezier(.25, .46, .45, .94);
+  transition: opacity 0.25s linear;
 }
+
 .fade-enter,
 .fade-leave-to {
-	opacity: 0;
+  opacity: 0;
+}
+
+.fade-alt-enter-active,
+.fade-alt-leave-active {
+  transition: opacity 0.25s linear;
+}
+
+.fade-alt-enter,
+.fade-alt-leave-to {
+  opacity: 0;
+}
+
+@media (min-width: $breakpoint--md) {
+  .fade-alt-leave-active {
+    transition: none;
+  }
 }
 
 .drop-enter-active,
 .drop-leave-active {
-	transition: opacity .15s cubic-bezier(.25, .46, .45, .94), transform .15s ease;
+  transition: opacity 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.15s ease;
 }
+
 .drop-enter,
 .drop-leave-to {
-	transform: translateY(-100%);
-	opacity: 0;
-	transition: all .15s ease-in 0s;
+  transition: all 0.15s ease-in 0s;
+  transform: translateY(-100%);
+  opacity: 0;
 }

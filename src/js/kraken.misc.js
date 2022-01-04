@@ -1,11 +1,13 @@
-/*!
+/*
  * File: misc.js
  *
  * Desc: js for misc scripts in the theme
+ *
  */
-
-//Drupal.behaviors.krakenMisc = {
-//  attach: function (context, settings) {
-
-//  }
-//};
+//(function(Drupal) {
+//  Drupal.behaviors.krakenMisc = {
+//    attach(context, settings) {
+      // add scroll to top for to top button when needed
+//    }
+//  };
+//})(Drupal);

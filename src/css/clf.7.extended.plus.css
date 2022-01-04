@@ -1,0 +1,21 @@
+@media screen and (min-width: 2400px) {
+  #ubc7-global-menu .clf-container,
+  #ubc7-header .clf-container,
+  #ubc7-unit .clf-container,
+  #ubc7-footer .clf-container,
+  #ubc7-unit-menu .clf-container {
+    width: 2368px;
+  }
+
+  #ubc7-header .span9 {
+    width: 2259px;
+  }
+
+  #ubc7-wordmark {
+    width: 40% !important;
+  }
+
+  .layout--centered #main-content {
+    width: 2400px;
+  }
+}

@@ -3,3 +3,109 @@
 /*
 * This file contains styles for the drupal maintenance page
 */
+@import "config/variables.config.css";
+
+html {
+  color: $text-color;
+  font-family: $default-typeface;
+  font-size: 100%;
+}
+
+body {
+  background-color: #002145 !important;
+  font-family: $default-typeface;
+  font-size: var(--base-font-size);
+  line-height: var(--leading);
+}
+
+.block {
+  display: block;
+}
+
+.max-w-full {
+  max-width: 100%;
+}
+
+.h-screen {
+  height: 100vh;
+}
+
+.h-12 {
+  height: 3rem;
+}
+
+.w-screen {
+  height: 100vw;
+}
+
+.w-12 {
+  width: 3rem;
+}
+
+.mx-auto {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.py-10 {
+  padding-top: 2.5rem;
+  padding-left: 2.5rem;
+}
+
+.px-2 {
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.px-16 {
+  padding-right: 4rem;
+  padding-left: 4rem;
+}
+
+.pb-4 {
+  padding-bottom: 1rem;
+}
+
+.bg-ubc-blue {
+  background-color: #002145;
+}
+
+.bg-grey-50 {
+  background-color: #fafafa;
+}
+
+.text-grey-500 {
+  color: #9e9e9e;
+}
+
+.shadow-lg {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+}
+
+.rounded {
+  border-radius: 0.25rem;
+}
+
+.rounded-sm {
+  border-radius: 0.125rem;
+}
+
+@media (min-width: 640px) {
+
+  .sm--max-w-md {
+    max-width: 34rem;
+  }
+}

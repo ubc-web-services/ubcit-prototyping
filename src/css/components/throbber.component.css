@@ -8,52 +8,47 @@
 * replace the default Drupal ajax throbber because it's ugly
 */
 
-/* variables in file */
-$throbber-background: rgba(255, 255, 255, .5);
-$throbber-border: rgba(51, 51, 51, .25);
-$throbber-color: $unit-primary;
-
 .ajax-progress,
 .ajax-progress--throbber,
 .ajax-progress-throbber,
 .ajax-progress--fullscreen,
 .ajax-progress-fullscreen {
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: 1000;
-	width: 100%;
-	height: 100%;
-	margin: 0;
-	padding: 0;
-	overflow: hidden;
-	text-indent: -9999em;
-	background: $throbber-background;
-	-webkit-border-radius: 0;
-	border-radius: 0;
-	opacity: 1;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  text-indent: -9999em;
+  opacity: 1;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  background: $throbber-background;
 }
 
 .ajax-progress--throbber::after,
 .ajax-progress--fullscreen::after,
 .ajax-progress-throbber::after,
 .ajax-progress-fullscreen::after {
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	display: block;
-	width: 4rem;
-	height: 4rem;
-	margin: auto;
-	overflow: hidden;
-	text-indent: -9999em;
-	background-image: url("data:image/svg+xml,%3Csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='xMidYMid' class='lds-ripple'%3E%3Ccircle cx='50' cy='50' r='31.8736' fill='none' stroke='%238cd0e5' stroke-width='1'%3E%3Canimate attributeName='r' calcMode='spline' values='0;40' keyTimes='0;1' dur='1' keySplines='0 0.2 0.8 1' begin='-0.5s' repeatCount='indefinite'%3E%3C/animate%3E%3Canimate attributeName='opacity' calcMode='spline' values='1;0' keyTimes='0;1' dur='1' keySplines='0.2 0 0.8 1' begin='-0.5s' repeatCount='indefinite'%3E%3C/animate%3E%3C/circle%3E%3Ccircle cx='50' cy='50' r='11.6081' fill='none' stroke='%23002145' stroke-width='1'%3E%3Canimate attributeName='r' calcMode='spline' values='0;40' keyTimes='0;1' dur='1' keySplines='0 0.2 0.8 1' begin='0s' repeatCount='indefinite'%3E%3C/animate%3E%3Canimate attributeName='opacity' calcMode='spline' values='1;0' keyTimes='0;1' dur='1' keySplines='0.2 0 0.8 1' begin='0s' repeatCount='indefinite'%3E%3C/animate%3E%3C/circle%3E%3C/svg%3E");
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: 4rem 4rem;
-	content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  overflow: hidden;
+  width: 4rem;
+  height: 4rem;
+  margin: auto;
+  content: "";
+  text-indent: -9999em;
+  background-image: url("data:image/svg+xml,%3Csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='xMidYMid' class='lds-ripple'%3E%3Ccircle cx='50' cy='50' r='31.8736' fill='none' stroke='%238cd0e5' stroke-width='1'%3E%3Canimate attributeName='r' calcMode='spline' values='0;40' keyTimes='0;1' dur='1' keySplines='0 0.2 0.8 1' begin='-0.5s' repeatCount='indefinite'%3E%3C/animate%3E%3Canimate attributeName='opacity' calcMode='spline' values='1;0' keyTimes='0;1' dur='1' keySplines='0.2 0 0.8 1' begin='-0.5s' repeatCount='indefinite'%3E%3C/animate%3E%3C/circle%3E%3Ccircle cx='50' cy='50' r='11.6081' fill='none' stroke='%23002145' stroke-width='1'%3E%3Canimate attributeName='r' calcMode='spline' values='0;40' keyTimes='0;1' dur='1' keySplines='0 0.2 0.8 1' begin='0s' repeatCount='indefinite'%3E%3C/animate%3E%3Canimate attributeName='opacity' calcMode='spline' values='1;0' keyTimes='0;1' dur='1' keySplines='0.2 0 0.8 1' begin='0s' repeatCount='indefinite'%3E%3C/animate%3E%3C/circle%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 4rem 4rem;
 }
 
 /*

@@ -1,0 +1,15 @@
+.collapse:not(.show) {
+  display: none;
+}
+
+.collapsing {
+  overflow: hidden;
+  height: 0;
+  transition: height 0.35s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .collapsing {
+    transition: none;
+  }
+}

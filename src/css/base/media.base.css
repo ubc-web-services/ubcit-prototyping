@@ -5,66 +5,65 @@
 */
 
 img {
-	max-width: 100%;
+  max-width: 100%;
 }
 
 figure {
-	@apply mt-leading;
-	margin-bottom: 0;
+  @apply mt-leading;
+
+  margin-bottom: 0;
 }
 
 figcaption {
-	@apply px-3 pt-2 text-sm text-grey-700;
+  @apply px-3 pt-2 text-sm text-grey-700;
 }
 
-figure.w-full img {
-	width: 100%;
-}
-
-.img-and-caption {
-	@apply my-6;
-}
 
 /* svgs
 * add a default stroke width (utilities to modify in separate file)
 */
 svg {
-	stroke-width: 2;
-	fill: none;
+  stroke-width: 2;
+  fill: none;
 }
 
 /* embedded media (iframes) */
-.media-embed-letterbox,
-.media-wrapper,
-.video-w-caption article {
-	position: relative;
-	height: 0 !important;
-	padding-bottom: 56.25%;
-	overflow: hidden;
+.media-wrapper {
+  position: relative;
+  overflow: hidden;
+  height: 0 !important;
+  padding-bottom: 56.25%;
 }
 
-.media-embed-letterbox embed,
-.media-embed-letterbox iframe,
-.media-embed-letterbox object,
 .media-wrapper embed,
 .media-wrapper iframe,
-.media-wrapper object,
-.video-w-caption embed,
-.video-w-caption iframe,
-.video-w-caption object {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100% !important;
-	height: 100% !important;
-}
-
-.video-w-caption figure {
-	width: 100%;
+.media-wrapper object {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
 }
 
 .img-cover img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.img-zoom {
+  overflow: hidden;
+}
+
+.img-zoom img {
+  transition: transform 0.3s ease-in-out;
+  transform-origin: bottom center;
+}
+
+.img-zoom:hover img {
+  transform: scale(1.05);
+}
+
+.img-rounded img {
+  border-radius: 9999px;
 }

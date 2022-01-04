@@ -1,6 +1,6 @@
 /** @define margin */
 
 /* Helper class to remove margin of first child */
-.first-child--mt-0 >:first-child {
+.first-child--mt-0 > :first-child {
   margin-top: 0;
 }

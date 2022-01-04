@@ -26,6 +26,7 @@ pre[class*="language-"] {
 	-ms-hyphens: none;
 	hyphens: none;
 	background: none;
+	text-shadow: none;
 }
 
 /* Code blocks */
@@ -45,6 +46,16 @@ pre[class*="language-"] {
 	padding: .1em;
 	white-space: normal;
 	border-radius: .3em;
+}
+
+code[class*="language-"] .tag {
+	padding: 0;
+	background-color: transparent;
+	margin-right: 0;
+}
+
+code[class*="language-"] .tag::before {
+	display: none;
 }
 
 .token.comment,

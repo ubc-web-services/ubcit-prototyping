@@ -4,281 +4,143 @@
 * This file contains all styles related to the button component.
 */
 
-/* variables in file */
-$gradient-black-transparent: rgba(0, 0, 0, 0);
-$gradient-black-translucent: rgba(0, 0, 0, .2);
-$gradient-black-opaque: rgba(0, 0, 0, 1);
-$button-text: $ubc-blue;
-$button-bg: $white;
-$button-border: $ubc-blue;
-$button-text--hover: $white;
-$button-bg--hover: $ubc-blue;
-$button-border--hover: $ubc-blue;
-$button-text--active: $white;
-$button-bg--active: $ubc-blue-sea;
-$button-border--active: $ubc-blue;
-$button-light-bg: $white;
-$button-light-border: $ubc-blue-cobalt;
-$button-light-text: $ubc-blue-cobalt;
-$button-light-bg--hover: $ubc-blue-cobalt;
-$button-light-border--hover: $ubc-blue-cobalt;
-$button-light-text--hover: $white;
-$button-light-bg--active: $ubc-blue-cobalt;
-$button-light-border--active: $ubc-blue-cobalt;
-$button-light-text--active: $white;
-$button-dark-bg: $ubc-blue;
-$button-dark-border: $ubc-blue;
-$button-dark-text: $white;
-$button-dark-bg--hover: $white;
-$button-dark-border--hover: $ubc-blue;
-$button-dark-text--hover: $ubc-blue;
-$button-dark-bg--active: rgba(0, 33, 69, .2);
-$button-dark-border--active: $ubc-blue;
-$button-dark-text--active: $ubc-blue;
-$button-transparent-bg: transparent;
-$button-transparent-border: $white;
-$button-transparent-text: $white;
-$button-transparent-bg--hover: rgba(255, 255, 255, .2);
-$button-transparent-border--hover: $white;
-$button-transparent-text--hover: $white;
-$button-transparent-bg--active: transparent;
-$button-transparent-border--active: $white;
-$button-transparent-text--active: $white;
-
 /* flex button */
 .unit-button {
-	@apply inline-flex no-underline uppercase border;
-	padding: .75em 2em .5em;
-	color: $button-text;
-	background-color: $button-bg;
-	border-color: $button-border;
-	cursor: pointer;
-	transition: all .125s ease-out;
+  @apply inline-flex text-center no-underline border;
+
+  padding: 0.65em 2em;
+  cursor: pointer;
+  transition: all 0.125s ease-out;
+  color: $button-text;
+  border-color: $button-border;
+  background-color: $button-bg;
 }
 
 .unit-button:hover {
-	@apply no-underline shadow-md;
-	color: $button-text--hover;
-	background-color: $button-bg--hover;
-	border-color: $button-border--hover;
+  @apply no-underline shadow-md;
+
+  color: $button-text--hover;
+  border-color: $button-border--hover;
+  background-color: $button-bg--hover;
 }
 
 .unit-button:active {
-	@apply no-underline shadow-md;
-	color: $button-text--active;
-	background-color: $button-bg--active;
-	border-color: $button-border--active;
+  @apply no-underline shadow-md;
+
+  color: $button-text--active;
+  border-color: $button-border--active;
+  background-color: $button-bg--active;
 }
 
 .unit-button--block {
-	display: block;
-	width: 100%;
-	text-align: center;
+  display: block;
+  width: 100%;
+  text-align: center;
 }
 
 /* button colour variations */
 .unit-button--light {
-	color: $button-light-text;
-	background-color: $button-light-bg;
-	border-color: $button-light-border;
+  color: $button-light-text;
+  border-color: $button-light-border;
+  background-color: $button-light-bg;
 }
 
 .unit-button--light:hover {
-	color: $button-light-text--hover;
-	background-color: $button-light-bg--hover;
-	border-color: $button-light-border--hover;
+  color: $button-light-text--hover;
+  border-color: $button-light-border--hover;
+  background-color: $button-light-bg--hover;
 }
 
 .unit-button--light:active {
-	color: $button-light-text--active;
-	background-color: $button-light-bg--active;
-	border-color: $button-light-border--active;
-	box-shadow: inset 0 0 1em $ubc-blue-sea;
+  color: $button-light-text--active;
+  border-color: $button-light-border--active;
+  background-color: $button-light-bg--active;
 }
 
 .unit-button--dark {
-	color: $button-dark-text;
-	background-color: $button-dark-bg;
-	border-color: $button-dark-border;
+  color: $button-dark-text;
+  border-color: $button-dark-border;
+  background-color: $button-dark-bg;
 }
 
 .unit-button--dark:hover {
-	color: $button-dark-text--hover;
-	background-color: $button-dark-bg--hover;
-	border-color: $button-dark-border--hover;
+  color: $button-dark-text--hover;
+  border-color: $button-dark-border--hover;
+  background-color: $button-dark-bg--hover;
 }
 
 .unit-button--dark:active {
-	color: $button-dark-text--active;
-	background-color: $button-dark-bg--active;
-	border-color: $button-dark-border--active;
+  color: $button-dark-text--active;
+  border-color: $button-dark-border--active;
+  background-color: $button-dark-bg--active;
 }
 
 .unit-button--transparent {
-	color: $button-transparent-text;
-	background-color: $button-transparent-bg;
-	border-color: $button-transparent-border;
+  color: $button-transparent-text;
+  border-color: $button-transparent-border;
+  background-color: $button-transparent-bg;
 }
 
 .unit-button--transparent:hover {
-	color: $button-transparent-text--hover;
-	background-color: $button-transparent-bg--hover;
-	border-color: $button-transparent-border--hover;
+  color: $button-transparent-text--hover;
+  border-color: $button-transparent-border--hover;
+  background-color: $button-transparent-bg--hover;
 }
 
 .unit-button--transparent:active {
-	color: $button-transparent-text--active;
-	background-color: $button-transparent-bg--active;
-	border-color: $button-transparent-border--active;
+  color: $button-transparent-text--active;
+  border-color: $button-transparent-border--active;
+  background-color: $button-transparent-bg--active;
 }
 
 .unit-button--simple {
-	@apply relative p-0 overflow-hidden border-0;
-	color: $default-link-color;
+  @apply relative py-0 pl-0 overflow-hidden tracking-wider border-0;
+
+  padding-right: 1.5em;
+  color: $default-link-color;
+  background: transparent;
 }
 
-.unit-button--simple:before {
-	position: absolute;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	z-index: -1;
-	height: 4px;
-	background: #2098d1;
-	transform: translateY(4px);
-	transition-timing-function: ease-out;
-	transition-duration: .2s;
-	transition-property: transform;
-	content: "";
+.unit-button--simple::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1.5em;
+  height: 100%;
+  content: "";
+  transition-timing-function: ease-out;
+  transition-duration: 0.2s;
+  transition-property: transform;
+  transform: translate3d(0, 0, 0);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1792 1792'%3E%3Cpath fill='%230055b7' d='M1363 877l-742 742q-19 19-45 19t-45-19l-166-166q-19-19-19-45t19-45l531-531-531-531q-19-19-19-45t19-45l166-166q19-19 45-19t45 19l742 742q19 19 19 45t-19 45z'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: top 0.3em center;
+  background-size: 0.85em 0.85em;
 }
 
 .unit-button--simple:hover {
-	color: $default-link-color-hover;
-	text-decoration: none;
-	background: transparent;
-	box-shadow: none;
+  text-decoration: none;
+  color: $default-link-color-hover;
+  background: transparent;
+  box-shadow: none;
 }
 
-.unit-button--simple:hover:before,
-.unit-button--simple:focus:before,
-.unit-button--simple:active:before {
-	transform: translateY(0);
+.unit-button--simple:hover::after,
+.unit-button--simple:focus::after,
+.unit-button--simple:active::after {
+  transform: translate3d(0, 0, 0);
 }
 
-/* button icons */
-.unit-button__icon {
-	@apply self-center flex-none;
-	width: 1em;
-	height: 1em;
-	margin-top: -.25em;
-	transition: transform .125s ease-in-out;
-	stroke-width: 4;
+.unit-button--simple:hover::before,
+.unit-button--simple:focus::before,
+.unit-button--simple:active::before {
+  transform: translate3d(4px, 0, 0);
 }
 
-.group:hover .unit-button__icon,
-.unit-button:hover .unit-button__icon {
-	transform: translateX(4px);
-}
-
-/* button icons & separators */
-.unit-button--has-icon-left,
-.unit-button--has-icon-right {
-	position: relative;
-}
-
-.unit-button--has-separator-left::after,
-.unit-button--has-separator-right::after {
-	position: absolute;
-	top: 25%;
-	display: block;
-	width: 1px;
-	height: 50%;
-	content: '';
-}
-
-.unit-button--has-icon-left.unit-button--has-separator-left::after {
-	left: 3.75em;
-}
-
-.unit-button--has-icon-right.unit-button--has-separator-right::after {
-	right: 3.75em;
-}
-
-.unit-button--light.unit-button--has-separator-left::after,
-.unit-button--light.unit-button--has-separator-right::after {
-	background-color: $ubc-blue-cobalt;
-}
-
-.unit-button--dark.unit-button--has-separator-left::after,
-.unit-button--dark.unit-button--has-separator-right::after {
-	background-color: $white;
-}
-
-.unit-button--light.unit-button--has-separator-left:hover::after,
-.unit-button--light.unit-button--has-separator-right:hover::after,
-.unit-button--dark.unit-button--has-separator-left:hover::after,
-.unit-button--dark.unit-button--has-separator-right:hover::after {
-	background-color: $white;
-}
-
-.unit-button--has-icon-left .unit-button__icon {
-	margin-right: 1em;
-}
-
-.unit-button--has-icon-right .unit-button__icon {
-	margin-left: 1em;
-}
-
-.unit-button--simple.unit-button--has-icon-left .unit-button__icon {
-	margin-right: .5em;
-}
-
-.unit-button--simple.unit-button--has-icon-right .unit-button__icon {
-	@apply ml-2;
-	margin-left: .5em;
-}
-
-.unit-button--has-icon-left.unit-button--has-separator-left .unit-button__icon {
-	margin-right: 2.5em;
-}
-
-.unit-button--has-icon-right.unit-button--has-separator-right .unit-button__icon {
-	margin-left: 2.5em;
-}
-
-.unit-button--light.unit-button--has-icon-left:hover .unit-button__icon,
-.unit-button--light.unit-button--has-icon-right:hover .unit-button__icon,
-.unit-button--dark.unit-button--has-icon-left:hover .unit-button__icon,
-.unit-button--dark.unit-button--has-icon-right:hover .unit-button__icon {
-	@apply text-white;
-}
-
-.unit-button--animate-icon:hover .unit-button__icon {
-	transform: translateX(4px);
-	transition: transform .125s ease-in-out;
-}
-
-/* Share button */
-.share-button:hover .share-links {
-	display: block;
-}
-
-.share-links {
-	padding-top: 1rem;
-}
-
-.share-buttons {
-	@apply relative;
-}
-
-.share-buttons::before {
-	@apply absolute block;
-	top: -1rem;
-	left: 1rem;
-	width: 0;
-	height: 0;
-	border-right: 1rem solid transparent;
-	border-bottom: 1rem solid $ubc-blue;
-	border-left: 1rem solid transparent;
-	content: '';
+.unit-button-icon {
+  top: 0.5em;
+  width: 1em;
+  height: 1em;
+  margin-left: 0.5em;
+  transform: translateY(0.2em);
 }

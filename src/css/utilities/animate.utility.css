@@ -1,0 +1,24 @@
+/** @define animate utilities */
+
+.hover--shift {
+  transition: all 0.175s ease-in-out;
+  transform: translate3d(0);
+}
+
+.hover--shift:hover {
+  transition: all 0.175s ease-in-out;
+  transform: translate3d(0, -4px, 0);
+}
+
+.hover--appear-from-bottom {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+  transition-property: all;
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+.group:hover .hover--appear-from-bottom {
+  transform: translateY(0);
+  opacity: 1;
+}

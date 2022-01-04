@@ -1,0 +1,15 @@
+/** @define container.utility */
+
+/* adds a set of custom containers */
+
+.container-xs {
+  max-width: 480px;
+}
+
+.container-sm {
+  max-width: 640px;
+}
+
+.container-md {
+  max-width: 768px;
+}

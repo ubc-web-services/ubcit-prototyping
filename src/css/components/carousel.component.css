@@ -4,76 +4,67 @@
 * This file contains all styles related to the carousel component.
 */
 
-/* variables in file */
-$carousel-button--disabled: $grey-500;
-$carousel-item--focus-outline: $ubc-blue-cobalt;
-$carousel-item--focus-border: $white;
-$carousel-caption--text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
-$carousel-gradient-transparent: rgba(0, 0, 0, .0001);
-$carousel-gradient-translucent: rgba(0, 0, 0, .7);
-
 /* tiny-slider styles */
 .tns-outer {
-	@apply relative;
+  @apply relative;
 }
 
 /* previous / next buttons */
 .tns-controls {
-	@apply absolute inset-0 z-40 flex justify-between pointer-events-none;
+  @apply absolute inset-0 z-40 flex justify-between pointer-events-none;
 }
 
 .tns-controls button {
-	@apply self-center block w-20 h-20 overflow-hidden pointer-events-auto;
-	text-indent: -300%;
-	background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 22L12 12L2 2' stroke='%23fff' stroke-opacity='0.4' fill='none' stroke-width='5'/%3E%3C/svg%3E%0A");
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-size: 1.5rem;
+  @apply self-center block w-16 h-16 overflow-hidden pointer-events-auto;
+
+  text-indent: -300%;
+  background-color: $ubc-blue-cornflower;
+  /* background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 22L12 12L2 2' stroke='%23fff' stroke-opacity='0.7' fill='none' stroke-width='5'/%3E%3C/svg%3E%0A"); */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath d='M85,277.375h259.704L225.002,397.077L256,427l171-171L256,85l-29.922,29.924l118.626,119.701H85V277.375z' fill='%23fff'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 1.75rem;
 }
 
 .tns-controls button:hover {
-	background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 22L12 12L2 2' stroke='%23fff' fill='none' stroke-width='5'/%3E%3C/svg%3E%0A");
+  background-color: $ubc-blue-cobalt;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath d='M85,277.375h259.704L225.002,397.077L256,427l171-171L256,85l-29.922,29.924l118.626,119.701H85V277.375z' fill='%23fff'/%3E%3C/svg%3E");
 }
 
 .tns-controls button[data-controls=prev] {
-	@apply rotate-180;
+  @apply transform rotate-180;
 }
 
 /* page indicators */
 .tns-nav {
-	@apply absolute z-40 flex;
-	right: 6rem;
-	bottom: 2rem;
+  @apply absolute z-40 flex justify-center w-full;
+
+  bottom: -2rem;
 }
 
 .tns-nav button {
-	@apply inline-block w-4 h-4 m-2 border-2 border-white rounded-full cursor-pointer;
-	transition: .4s ease-in-out;
+  @apply inline-block w-8 h-2 m-2 cursor-pointer bg-ubc-blue-cornflower;
+
+  transition: 0.4s ease-in-out;
 }
 
 .tns-nav .tns-nav-active {
-	@apply border-8 border-ubc-blue;
+  @apply bg-ubc-blue-cobalt;
 }
 
-/* alternate slider style for cards */
-.slider--alt .tns-controls {
-	@apply px-6;
+@media (min-width: $breakpoint--clf7-md) {
+
+  .carousel__cell--fixed-height {
+    height: 600px;
+  }
 }
 
-.slider--alt .tns-nav {
-	@apply absolute bottom-auto right-auto z-40 flex justify-center w-full mx-auto;
-	top: 2.5rem;
-}
-
-.slider--alt .tns-nav button {
-	@apply border-8;
-	border-color: rgba(255, 255, 255, .6);
-}
-
-.slider--alt .tns-nav .tns-nav-active {
-	@apply border-ubc-blue;
-}
-
-.slider--alt .carousel__cell {
-	@apply p-6;
+/* accessibly hidden links and content */
+.tns-outer [data-action="stop"] {
+  position: absolute;
+  top: auto;
+  left: -300%;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
 }

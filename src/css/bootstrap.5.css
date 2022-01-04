@@ -1,0 +1,25 @@
+/* import unstyled components styles from local bootstrap copy
+This allows you to use the bootstrap behaviours without inheriting any styles. Note that this is a subset of the available javascript components at the moment. For a full list, see https://getbootstrap.com/docs/5.1/getting-started/introduction/#components */
+
+@import "/bootstrap/carousel.css";
+@import "/bootstrap/collapse.css";
+@import "/bootstrap/dropdown.css";
+@import "/bootstrap/fade.css";
+@import "/bootstrap/modal.css";
+@import "/bootstrap/offcanvas.css";
+@import "/bootstrap/tabs.css";
+
+/* alternatively, import all styles from bootstrap */
+/*
+@import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
+*/
+/* or, optionally import just a subset of styles from bootstrap like this */
+/*
+@import '../../node_modules/bootstrap/dist/css/bootstrap-grid.min.css';
+@import '../../node_modules/bootstrap/dist/css/bootstrap-grid.rtl.min.css';
+@import '../../node_modules/bootstrap/dist/css/bootstrap-reboot.min.css';
+@import '../../node_modules/bootstrap/dist/css/bootstrap-reboot.rtl.min.css';
+@import '../../node_modules/bootstrap/dist/css/bootstrap-utilities.min.css';
+@import '../../node_modules/bootstrap/dist/css/bootstrap-utilities.rtl.min.css'; */
+
+/* if you'd like to only import specific styles, you'll need to add a sass compiler and configure webpack to handle the CSS - see https://getbootstrap.com/docs/5.1/getting-started/webpack/#importing-precompiled-sass */

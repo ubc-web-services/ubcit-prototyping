@@ -1,0 +1,146 @@
+/* drupal media */
+@import "config/variables.config.css";
+
+.field--name-field-media-image-1,
+.media--type-image {
+  @apply mt-leading;
+}
+
+.ubc-card__media .media--type-image,
+figure .media--type-image {
+  @apply mt-0;
+}
+
+.text-formatted figure:not([class*="align-"]) {
+  width: 100%;
+}
+
+.align-center,
+.align-left,
+.align-right {
+  display: table;
+}
+
+figure[class*="align-"] figcaption {
+  display: table-caption;
+  caption-side: bottom;
+}
+
+figure.align-center,
+figure.align-right,
+figure.align-left {
+  @apply mt-0;
+}
+
+figure.align-left,
+.align-left.media {
+  @apply mr-leading mb-leading;
+}
+
+[class^="widget-"].align-left {
+  @apply max-w-md mr-leading;
+}
+
+figure.align-right,
+.align-right.media {
+  @apply ml-leading mb-leading;
+}
+
+[class^="widget-"].align-right {
+  @apply max-w-md ml-leading;
+}
+
+.align-center .media--type-image,
+.align-left .media--type-image,
+.align-right .media--type-image,
+.align-center.media--type-remote-video,
+.align-left.media--type-remote-video,
+.align-right.media--type-remote-video {
+  @apply mt-leading;
+}
+
+/* captions */
+figure.caption-drupal-media {
+  @apply mt-0;
+}
+
+figure.caption-drupal-media figcaption {
+  @apply mb-leading;
+}
+
+/* specific overrides */
+.carousel__cell .media--type-remote-video,
+.media--type-remote-video.media--view-mode--featured-content {
+  @apply my-0;
+}
+
+.media--type-remote-video.media--view-mode-full {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  height: 0 !important;
+  padding-bottom: 56.25%;
+}
+
+.media--type-remote-video.media--view-mode-full iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.media--type-twitter {
+  margin-top: calc(var(--leading) * 1rem);
+}
+
+.media--type-twitter .twitter-tweet {
+  min-width: 250px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+@media (max-width: $breakpoint--sm--max) {
+
+  figure.align-left,
+  .align-left.media {
+    @apply float-none mr-0;
+  }
+
+  figure.align-right,
+  .align-right.media {
+    @apply float-none ml-0;
+  }
+
+  [class^="widget-"].align-left,
+  [class^="widget-"].align-right {
+    @apply float-none ml-0 mr-0 max-w-none;
+  }
+
+  .media--type-remote-video {
+    position: relative;
+    overflow: hidden;
+    height: 0 !important;
+    padding-bottom: 56.25%;
+  }
+
+  .media--type-remote-video iframe,
+  .media--type-remote-video embed,
+  .media--type-remote-video object {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
+
+figure.align-left .media--type-remote-video.media--view-mode-full,
+.align-left.media--type-remote-video.media--view-mode-full,
+figure.align-right .media--type-remote-video.media--view-mode-full,
+.align-right.media--type-remote-video.media--view-mode-full,
+figure.align-center .media--type-remote-video.media--view-mode-full,
+.align-center.media--type-remote-video.media--view-mode-full {
+  display: block;
+}

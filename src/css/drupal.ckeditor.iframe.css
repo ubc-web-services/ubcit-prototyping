@@ -3,135 +3,212 @@
 /*
 * This approximates the CLF's style in CKEditor instances on the Drupal back-end.
 */
+@import "config/variables.config.css";
 
 @charset "UTF-8";
 
 /* Adjust body padding and focus styles */
 body {
-	padding: 1rem;
+  padding: 1rem;
 }
 
 body:focus {
-	outline: none;
-	box-shadow: none;
+  outline: none;
+  box-shadow: none;
+}
+
+/* Styles dropdown */
+div.cke_combopanel {
+  height: 300px !important;
+}
+
+li.cke_panel_listItem a {
+  padding: 3px 5px !important;
+  font-size: 0.8em !important;
 }
 
 /* Captions */
 .caption > * {
-	padding: .5em;
-	background: #f3f3f3;
-	border: 1px solid #ccc;
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  background: #f3f3f3;
 }
 
 .caption > figcaption {
-	padding-top: .5em;
-	font-size: small;
-	text-align: center;
-	border: 1px solid #ccc;
-	border-top: none;
+  padding-top: 0.5em;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-top: none;
+  font-size: small;
 }
 
 /* Override clf's default blockquote and pre styles when captioned. */
 .caption-pre > pre,
 .caption-blockquote > blockquote {
-	margin: 0;
+  margin: 0;
 }
 
 .caption-blockquote > figcaption::before {
-	content: "— ";
+  content: "— ";
 }
 
 .caption-blockquote > figcaption {
-	text-align: left;
+  text-align: left;
 }
 
 [dir="rtl"] .caption-blockquote > figcaption {
-	text-align: right;
+  text-align: right;
 }
 
 /* buttons - add styles here as they're added with data attributes instead of classes in the editor */
 [data-drupal-button-link="unit-button"] {
-	display: inline-flex;
-	padding: .75rem 1.5rem;
-	border-width: 1px;
+  display: inline-flex;
+  padding: 0.65em 2em 0.42em;
+  cursor: pointer;
+  transition: all 0.125s ease-out;
+  text-align: center;
+  text-decoration: none;
+  color: $button-text;
+  border-width: 1px;
+  border-color: $button-border;
+  background-color: $button-bg;
 }
 
 [data-drupal-button-link="unit-button"]:hover {
-	text-decoration: none;
-	box-shadow: 0 4px 6px -1px rgba(0, 0, 0, .1), 0 2px 4px -1px rgba(0, 0, 0, .06);
+  text-decoration: none;
+  color: $button-text--hover;
+  border-color: $button-border--hover;
+  background-color: $button-bg--hover;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+[data-drupal-button-link="unit-button-block"] {
+  display: block;
+  width: 100%;
+  text-align: center;
 }
 
 /* button sizes */
 [data-drupal-button-link-size="text-xs"] {
-	font-size: .75rem;
+  font-size: 0.75rem;
 }
 
 [data-drupal-button-link-size="text-sm"] {
-	font-size: .875rem;
+  font-size: 0.875rem;
 }
 
 [data-drupal-button-link-size="text-lg"] {
-	font-size: 1.125rem;
+  font-size: 1.125rem;
 }
 
 [data-drupal-button-link-size="text-xl"] {
-	font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
 [data-drupal-button-link-size="text-2x"] {
-	font-size: 1.75rem;
+  font-size: 1.5rem;
 }
 
 /* button style variations */
-
 [data-drupal-button-link-style="unit-button--light"] {
-	color: #0055b7;
-	background-color: #fff;
-	border-color: #0055b7;
+  color: $button-light-text;
+  border-color: $button-light-border;
+  background-color: $button-light-bg;
 }
 
 [data-drupal-button-link-style="unit-button--light"]:hover {
-	color: #0055b7;
-	background-color: #fff;
-	border-color: #0055b7;
+  color: $button-light-text--hover;
+  border-color: $button-light-border--hover;
+  background-color: $button-light-bg--hover;
 }
 
 [data-drupal-button-link-style="unit-button--dark"] {
-	color: #fff;
-	background-color: #002145;
-	border-color: #002145;
+  color: $button-dark-text;
+  border-color: $button-dark-border;
+  background-color: $button-dark-bg;
 }
 
 [data-drupal-button-link-style="unit-button--dark"]:hover {
-	color: #fff;
-	background-color: #003a79;
-	border-color: #003a79;
+  color: $button-dark-text--hover;
+  border-color: $button-dark-border--hover;
+  background-color: $button-dark-bg--hover;
 }
 
 [data-drupal-button-link-style="unit-button--transparent"] {
-	color: #fff;
-	background-color: transparent;
-	border-color: #fff;
+  color: $button-transparent-text;
+  border-color: $button-transparent-border;
+  background-color: $button-transparent-bg;
 }
 
 [data-drupal-button-link-style="unit-button--transparent"]:hover {
-	color: #002145;
-	background-color: #fff;
-	border-color: #fff;
+  color: $button-transparent-text--hover;
+  border-color: $button-transparent-border--hover;
+  background-color: $button-transparent-bg--hover;
 }
 
 [data-drupal-button-link-style="unit-button--simple"] {
-	padding-top: 0;
-	padding-bottom: 0;
-	padding-left: 0;
-	color: #5c6ac4;
-	color: var(--color-primary);
-	border-width: 0;
+  position: relative;
+  overflow: hidden;
+  padding-top: 0;
+  padding-right: 1.5em;
+  padding-bottom: 0;
+  padding-left: 0;
+  letter-spacing: 0.05em;
+  color: $default-link-color;
+  border-width: 0;
+  background: transparent;
+}
+
+[data-drupal-button-link-style="unit-button--simple"]::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1.5em;
+  height: 100%;
+  content: "";
+  transition-timing-function: ease-out;
+  transition-duration: 0.2s;
+  transition-property: transform;
+  transform: translate3d(0, 0, 0);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1792 1792'%3E%3Cpath fill='%230055b7' d='M1363 877l-742 742q-19 19-45 19t-45-19l-166-166q-19-19-19-45t19-45l531-531-531-531q-19-19-19-45t19-45l166-166q19-19 45-19t45 19l742 742q19 19 19 45t-19 45z'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: top 0.3em center;
+  background-size: 0.85em 0.85em;
 }
 
 [data-drupal-button-link-style="unit-button--simple"]:hover {
-	color: #002145;
-	text-decoration: underline;
-	background: transparent;
-	box-shadow: none;
+  text-decoration: underline;
+  color: $default-link-color-hover;
+  background: transparent;
+  box-shadow: none;
+}
+
+[data-drupal-button-link-style="unit-button--simple"]:hover::after {
+  transform: translate3d(0, 0, 0);
+}
+
+[data-drupal-button-link-style="unit-button--simple"]:hover::before {
+  transform: translate3d(4px, 0, 0);
+}
+
+/* ensure media in the full view mode is made the correct width, and ignore alignment */
+drupal-media[data-view-mode="full"],
+drupal-media[data-view-mode="full"] .align-right,
+drupal-media[data-view-mode="full"] .align-left,
+drupal-media[data-view-mode="full"] .align-center {
+  display: block !important;
+  float: none !important;
+  width: 100% !important;
+}
+
+/* ensure media edit buttons remain above emebedded content */
+.media-library-item__edit {
+  position: relative;
+  z-index: 100;
+  right: 0;
+  padding: 0.5em;
+  border: 1px solid #ddd;
+  border-radius: 0.25rem;
+  background-color: white;
+  font-size: 0.75rem;
 }

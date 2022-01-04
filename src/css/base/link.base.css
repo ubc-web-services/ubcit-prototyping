@@ -5,20 +5,20 @@
 */
 a,
 button {
-	transition: background-color .125s ease, color .125s ease;
+  transition: background-color 0.125s ease, color 0.125s ease;
 }
 
 a {
-	color: $default-link-color;
-	text-decoration: underline;
+  text-decoration: underline;
+  color: $default-link-color;
 }
 
 a:hover {
-	color: $default-link-color-hover;
+  color: $default-link-color-hover;
 }
 
 a:active {
-	color: $default-link-color-active;
+  color: $default-link-color-active;
 }
 
 /* accessibly hidden links and content */
@@ -27,21 +27,22 @@ a:active {
 .skip-link:visited,
 .skip-link:hover,
 .visually-hidden {
-	position: absolute;
-	top: auto;
-	left: -300%;
-	width: 1px;
-	height: 1px;
-	overflow: hidden;
+  position: absolute;
+  top: auto;
+  left: -300%;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
 }
 
 /* allow the link to stretch to fill the first parent with relative positioning */
 .link-expand::before,
 .unit-button--simple.link-expand::before {
-	@apply absolute inset-0;
-	content: '';
+  @apply absolute inset-0;
+
+  content: "";
 }
 
 .link-expand-break {
-	@apply relative z-50;
+  @apply relative z-50;
 }

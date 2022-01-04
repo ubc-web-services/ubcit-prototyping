@@ -1,0 +1,7 @@
+/** @define min-height */
+
+/* create classes for minimum heights */
+
+.min-h-96 {
+  height: 24rem;
+}
