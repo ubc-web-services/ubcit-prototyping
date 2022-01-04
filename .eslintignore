@@ -1,0 +1,4 @@
+assets/vendor/**/*
+node_modules/**/*
+!*.es6.js
+js/**/*
