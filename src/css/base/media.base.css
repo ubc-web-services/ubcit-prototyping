@@ -4,8 +4,11 @@
 * This file contains base styles related to media, such as images, svgs and iframes.
 */
 
-img {
+img,
+video {
   max-width: 100%;
+  height: auto;
+  aspect-ratio: attr(width) / attr(height);
 }
 
 figure {
