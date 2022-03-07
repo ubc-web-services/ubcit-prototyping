@@ -76,7 +76,7 @@
     "postcss-import": "^14.0.2",
     "postcss-loader": "^6.2.1",
     "postcss-simple-vars": "^6.0.3",
-    "prismjs": "^1.26.0",
+    "prismjs": "^1.27.0",
     "stylelint": "^14.2.0",
     "stylelint-checkstyle-formatter": "^0.1.2",
     "stylelint-config-standard": "^24.0.0",
