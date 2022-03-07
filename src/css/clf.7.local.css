@@ -1,3 +1,6 @@
+
+@import "config/variables.config.css";
+
 /* utilities from bootstrap for visibility */
 
 .js-bootstrap .collapse:not(.show):not(.in) {
@@ -542,6 +545,17 @@ a#ubc7-global-utility-no-script {
   background: #fff;
 }
 
+@media screen and (max-width: $breakpoint--clf7-md--max) {
+  #ubc7-unit-menu .menu-item--active-trail > .btn-group > .btn:not(.dropdown-toggle) {
+    background: #d7e0e7;
+    box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
+  }
+  #ubc7-unit-menu .menu-item--active-trail > .btn-group:hover > .btn:not(.dropdown-toggle) {
+    background: #002145;
+    color: #fff;
+  }
+}
+
 #ubc7-unit-menu .btn-group:hover .btn {
   color: #fff;
   background: #002145;
@@ -620,7 +634,8 @@ a#ubc7-global-utility-no-script {
   font-size: 14px;
 }
 
-#ubc7-unit-menu .nav-collapse .open > .dropdown-menu {
+#ubc7-unit-menu .nav-collapse .open > .dropdown-menu,
+#ubc7-unit-menu .nav-collapse .is-open > .dropdown-menu {
   display: block;
 }
 
@@ -654,15 +669,15 @@ a#ubc7-global-utility-no-script {
   background-color: #002145;
 }
 
-#ubc7-unit-menu .nav > li.active > a,
-#ubc7-unit-menu .nav > li.active > .btn-group,
+#ubc7-unit-menu .nav > li.menu-item--active-trail > a,
+#ubc7-unit-menu .nav > li.menu-item--active-trail > .btn-group,
 #ubc7-unit-menu .nav > li > a.is-active {
   background: #d7e0e7;
   box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
 }
 
-#ubc7-unit-menu .nav > li.active > a:hover,
-#ubc7-unit-menu .nav > li.active > .btn-group:hover,
+#ubc7-unit-menu .nav > li.menu-item--active-trail > a:hover,
+#ubc7-unit-menu .nav > li.menu-item--active-trail > .btn-group:hover,
 #ubc7-unit-menu .nav > li > a.is-active:hover {
   color: #fff;
   background: #002145;
@@ -786,7 +801,7 @@ a#ubc7-global-utility-no-script {
   background-color: #002145;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: $breakpoint--clf7-sm) {
   #ubc7-global-menu .clf-container,
   #ubc7-header .clf-container,
   #ubc7-unit .clf-container,
@@ -869,7 +884,7 @@ a#ubc7-global-utility-no-script {
   }
 }
 
-@media screen and (min-width: 980px) {
+@media screen and (min-width: $breakpoint--clf7-md) {
   #ubc7-global-menu .clf-container,
   #ubc7-header .clf-container,
   #ubc7-unit .clf-container,
@@ -883,7 +898,7 @@ a#ubc7-global-utility-no-script {
   }
 
   .dialog-off-canvas-main-canvas > .container {
-    width: 980px;
+    width: $breakpoint--clf7-md;
     margin-right: auto;
     margin-left: auto;
   }
@@ -1183,9 +1198,9 @@ a#ubc7-global-utility-no-script {
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: $breakpoint--clf7-lg) {
   .dialog-off-canvas-main-canvas > .container {
-    width: 1200px;
+    width: $breakpoint--clf7-lg;
   }
 
   #ubc7-global-menu .clf-container,
@@ -1193,7 +1208,7 @@ a#ubc7-global-utility-no-script {
   #ubc7-unit .clf-container,
   #ubc7-unit-menu .clf-container,
   #ubc7-footer .clf-container {
-    width: 1170px;
+    width: calc($breakpoint--clf7-lg - 30px);
   }
 
   #ubc7-header .span1,
@@ -1296,7 +1311,7 @@ a#ubc7-global-utility-no-script {
   }
 }
 
-@media screen and (min--moz-device-pixel-ratio: 0) and (min-width: 1200px) {
+@media screen and (min--moz-device-pixel-ratio: 0) and (min-width: $breakpoint--clf7-lg) {
   #ubc7-unit-menu .nav > li > a {
     padding-top: 11px !important;
   }
@@ -1348,21 +1363,21 @@ a#ubc7-global-utility-no-script {
   }
 }
 
-@media only screen and (-o-min-device-pixel-ratio: "3/2") and (max-width: 979px), only screen and (-webkit-min-device-pixel-ratio: 1.5) and (max-width: 979px), only screen and (min--moz-device-pixel-ratio: 1.5) and (max-width: 979px), only screen and (min-device-pixel-ratio: 1.5) and (max-width: 979px) {
+@media only screen and (-o-min-device-pixel-ratio: "3/2") and (max-width: $breakpoint--clf7-md--max), only screen and (-webkit-min-device-pixel-ratio: 1.5) and (max-width: $breakpoint--clf7-md--max), only screen and (min--moz-device-pixel-ratio: 1.5) and (max-width: $breakpoint--clf7-md--max), only screen and (min-device-pixel-ratio: 1.5) and (max-width: $breakpoint--clf7-md--max) {
   #ubc7-signature a {
     background-position: -2px -435px !important;
     background-size: 1400px !important;
   }
 }
 
-@media only screen and (-o-min-device-pixel-ratio: "3/2") and (max-width: 767px), only screen and (-webkit-min-device-pixel-ratio: 1.5) and (max-width: 767px), only screen and (min--moz-device-pixel-ratio: 1.5) and (max-width: 767px), only screen and (min-device-pixel-ratio: 1.5) and (max-width: 767px) {
+@media only screen and (-o-min-device-pixel-ratio: "3/2") and (max-width: $breakpoint--clf7-sm--max), only screen and (-webkit-min-device-pixel-ratio: 1.5) and (max-width: $breakpoint--clf7-sm--max), only screen and (min--moz-device-pixel-ratio: 1.5) and (max-width: $breakpoint--clf7-sm--max), only screen and (min-device-pixel-ratio: 1.5) and (max-width: $breakpoint--clf7-sm--max) {
   #ubc7-signature a {
     background-position: -2px -544px !important;
     background-size: 1500px !important;
   }
 }
 
-@media (max-width: 360px) {
+@media (max-width: $breakpoint--clf7-xs) {
   #ubc7-unit-identifier {
     white-space: normal !important;
     font-size: 13px !important;
@@ -1380,16 +1395,16 @@ a#ubc7-global-utility-no-script {
   background: #fff;
 }
 
-@media screen and (min-width: 980px) {
+@media screen and (min-width: $breakpoint--clf7-md) {
   .layout--centered #main-content {
-    width: 970px;
+    width: $breakpoint--clf7-md;
     margin-right: auto;
     margin-left: auto;
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: $breakpoint--clf7-lg) {
   .layout--centered #main-content {
-    width: 1200px;
+    width: $breakpoint--clf7-lg;
   }
 }

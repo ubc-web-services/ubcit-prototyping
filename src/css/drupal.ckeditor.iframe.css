@@ -5,8 +5,6 @@
 */
 @import "config/variables.config.css";
 
-@charset "UTF-8";
-
 /* Adjust body padding and focus styles */
 body {
   padding: 1rem;
