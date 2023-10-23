@@ -13,11 +13,11 @@ table {
 }
 
 thead tr {
-  @apply border-t border-b border-ubc-blue;
+  @apply border-b-2 border-ubc-blue;
 }
 
 tr {
-  @apply border-b border-grey-300;
+  @apply border-b border-ubc-grey-3;
 }
 
 td,
@@ -47,14 +47,14 @@ th {
 
 .table--condensed th,
 .table--condensed td {
-  @apply py-2 pr-2;
+  @apply p-2;
 
   line-height: 1.25;
 }
 
 .table--striped tr.odd,
 .table--striped tbody tr:nth-child(2n+1) {
-  background-color: $table-row-striping-color;
+  @apply bg-ubc-grey-2/10
 }
 
 .table--striped td,
@@ -63,5 +63,5 @@ th {
 }
 
 .table--hover tbody tr:hover {
-  background-color: $table-row-hover-color;
+  @apply bg-ubc-grey-2/10
 }

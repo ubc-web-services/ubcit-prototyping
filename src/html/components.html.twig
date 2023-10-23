@@ -32,6 +32,14 @@
 <h2 id="icons">SVG Icons</h2>
 <hr />
 {% include "components/component--icon.twig" %}
+<div class="container px-5 mx-auto md--px-4">
+	<details>
+  		<summary class="font-mono">SVG Icons Code</summary>
+		<script type="text/plain" class="language-markup">
+			{% include "components/component--icon.twig" %}
+		</script>
+	</details>
+</div>
 
 <h2 id="forms">Forms</h2>
 <hr />
@@ -84,10 +92,6 @@
 		<h3 class="my-4">Share button</h3>
 		{% include "components/component--social--share.twig" %}
 	</div>
-	<div class="md--flex-1 md--px-4">
-		<h3 class="my-4">Twitter stream</h3>
-		{% include "components/component--social--twitter.twig" %}
-	</div>
 </div>
 
 <h2 class="mt-12 " id="cards" >Cards</h2>
@@ -135,10 +139,12 @@
 </div>
 {% include "components/component--carousel.twig" %}
 <div class="container px-5 mx-auto md--px-4">
-	<h4 class="font-mono text-grey-500">Carousel Code</h4>
-	<script type="text/plain" class="language-markup">
-	{% include "components/component--carousel.twig" %}
-	</script>
+	<details>
+  		<summary class="font-mono">Carousel Code</summary>
+		<script type="text/plain" class="language-markup">
+			{% include "components/component--carousel.twig" %}
+		</script>
+	</details>
 </div>
 
 <div class="container px-5 mx-auto md--px-4">

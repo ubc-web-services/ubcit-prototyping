@@ -97,6 +97,40 @@
   background-color: $button-transparent-bg--active;
 }
 
+.unit-button--secondary {
+  color: $ubc-blue;
+  border-color: var(--color-secondary);
+  background-color: var(--color-secondary);
+}
+
+.unit-button--secondary:hover {
+  color: $ubc-blue;
+  border-color: $ubc-grey-3;
+  background-color: $ubc-grey-3;
+}
+
+.unit-button--secondary:active {
+  color: $ubc-blue;
+  border-color: $ubc-grey-2;
+  background-color: $ubc-grey-2;
+}
+
+.unit-button--filter {
+  @apply text-ubc-grey-1 border-ubc-grey-1 bg-white px-5 py-2 rounded-full
+}
+
+.unit-button--filter:hover {
+  @apply text-ubc-grey-1 border-ubc-grey-1 bg-ubc-grey-1/20
+}
+
+.unit-button--filter.active {
+  @apply text-white border-ubc-blue bg-ubc-blue
+}
+
+.unit-button--filter.active:hover {
+  @apply text-white border-ubc-grey-1 bg-ubc-grey-1
+}
+
 .unit-button.unit-button--disabled,
 .unit-button--dark.unit-button--disabled {
   @apply !bg-accessible-grey !border-accessible-grey !text-white cursor-not-allowed

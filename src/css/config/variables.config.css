@@ -158,10 +158,6 @@ $button-transparent-bg--active: rgb(255 255 255 / 60%);
 $button-transparent-border--active: rgb(255 255 255 / 60%);
 $button-transparent-text--active: rgb(0 33 69 / 60%);
 
-/* Tables */
-$table-row-striping-color: rgb(225 243 249 / 50%);
-$table-row-hover-color: rgb(225 243 249 / 50%);
-
 /* Carousel */
 $carousel-button--disabled: $grey-500;
 $carousel-item--focus-outline: $ubc-blue-cobalt;
