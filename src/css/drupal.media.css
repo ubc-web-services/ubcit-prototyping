@@ -1,5 +1,5 @@
 /* drupal media */
-@import "config/variables.config.css";
+@import url("config/variables.config.css");
 
 .field--name-field-media-image-1,
 .media--type-image {

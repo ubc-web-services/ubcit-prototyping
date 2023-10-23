@@ -4,8 +4,7 @@
   top: 0;
   left: 0;
   display: none;
-  overflow-x: hidden;
-  overflow-y: auto;
+  overflow: hidden auto;
   width: 100%;
   height: 100%;
   outline: 0;
@@ -66,7 +65,7 @@
   outline: 0;
   background-color: #fff;
   background-clip: padding-box;
-  box-shadow: 0 0 #0000, 0 0 #0000, 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 0 #0000, 0 0 #0000, 0 20px 25px -5px rgb(0 0 0 / 10%), 0 10px 10px -5px rgb(0 0 0 / 4%);
 }
 
 .modal-backdrop {
@@ -119,7 +118,7 @@
   margin: 0.25rem;
 }
 
-@media (min-width: 576px) {
+@media (width >= 576px) {
   .modal-dialog {
     max-width: 500px;
     margin: 1.75rem auto;
@@ -138,7 +137,7 @@
   }
 }
 
-@media (min-width: 992px) {
+@media (width >= 992px) {
 
   .modal-lg,
   .modal-xl {
@@ -146,7 +145,7 @@
   }
 }
 
-@media (min-width: 1200px) {
+@media (width >= 1200px) {
   .modal-xl {
     max-width: 1140px;
   }

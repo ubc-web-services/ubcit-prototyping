@@ -31,7 +31,7 @@
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath d='M85,277.375h259.704L225.002,397.077L256,427l171-171L256,85l-29.922,29.924l118.626,119.701H85V277.375z' fill='%23fff'/%3E%3C/svg%3E");
 }
 
-.tns-controls button[data-controls=prev] {
+.tns-controls button[data-controls="prev"] {
   @apply transform rotate-180;
 }
 

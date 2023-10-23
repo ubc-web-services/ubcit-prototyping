@@ -24,7 +24,6 @@
   padding: 0;
   text-indent: -9999em;
   opacity: 1;
-  -webkit-border-radius: 0;
   border-radius: 0;
   background: $throbber-background;
 }
@@ -34,10 +33,7 @@
 .ajax-progress-throbber::after,
 .ajax-progress-fullscreen::after {
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  inset: 0 0 0 0;
   display: block;
   overflow: hidden;
   width: 4rem;

@@ -3,13 +3,13 @@
 /*
 * This file contains styles for the drupal content moderation form
 */
-@import "config/variables.config.css";
+@import url("config/variables.config.css");
 
 .entity-moderation-form {
   position: relative;
   display: block;
   padding: 0 0.5rem;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgb(255 255 255 / 50%);
   font-size: 75%;
 }
 
@@ -39,7 +39,7 @@
   background-color: #003a79;
 }
 
-@media (min-width: 640px) {
+@media (width >= 640px) {
 
   .entity-moderation-form {
     display: flex;

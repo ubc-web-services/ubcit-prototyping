@@ -4,7 +4,7 @@
 * This file overrides some default CLF styles
 */
 
-@import "config/variables.config.css";
+@import url("config/variables.config.css");
 
 fieldset {
   border-width: 0;
@@ -119,12 +119,11 @@ input[type="search"] {
 .masthead__img img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
   object-fit: cover;
 }
 
 /* for UBC Ckeditor Widgets styles - need to create a new branch before committing */
-@media (min-width: 960px) {
+@media (width >= 960px) {
 
   .flex-item,
   .flex-1 {
@@ -169,18 +168,12 @@ input[type="search"] {
 }
 
 .pin {
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  inset: 0 0 0 0;
 }
 
 .more-link a {
   display: inline-flex;
-  padding-top: 0.75em;
-  padding-right: 1.5em;
-  padding-bottom: 0.75em;
-  padding-left: 1.5em;
+  padding: 0.75em 1.5em 0.75em 1.5em;
   text-decoration: none;
   color: $ubc-blue-cobalt;
   border-width: 1px;
@@ -194,7 +187,7 @@ input[type="search"] {
   color: $white;
   border-color: $ubc-blue-cobalt;
   background-color: $ubc-blue-cobalt;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 10%), 0 2px 4px -1px rgb(0 0 0 / 6%);
 }
 
 /*

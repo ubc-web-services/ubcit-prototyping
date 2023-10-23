@@ -1,5 +1,6 @@
 module.exports = {
   content: [
+    "./components/**/*.{twig,js}",
     "./src/**/*.{twig,html}",
     "./src/**/*.{js,jsx,ts,tsx,vue}",
     "./kraken.theme",
@@ -20,14 +21,31 @@ module.exports = {
       "ubc-blue-cornflower": "#97d4e9",
       "ubc-blue-polar": "#def1f8",
       "ubc-blue-frost": "#f6fbfd",
+      "ubc-grey-1": "#2f5d7c",
+      "ubc-grey-2": "#5e869f",
+      "ubc-grey-3": "#98b2c3",
+      "ubc-grey-4": "#c3d0db",
+      "ubc-grey-5": "#d5dee4",
+      "ubc-grey-6": "#eaeef1",
+      "ubc-black": "#222",
       "unit-primary": "var(--color-primary)",
       "unit-secondary": "var(--color-secondary)",
       "unit-tertiary": "var(--color-tertiary)",
       "unit-accent": "var(--color-accent)",
-      "unit-primary-alpha": "var(--color-primary-alpha)",
-      "unit-secondary-alpha": "var(--color-secondary-alpha)",
-      "unit-tertiary-alpha": "var(--color-secondary-alpha)",
-      "unit-accent-alpha": "var(--color-accent-alpha)",
+      "cesd-blue-dark": "#0680a6",
+      "cesd-blue-mid": "#00a7e1",
+      "cesd-blue-light": "#6ec4e8",
+      "cesd-blue-lightest": "#c5e7f5",
+      "cesd-green-dark": "#5c7f06",
+      "cesd-green-mid": "#84b507",
+      "cesd-green-light": "#b5d26a",
+      "cesd-green-lightest": "#e1edc3",
+      "cesd-stone": "#ece6d9",
+      "success-green": "#006f4c",
+      "warning-red": "#83261e",
+      "accessible-grey": "#757575",
+      "disabled-grey-1": "#acacac",
+      "disabled-grey-2": "#e3e3e3",
       grey: {
         50: "#fafafa",
         100: "#f5f5f5",
@@ -50,23 +68,9 @@ module.exports = {
       xxl: "2400px",
     },
     fontFamily: {
-      sans: ["Catamaran", "Arial", "sans-serif"],
-      serif: [
-        "Merriweather",
-        "Georgia",
-        "Cambria",
-        '"Times New Roman"',
-        "Times",
-        "serif",
-      ],
-      mono: [
-        "Menlo",
-        "Monaco",
-        "Consolas",
-        '"Liberation Mono"',
-        '"Courier New"',
-        "monospace",
-      ],
+      sans: "var(--text-font-stack)",
+      serif: "var(--alternate-font-stack)",
+      mono: "var(--code-font-stack)",
     },
     fontSize: {
       xs: ".75rem", //12px
@@ -83,14 +87,6 @@ module.exports = {
       "8xl": "4rem", // 64px
       "9xl": "5rem", //80px
       "10xl": "7.625rem", //122px
-    },
-    borderColor: (theme) => {
-      return global.Object.assign(
-        {
-          DEFAULT: theme("colors.grey.300", "currentColor"),
-        },
-        theme("colors")
-      );
     },
     extend: {
       margin: {

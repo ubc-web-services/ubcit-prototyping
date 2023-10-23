@@ -1,4 +1,4 @@
-@media screen and (min-width: 2400px) {
+@media screen and (width >= 2400px) {
   #ubc7-global-menu .clf-container,
   #ubc7-header .clf-container,
   #ubc7-unit .clf-container,

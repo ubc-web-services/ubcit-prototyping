@@ -1,8 +1,8 @@
-@import "config/variables.config.css";
-@import "lib/fc.core.css";
-@import "lib/fc.daygrid.css";
-@import "lib/fc.timegrid.css";
-@import "lib/fc.list.css";
+@import url("config/variables.config.css");
+@import url("lib/fc.core.css");
+@import url("lib/fc.daygrid.css");
+@import url("lib/fc.timegrid.css");
+@import url("lib/fc.list.css");
 
 .fc-body .fc-scroller {
   height: auto !important;

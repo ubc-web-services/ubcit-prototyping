@@ -42,7 +42,7 @@ body .fc {
 
 .fc-popover {
   position: absolute;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 6px rgb(0 0 0 / 15%);
 }
 
 .fc-popover .fc-header {
@@ -255,23 +255,20 @@ a[data-goto]:hover {
 
 .fc-event.fc-selected {
   z-index: 9999 !important;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 5px rgb(0 0 0 / 20%);
 }
 
 .fc-event.fc-selected:after {
   position: absolute;
   z-index: 1;
-  top: -1px;
-  right: -1px;
-  bottom: -1px;
-  left: -1px;
+  inset: -1px -1px -1px -1px;
   content: "";
   opacity: 0.25;
   background: #000;
 }
 
 .fc-event.fc-dragging.fc-selected {
-  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 7px rgb(0 0 0 / 30%);
 }
 
 .fc-event.fc-dragging:not(.fc-selected) {
@@ -281,10 +278,7 @@ a[data-goto]:hover {
 .fc-h-event.fc-selected:before {
   position: absolute;
   z-index: 3;
-  top: -10px;
-  right: 0;
-  bottom: -10px;
-  left: 0;
+  inset: -10px 0 -10px 0;
   content: "";
 }
 
@@ -419,10 +413,6 @@ a.fc-more:hover {
 }
 
 .fc-unselectable {
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
   -webkit-touch-callout: none;
   -webkit-tap-highlight-color: transparent;
@@ -538,9 +528,6 @@ a.fc-more:hover {
 
 .fc-button {
   padding: 0.4em 0.65em;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
   vertical-align: middle;
   color: #212529;
@@ -549,7 +536,7 @@ a.fc-more:hover {
   background-color: transparent;
   font-size: 1em;
   line-height: 1.5;
-  -webkit-appearance: button;
+  appearance: button;
 }
 
 .fc-button:hover {
@@ -559,8 +546,7 @@ a.fc-more:hover {
 
 .fc-button:focus {
   outline: 0;
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(44, 62, 80, 0.25);
-  box-shadow: 0 0 0 0.2rem rgba(44, 62, 80, 0.25);
+  box-shadow: 0 0 0 0.2rem rgb(44 62 80 / 25%);
 }
 
 .fc-button:disabled {
@@ -580,8 +566,7 @@ a.fc-more:hover {
 }
 
 .fc-button-primary:focus {
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(76, 91, 106, 0.5);
-  box-shadow: 0 0 0 0.2rem rgba(76, 91, 106, 0.5);
+  box-shadow: 0 0 0 0.2rem rgb(76 91 106 / 50%);
 }
 
 .fc-button-primary:disabled {
@@ -599,8 +584,7 @@ a.fc-more:hover {
 
 .fc-button-primary:not(:disabled).fc-button-active:focus,
 .fc-button-primary:not(:disabled):active:focus {
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(76, 91, 106, 0.5);
-  box-shadow: 0 0 0 0.2rem rgba(76, 91, 106, 0.5);
+  box-shadow: 0 0 0 0.2rem rgb(76 91 106 / 50%);
 }
 
 .fc-button .fc-icon {
@@ -611,7 +595,7 @@ a.fc-more:hover {
 .fc-button-group {
   position: relative;
   display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
+  display: inline-flexbox;
   display: inline-flex;
   vertical-align: middle;
 }
@@ -619,7 +603,6 @@ a.fc-more:hover {
 .fc-button-group > .fc-button {
   position: relative;
   -webkit-box-flex: 1;
-  -ms-flex: 1 1 auto;
   flex: 1 1 auto;
 }
 
@@ -680,8 +663,6 @@ a.fc-more:hover {
 .fc-view-container *,
 .fc-view-container :after,
 .fc-view-container :before {
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
 }
 

@@ -7,7 +7,7 @@
   @apply mr-4 text-xs text-white no-underline rounded;
 
   padding: 0.35em 0.75em 0.25em;
-  background-color: rgba(0, 33, 69, 1);
+  background-color: rgb(0 33 69 / 100%);
 }
 
 .tag::before {

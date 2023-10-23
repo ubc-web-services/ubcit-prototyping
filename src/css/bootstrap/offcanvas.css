@@ -24,7 +24,7 @@
   left: 0;
   width: 400px;
   transform: translateX(-100%);
-  box-shadow: 0 0 #0000, 0 0 #0000, 20px 0 25px -5px rgba(0, 0, 0, 0.1), 10px 0 10px -5px rgba(0, 0, 0, 0.04) !important;
+  box-shadow: 0 0 #0000, 0 0 #0000, 20px 0 25px -5px rgb(0 0 0 / 10%), 10px 0 10px -5px rgb(0 0 0 / 4%) !important;
 }
 
 .offcanvas-top,
@@ -35,7 +35,7 @@
   height: 30vh;
   max-height: 100%;
   transform: translateY(-100%);
-  box-shadow: 0 0 #0000, 0 0 #0000, 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04) !important;
+  box-shadow: 0 0 #0000, 0 0 #0000, 0 20px 25px -5px rgb(0 0 0 / 10%), 0 10px 10px -5px rgb(0 0 0 / 4%) !important;
 }
 
 .offcanvas-end,
@@ -44,7 +44,7 @@
   right: 0;
   width: 400px;
   transform: translateX(100%);
-  box-shadow: 0 0 #0000, 0 0 #0000, -20px 0 25px -5px rgba(0, 0, 0, 0.1), -10px 0 10px -5px rgba(0, 0, 0, 0.04) !important;
+  box-shadow: 0 0 #0000, 0 0 #0000, -20px 0 25px -5px rgb(0 0 0 / 10%), -10px 0 10px -5px rgb(0 0 0 / 4%) !important;
 }
 
 .offcanvas-bottom,
@@ -54,7 +54,7 @@
   height: 30vh;
   max-height: 100%;
   transform: translateY(100%);
-  box-shadow: 0 0 #0000, 0 0 #0000, 0 -20px 25px -5px rgba(0, 0, 0, 0.1), 0 -10px 10px -5px rgba(0, 0, 0, 0.04) !important;
+  box-shadow: 0 0 #0000, 0 0 #0000, 0 -20px 25px -5px rgb(0 0 0 / 10%), 0 -10px 10px -5px rgb(0 0 0 / 4%) !important;
 }
 
 .offcanvas.show {

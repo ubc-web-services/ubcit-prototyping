@@ -186,10 +186,7 @@ fieldset.webform-type-radios {
 fieldset fieldset {
   margin-top: 3rem !important;
   margin-bottom: 0 !important;
-  padding-top: 0;
-  padding-right: 0;
-  padding-bottom: 0;
-  padding-left: 0;
+  padding: 0 0 0 0;
   box-shadow: none;
 }
 
@@ -218,14 +215,12 @@ fieldset fieldset legend {
   @apply text-sm text-grey-700;
 }
 
-@media (min-width: 400px) {
+@media (width >= 400px) {
   .webform-options-display-two-columns,
   .webform-options-display-three-columns {
     display: flex;
     flex-wrap: wrap;
     margin-top: 0;
-    -moz-column-count: initial;
-    -webkit-column-count: initial;
     column-count: initial;
   }
   .webform-options-display-two-columns div.form-item {

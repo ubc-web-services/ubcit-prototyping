@@ -31,7 +31,7 @@
 .message__close:hover {
   @apply text-black no-underline;
 
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgb(255 255 255 / 50%);
 }
 
 .message__icon {

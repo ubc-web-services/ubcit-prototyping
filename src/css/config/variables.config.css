@@ -3,16 +3,7 @@
 */
 
 /* used to determine when to trigger an external icon */
-$site-url: "e.ubc.ca";
-
-/* Type Variables */
-
-$text-font-stack: catamaran, arial, sans-serif;
-$serif-font-stack: merriweather, georgia, cambria, "Times New Roman", times, serif;
-$code-font-stack: menlo, monaco, consolas, "Liberation Mono", "Courier New", monospace;
-
-$default-typeface: $text-font-stack;
-$alternate-typeface: $serif-font-stack;
+$site-url: "extendedlearning.ubc.ca";
 
 /* Type Sizes */
 $base-line-height: var(--leading);
@@ -61,11 +52,14 @@ $ubc-blue-cornflower: #97d4e9;
 $ubc-blue-polar: #def1f8;
 $ubc-blue-frost: #f6fbfd;
 
-$unit-primary: var(--color-primary);
-$unit-secondary: var(--color-secondary);
-$unit-tertiary: var(--color-tertiary);
-$unit-tertiary-alt: var(--color-tertiary-alt);
-$unit-accent: var(--color-accent);
+$ubc-grey-1: #2f5d7c;
+$ubc-grey-2: #5e869f;
+$ubc-grey-3: #98b2c3;
+$ubc-grey-4: #c3d0db;
+$ubc-grey-5: #d5dee4;
+$ubc-grey-6: #eaeef1;
+$ubc-black: #222;
+
 $grey-50: #fafafa;
 $grey-100: #f5f5f5;
 $grey-300: #e0e0e0;
@@ -79,32 +73,29 @@ $success: #57edae;
 $status: $ubc-blue-neptune;
 $text-color: $grey-900;
 
-$white-transparent: rgba(255, 255, 255, 0.5);
-$white--translucent: rgba(255, 255, 255, 0.2);
-$ubc-blue--transparent: rgba(0, 33, 69, 0.9);
-$ubc-blue--tint: rgba(0, 33, 69, 0.25);
-$gradient-ubc-blue-transparent: rgba(0, 33, 69, 0);
-$gradient-ubc-blue-opaque: rgba(0, 33, 69, 1);
-$gradient-grey-transparent: rgba(244, 244, 244, 0);
-$gradient-grey-opaque: rgba(244, 244, 244, 1);
+$error: #ff7c7c;
+$warning: #f8e605;
+$success: #57edae;
+$status: $ubc-blue-neptune;
+$text-color: $grey-900;
+
+$white-transparent: rgb(255 255 255 / 50%);
+$white--translucent: rgb(255 255 255 / 20%);
+$ubc-blue--transparent: rgb(0 33 69 / 90%);
+$ubc-blue--tint: rgb(0 33 69 / 25%);
+$gradient-ubc-blue-transparent: rgb(0 33 69 / 0%);
+$gradient-ubc-blue-opaque: rgb(0 33 69 / 100%);
+$gradient-grey-transparent: rgb(244 244 244 / 0%);
+$gradient-grey-opaque: rgb(244 244 244 / 100%);
 
 /* Default colors */
-$default-text-color: $grey-900;
-$default-link-color: $ubc-blue-cobalt;
-$default-link-color-hover: $ubc-blue;
-$default-link-color-active: $ubc-blue;
+$default-link-color: $ubc-blue;
+$default-link-color-hover: #2f5d7c;
+$default-link-color-active: #98b2c3;
 
-$box-shadow-color: rgba(0, 0, 0, 0.1);
-$image-overlay-bg-colour: rgba(69, 69, 69, 1);
-$image-overlay-screen-colour: rgba(125, 134, 140, 0.2);
-
-/* Title weights */
-$h1-weight: 600;
-$h2-weight: 600;
-$h3-weight: 600;
-$h4-weight: 600;
-$h5-weight: 600;
-$h6-weight: 600;
+$box-shadow-color: rgb(0 0 0 / 10%);
+$image-overlay-bg-colour: rgb(69 69 69 / 100%);
+$image-overlay-screen-colour: rgb(125 134 140 / 20%);
 
 /* Forms */
 $input-border-radius: 0;
@@ -121,68 +112,68 @@ $input-check-radio-color: $ubc-blue;
 $input-check-radio-border: $ubc-blue;
 $input-placeholder-color: $grey-300;
 $input-required-color: $error;
-$focus-bg: rgba(64, 180, 229, 0.5);
-$focus-inner-bg: rgba(0, 33, 69, 1);
-$focus-required-bg: rgba(255, 124, 124, 0.5);
+$focus-bg: rgb(64 180 229 / 50%);
+$focus-inner-bg: rgb(0 33 69 / 100%);
+$focus-required-bg: rgb(255 124 124 / 50%);
 $focus-required-inner-bg: #d62f2f;
 
 /* Buttons */
-$gradient-black-transparent: rgba(0, 0, 0, 0);
-$gradient-black-translucent: rgba(0, 0, 0, 0.2);
-$gradient-black-opaque: rgba(0, 0, 0, 1);
+$gradient-black-transparent: rgb(0 0 0 / 0%);
+$gradient-black-translucent: rgb(0 0 0 / 20%);
+$gradient-black-opaque: rgb(0 0 0 / 100%);
 $button-text: $white;
 $button-bg: $ubc-blue;
-$button-border: $transparent;
-$button-text--hover: $white;
-$button-bg--hover: $ubc-blue-sea;
-$button-border--hover: $transparent;
-$button-text--active: $white;
-$button-bg--active: $ubc-blue-sea;
-$button-border--active: $transparent;
-$button-light-bg: $ubc-blue-polar;
-$button-light-border: $transparent;
-$button-light-text: $black;
-$button-light-bg--hover: $ubc-blue-frost;
-$button-light-border--hover: $transparent;
-$button-light-text--hover: $black;
-$button-light-bg--active: $ubc-blue-frost;
-$button-light-border--active: $transparent;
-$button-light-text--active: $black;
+$button-border: $ubc-blue;
+$button-text--hover: $ubc-blue;
+$button-bg--hover: $white;
+$button-border--hover: $ubc-blue;
+$button-text--active: ubc-grey-1;
+$button-bg--active: $white;
+$button-border--active: $ubc-grey-1;
+$button-light-bg: $white;
+$button-light-border: $ubc-blue;
+$button-light-text: $ubc-blue;
+$button-light-bg--hover: $ubc-blue;
+$button-light-border--hover: $ubc-blue;
+$button-light-text--hover: $white;
+$button-light-bg--active: $ubc-grey-1;
+$button-light-border--active: $ubc-grey-1;
+$button-light-text--active: $white;
 $button-dark-bg: $ubc-blue;
-$button-dark-border: $transparent;
+$button-dark-border: $ubc-blue;
 $button-dark-text: $white;
-$button-dark-bg--hover: $ubc-blue-cobalt;
-$button-dark-border--hover: $transparent;
-$button-dark-text--hover: $white;
-$button-dark-bg--active: $ubc-blue-cobalt;
-$button-dark-border--active: $transparent;
-$button-dark-text--active: $white;
-$button-transparent-bg: rgba(255, 255, 255, 0.2);
-$button-transparent-border: $transparent;
+$button-dark-bg--hover: $white;
+$button-dark-border--hover: $ubc-blue;
+$button-dark-text--hover: $ubc-blue;
+$button-dark-bg--active: $white;
+$button-dark-border--active: $ubc-grey-1;
+$button-dark-text--active: $ubc-grey-1;
+$button-transparent-bg: $transparent;
+$button-transparent-border: $white;
 $button-transparent-text: $white;
-$button-transparent-bg--hover: rgba(255, 255, 255, 0.4);
-$button-transparent-border--hover: $transparent;
-$button-transparent-text--hover: $white;
-$button-transparent-bg--active: rgba(255, 255, 255, 0.5);
-$button-transparent-border--active: $transparent;
-$button-transparent-text--active: $white;
+$button-transparent-bg--hover: $white;
+$button-transparent-border--hover: $white;
+$button-transparent-text--hover: $ubc-blue;
+$button-transparent-bg--active: rgb(255 255 255 / 60%);
+$button-transparent-border--active: rgb(255 255 255 / 60%);
+$button-transparent-text--active: rgb(0 33 69 / 60%);
 
 /* Tables */
-$table-row-striping-color: rgba(225, 243, 249, 0.5);
-$table-row-hover-color: rgba(225, 243, 249, 0.5);
+$table-row-striping-color: rgb(225 243 249 / 50%);
+$table-row-hover-color: rgb(225 243 249 / 50%);
 
 /* Carousel */
 $carousel-button--disabled: $grey-500;
 $carousel-item--focus-outline: $ubc-blue-cobalt;
 $carousel-item--focus-border: $white;
-$carousel-caption--text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
-$carousel-gradient-transparent: rgba(0, 0, 0, 0.0001);
-$carousel-gradient-translucent: rgba(0, 0, 0, 0.7);
+$carousel-caption--text-shadow: 0 1px 2px rgb(0 0 0 / 60%);
+$carousel-gradient-transparent: rgb(0 0 0 / 0.01%);
+$carousel-gradient-translucent: rgb(0 0 0 / 70%);
 
 /* Throbber / ajax loading animation */
-$throbber-background: rgba(255, 255, 255, 0.5);
-$throbber-border: rgba(51, 51, 51, 0.25);
-$throbber-color: $unit-primary;
+$throbber-background: rgb(255 255 255 / 50%);
+$throbber-border: rgb(51 51 51 / 25%);
+$throbber-color: var(--color-primary);
 
 /* CLF 8 Breakpoints map */
 $breakpoint--xs: 480px;

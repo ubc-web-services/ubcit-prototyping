@@ -9,31 +9,26 @@ https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+cli
 
 code[class*="language-"],
 pre[class*="language-"] {
-	color: #ccc;
-	font-size: 1em;
-	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-	line-height: 1.5;
-	white-space: pre;
 	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
 	word-wrap: normal;
 	word-break: normal;
-	word-spacing: normal;
-	-moz-tab-size: 4;
-	-o-tab-size: 4;
 	tab-size: 4;
-	-webkit-hyphens: none;
-	-moz-hyphens: none;
-	-ms-hyphens: none;
 	hyphens: none;
+	color: #ccc;
 	background: none;
 	text-shadow: none;
+	font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+	font-size: 1em;
+	line-height: 1.5;
 }
 
 /* Code blocks */
 pre[class*="language-"] {
-	margin: .5em 0;
-	padding: 1em;
 	overflow: auto;
+	margin: 0.5em 0;
+	padding: 1em;
 }
 
 :not(pre) > code[class*="language-"],
@@ -43,15 +38,15 @@ pre[class*="language-"] {
 
 /* Inline code */
 :not(pre) > code[class*="language-"] {
-	padding: .1em;
+	padding: 0.1em;
 	white-space: normal;
-	border-radius: .3em;
+	border-radius: 0.3em;
 }
 
 code[class*="language-"] .tag {
+	margin-right: 0;
 	padding: 0;
 	background-color: transparent;
-	margin-right: 0;
 }
 
 code[class*="language-"] .tag::before {
@@ -148,14 +143,11 @@ pre[class*="language-"].line-numbers > code {
 	top: 0;
 	left: -3.8em;
 	width: 3em; /* works for line-numbers below 1000 lines */
-	font-size: 100%;
-	letter-spacing: -1px;
-	border-right: 1px solid #999;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
 	user-select: none;
+	letter-spacing: -1px;
 	pointer-events: none;
+	border-right: 1px solid #999;
+	font-size: 100%;
 }
 
 .line-numbers-rows > span {
@@ -165,21 +157,21 @@ pre[class*="language-"].line-numbers > code {
 
 .line-numbers-rows > span:before {
 	display: block;
-	padding-right: .8em;
-	color: #999;
-	text-align: right;
+	padding-right: 0.8em;
 	content: counter(linenumber);
+	text-align: right;
+	color: #999;
 }
 
 /* Fallback, in case JS does not run, to ensure the code is at least visible */
-[class*='lang-'] script[type='text/plain'],
-[class*='language-'] script[type='text/plain'],
-script[type='text/plain'][class*='lang-'],
-script[type='text/plain'][class*='language-'] {
+[class*="lang-"] script[type="text/plain"],
+[class*="language-"] script[type="text/plain"],
+script[type="text/plain"][class*="lang-"],
+script[type="text/plain"][class*="language-"] {
 	display: block;
 	overflow: auto;
-	font: 100% Consolas, Monaco, monospace;
 	white-space: pre;
+	font: 100% Consolas, Monaco, monospace;
 }
 
 div.code-toolbar {
@@ -188,10 +180,10 @@ div.code-toolbar {
 
 div.code-toolbar > .toolbar {
 	position: absolute;
-	top: .3em;
-	right: .2em;
+	top: 0.3em;
+	right: 0.2em;
+	transition: opacity 0.3s ease-in-out;
 	opacity: 0;
-	transition: opacity .3s ease-in-out;
 }
 
 div.code-toolbar:hover > .toolbar {
@@ -213,28 +205,26 @@ div.code-toolbar > .toolbar a {
 }
 
 div.code-toolbar > .toolbar button {
-	padding: 0;
 	overflow: visible;
+	padding: 0; /* for button */
+	user-select: none;
 	color: inherit;
+	border: 0;
+	background: none;
 	font: inherit;
 	line-height: normal;
-	background: none;
-	border: 0;
-	-webkit-user-select: none; /* for button */
-	-moz-user-select: none;
-	-ms-user-select: none;
 }
 
 div.code-toolbar > .toolbar a,
 div.code-toolbar > .toolbar button,
 div.code-toolbar > .toolbar span {
-	padding: 0 .5em;
+	padding: 0 0.5em;
 	color: #bbb;
-	font-size: .8em;
+	border-radius: 0.5em;
 	background: #f5f2f0;
-	background: rgba(224, 224, 224, .2);
-	border-radius: .5em;
-	box-shadow: 0 2px 0 0 rgba(0, 0, 0, .2);
+	background: rgb(224 224 224 / 20%);
+	box-shadow: 0 2px 0 0 rgb(0 0 0 / 20%);
+	font-size: 0.8em;
 }
 
 div.code-toolbar > .toolbar a:hover,
@@ -243,6 +233,6 @@ div.code-toolbar > .toolbar button:hover,
 div.code-toolbar > .toolbar button:focus,
 div.code-toolbar > .toolbar span:hover,
 div.code-toolbar > .toolbar span:focus {
-	color: inherit;
 	text-decoration: none;
+	color: inherit;
 }

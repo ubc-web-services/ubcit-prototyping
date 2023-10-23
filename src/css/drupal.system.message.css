@@ -2,7 +2,7 @@
  * @file
  * Styles for system messages
  */
-@import "config/variables.config.css";
+@import url("config/variables.config.css");
 
 .message {
   position: relative;
@@ -10,12 +10,8 @@
   align-items: center;
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
-  padding-top: 1rem;
-  padding-right: 3rem;
-  padding-bottom: 1rem;
-  padding-left: 1rem;
-  padding-left: 3rem;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  padding: 1rem 3rem 1rem 3rem;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 10%), 0 4px 6px -2px rgb(0 0 0 / 5%);
 }
 
 .message--success {
@@ -38,17 +34,14 @@
   position: absolute;
   top: 0;
   right: 0;
-  padding-top: 0.75rem;
-  padding-right: 1rem;
-  padding-bottom: 0.75rem;
-  padding-left: 1rem;
+  padding: 0.75rem 1rem 0.75rem 1rem;
   line-height: 1;
 }
 
 .message__close:hover {
   text-decoration: none;
   color: #000;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgb(255 255 255 / 50%);
 }
 
 .message__icon {

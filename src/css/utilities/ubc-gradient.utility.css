@@ -1,10 +1,10 @@
 /** @define ubc-gradient */
 
 /* variables in file */
-$gradient-ubc-blue-transparent: rgba(0, 33, 69, 0);
-$gradient-ubc-blue-opaque: rgba(0, 33, 69, 1);
-$gradient-grey-transparent: rgba(244, 244, 244, 0);
-$gradient-grey-opaque: rgba(244, 244, 244, 1);
+$gradient-ubc-blue-transparent: rgb(0 33 69 / 0%);
+$gradient-ubc-blue-opaque: rgb(0 33 69 / 100%);
+$gradient-grey-transparent: rgb(244 244 244 / 0%);
+$gradient-grey-opaque: rgb(244 244 244 / 100%);
 
 /* gradients */
 .gradient-bottom--ubc-blue {
