@@ -1,8 +1,8 @@
 /** @define layouts */
 
 /* variables in file */
-$focus-bg: rgb(64 180 229 / 50%);
-$focus-inner-bg: rgb(0 33 69 / 100%);
+$focus-bg: rgba(64, 180, 229, 0.5);
+$focus-inner-bg: rgba(0, 33, 69, 1);
 
 /* Set up a decent box model on the root element */
 html {
@@ -27,6 +27,7 @@ button:focus {
   box-shadow:
     0 0 0 6px $focus-bg,
     0 0 0 1px $focus-inner-bg !important;
+  z-index: 2;
 }
 
 [tabindex="-1"]:focus {

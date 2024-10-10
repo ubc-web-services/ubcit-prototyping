@@ -9,10 +9,4 @@ module.exports = merge(common, {
     path: path.resolve(__dirname, "build/js"),
     filename: "[name].min.js",
   },
-  resolve: {
-    alias: {
-      vue$: "vue/dist/vue.min.js",
-    },
-    extensions: [".js", ".jsx", ".vue"],
-  },
 });

@@ -1,8 +1,8 @@
 {# CONFIG #}
-{% set unitName = "UBC Extended Learning" %}
-{% set siteURL = "extendedlearning.ubc.ca" %}
+{% set unitName = "UBC Information Technology" %}
+{% set siteURL = "it.ubc.ca" %}
 {% set facultyName = "" %}
-{% set campus = 'vancouver' %}
+{% set campus = '' %}
 {% set clfversion = 7 %}
 {% set clf_sticky = TRUE %}
 
@@ -19,9 +19,8 @@
 	</style>
 </head>
 
-<body class="overflow-x-hidden layout--full-width">
+<body class="overflow-x-hidden layout--full-width js-bootstrap">
 	<div id="main-content">
-
 		{% if clfversion == 7 %}
 			{% include "../includes/header--clf7.twig" %}
 		{% else %}

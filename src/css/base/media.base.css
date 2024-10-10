@@ -8,7 +8,6 @@ img,
 video {
   max-width: 100%;
   height: auto;
-  aspect-ratio: attr(width) / attr(height);
 }
 
 figure {
@@ -21,7 +20,6 @@ figcaption {
   @apply px-3 pt-2 text-sm text-grey-700;
 }
 
-
 /* svgs
 * add a default stroke width (utilities to modify in separate file)
 */
@@ -31,21 +29,12 @@ svg {
 }
 
 /* embedded media (iframes) */
-.media-wrapper {
-  position: relative;
-  overflow: hidden;
-  height: 0 !important;
-  padding-bottom: 56.25%;
-}
-
-.media-wrapper embed,
-.media-wrapper iframe,
-.media-wrapper object {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100% !important;
-  height: 100% !important;
+embed,
+iframe,
+object {
+  aspect-ratio: 16/9;
+  height: auto;
+  width: 100%;
 }
 
 .img-cover img {

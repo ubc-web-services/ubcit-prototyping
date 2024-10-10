@@ -1,11 +1,6 @@
 /* drupal media */
 @import url("config/variables.config.css");
 
-.field--name-field-media-image-1,
-.media--type-image {
-  @apply mt-leading;
-}
-
 .ubc-card__media .media--type-image,
 figure .media--type-image {
   @apply mt-0;
@@ -21,51 +16,85 @@ figure .media--type-image {
   display: table;
 }
 
+.align-center {
+  @apply mx-auto;
+}
+
 figure[class*="align-"] figcaption {
   display: table-caption;
   caption-side: bottom;
 }
 
-figure.align-center,
-figure.align-right,
-figure.align-left {
-  @apply mt-0;
-}
-
+img.align-left,
 figure.align-left,
-.align-left.media {
-  @apply mr-leading mb-leading;
-}
-
-[class^="widget-"].align-left {
-  @apply max-w-md mr-leading;
-}
-
+img.align-right,
 figure.align-right,
-.align-right.media {
-  @apply ml-leading mb-leading;
+.media.align-left,
+.media.align-right {
+  @apply mb-4;
 }
 
-[class^="widget-"].align-right {
-  @apply max-w-md ml-leading;
+figure img {
+  @apply !mt-0;
 }
 
-.align-center .media--type-image,
-.align-left .media--type-image,
-.align-right .media--type-image,
-.align-center.media--type-remote-video,
-.align-left.media--type-remote-video,
-.align-right.media--type-remote-video {
+.drupal-media.align-left,
+.drupal-media.align-right,
+.media.align-left,
+.media.align-right,
+figure.align-left,
+figure.align-right {
   @apply mt-leading;
 }
 
-/* captions */
-figure.caption-drupal-media {
-  @apply mt-0;
+img.align-left,
+img.align-right {
+  @apply mt-[.5em];
 }
 
-figure.caption-drupal-media figcaption {
-  @apply mb-leading;
+[class^="widget-"].align-left,
+[class^="widget-"].align-right {
+  @apply max-w-md;
+}
+
+@media (min-width: $breakpoint--sm) {
+
+  .align-left {
+    float: left;
+  }
+
+  .align-right {
+    float: right;
+  }
+
+  .drupal-media.align-left,
+  .drupal-media.align-right,
+  .media.align-left,
+  .media.align-right,
+  .caption-drupal-media.align-left,
+  .caption-drupal-media.align-right,
+  figure.align-left,
+  figure.align-right,
+  img.align-left,
+  img.align-right  {
+    clear: both;
+    max-width: 50%;
+  }
+
+  [class^="widget-"].align-left,
+  img.align-left,
+  figure.align-left,
+  .media.align-left {
+    @apply mr-6;
+  }
+
+  [class^="widget-"].align-right,
+  img.align-right,
+  figure.align-right,
+  .media.align-right {
+    @apply ml-6;
+  }
+
 }
 
 /* specific overrides */
@@ -74,73 +103,65 @@ figure.caption-drupal-media figcaption {
   @apply my-0;
 }
 
-.media--type-remote-video.media--view-mode-full {
-  position: relative;
-  display: block;
-  overflow: hidden;
-  width: 100%;
-  height: 0 !important;
-  padding-bottom: 56.25%;
-}
-
-.media--type-remote-video.media--view-mode-full iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100% !important;
-  height: 100% !important;
-}
-
-.media--type-twitter {
-  margin-top: calc(var(--leading) * 1rem);
-}
-
-.media--type-twitter .twitter-tweet {
-  min-width: 250px;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
 @media (max-width: $breakpoint--sm--max) {
 
   figure.align-left,
-  .align-left.media {
-    @apply float-none mr-0;
-  }
-
   figure.align-right,
-  .align-right.media {
-    @apply float-none ml-0;
-  }
-
+  .media.align-left,
+  .media.align-right,
+  .drupal-media.align-left,
+  .drupal-media.align-right,
+  .caption-drupal-media.align-left,
+  .caption-drupal-media.align-right,
+  img.align-left,
+  img.align-right,
   [class^="widget-"].align-left,
   [class^="widget-"].align-right {
-    @apply float-none ml-0 mr-0 max-w-none;
+    @apply float-none max-w-full ml-0 mr-0;
   }
 
-  .media--type-remote-video {
-    position: relative;
-    overflow: hidden;
-    height: 0 !important;
-    padding-bottom: 56.25%;
+  figure.align-left,
+  figure.align-right {
+    width: 100%;
   }
 
-  .media--type-remote-video iframe,
-  .media--type-remote-video embed,
-  .media--type-remote-video object {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100% !important;
-    height: 100% !important;
-  }
 }
 
-figure.align-left .media--type-remote-video.media--view-mode-full,
-.align-left.media--type-remote-video.media--view-mode-full,
-figure.align-right .media--type-remote-video.media--view-mode-full,
-.align-right.media--type-remote-video.media--view-mode-full,
-figure.align-center .media--type-remote-video.media--view-mode-full,
-.align-center.media--type-remote-video.media--view-mode-full {
-  display: block;
+/* image filters */
+.img-greyscale {
+  filter: grayscale(100%);
+}
+
+
+/* add play button on top of image thumbnail */
+.media--type-remote-video {
+  position: relative;
+}
+
+.media--type-remote-video .field--name-thumbnail {
+  width: 100%;
+  cursor: pointer;
+}
+
+.media--type-remote-video .field--name-thumbnail img {
+  width: 100%;
+}
+
+.media--type-remote-video .field--name-thumbnail:after {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: url("../img/svg/icon-play.svg");
+  background-position: center;
+  background-size: 4rem 4rem;
+  background-repeat: no-repeat;
+  content: '';
+}
+
+@media (min-width: $breakpoint--clf7-sm) {
+  .media--type-remote-video .field--name-thumbnail:after {
+    background-size: 7.5rem 7.5rem;
+  }
 }

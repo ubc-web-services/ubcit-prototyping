@@ -9,10 +9,4 @@ module.exports = merge(common, {
     path: path.resolve(__dirname, "build/js"),
     filename: "[name].js",
   },
-  resolve: {
-    alias: {
-      vue$: "vue/dist/vue.js",
-    },
-    extensions: [".js", ".jsx", ".vue"],
-  },
 });

@@ -74,3 +74,21 @@ $gradient-grey-opaque: rgb(244 244 244 / 100%);
   content: "";
   background: linear-gradient(to bottom, $gradient-ubc-blue-opaque 0%, $gradient-ubc-blue-transparent 55%);
 }
+
+
+/* gradients and colour screens */
+.bg-gradient--screen {
+	position: relative;
+}
+
+.bg-gradient--screen::after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(227deg, $ubc-blue-cobalt 2.5%, $ubc-blue-sea 33%, $ubc-blue 80%);
+	opacity: .6;
+	content: '';
+}

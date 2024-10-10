@@ -1,55 +1,133 @@
-<Tabcordion initial="tab1" :tabs="['tab1', 'tab2', 'tab3']" >
-	<template slot="tab-head-tab1">
-		Overview
-	</template>
-	<template slot="tab-panel-tab1">
-		<h2>Overview</h2>
-		<p>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-		</p>
-	</template>
-	<template slot="tab-head-tab2">
-		Details
-	</template>
-	<template slot="tab-panel-tab2">
-		<h2>Details</h2>
-		<p>
-			 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-		</p>
-	</template>
-	<template slot="tab-head-tab3">
-		Requirements
-	</template>
-	<template slot="tab-panel-tab3">
-		<h2>Requirements</h2>
-		<p>
-			Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-		</p>
-	</template>
-</Tabcordion>
+
+<div class="tabcordion">
+	<ul class="nav nav-tabs tabcordion__links" role="tablist">
+		<li class="nav-item tabcordion__tab" role="presentation">
+            <button id="tab-1" data-bs-target="#pane-1" class="nav-link active" data-bs-toggle="tab" role="tab" type="button" aria-controls="tab-1" aria-selected="true">Overview</button>
+		</li>
+		<li class="nav-item tabcordion__tab">
+            <button id="tab-2" data-bs-target="#pane-2" class="nav-link" data-bs-toggle="tab" role="tab" type="button" aria-controls="tab-2" aria-selected="false">Requirements
+			</button>
+        </li>
+		<li class="nav-item tabcordion__tab">
+            <button id="tab-3" data-bs-target="#pane-3" class="nav-link" data-bs-toggle="tab" role="tab" type="button" aria-controls="tab-3" aria-selected="false">Details
+			</button>
+        </li>
+	</ul>
+	 <div class="tab-content">
+	 	<div id="pane-1" class="card tab-pane fade show active" role="tabpanel" aria-labelledby="tab-1">
+            <div class="card-header" role="tab" id="heading-1">
+              <h5 class="my-0">
+                <button class="tabcordion__heading" data-bs-toggle="collapse" data-bs-target="#collapse-1" aria-expanded="false" aria-controls="collapse-1" type="button">
+                  Overview
+                </button>
+              </h5>
+            </div>
+            <div id="collapse-1" class="collapse show fade tabcordion__content" data-parent="#content" role="tabpanel" aria-labelledby="heading-1">
+              	<div class="flow-root text-formatted">
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+					</p>
+				</div>
+            </div>
+        </div>
+	 	 <div id="pane-2" class="card tab-pane fade" role="tabpanel" aria-labelledby="tab-2">
+            <div class="card-header" role="tab" id="heading-2">
+              	<h5 class="my-0">
+                	<button class="collapsed tabcordion__heading" data-bs-toggle="collapse" data-bs-target="#collapse-2" aria-expanded="false" aria-controls="collapse-2" type="button">
+                  	Requirements
+                	</button>
+              	</h5>
+            </div>
+            <div id="collapse-2" class="collapse fade tabcordion__content" data-parent="#content" role="tabpanel" aria-labelledby="heading-2">
+              	<div class="flow-root text-formatted">
+                	<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</p>
+              	</div>
+            </div>
+        </div>
+		<div id="pane-3" class="card tab-pane fade" role="tabpanel" aria-labelledby="tab-3">
+            <div class="card-header" role="tab" id="heading-3">
+              	<h5 class="my-0">
+                	<button class="collapsed tabcordion__heading" data-bs-toggle="collapse" data-bs-target="#collapse-3" aria-expanded="false" aria-controls="collapse-3" type="button">
+                  	Details
+                	</button>
+              	</h5>
+            </div>
+            <div id="collapse-3" class="collapse fade tabcordion__content" data-parent="#content" role="tabpanel" aria-labelledby="heading-3">
+              	<div class="flow-root text-formatted">
+                	<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</p>
+              	</div>
+            </div>
+        </div>
+	 </div>
+</div>
 
 <details>
   <summary class="font-mono">Tabcordion Code</summary>
   <script type="text/plain" class="language-markup">
-    <Tabcordion initial="tab1" :tabs="['tab1', 'tab2', 'tab3']" >
-      <template slot="tab-head-tab1">Overview</template>
-      <template slot="tab-panel-tab1">
-        <h2>Overview</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </p>
-      </template>
-      <template slot="tab-head-tab2">Details</template>
-      <template slot="tab-panel-tab2">
-        <h2>Details</h2>
-        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-      </template>
-      <template slot="tab-head-tab3">Requirements</template>
-      <template slot="tab-panel-tab3">
-        <h2>Requirements</h2>
-        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-      </template>
-    </Tabcordion>
+	<div class="tabcordion">
+		<ul class="nav nav-tabs tabcordion__links" role="tablist">
+			<li class="nav-item tabcordion__tab" role="presentation">
+				<button id="tab-1" data-bs-target="#pane-1" class="nav-link active" data-bs-toggle="tab" role="tab" type="button" aria-controls="tab-1" aria-selected="true">Overview</button>
+			</li>
+			<li class="nav-item tabcordion__tab">
+				<button id="tab-2" data-bs-target="#pane-2" class="nav-link" data-bs-toggle="tab" role="tab" type="button" aria-controls="tab-2" aria-selected="false">Requirements
+				</button>
+			</li>
+			<li class="nav-item tabcordion__tab">
+				<button id="tab-3" data-bs-target="#pane-3" class="nav-link" data-bs-toggle="tab" role="tab" type="button" aria-controls="tab-3" aria-selected="false">Details
+				</button>
+			</li>
+		</ul>
+		<div class="tab-content">
+			<div id="pane-1" class="card tab-pane fade show active" role="tabpanel" aria-labelledby="tab-1">
+				<div class="card-header" role="tab" id="heading-1">
+				<h5 class="my-0">
+					<button class="tabcordion__heading" data-bs-toggle="collapse" data-bs-target="#collapse-1" aria-expanded="false" aria-controls="collapse-1" type="button">
+					Overview
+					</button>
+				</h5>
+				</div>
+				<div id="collapse-1" class="collapse show fade tabcordion__content" data-parent="#content" role="tabpanel" aria-labelledby="heading-1">
+					<div class="flow-root text-formatted">
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+						</p>
+					</div>
+				</div>
+			</div>
+			<div id="pane-2" class="card tab-pane fade" role="tabpanel" aria-labelledby="tab-2">
+				<div class="card-header" role="tab" id="heading-2">
+					<h5 class="my-0">
+						<button class="collapsed tabcordion__heading" data-bs-toggle="collapse" data-bs-target="#collapse-2" aria-expanded="false" aria-controls="collapse-2" type="button">
+						Requirements
+						</button>
+					</h5>
+				</div>
+				<div id="collapse-2" class="collapse fade tabcordion__content" data-parent="#content" role="tabpanel" aria-labelledby="heading-2">
+					<div class="flow-root text-formatted">
+						<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						</p>
+					</div>
+				</div>
+			</div>
+			<div id="pane-3" class="card tab-pane fade" role="tabpanel" aria-labelledby="tab-3">
+				<div class="card-header" role="tab" id="heading-3">
+					<h5 class="my-0">
+						<button class="collapsed tabcordion__heading" data-bs-toggle="collapse" data-bs-target="#collapse-3" aria-expanded="false" aria-controls="collapse-3" type="button">
+						Details
+						</button>
+					</h5>
+				</div>
+				<div id="collapse-3" class="collapse fade tabcordion__content" data-parent="#content" role="tabpanel" aria-labelledby="heading-3">
+					<div class="flow-root text-formatted">
+						<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
   </script>
 </details>

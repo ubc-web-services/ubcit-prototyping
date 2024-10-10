@@ -29,63 +29,103 @@
 }
 
 /* subnavigation */
-.subnav__links {
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 0;
-  list-style: none;
-}
-
-.subnav--nested {
-  @apply list-none;
-}
-
-.nav--split {
-  display: flex;
-}
-
 .navlink--secondary {
-  @apply relative block py-2 overflow-hidden no-underline text-ubc-blue-cobalt;
+  @apply relative block py-2 px-[14px] pr-10 overflow-hidden no-underline text-ubc-blue;
+
+  border-bottom: 1px solid #97d4e9 !important;
 }
 
-.navlink--secondary:hover {
-  @apply underline;
+.navlink--secondary::after {
+  @apply absolute top-0 right-0 block w-10 h-full bg-transparent;
+
+  content: "";
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath fill='none' stroke='%23002145' stroke-miterlimit='10' stroke-width='4' d='M26 20.006L40 32 26 44.006'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 1.25rem;
 }
 
-.navlink--secondary.has-children {
-  @apply flex-1;
+.navlink--secondary:hover,
+.navlink--secondary.menu-item--active-trail:not(.is-active):hover {
+  @apply text-white no-underline bg-unit-primary;
+}
+
+.navlink--secondary:hover::after {
+  @apply bg-unit-accent;
+
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath fill='none' stroke='%23ffffff' stroke-miterlimit='10' stroke-width='4' d='M26 20.006L40 32 26 44.006'%3E%3C/path%3E%3C/svg%3E");
+}
+
+.navlink--secondary.is-active {
+  @apply font-semibold text-white no-underline bg-unit-primary;
+}
+
+.navlink--secondary.is-active::after {
+  @apply bg-unit-accent;
+
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath fill='none' stroke='%23ffffff' stroke-miterlimit='10' stroke-width='4' d='M26 20.006L40 32 26 44.006'%3E%3C/path%3E%3C/svg%3E");
+}
+
+.navlink--secondary.menu-item--active-trail:not(.is-active) {
+  @apply font-semibold bg-transparent;
+}
+
+.navlink--secondary.menu-item--active-trail:not(.is-active)::after {
+  @apply bg-transparent;
+
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath fill='none' stroke='%23002145' stroke-miterlimit='10' stroke-width='4' d='M20 40l11.994-14L44 40'%3E%3C/path%3E%3C/svg%3E");
+}
+
+.navlink--secondary.menu-item--active-trail:not(.is-active):hover::after {
+  @apply bg-unit-accent;
+
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath fill='none' stroke='%23ffffff' stroke-miterlimit='10' stroke-width='4' d='M20 40l11.994-14L44 40'%3E%3C/path%3E%3C/svg%3E");
 }
 
 .subnav--nested .navlink--secondary {
-  @apply block py-2 pl-4 pr-12 text-sm font-normal;
-}
+  @apply block pl-[1.75rem] font-normal;
 
-.navlink--secondary.is-active,
-.menu-item--active-trail.active .nav--split a,
-.menu-item--active-trail.active .nav--split button {
-  @apply font-semibold;
-}
-
-.subnav--nested .subnav--nested {
-  @apply bg-grey-50;
+  font-size: 0.875rem;
 }
 
 .subnav--nested .subnav--nested .navlink--secondary {
-  @apply pl-8 font-normal;
+  @apply pl-[2.625rem];
 }
 
-.subnav--nested .subnav--nested .subnav--nested .navlink--secondary {
-  @apply pl-12 font-normal;
+/* vue subanv */
+.nav--split {
+  @apply flex;
+}
+
+.nav--split > .navlink--secondary::after {
+  @apply hidden;
+}
+
+.nav--split .disclose__trigger {
+  @apply flex-1;
 }
 
 .nav--split .js-reveal__trigger {
-  @apply flex-none w-6 px-4;
+  @apply flex-none inline-flex w-[40px] text-ubc-blue bg-transparent place-content-center place-items-center;
+
+  border-bottom: 1px solid #97d4e9 !important;
 }
 
-@media (min-width: $breakpoint--xl) {
-  .subnav--nested .navlink--secondary {
-    @apply text-base;
-  }
+.nav--split .js-reveal__trigger svg {
+  @apply mt-0 ml-0;
+}
+
+.nav--split:hover .js-reveal__trigger,
+.nav--split > .is-active + .js-reveal__trigger {
+  @apply text-white bg-unit-accent;
+}
+
+.menu-item--active-trail > .disclose > .nav--split > a {
+  @apply font-semibold text-white no-underline bg-unit-primary;
+}
+
+.menu-item--active-trail > .disclose > .nav--split > button {
+  @apply text-white bg-unit-accent;
 }
 
 /* Pager */
@@ -111,18 +151,18 @@
 }
 
 .bg-caret--white,
-.pager__item--next a:hover,
-.pager__item--previous a:hover {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%23002145' d='M65.67 36.36L34.32 5 20.68 18.64 52 50 20.68 81.35 34.32 95l45-45z'/%3E%3C/svg%3E");
+.pager__item--next:hover a,
+.pager__item--previous:hover a {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%23fff' d='M65.67 36.36L34.32 5 20.68 18.64 52 50 20.68 81.35 34.32 95l45-45z'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: 1em 1em;
 }
 
 .pager__item.is-active {
-  @apply text-black no-underline bg-unit-tertiary hover--no-underline;
+  @apply text-white no-underline bg-unit-tertiary hover--no-underline;
 }
 
 .pager__item.is-active a {
-  @apply text-black;
+  @apply text-white;
 }

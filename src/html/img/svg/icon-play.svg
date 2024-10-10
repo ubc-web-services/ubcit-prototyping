@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title-icon-play" aria-describedby="description-icon-play" role="img">
+    <title id="title-icon-play">Play</title>
+    <desc id="description-icon-play">A media play button.</desc>
+    <path stroke="#fff" fill="none" stroke-miterlimit="10" d="M24 18l24 14-24 14V18z" stroke-linejoin="round" stroke-linecap="round"></path>
+    <circle cx="32" cy="32" r="30" stroke="#fff" fill="none" stroke-miterlimit="10" stroke-linejoin="round" stroke-linecap="round"></circle>
+</svg>

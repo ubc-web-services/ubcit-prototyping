@@ -73,10 +73,10 @@ $success: #57edae;
 $status: $ubc-blue-neptune;
 $text-color: $grey-900;
 
-$error: #ff7c7c;
-$warning: #f8e605;
-$success: #57edae;
-$status: $ubc-blue-neptune;
+$error: #b33542;
+$warning: #ef8843;
+$success: #95be4f;
+$status: #324d6a;
 $text-color: $grey-900;
 
 $white-transparent: rgb(255 255 255 / 50%);
@@ -96,6 +96,14 @@ $default-link-color-active: #98b2c3;
 $box-shadow-color: rgb(0 0 0 / 10%);
 $image-overlay-bg-colour: rgb(69 69 69 / 100%);
 $image-overlay-screen-colour: rgb(125 134 140 / 20%);
+
+/* Title weights */
+$h1-weight: 600;
+$h2-weight: 600;
+$h3-weight: 600;
+$h4-weight: 600;
+$h5-weight: 600;
+$h6-weight: 600;
 
 /* Forms */
 $input-border-radius: 0;
@@ -157,6 +165,10 @@ $button-transparent-text--hover: $ubc-blue;
 $button-transparent-bg--active: rgb(255 255 255 / 60%);
 $button-transparent-border--active: rgb(255 255 255 / 60%);
 $button-transparent-text--active: rgb(0 33 69 / 60%);
+
+/* Tables */
+$table-row-striping-color: rgba(225, 243, 249, 0.5);
+$table-row-hover-color: rgba(225, 243, 249, 0.5);
 
 /* Carousel */
 $carousel-button--disabled: $grey-500;

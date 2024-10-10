@@ -31,11 +31,15 @@
 .message__close:hover {
   @apply text-black no-underline;
 
-  background-color: rgb(255 255 255 / 50%);
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .message__icon {
   @apply flex-none inline-block w-8 h-8 mx-auto mb-4 text-ubc-blue;
+}
+
+.message p {
+  margin-top: calc(var(--leading) * .5rem);
 }
 
 @media (min-width: $breakpoint--sm) {

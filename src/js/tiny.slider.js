@@ -3,7 +3,7 @@ import { tns } from "tiny-slider";
 
 const slider = tns({
   autoplay: true,
-  autoWidth: true,
+  autoHeight: true,
   center: true,
   container: ".slideshow",
   edgePadding: 0,

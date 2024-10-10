@@ -1,4 +1,5 @@
 module.exports = {
+  blocklist: ["collapse"],
   content: [
     "./components/**/*.{twig,js}",
     "./src/**/*.{twig,html}",
@@ -32,17 +33,6 @@ module.exports = {
       "unit-secondary": "var(--color-secondary)",
       "unit-tertiary": "var(--color-tertiary)",
       "unit-accent": "var(--color-accent)",
-      "cesd-blue-dark": "#0680a6",
-      "cesd-blue-mid": "#00a7e1",
-      "cesd-blue-light": "#6ec4e8",
-      "cesd-blue-lightest": "#c5e7f5",
-      "cesd-green-dark": "#5c7f06",
-      "cesd-green-mid": "#84b507",
-      "cesd-green-light": "#b5d26a",
-      "cesd-green-lightest": "#e1edc3",
-      "cesd-stone": "#ece6d9",
-      "success-green": "#006f4c",
-      "warning-red": "#83261e",
       "accessible-grey": "#757575",
       "disabled-grey-1": "#acacac",
       "disabled-grey-2": "#e3e3e3",
@@ -94,20 +84,6 @@ module.exports = {
       },
       padding: {
         leading: "calc(var(--leading) * var(--base-font-size))",
-      },
-      spacing: {
-        18: "4.5rem",
-        22: "5.5rem",
-        30: "7.5rem",
-      },
-      strokeWidth: {
-        3: "3",
-        4: "4",
-        5: "5",
-        6: "6",
-        "1-4": "0.25",
-        "1-2": "0.5",
-        "3-4": "0.75",
       },
       width: {
         half: "50%",

@@ -68,3 +68,7 @@
   width: 1px;
   height: 1px;
 }
+
+.tns-outer [data-action] {
+  @apply sr-only
+}

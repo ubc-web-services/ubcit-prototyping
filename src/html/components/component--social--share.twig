@@ -1,8 +1,8 @@
-<div class="inline-block share-button">
-  <button class="text-sm font-semibold unit-button group"><svg role="presentation" class="inline-block w-6 h-6 mr-2 text-ubc-blue group-hover--text-white">
+<div class="inline-block share-button dropdown">
+  <button class="font-semibold unit-button group dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"><svg role="presentation" class="inline-block w-6 h-6 mr-2 text-white group-hover--text-ubc-blue">
 		<use xlink:href="#icon-share"></use>
 	</svg>Share</button>
-  <div class="absolute hidden shadow share-links">
+  <div class="shadow share-links dropdown-menu">
     <ul class="flex justify-around px-8 py-2 my-0 share-buttons list-inline bg-ubc-blue">
       <li class="mx-4">
         <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fapsc.ubc.ca&quote=" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&quote=' + encodeURIComponent(document.URL)); return false;">

@@ -54,9 +54,9 @@
 
 :root {
   --color-primary: #002145 !important;
-  --color-secondary: #f5ce3e !important;
-  --color-tertiary: #fbebb1 !important;
-  --color-accent: #fdf5d8 !important;
+  --color-secondary: #e0e0e0 !important;
+  --color-tertiary: #def1f8 !important;
+  --color-accent: #003a79 !important;
   --color-link: #0055b7;
   --color-link-hover: #002145;
   --color-link-active: #002145;

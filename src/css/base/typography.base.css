@@ -11,7 +11,6 @@ html {
 }
 
 body {
-  letter-spacing: 0.0175em;
   font-family: var(--text-font-stack);
   font-size: var(--base-font-size);
   line-height: var(--leading);
@@ -20,62 +19,73 @@ body {
 /* heading elements */
 h1,
 .h1 {
-  margin-top: 2.5rem;
+  margin-top: calc(var(--leading) * 3.5rem);
   margin-bottom: 0;
-  color: $ubc-blue;
   font-family: var(--alternate-font-stack);
-  font-size: 1.875rem;
-  font-weight: 400;
+  font-size: $text-6xl;
+  font-weight: $h1-weight;
+  line-height: 1.25;
 }
 
 h2,
 .h2 {
-  margin-top:  2.25rem;
+  margin-top: calc(var(--leading) * 2.25rem);
   margin-bottom: 0;
-  color: $ubc-blue;
   font-family: var(--alternate-font-stack);
-  font-size: 1.6875rem;
-  font-weight: 400;
+  font-size: 2.625rem;
+  font-weight: $h2-weight;
+  line-height: 1.4;
 }
 
 h3,
 .h3 {
-  margin-top:  2rem;
+  margin-top: calc(var(--leading) * 1.75rem);
   margin-bottom: 0;
-  color: $ubc-blue;
+  letter-spacing: 0.025em;
   font-family: var(--alternate-font-stack);
-  font-size: 1.5rem;
-  font-weight: 400;
+  font-size: $text-5xl;
+  font-weight: $h3-weight;
+  line-height: 1.4;
 }
 
 h4,
 .h4 {
-  margin-top:  1.75rem;
+  margin-top: calc(var(--leading) * 1.25rem);
   margin-bottom: 0;
-  color: $ubc-blue;
+  letter-spacing: 0.025em;
   font-family: var(--alternate-font-stack);
-  font-size: 1.25rem;
-  font-weight: 600;
+  font-size: $text-2xl;
+  font-weight: 700;
+  line-height: 1.4;
 }
 
 h5,
 .h5 {
-  margin-top:  1.5rem;
+  margin-top: calc(var(--leading) * 1rem);
   margin-bottom: 0;
-  color: $ubc-blue;
+  letter-spacing: 0.05em;
   font-family: var(--alternate-font-stack);
-  font-size: 1.125rem;
-  font-weight: 600;
+  font-size: $text-base;
+  font-weight: $h5-weight;
+  line-height: 1.425;
 }
 
 h6,
 .h6 {
-  margin-top:  1.5rem;
+  margin-top: calc(var(--leading) * 1rem);
   margin-bottom: 0;
-  color: $ubc-blue;
+  letter-spacing: 0.05em;
   font-family: var(--alternate-font-stack);
-  font-size: 1rem;
-  font-weight: 600;
+  font-size: $text-sm;
+  font-weight: $h6-weight;
+  line-height: 1.425;
+}
+
+.heading-display,
+.heading-display h1 {
+  font-size: $text-5xl;
+  font-weight: 900;
+  line-height: 1.2;
 }
 
 /* responsive type (20px min to 46px max) - see https://modern-fluid-typography.vercel.app for configuration */
@@ -83,12 +93,19 @@ h6,
   font-size: clamp(1.25rem, 2vw + 1rem, 3rem);
 }
 
+@media (max-width: $breakpoint--xs--max) {
+  .heading-display,
+  .heading-display h1 {
+    font-size: $text-2xl;
+  }
+}
+
 /* text and list elements */
 p,
 pre,
 table,
 blockquote {
-  margin-top: 1.5rem;
+  margin-top: calc(var(--leading) * 1rem);
   margin-bottom: 0;
 }
 
@@ -164,24 +181,11 @@ dt {
 
 /* Blockquote */
 blockquote {
-  @apply relative px-16 py-12 mx-auto my-8 text-2xl text-unit-primary bg-ubc-grey-4;
+  @apply relative p-12 mx-auto my-8 text-2xl text-grey-700;
 
   max-width: 60ch;
-  /* quotes: "“""”""‘""’";
-  font-family: var(--alternate-font-stack);*/
-}
-
-blockquote::before {
-  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg width='1792' height='1792' viewBox='0 0 1792 1792' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23002145' d='M832 960v384q0 80-56 136t-136 56h-384q-80 0-136-56t-56-136v-704q0-104 40.5-198.5t109.5-163.5 163.5-109.5 198.5-40.5h64q26 0 45 19t19 45v128q0 26-19 45t-45 19h-64q-106 0-181 75t-75 181v32q0 40 28 68t68 28h224q80 0 136 56t56 136zm896 0v384q0 80-56 136t-136 56h-384q-80 0-136-56t-56-136v-704q0-104 40.5-198.5t109.5-163.5 163.5-109.5 198.5-40.5h64q26 0 45 19t19 45v128q0 26-19 45t-45 19h-64q-106 0-181 75t-75 181v32q0 40 28 68t68 28h224q80 0 136 56t56 136z'/%3E%3C/svg%3E");
-  background-position: 50%;
-  background-repeat: no-repeat;
-  background-size: 1.5em 1.5em;
-  content: "";
-  margin-bottom: 1em;
-  display: inline-flex;
-  height: 1.5em;
-  transform: translateY(.25em);
-  width: 1.5em;
+  /* quotes: "“""”""‘""’"; */
+  font-family: var(--alternate-font-stack);
 }
 
 blockquote p:first-of-type {
@@ -192,47 +196,27 @@ blockquote p:last-of-type {
   position: relative;
 }
 
-/* variants */
-blockquote.cesd-blue {
-  @apply bg-cesd-blue-lightest
-}
-
-blockquote.cesd-green {
-  @apply bg-cesd-green-lightest
-}
-
-blockquote.cesd-blue::before {
-  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg width='1792' height='1792' viewBox='0 0 1792 1792' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%2300a7e1' d='M832 960v384q0 80-56 136t-136 56h-384q-80 0-136-56t-56-136v-704q0-104 40.5-198.5t109.5-163.5 163.5-109.5 198.5-40.5h64q26 0 45 19t19 45v128q0 26-19 45t-45 19h-64q-106 0-181 75t-75 181v32q0 40 28 68t68 28h224q80 0 136 56t56 136zm896 0v384q0 80-56 136t-136 56h-384q-80 0-136-56t-56-136v-704q0-104 40.5-198.5t109.5-163.5 163.5-109.5 198.5-40.5h64q26 0 45 19t19 45v128q0 26-19 45t-45 19h-64q-106 0-181 75t-75 181v32q0 40 28 68t68 28h224q80 0 136 56t56 136z'/%3E%3C/svg%3E");
-}
-
-blockquote.cesd-green::before {
-  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg width='1792' height='1792' viewBox='0 0 1792 1792' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%2384b507' d='M832 960v384q0 80-56 136t-136 56h-384q-80 0-136-56t-56-136v-704q0-104 40.5-198.5t109.5-163.5 163.5-109.5 198.5-40.5h64q26 0 45 19t19 45v128q0 26-19 45t-45 19h-64q-106 0-181 75t-75 181v32q0 40 28 68t68 28h224q80 0 136 56t56 136zm896 0v384q0 80-56 136t-136 56h-384q-80 0-136-56t-56-136v-704q0-104 40.5-198.5t109.5-163.5 163.5-109.5 198.5-40.5h64q26 0 45 19t19 45v128q0 26-19 45t-45 19h-64q-106 0-181 75t-75 181v32q0 40 28 68t68 28h224q80 0 136 56t56 136z'/%3E%3C/svg%3E");
-}
-
-/*
 blockquote p:first-of-type::before {
 	content: '“';
 }
 
-
 blockquote p:last-of-type::after {
 	content: '”';
 }
-*/
 
 cite,
-.text-cite {
-  @apply text-sm font-semibold;
+.cite {
+  @apply pt-6 font-sans text-sm not-italic font-normal text-right uppercase;
 }
 
 cite span,
-.text-cite span {
+.cite span {
   display: block;
 }
 
 .blockquote--inverse,
 .blockquote--inverse cite,
-.blockquote--inverse .text-cite {
+.blockquote--inverse .cite {
   @apply text-left bg-transparent text-ubc-blue;
 }
 
@@ -256,23 +240,11 @@ hr,
 
 /* Text utilities */
 .text-lead {
-  margin-top: 1.5rem;
+  margin-top: calc(var(--leading) * 1.5rem);
   margin-bottom: 0;
-  font-size: 1.25rem;
-}
-
-.text-small {
-  margin-top: 1.5rem;
-  margin-bottom: 0;
-  font-size: 0.875rem;
-}
-
-.text-overline {
-  margin-top: 1.5rem;
-  margin-bottom: 0;
-  letter-spacing: 4px;
-  color: $ubc-blue;
-  font-size: 0.875rem;
+  font-family: var(--alternate-font-stack);
+  font-size: $text-xl;
+  line-height: var(--leading);
 }
 
 .text-hug {
@@ -306,42 +278,111 @@ hr,
 }
 
 /* larger viewport type styles */
-@media (min-width: $breakpoint--md) {
+@media (min-width: $breakpoint--xl) {
+
+  body {
+    font-size: $text-2xl;
+  }
 
   /* heading elements */
   h1,
   .h1 {
-    margin-top: 3.75rem;
-    font-size: 3rem;
+    margin-top: calc(var(--leading) * 3rem);
+    letter-spacing: -0.01em;
+    font-size: $text-8xl;
   }
 
   h2,
   .h2 {
-    margin-top:  3rem;
-    font-size: 2.25rem;
+    margin-top: calc(var(--leading) * 2.5rem);
+    font-size: $text-7xl;
   }
 
   h3,
   .h3 {
-    margin-top:  2.5rem;
-    font-size: 2rem;
+    margin-top: calc(var(--leading) * 2.5rem);
+    font-size: $text-6xl;
+    line-height: 1.25;
   }
 
   h4,
   .h4 {
-    margin-top:  2rem;
-    font-size: 1.5rem;
+    margin-top: calc(var(--leading) * 1rem);
+    font-size: $text-5xl;
   }
 
   h5,
   .h5 {
-    margin-top:  1.75rem;
-    font-size: 1.25rem;
+    margin-top: calc(var(--leading) * 0.875rem);
+    font-size: $text-3xl;
+    line-height: 1.4;
+  }
+
+  h6,
+  .h6 {
+    font-size: $text-2xl;
+  }
+
+  .heading-display,
+  .heading-display h1 {
+    font-size: $text-7xl;
+  }
+
+  blockquote {
+    @apply text-4xl;
+  }
+
+  cite,
+  .cite {
+    @apply text-base;
   }
 
   .text-lead {
-    margin-top: 2rem;
-    font-size: 1.5rem;
+    font-size: $text-5xl;
   }
 
+  /* Responsively change text sizes if not redefined by utility with breakpoint. !important added to override base utility classes, which come later in our stylesheeet */
+  .text-xs {
+    font-size: $text-lg !important;
+  }
+
+  .text-sm {
+    font-size: $text-xl !important;
+  }
+
+  .text-base {
+    font-size: $text-2xl !important;
+  }
+
+  .text-lg {
+    font-size: $text-3xl !important;
+  }
+
+  .text-xl {
+    font-size: $text-4xl !important;
+  }
+
+  .text-2xl {
+    font-size: $text-5xl !important;
+  }
+
+  .text-3xl {
+    font-size: $text-6xl !important;
+  }
+
+  .text-4xl {
+    font-size: $text-7xl !important;
+  }
+
+  .text-5xl {
+    font-size: $text-8xl !important;
+  }
+
+  .text-6xl {
+    font-size: $text-9xl !important;
+  }
+
+  .text-7xl {
+    font-size: $text-10xl !important;
+  }
 }
