@@ -1,6 +1,6 @@
 {% extends "layouts/default.twig" %}
 {% set title = "Web Styles" %}
-{% set pageTitle = "Unit Web Styles" %}
+{% set pageTitle = "UBC IT Web Styles" %}
 {% set showTitle = TRUE %}
 
 {% block masthead %}
@@ -8,10 +8,19 @@
 
 {% block content %}
 
-<Message title="Please note" classes="message--warning" svgicon="icon-alert">
-	<p>These pages have not been fully tested for cross-browser compatability, so display issues may be present. Please use current versions of Chrome or Safari at this time.</p>
-</Message>
-<ul class="list-none">
+<div class="message js-dismiss message--error bg-dark" role="warning" aria-live="polite">
+	<button class="js-dismiss__trigger message__close" data-dismiss="message">
+		<span>Dismiss</span>
+	</button>
+	<svg role="img" class="text-white pointer-events-none message__icon">
+		<use xlink:href="#icon-alert"></use>
+	</svg>
+	<div class="message__content first-child--mt-0">
+		<h4>Work in progress</h4>
+		<p>These pages have not been fully tested for cross-browser compatability, so display issues may be present. Please use current versions of Chrome or Safari at this time.</p>
+	</div>
+</div>
+<ul class="pl-0 list-none">
 	<li class="block bg-ubc-blue">
 		<h2 class="p-4 mt-0 text-white uppercase heading-five">Prototype pages</h2>
 	</li>
@@ -28,13 +37,13 @@
 			class="block p-4 no-underline hover--underline text-ubc-blue hover--unit-grey">Sidebar Right Page Layout</a></li>
 	<li class="block border border-t-0 border-unit-grey-light"><a href="layout--narrow.html"
 			class="block p-4 no-underline hover--underline text-ubc-blue hover--unit-grey">Narrow Page Layout</a></li>
-	<li class="block border border-t-0 border-unit-grey-light"><a href="layout--home.html"
-			class="block p-4 no-underline hover--underline text-ubc-blue hover--unit-grey">Home Page Layout</a></li>
+	{# <li class="block border border-t-0 border-unit-grey-light"><a href="layout--home.html"
+			class="block p-4 no-underline hover--underline text-ubc-blue hover--unit-grey">Home Page Layout</a></li> #}
 	<li class="block border border-t-0 border-unit-grey-light"><a href="layout--landing.html"
 			class="block p-4 no-underline hover--underline text-ubc-blue hover--unit-grey">Landing Page Layout</a></li>
-	<li class="block border border-t-0 border-unit-grey-light"><a href="home.html"
+	{# <li class="block border border-t-0 border-unit-grey-light"><a href="home.html"
 			class="block p-4 no-underline hover--underline text-ubc-blue hover--unit-grey">Home Page</a></li>
-	<li class="block border border-t-0 border-unit-grey-light"><a href="landing-page--masthead.html"
+	 <li class="block border border-t-0 border-unit-grey-light"><a href="landing-page--masthead.html"
 			class="block p-4 no-underline hover--underline text-ubc-blue hover--unit-grey">Landing Page -
 			masthead</a></li>
 	<li class="block border border-t-0 border-unit-grey-light"><a href="landing-page--w-list.html"
@@ -63,7 +72,7 @@
 			class="block p-4 no-underline hover--underline text-ubc-blue hover--unit-grey">Listing Page with
 			images</a></li>
 	<li class="block border border-t-0 border-unit-grey-light"><a href="page.html"
-			class="block p-4 no-underline hover--underline text-ubc-blue hover--unit-grey">Basic Page</a></li>
+			class="block p-4 no-underline hover--underline text-ubc-blue hover--unit-grey">Basic Page</a></li> #}
 </ul>
 <h3 class="text-sm text-grey-500 heading-five">* Misc Notes:</h3>
 <ul class="pl-4 text-sm list-disc text-grey-500">

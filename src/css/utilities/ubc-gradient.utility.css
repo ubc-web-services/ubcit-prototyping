@@ -3,42 +3,8 @@
 /* variables in file */
 $gradient-ubc-blue-transparent: rgb(0 33 69 / 0%);
 $gradient-ubc-blue-opaque: rgb(0 33 69 / 100%);
-$gradient-grey-transparent: rgb(244 244 244 / 0%);
-$gradient-grey-opaque: rgb(244 244 244 / 100%);
 
 /* gradients */
-.gradient-bottom--ubc-blue {
-  background: linear-gradient(to bottom, $gradient-ubc-blue-transparent 45%, $gradient-ubc-blue-opaque 100%);
-}
-
-.gradient-top--ubc-blue {
-  background: linear-gradient(to bottom, $gradient-ubc-blue-opaque 0%, $gradient-ubc-blue-transparent 55%);
-}
-
-.gradient-bottom--ubc-blue-full {
-  background: linear-gradient(to bottom, $gradient-ubc-blue-transparent 2%, $gradient-ubc-blue-opaque 100%);
-}
-
-.gradient-top--ubc-blue-full {
-  background: linear-gradient(to bottom, $gradient-ubc-blue-opaque 0%, $gradient-ubc-blue-transparent 100%);
-}
-
-.gradient-bottom--grey {
-  background: linear-gradient(to bottom, $gradient-grey-transparent 45%, $gradient-grey-opaque 100%);
-}
-
-.gradient-top--grey {
-  background: linear-gradient(to bottom, $gradient-grey-opaque 0%, $gradient-grey-transparent 55%);
-}
-
-.gradient-bottom--grey-full {
-  background: linear-gradient(to bottom, $gradient-grey-transparent 2%, $gradient-grey-opaque 100%);
-}
-
-.gradient-top--grey-full {
-  background: linear-gradient(to bottom, $gradient-grey-opaque 0%, $gradient-grey-transparent 100%);
-}
-
 .has-gradient--after,
 .has-gradient-top--after,
 .has-gradient-bottom--after {
@@ -91,4 +57,58 @@ $gradient-grey-opaque: rgb(244 244 244 / 100%);
 	background: linear-gradient(227deg, $ubc-blue-cobalt 2.5%, $ubc-blue-sea 33%, $ubc-blue 80%);
 	opacity: .6;
 	content: '';
+}
+
+@media (min-width: $breakpoint--md) {
+  .md--has-gradient--after,
+  .md--has-gradient-top--after,
+  .md--has-gradient-bottom--after {
+    position: relative;
+  }
+
+  .md--has-gradient--after::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background: linear-gradient(to top, $gradient-ubc-blue-opaque 0%, $gradient-ubc-blue-transparent 100%);
+  }
+
+  .md--has-gradient-bottom--after::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background: linear-gradient(to bottom, $gradient-ubc-blue-transparent 45%, $gradient-ubc-blue-opaque 100%);
+  }
+
+  .md--has-gradient-top--after::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background: linear-gradient(to bottom, $gradient-ubc-blue-opaque 0%, $gradient-ubc-blue-transparent 55%);
+  }
+
+  .md--bg-gradient--screen {
+    position: relative;
+  }
+
+  .md--bg-gradient--screen::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(227deg, $ubc-blue-cobalt 2.5%, $ubc-blue-sea 33%, $ubc-blue 80%);
+    opacity: .6;
+    content: '';
+  }
 }

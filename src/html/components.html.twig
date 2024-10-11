@@ -152,10 +152,6 @@
 
 <p class="text-sm text-grey-500">Note: these styles can have accessibility issues as the text has poor and variable readbility over the image.</p>
 
-<h2 class="mt-12 " id="layout">Layout</h2>
-<hr />
-{% include "components/layout--grid.twig" %}
-
 <h2 class="mt-12 " id="accordions">Accordions</h2>
 <hr />
 {% include "components/component--accordion.twig" %}
@@ -178,6 +174,61 @@
 
 {% block prefooter %}
 <div class="container px-5 mx-auto md--px-4">
+<h2 class="mt-12 " id="layout">Layout</h2>
+<hr />
+{% include "components/layout--grid.twig" %}
+</div>
+{% include "components/layout--grid.twig" %}
+<div class="container px-5 mx-auto md--px-4">
+	<h2 id="containers">Container Regions</h2>
+	<hr />
+	<h3>Container Region Colour Variants</h3>
+	<ul class="grid grid-cols-4 gap-8 pl-0 list-none">
+		<li>
+				<div class="h-full p-2 text-white border-4 border-white shadow-md bg-unit-primary">PRIMARY (user defined)<br>#002145<br><span class="font-mono">unit-primary</span></div>
+		</li>
+		<li>
+				<div class="h-full p-2 text-black border-4 border-white shadow-md bg-unit-secondary">SECONDARY (user defined)<br>#e0e0e0<br><span class="font-mono">unit-secondary</span></div>
+		</li>
+		<li>
+				<div class="h-full p-2 text-black border-4 border-white shadow-md bg-unit-tertiary">TERTIARY (user defined)<br>#def1f8<br><span class="font-mono">unit-tertiary</span></div>
+		</li>
+		<li>
+				<div class="h-full p-2 text-white border-4 border-white shadow-md bg-unit-accent">ACCENT (user defined)<br>#003a79<br><span class="font-mono">unit-accent</span></div>
+		</li>
+		<li>
+				<div class="h-full p-2 text-white border-4 border-white shadow-md bg-ubc-blue">
+				UBC BLUE<br>#002145<br><span class="font-mono">ubc-blue</span></div>
+		</li>
+		<li>
+				<div class="h-full p-2 text-white border-4 border-white shadow-md bg-ubc-blue-cobalt">UBC
+					BLUE: COBALT<br>#0055b7<br><span class="font-mono">ubc-blue-cobalt</span></div>
+		</li>
+		<li>
+				<div class="h-full p-2 text-black border-4 border-white shadow-md bg-ubc-blue-neptune">UBC
+					BLUE: NEPTUNE<br>#40b4e5<br><span class="font-mono">ubc-blue-neptune</span></div>
+		</li>
+		<li>
+				<div class="h-full p-2 text-black border-4 border-white shadow-md bg-ubc-blue-sky">UBC
+					BLUE: SKY<br>#61c1e9<br><span class="font-mono">ubc-blue-sky</span></div>
+		</li>
+		<li>
+				<div class="h-full p-2 text-black border-4 border-white shadow-md bg-ubc-blue-cornflower">UBC
+					BLUE: CORNFLOWER<br>#97d4e9<br><span class="font-mono">ubc-blue-cornflower</span></div>
+		</li>
+		<li>
+				<div class="h-full p-2 text-black border-4 border-white shadow-md bg-ubc-blue-polar">UBC
+					BLUE: POLAR<br>#def1f8<br><span class="font-mono">ubc-blue-polar</span></div>
+		</li>
+		<li>
+				<div class="h-full p-2 text-black border-4 border-white shadow-md bg-ubc-blue-frost">UBC
+					BLUE: FROST<br>#f6fbfd<br><span class="font-mono">ubc-blue-frost</span></div>
+		</li>
+	</ul>
+</div>
+{% include "components/region--containers.twig" %}
+
+<div class="container px-5 mx-auto md--px-4">
 	<h2 id="carousel">Carousel</h2>
 	<hr />
 </div>
@@ -190,6 +241,7 @@
 		</script>
 	</details>
 </div>
+
 
 {% endblock %}
 

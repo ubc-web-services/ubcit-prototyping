@@ -278,13 +278,13 @@ hr,
 }
 
 /* larger viewport type styles */
+/*
 @media (min-width: $breakpoint--xl) {
 
   body {
     font-size: $text-2xl;
   }
 
-  /* heading elements */
   h1,
   .h1 {
     margin-top: calc(var(--leading) * 3rem);
@@ -341,7 +341,6 @@ hr,
     font-size: $text-5xl;
   }
 
-  /* Responsively change text sizes if not redefined by utility with breakpoint. !important added to override base utility classes, which come later in our stylesheeet */
   .text-xs {
     font-size: $text-lg !important;
   }
@@ -386,3 +385,4 @@ hr,
     font-size: $text-10xl !important;
   }
 }
+*/
