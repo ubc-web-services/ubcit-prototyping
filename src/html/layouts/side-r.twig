@@ -30,7 +30,9 @@
 		<main class="unit-content">
 			<div class="container px-5 mx-auto md--px-4 md--grid md--gap-x-8 md--grid-cols-12">
 				<div class="md--col-span-full">
-					{% include "components/navigation--breadcrumb.twig" %}
+					{% if showBreadcrumb %}
+						{% include "components/navigation--breadcrumb.twig" %}
+					{% endif %}
 					{% if showTitle %}
 						<h1>{{ pageTitle }}</h1>
 					{% endif %}

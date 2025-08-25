@@ -29,7 +29,9 @@
 		{% block masthead %}{% endblock %}
 		<main class="unit-content">
 			<div class="container px-5 mx-auto md--px-4">
-				{% include "components/navigation--breadcrumb.twig" %}
+				{% if showBreadcrumb %}
+					{% include "components/navigation--breadcrumb.twig" %}
+				{% endif %}
 				{% if showTitle %}
         	<h1>{{ pageTitle }}</h1>
 				{% endif %}
