@@ -93,8 +93,7 @@ select {
   background-repeat: no-repeat;
   background-position: right 0.5rem center;
   background-size: 1.5em 1.5em;
-  -webkit-print-color-adjust: exact;
-  color-adjust: exact;
+  print-color-adjust: exact;
 }
 
 /* fieldset and legend */
@@ -159,8 +158,7 @@ legend {
   background-color: #fff;
   background-origin: border-box;
   appearance: none;
-  -webkit-print-color-adjust: exact;
-  color-adjust: exact;
+  print-color-adjust: exact;
 }
 
 [type="checkbox"] {

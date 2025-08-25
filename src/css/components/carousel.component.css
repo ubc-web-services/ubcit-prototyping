@@ -1,74 +1,189 @@
-/** @define carousel */
+/** @define carousel.component */
 
 /*
 * This file contains all styles related to the carousel component.
 */
 
-/* tiny-slider styles */
-.tns-outer {
-  @apply relative;
+.carousel {
+  position: relative;
 }
 
-/* previous / next buttons */
-.tns-controls {
-  @apply absolute inset-0 z-40 flex justify-between pointer-events-none;
+.carousel.pointer-event {
+  touch-action: pan-y;
 }
 
-.tns-controls button {
-  @apply self-center block w-16 h-16 overflow-hidden pointer-events-auto;
-
-  text-indent: -300%;
-  background-color: $ubc-blue-cornflower;
-  /* background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 22L12 12L2 2' stroke='%23fff' stroke-opacity='0.7' fill='none' stroke-width='5'/%3E%3C/svg%3E%0A"); */
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath d='M85,277.375h259.704L225.002,397.077L256,427l171-171L256,85l-29.922,29.924l118.626,119.701H85V277.375z' fill='%23fff'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 1.75rem;
+.carousel-inner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.carousel-inner::after {
+  display: block;
+  clear: both;
+  content: "";
 }
 
-.tns-controls button:hover {
-  background-color: $ubc-blue-cobalt;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath d='M85,277.375h259.704L225.002,397.077L256,427l171-171L256,85l-29.922,29.924l118.626,119.701H85V277.375z' fill='%23fff'/%3E%3C/svg%3E");
+.carousel-item {
+  position: relative;
+  display: none;
+  float: left;
+  width: 100%;
+  margin-right: -100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transition: transform 0.2s ease-in-out;
 }
 
-.tns-controls button[data-controls="prev"] {
-  @apply transform rotate-180;
-}
-
-/* page indicators */
-.tns-nav {
-  @apply absolute z-40 flex justify-center w-full;
-
-  bottom: -2rem;
-}
-
-.tns-nav button {
-  @apply inline-block w-8 h-2 m-2 cursor-pointer bg-ubc-blue-cornflower;
-
-  transition: 0.4s ease-in-out;
-}
-
-.tns-nav .tns-nav-active {
-  @apply bg-ubc-blue-cobalt;
-}
-
-@media (min-width: $breakpoint--clf7-md) {
-
-  .carousel__cell--fixed-height {
-    height: 600px;
+@media (prefers-reduced-motion: reduce) {
+  .carousel-item {
+    transition: none;
   }
 }
 
-/* accessibly hidden links and content */
-.tns-outer [data-action="stop"] {
-  position: absolute;
-  top: auto;
-  left: -300%;
-  overflow: hidden;
-  width: 1px;
-  height: 1px;
+.carousel img {
+    width: 100%;
+  }
+
+.carousel-item.active,
+.carousel-item-next,
+.carousel-item-prev {
+  display: block;
 }
 
-.tns-outer [data-action] {
-  @apply sr-only
+.carousel-item-next:not(.carousel-item-start),
+.active.carousel-item-end {
+  transform: translateX(100%);
+}
+
+.carousel-item-prev:not(.carousel-item-end),
+.active.carousel-item-start {
+  transform: translateX(-100%);
+}
+
+.carousel-fade .carousel-item {
+  opacity: 0;
+  transition-property: opacity;
+  transform: none;
+}
+
+.carousel-fade .carousel-item.active,
+.carousel-fade .carousel-item-next.carousel-item-start,
+.carousel-fade .carousel-item-prev.carousel-item-end {
+  z-index: 1;
+  opacity: 1;
+}
+
+.carousel-fade .active.carousel-item-start,
+.carousel-fade .active.carousel-item-end {
+  z-index: 0;
+  opacity: 0;
+  transition: opacity 0s 0.6s;
+}
+@media (prefers-reduced-motion: reduce) {
+  .carousel-fade .active.carousel-item-start,
+  .carousel-fade .active.carousel-item-end {
+    transition: none;
+  }
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  @apply z-40 block w-16 h-16 overflow-hidden pointer-events-auto absolute text-center bg-[none] opacity-50;
+  border: 0;
+  top: calc(50% - 2rem);
+  transition: opacity 0.15s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .carousel-control-prev,
+  .carousel-control-next {
+    transition: none;
+  }
+}
+
+.carousel-control-prev:hover,
+.carousel-control-prev:focus,
+.carousel-control-next:hover,
+.carousel-control-next:focus {
+  @apply text-white no-underline opacity-90;
+  outline: 0;
+}
+
+.carousel-control-prev {
+  @apply left-0;
+}
+
+.carousel-control-next {
+  @apply right-0;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 100% 100%;
+  background-image: url(../img/svg/icon-caret--white-transparent.svg);
+}
+
+.carousel-control-prev-icon {
+  @apply transform rotate-180;
+}
+
+.carousel-indicators {
+  @apply absolute right-0 bottom-0 left-0 z-[200] flex p-0 mr-[15%] mb-4 ml-[15%];
+  justify-content: center;
+}
+
+.carousel-indicators [data-bs-target] {
+  @apply inline-block w-4 h-4 m-2 border-0 border-white rounded-full cursor-pointer;
+	transition: .4s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .carousel-indicators [data-bs-target] {
+    transition: none;
+  }
+}
+
+/*
+.carousel-indicators .active {
+    @apply border-8;
+}
+*/
+
+.carousel-caption {
+  @apply text-white absolute right-[15%] bottom-[1.25rem] left-[15%] py-5 text-center;
+}
+
+.carousel-dark .carousel-control-prev-icon,
+.carousel-dark .carousel-control-next-icon {
+  filter: invert(1) grayscale(100);
+}
+
+.carousel-dark .carousel-indicators [data-bs-target] {
+  @apply bg-black;
+}
+
+.carousel-dark .carousel-caption {
+  @apply text-black;
+}
+
+[data-bs-theme="dark"] .carousel .carousel-control-prev-icon,
+[data-bs-theme="dark"] .carousel .carousel-control-next-icon,
+[data-bs-theme="dark"].carousel .carousel-control-prev-icon,
+[data-bs-theme="dark"].carousel .carousel-control-next-icon {
+  filter: invert(1) grayscale(100);
+}
+
+[data-bs-theme="dark"] .carousel .carousel-indicators [data-bs-target],
+[data-bs-theme="dark"].carousel .carousel-indicators [data-bs-target] {
+  @apply bg-black;
+}
+
+[data-bs-theme="dark"] .carousel .carousel-caption,
+[data-bs-theme="dark"].carousel .carousel-caption {
+  @apply text-black;
 }

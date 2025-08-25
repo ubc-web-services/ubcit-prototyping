@@ -20,7 +20,6 @@
 @import url("base/print.base.css");
 
 /* Import any node assets */
-@import url("../../node_modules/tiny-slider/dist/tiny-slider.css");
 
 /* Add styles for specific components */
 @import url("tailwindcss/components");
