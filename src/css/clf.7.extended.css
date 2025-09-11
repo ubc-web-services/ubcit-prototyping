@@ -1,4 +1,8 @@
-@media screen and (width >= 1720px) {
+/**
+ * @file
+ * Styles for a 1720px wide version of the CLF
+ */
+ @media screen and (min-width: 1720px) {
   #ubc7-global-menu .clf-container,
   #ubc7-header .clf-container,
   #ubc7-unit .clf-container,
@@ -8,18 +12,18 @@
   }
 
   #ubc7-wordmark {
-    background-image: url("../img/clf/ubc7-clf-sprite-blue.png");
+    background-image: url(../img/clf/ubc7-clf-sprite-blue.png);
     background-repeat: no-repeat;
   }
 
   .legacy--wg #ubc7-wordmark,
   .legacy--wb #ubc7-wordmark {
-    background-image: url("../img/clf/ubc7-clf-sprite-white.png");
+    background-image: url(../img/clf/ubc7-clf-sprite-white.png);
     background-repeat: no-repeat;
   }
 
   .legacy--gw #ubc7-wordmark {
-    background-image: url("../img/clf/ubc7-clf-sprite-grey.png");
+    background-image: url(../img/clf/ubc7-clf-sprite-grey.png);
     background-repeat: no-repeat;
   }
 
@@ -45,29 +49,36 @@
   }
 }
 
-@media only screen and (minpixel-ratio: "3/2") and (width >= 1720px), only screen and (-webkit-min-device-pixel-ratio: 1.5) and (width >= 1720px), only screen and (min--moz-device-pixel-ratio: 1.5) and (width >= 1720px), only screen and (min-device-pixel-ratio: 1.5) and (width >= 1720px) {
+@media only screen and (-o-min-device-pixel-ratio: "3/2") and (min-width: 1720px), only screen and (-webkit-min-device-pixel-ratio: 1.5) and (min-width: 1720px), only screen and (min--moz-device-pixel-ratio: 1.5) and (min-width: 1720px), only screen and (min-device-pixel-ratio: 1.5) and (min-width: 1720px) {
   #ubc7-wordmark {
-    background-image: url("../img/clf/ubc7-clf-sprite-blue-2x.png");
+    background-image: url(../img/clf/ubc7-clf-sprite-blue-2x.png);
     background-repeat: no-repeat;
     background-size: 1500px !important;
   }
 
   .legacy--wg #ubc7-wordmark,
   .legacy--wb #ubc7-wordmark {
-    background-image: url("../img/clf/ubc7-clf-sprite-white-2x.png");
+    background-image: url(../img/clf/ubc7-clf-sprite-white-2x.png);
     background-repeat: no-repeat;
     background-size: 1500px !important;
   }
 
   .legacy--gw #ubc7-wordmark {
-    background-image: url("../img/clf/ubc7-clf-sprite-grey-2x.png");
+    background-image: url(../img/clf/ubc7-clf-sprite-grey-2x.png);
     background-repeat: no-repeat;
     background-size: 1500px !important;
   }
 }
 
-@media screen and (width >= 1720px) {
+@media screen and (min-width: 1720px) {
+
   .layout--centered #main-content {
     width: 1720px;
   }
+
+  .container,
+  .container-xl {
+    max-width: 1720px;
+  }
+
 }

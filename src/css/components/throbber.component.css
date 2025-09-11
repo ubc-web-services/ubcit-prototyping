@@ -8,6 +8,7 @@
 * replace the default Drupal ajax throbber because it's ugly
 */
 
+/* Throbber / ajax loading animation */
 .ajax-progress,
 .ajax-progress--throbber,
 .ajax-progress-throbber,
@@ -24,8 +25,9 @@
   padding: 0;
   text-indent: -9999em;
   opacity: 1;
+  -webkit-border-radius: 0;
   border-radius: 0;
-  background: $throbber-background;
+  background: rgba(var(--white), 0.5);
 }
 
 .ajax-progress--throbber::after,
@@ -33,7 +35,10 @@
 .ajax-progress-throbber::after,
 .ajax-progress-fullscreen::after {
   position: absolute;
-  inset: 0 0 0 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   display: block;
   overflow: hidden;
   width: 4rem;
@@ -41,56 +46,8 @@
   margin: auto;
   content: "";
   text-indent: -9999em;
-  background-image: url("data:image/svg+xml,%3Csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='xMidYMid' class='lds-ripple'%3E%3Ccircle cx='50' cy='50' r='31.8736' fill='none' stroke='%238cd0e5' stroke-width='1'%3E%3Canimate attributeName='r' calcMode='spline' values='0;40' keyTimes='0;1' dur='1' keySplines='0 0.2 0.8 1' begin='-0.5s' repeatCount='indefinite'%3E%3C/animate%3E%3Canimate attributeName='opacity' calcMode='spline' values='1;0' keyTimes='0;1' dur='1' keySplines='0.2 0 0.8 1' begin='-0.5s' repeatCount='indefinite'%3E%3C/animate%3E%3C/circle%3E%3Ccircle cx='50' cy='50' r='11.6081' fill='none' stroke='%23002145' stroke-width='1'%3E%3Canimate attributeName='r' calcMode='spline' values='0;40' keyTimes='0;1' dur='1' keySplines='0 0.2 0.8 1' begin='0s' repeatCount='indefinite'%3E%3C/animate%3E%3Canimate attributeName='opacity' calcMode='spline' values='1;0' keyTimes='0;1' dur='1' keySplines='0.2 0 0.8 1' begin='0s' repeatCount='indefinite'%3E%3C/animate%3E%3C/circle%3E%3C/svg%3E");
+  background-image: url(../img/svg/icon-throbber.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 4rem 4rem;
 }
-
-/*
-.ajax-progress--throbber::before,
-.ajax-progress--fullscreen::before,
-.ajax-progress-throbber::before,
-.ajax-progress-fullscreen::before,
-.ajax-progress--throbber::after,
-.ajax-progress--fullscreen::after,
-.ajax-progress-throbber::after,
-.ajax-progress-fullscreen::after {
-  content: " ";
-  display: block;
-  width: 4rem;
-  height: 4rem;
-  border-radius: 100%;
-  border-width: .25rem;
-  border-style: solid;
-  overflow: hidden;
-  text-indent: -9999em;
-  margin: auto;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-
-.ajax-progress--throbber::before,
-.ajax-progress--fullscreen::before,
-.ajax-progress-throbber::before,
-.ajax-progress-fullscreen::before {
-	border-color: $throbber-border;
-}
-
-.ajax-progress--throbber::after,
-.ajax-progress--fullscreen::after,
-.ajax-progress-throbber::after,
-.ajax-progress-fullscreen::after {
-	border-color: $throbber-color $throbber-color $throbber-color transparent;
-	animation: spin .75s infinite linear;
-}
-
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-*/

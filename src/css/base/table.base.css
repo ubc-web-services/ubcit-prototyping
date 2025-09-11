@@ -1,13 +1,11 @@
-/** @define media */
+/** @define table.base */
 
 /*
 * This file contains all styles related to the table element.
 */
 
 table {
-  @apply w-full text-left;
-
-  margin-top: var(--leading);
+  @apply w-full text-left mt-leading;
   border-spacing: 0;
   border-collapse: collapse;
 }
@@ -22,10 +20,9 @@ tr {
 
 td,
 th {
-  @apply p-4;
-
+  @apply p-4 text-sm;
   vertical-align: top;
-  line-height: 1.2;
+  line-height: 1.45;
 }
 
 th {
@@ -33,9 +30,7 @@ th {
 }
 
 table caption {
-  @apply text-ubc-blue;
-
-  padding: 1rem 0;
+  @apply px-4 py-0 text-ubc-blue;
   font-size: 120%;
   font-weight: 600;
 }
@@ -48,28 +43,93 @@ table caption {
 }
 
 .table--plain tr {
-  @apply border-b-0;
-
-  background-color: transparent !important;
+  @apply border-b-0 !bg-transparent;
 }
 
 .table--condensed th,
 .table--condensed td {
   @apply py-2 pr-2;
-
   line-height: 1.25;
 }
 
 .table--striped tr.odd,
 .table--striped tbody tr:nth-child(2n+1) {
-  background-color: $table-row-striping-color;
+  @apply bg-ubc-blue-cornflower/20;
 }
 
 .table--striped td,
 .table--striped th {
   padding-left: 0.75rem;
+  @apply pl-3;
 }
 
 .table--hover tbody tr:hover {
-  background-color: $table-row-hover-color;
+  @apply bg-ubc-blue-cornflower/30;
+}
+
+td p:first-child {
+  margin-top: 0;
+}
+
+/* sortable tables */
+.tablesort {
+  display: none;
+}
+
+.tablesort--asc {
+  background-image: url(../img/svg/icon-sort-asc.svg);
+}
+
+.tablesort--desc {
+  background-image: url(../img/svg/icon-sort-desc.svg);
+}
+
+.column-sort {
+  position: relative;
+}
+
+.column-sort::after  {
+  position: absolute;
+  right: -1.25rem;
+  height: 1rem;
+  width: 1rem;
+  content: '';
+  background-image: url(../img/svg/icon-sort.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 1rem 1rem;
+}
+
+[aria-sort] .column-sort:has(.tablesort--desc)::after {
+  background-image: url(../img/svg/icon-sort-desc.svg);
+}
+
+[aria-sort] .column-sort:has(.tablesort--asc)::after {
+  background-image: url(../img/svg/icon-sort-asc.svg);
+}
+
+/* sortable wysiwyg tables */
+table.sortable th {
+  position: relative;
+}
+
+table.sortable th::after {
+  background-image: url(../img/svg/icon-sort.svg);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: 1em 1em;
+  content: "";
+  margin-left: .5em;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  margin-bottom: -.125em;
+}
+
+table.sortable th[aria-sort=descending]::after {
+  background-image: url(../img/svg/icon-sort-desc.svg);
+}
+
+table.sortable th[aria-sort=ascending]::after {
+  background-image: url(../img/svg/icon-sort-asc.svg);
 }

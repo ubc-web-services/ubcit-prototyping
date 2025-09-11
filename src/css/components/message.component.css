@@ -8,20 +8,20 @@
   @apply relative flex flex-col px-12 py-4 pl-4 my-6 shadow-lg;
 }
 
-.message--success {
-  background-color: $success;
-}
-
-.message--warning {
-  background-color: $warning;
-}
-
 .message--error {
-  background-color: $error;
+  background-color: rgb(var(--error))
 }
 
 .message--status {
-  background-color: $status;
+  background-color: rgb(var(--status))
+}
+
+.message--success {
+  background-color: rgb(var(--success))
+}
+
+.message--warning {
+  background-color: rgb(var(--warning))
 }
 
 .message__close {
@@ -29,20 +29,14 @@
 }
 
 .message__close:hover {
-  @apply text-black no-underline;
-
-  background-color: rgba(255, 255, 255, 0.5);
+  @apply text-black no-underline bg-white/50;
 }
 
 .message__icon {
   @apply flex-none inline-block w-8 h-8 mx-auto mb-4 text-ubc-blue;
 }
 
-.message p {
-  margin-top: calc(var(--leading) * .5rem);
-}
-
-@media (min-width: $breakpoint--sm) {
+@media (min-width: 768px) {
   .message {
     @apply flex-row items-center;
   }
@@ -52,7 +46,7 @@
   }
 }
 
-@media (min-width: $breakpoint--xl) {
+@media (min-width: 1720px) {
 
   .message {
     @apply py-8 pl-8;

@@ -1,9 +1,7 @@
-/** @define clf.8.dark.mode */
-
-/*
-* This file contains all styles related to UBC Common Look and Feel, v.7.
-*/
-
+/**
+ * @file
+ * Styles related to UBC Common Look and Feel in Dark Mode
+ */
 @media (prefers-color-scheme: dark) {
 
   body {

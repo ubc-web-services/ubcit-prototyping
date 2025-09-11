@@ -1,16 +1,12 @@
-/** @define stickyheader */
-
-/*
-* This file contains all styles used to control the behaviour
-* of the sticky header (provided by headroom.js)
-*/
-@import url("config/variables.config.css");
-
-@media (min-width: $breakpoint--clf7-md) {
+/**
+ * @file
+ * Styles used to control the behaviour of the sticky header
+ */
+@media (min-width: 980px) {
 
   .stickynav--pinned {
     position: fixed;
-    z-index: 51;
+    z-index: 300;
     top: 0;
     left: 0;
     width: 100%;
@@ -28,7 +24,7 @@
   }
 }
 
-@media (min-width: $breakpoint--clf7-md) {
+@media (min-width: 980px) {
 
   .nav--is-pinned #ubc7-unit {
     margin-bottom: 45px;

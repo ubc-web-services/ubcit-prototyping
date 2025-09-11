@@ -4,6 +4,23 @@
 <link rel="preconnect" href="https://themes.googleusercontent.com/">
 <link rel="preconnect" href="https://fonts.gstatic.com/">
 -->
+<style>
+    :root {
+        --unit-color-primary: 0, 33, 69;
+        --unit-color-secondary: 222, 241, 248;
+        --unit-color-tertiary: 204, 204, 204;
+        --unit-color-accent: 0, 58, 121;
+        --color-link: #0055b7;
+        --color-link-hover: #002145;
+        --color-link-active: #002145;
+        --leading: 1.625;
+        --base-font-size: 1rem;
+        --text-font-stack: "Whitney SSm A", "Whitney SSm B", Arial, sans-serif;
+        --alternate-font-stack: var(--text-font-stack);
+        --code-font-stack:  menlo, monaco, consolas, "Liberation Mono", "Courier New", monospace;
+      }
+      #ubc7-unit { background-color: #002145 !important; }
+</style>
 <link rel="apple-touch-icon" href="img/icon.png">
 <link rel="shortcut icon" href="favicon.ico">
 {% if clfversion == 7 %}
@@ -12,7 +29,6 @@
 {% else %}
 <link rel="stylesheet" href="css/clf.8.css">
 {% endif %}
-<link rel="stylesheet" href="css/drupal.media.css">
 <link rel="stylesheet" href="css/bootstrap.5.css">
 <link rel="stylesheet" href="css/styles.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />

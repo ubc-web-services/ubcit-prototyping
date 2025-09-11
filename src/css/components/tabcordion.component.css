@@ -19,46 +19,37 @@
 }
 
 .tabcordion__tab button {
-  @apply relative block w-full h-full py-4 overflow-hidden text-center text-ubc-blue;
-
-  border-bottom: 1px solid $grey-300;
+  @apply relative block w-full h-full py-4 overflow-hidden text-center border-b text-ubc-blue border-grey-300 ;
   line-height: 1.5rem;
 }
 
 .tabcordion__tab button:hover {
-  border-bottom: 1px solid var(--color-secondary);
+  @apply border-b border-unit-secondary;
 }
 
 .tabcordion__tab.is-active button,
 .tabcordion__tab button.active {
-  @apply font-semibold text-ubc-blue-sea;
-
-  border-bottom: 1px solid var(--color-primary);
+  @apply font-semibold border-b text-ubc-blue-sea border-unit-primary;
 }
 
 /* mobile triggers */
 .tabcordion__heading {
-  @apply relative block w-full py-4 pr-12 mt-2 overflow-hidden uppercase text-ubc-blue;
-
-  cursor: pointer;
-  border-bottom: 1px solid $grey-300;
-  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" %3E%3Cpath d="M53 29H35V11a3 3 0 0 0-6 0v18H11a3 3 0 0 0 0 6h18v18a3 3 0 0 0 6 0V35h18a3 3 0 0 0 0-6z" fill="%23002145" stroke-width="0" stroke-miterlimit="10" stroke-linejoin="round" stroke-linecap="round" %3E%3C/path%3E%3C/svg%3E');
+  @apply relative block w-full py-4 pr-12 mt-2 overflow-hidden uppercase border-b cursor-pointer text-ubc-blue border-grey-300;
+  background-image: url(../img/svg/icon-plus--ubc-blue.svg);
   background-repeat: no-repeat;
   background-position: right 1rem top 50%;
   background-size: 1rem 1rem;
 }
 
 .tabcordion__heading:hover {
-  border-bottom: 1px solid var(--color-secondary);
+  @apply border-b border-unit-secondary;
 }
 
 .tabcordion__heading.active,
 .tabcordion__heading.is-active,
 .tabcordion__heading[aria-expanded="true"] {
-  @apply font-semibold;
-
-  border-bottom: 1px solid var(--color-primary);
-  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" %3E%3Cpath d="M53 34H11a3 3 0 0 1 0-6h42a3 3 0 0 1 0 6z" fill="%230055b7" stroke-width="0" stroke-miterlimit="10" stroke-linejoin="round" stroke-linecap="round" %3E%3C/path%3E%3C/svg%3E');
+  @apply font-semibold border-b border-unit-primary;
+  background-image: url(../img/svg/icon-minus--ubc-blue.svg);
 }
 
 /* styles for only tabs */
@@ -72,11 +63,10 @@
   display: none;
 }
 
-@media (min-width: $breakpoint--md) {
+@media (min-width: 980px) {
 
   .tab-pane.show .tabcordion__content {
-    display: block !important;
-    opacity: 1;
+    @apply !block opacity-100;
   }
 
   .tabcordion__links {
@@ -92,15 +82,13 @@
 
 /* tabcordion content */
 .tabcordion__content {
-  padding-bottom: 1.5rem;
+  @apply pb-6;
 }
 
-@media (max-width: $breakpoint--md--max) {
+@media (max-width: 979px) {
 
   .tabcordion__content.show,
   .tab-content > .tab-pane {
-    display: block !important;
-    opacity: 1;
+    @apply !block opacity-100;
   }
-
 }

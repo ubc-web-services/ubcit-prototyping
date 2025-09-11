@@ -5,21 +5,14 @@
 */
 
 #totop-mask {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 1vw;
-  height: 70vh;
+  @apply absolute top-0 left-0 w-[1vw] h-[70vh];
 }
 
 #totop {
-  @apply fixed bottom-0 right-0 z-50 p-4 m-6 text-xs uppercase rounded-full shadow-xl;
-
+  @apply fixed bottom-0 right-0 z-50 p-4 m-6 text-xs uppercase bg-white rounded-full shadow-xl opacity-0;
   transition: opacity 0.4s linear;
-  opacity: 0;
-  background: $white;
 }
 
 #totop.is-visible {
-  opacity: 1;
+  @apply opacity-100;
 }

@@ -1,44 +1,34 @@
-/** @define drupal.local.tasks */
-
-/*
-* This file contains styles for the default drupal tabs
-*/
-@import url("config/variables.config.css");
-
+/**
+ * @file
+ * Styles for the default drupal tabs
+ */
 .tabs {
-  margin: 1rem 0 0.5rem 0;
-  font-size: 1rem;
+  @apply mx-0 mt-4 mb-2 text-base;
 }
 
 .tabs--primary,
 .tabs--secondary {
-  width: 99%;
+  @apply w-[99%];
 }
 
 .tabs--primary {
-  margin: 0 0 0.5em 0;
-  padding: 0;
-  list-style: none;
-  white-space: nowrap;
+  @apply p-0 list-none whitespace-nowrap mx-0 mt-0 mb-[.5em];
   box-shadow: inset 0 -3px #999;
   line-height: normal;
 }
 
 .tabs--primary li {
-  float: left;
-  margin: 0;
-  padding: 0;
+  @apply float-left p-0 m-0;
 }
 
 .tabs--primary a.is-active {
-  color: #005ca7;
-  background-color: #f3f3f3;
+  @apply text-ubc-blue-cobalt bg-grey-100;
   box-shadow: inset 0 -3px #005ca7;
 }
 
 .tabs--primary a.is-active:hover {
-  color: #01a7e1;
-  box-shadow: inset 0 -3px #01a7e1;
+  @apply text-ubc-blue-neptune;
+  box-shadow: inset 0 -3px #40b4e5;
 }
 
 .tabs--primary a {

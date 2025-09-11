@@ -1,68 +1,58 @@
-/** @define styles */
+/**
+ * @file
+ * This file is the main entry point for primary styles
+ */
 
-/*
-* This file is the main entry point for primary styles
-*/
-
-/* Add CSS variables (uses postcss-simple-vars) */
-@import url("config/variables.config.css");
+ /* add css variables */
+ @import "config/variables.config.css";
 
 /* Add normalize and general base styles */
-@import url("tailwindcss/base");
-@import url("base/default.base.css");
-@import url("base/typography.base.css");
-@import url("base/form.base.css");
-@import url("base/layout.base.css");
-@import url("base/link.base.css");
-@import url("base/list.base.css");
-@import url("base/media.base.css");
-@import url("base/table.base.css");
-@import url("base/print.base.css");
+@import "tailwindcss/base";
+@import "base/default.base.css";
+@import "base/typography.base.css";
+@import "base/form.base.css";
+@import "base/layout.base.css";
+@import "base/link.base.css";
+@import "base/list.base.css";
+@import "base/media.base.css";
+@import "base/table.base.css";
+@import "base/print.base.css";
 
-/* Import any node assets */
+/* Add any Drupal specific stylesheets */
+@import "drupal/drupal.node.preview.css";
+@import "drupal/drupal.entity.moderation.css";
+@import "drupal/drupal.media.css";
+@import "drupal/drupal.views.css";
+@import "drupal/drupal.webform.css";
+@import "drupal/clf.drupal.css";
+@import "drupal/drupal.theme.css";
 
 /* Add styles for specific components */
-@import url("tailwindcss/components");
-@import url("components/accordion.component.css");
-@import url("components/button.component.css");
-@import url("components/carousel.component.css");
-@import url("components/chosen.component.css");
-@import url("components/message.component.css");
-@import url("components/navigation.component.css");
-@import url("components/tabcordion.component.css");
-@import url("components/tag.component.css");
-@import url("components/throbber.component.css");
-@import url("components/totop.component.css");
+@import "tailwindcss/components";
+@import "components/accordion.component.css";
+@import "components/button.component.css";
+@import "components/card.component.css";
+@import "components/carousel.component.css";
+@import "components/chosen.component.css";
+@import "components/message.component.css";
+@import "components/navigation.component.css";
+@import "components/tabcordion.component.css";
+@import "components/tag.component.css";
+@import "components/throbber.component.css";
+@import "components/totop.component.css";
 
 /* Add site specific styles */
-@import url("theme/custom.theme.css");
+@import "theme/custom.theme.css";
 
 /* Add site specific utilities */
-@import url("utilities/animate.utility.css");
-@import url("utilities/container.utility.css");
-@import url("utilities/margin.utility.css");
-@import url("utilities/min-height.utility.css");
-@import url("utilities/skip-link.utility.css");
-@import url("utilities/svg.utility.css");
-/* @import "utilities/text-truncate.utility.css"; */
-@import url("utilities/ubc-gradient.utility.css");
-@import url("utilities/vue.utility.css");
+@import "utilities/animate.utility.css";
+@import "utilities/container.utility.css";
+@import "utilities/margin.utility.css";
+@import "utilities/min-height.utility.css";
+@import "utilities/skip-link.utility.css";
+@import "utilities/svg.utility.css";
+@import "utilities/ubc-gradient.utility.css";
+@import "utilities/vue.utility.css";
 
 /* Add utility classes last so that they take precedence */
-@import url("tailwindcss/utilities");
-
-:root {
-  --color-primary: #002145 !important;
-  --color-secondary: #e0e0e0 !important;
-  --color-tertiary: #def1f8 !important;
-  --color-accent: #003a79 !important;
-  --color-link: #0055b7;
-  --color-link-hover: #002145;
-  --color-link-active: #002145;
-  --leading: 1.5;
-  --base-font-size: 1rem;
-  --text-font-stack: "Whitney SSm A", "Whitney SSm B", arial, sans-serif;
-  --alternate-font-stack: var(--text-font-stack);
-  --code-font-stack:  menlo, monaco, consolas, "Liberation Mono", "Courier New", monospace;
-}
-#ubc7-unit { background-color: #002145 !important; }
+@import "tailwindcss/utilities";

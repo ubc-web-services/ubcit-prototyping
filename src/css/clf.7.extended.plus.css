@@ -1,4 +1,8 @@
-@media screen and (width >= 2400px) {
+/**
+ * @file
+ * Styles for a 2400px wide version of the CLF (requires clf.7.extended.css)
+ */
+@media screen and (min-width: 2400px) {
   #ubc7-global-menu .clf-container,
   #ubc7-header .clf-container,
   #ubc7-unit .clf-container,
@@ -17,5 +21,10 @@
 
   .layout--centered #main-content {
     width: 2400px;
+  }
+
+  .container,
+  .container-xxl {
+    max-width: 1720px;
   }
 }

@@ -1,9 +1,12 @@
-@import url("config/variables.config.css");
-@import url("lib/fc.core.css");
-@import url("lib/fc.daygrid.css");
-@import url("lib/fc.timegrid.css");
-@import url("lib/fc.list.css");
+/**
+ * @file
+ * Fullcalendar styles
+ */
+@import "lib/fullcalendar/fc.core.css";
+@import "lib/fullcalendar/fc.daygrid.css";
+@import "lib/fullcalendar/fc.timegrid.css";
+@import "lib/fullcalendar/fc.list.css";
 
 .fc-body .fc-scroller {
-  height: auto !important;
+  @apply !h-auto
 }

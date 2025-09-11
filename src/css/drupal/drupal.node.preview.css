@@ -1,0 +1,21 @@
+/** @define drupal.node.preview */
+
+/*
+* This styles the node preview form.
+*/
+.node-preview-container {
+  @apply border-b border-ubc-blue-sea bg-white/50;
+}
+
+.node-preview-backlink {
+  @apply inline-block my-2 mx-0 py-2 px-4 no-underline text-white border border-ubc-blue-sea bg-ubc-blue-sea/80;
+  border-radius: 0.25rem;
+}
+
+.node-preview-backlink:hover {
+  @apply no-underline text-white border border-ubc-blue bg-ubc-blue/80;
+}
+
+.node-preview-container select {
+  @apply min-w-[200px];
+}

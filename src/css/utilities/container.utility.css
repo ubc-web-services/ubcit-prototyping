@@ -1,5 +1,9 @@
 /** @define container.utility */
 
+.container {
+  width: 100%;
+}
+
 /* adds a set of custom containers */
 
 .container-xs {
@@ -12,4 +16,17 @@
 
 .container-md {
   max-width: 768px;
+}
+
+
+@media (min-width: 980px) {
+  .container {
+      max-width: 980px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+      max-width: 1200px;
+  }
 }

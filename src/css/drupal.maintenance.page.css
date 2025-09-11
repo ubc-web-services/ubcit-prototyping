@@ -1,18 +1,16 @@
-/** @define drupal.maintenance.page */
-
-/*
-* This file contains styles for the drupal maintenance page
-*/
-@import url("config/variables.config.css");
-
+/**
+ * @file
+ * Styles for the drupal maintenance page
+ */
 html {
-  color: $text-color;
+  @apply !bg-ubc-blue;
+  color: var(--text-color);
   font-family: var(--text-font-stack);
   font-size: 100%;
 }
 
 body {
-  background-color: #002145 !important;
+  @apply !bg-ubc-blue;
   font-family: var(--text-font-stack);
   font-size: var(--base-font-size);
   line-height: var(--leading);
@@ -88,7 +86,7 @@ body {
 }
 
 .shadow-lg {
-  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 10%), 0 4px 6px -2px rgb(0 0 0 / 5%);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
 .text-2xl {
@@ -103,7 +101,7 @@ body {
   border-radius: 0.125rem;
 }
 
-@media (width >= 640px) {
+@media (min-width: 640px) {
 
   .sm--max-w-md {
     max-width: 34rem;

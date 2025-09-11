@@ -4,17 +4,18 @@
 * This file contains all styles related to the tag component.
 */
 .tag {
-  @apply mr-4 text-xs text-white no-underline rounded;
+  @apply mr-4 text-xs text-white no-underline rounded bg-ubc-blue;
 
   padding: 0.35em 0.75em 0.25em;
-  background-color: rgb(0 33 69 / 100%);
 }
 
+/*
 .tag::before {
   content: "# ";
   font-size: 1.25em;
   line-height: 0;
 }
+*/
 
 .tag a,
 .tag a:hover {

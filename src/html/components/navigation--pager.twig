@@ -1,30 +1,90 @@
-<div class="mt-16 item-list">
+<h4>Full pager</h4>
+<nav class="flex justify-center my-8 pager" role="navigation" aria-labelledby="pagination-heading">
+	<h4 id="pagination-heading" class="visually-hidden">Pagination</h4>
 	<ul class="flex max-w-md pager__items js-pager__items list-unstyled">
 		<li class="pager__item is-active">
-			<a href="?search=&amp;audience=All&amp;organization=All&amp;date=now&amp;page=0" title="Current page" class="block px-4 py-2 text-white no-underline bg-unit-accent hover--text-white hover--no-underline">
-				<span class="visually-hidden">Current page</span>1</a>
+			<a href="?page=0" title="Current page" aria-current="page" class="block px-4 py-2 no-underline text-ubc-blue-cobalt hover--text-black hover--bg-unit-tertiary-alt hover--no-underline">
+				<span class="visually-hidden">
+					Current page
+				</span>1</a>
 		</li>
 		<li class="pager__item">
-			<a href="?search=&amp;audience=All&amp;organization=All&amp;date=now&amp;page=1" title="Go to page 2" class="block px-4 py-2 no-underline text-ubc-blue-cobalt hover--text-white hover--bg-ubc-blue hover--no-underline">
-				<span class="visually-hidden">Page</span>2</a>
+			<a href="?page=1" title="Go to page 2" class="block px-4 py-2 no-underline text-ubc-blue-cobalt hover--text-black hover--bg-unit-tertiary-alt hover--no-underline">
+				<span class="visually-hidden">
+					Page
+				</span>2</a>
 		</li>
 		<li class="pager__item">
-			<a href="?search=&amp;audience=All&amp;organization=All&amp;date=now&amp;page=2" title="Go to page 3" class="block px-4 py-2 no-underline text-ubc-blue-cobalt hover--text-white hover--bg-ubc-blue hover--no-underline">
-				<span class="visually-hidden">Page</span>3</a>
+			<a href="?page=2" title="Go to page 3" class="block px-4 py-2 no-underline text-ubc-blue-cobalt hover--text-black hover--bg-unit-tertiary-alt hover--no-underline">
+				<span class="visually-hidden">
+					Page
+				</span>3</a>
 		</li>
+		<li class="pager__item">
+			<a href="?page=3" title="Go to page 4" class="block px-4 py-2 no-underline text-ubc-blue-cobalt hover--text-black hover--bg-unit-tertiary-alt hover--no-underline">
+				<span class="visually-hidden">
+					Page
+				</span>4</a>
+		</li>
+		<li class="pager__item">
+			<a href="?page=4" title="Go to page 5" class="block px-4 py-2 no-underline text-ubc-blue-cobalt hover--text-black hover--bg-unit-tertiary-alt hover--no-underline">
+				<span class="visually-hidden">
+					Page
+				</span>5</a>
+		</li>
+		<li class="pager__item">
+			<a href="?page=5" title="Go to page 6" class="block px-4 py-2 no-underline text-ubc-blue-cobalt hover--text-black hover--bg-unit-tertiary-alt hover--no-underline">
+				<span class="visually-hidden">
+					Page
+				</span>6</a>
+		</li>
+		<li class="pager__item">
+			<a href="?page=6" title="Go to page 7" class="block px-4 py-2 no-underline text-ubc-blue-cobalt hover--text-black hover--bg-unit-tertiary-alt hover--no-underline">
+				<span class="visually-hidden">
+					Page
+				</span>7</a>
+		</li>
+		<li class="pager__item">
+			<a href="?page=7" title="Go to page 8" class="block px-4 py-2 no-underline text-ubc-blue-cobalt hover--text-black hover--bg-unit-tertiary-alt hover--no-underline">
+				<span class="visually-hidden">
+					Page
+				</span>8</a>
+		</li>
+		<li class="pager__item">
+			<a href="?page=8" title="Go to page 9" class="block px-4 py-2 no-underline text-ubc-blue-cobalt hover--text-black hover--bg-unit-tertiary-alt hover--no-underline">
+				<span class="visually-hidden">
+					Page
+				</span>9</a>
+		</li>
+		<li class="pager__item pager__item--ellipsis" role="presentation">…</li>
 		<li class="pager__item pager__item--next">
-			<a href="?search=&amp;audience=All&amp;organization=All&amp;date=now&amp;page=1" title="Go to next page" rel="next" class="block px-2 py-2 no-underline text-ubc-blue-cobalt hover--text-white hover--bg-ubc-blue hover--no-underline">
+			<a href="?page=1" title="Go to next page" rel="next" class="block px-6 py-2 no-underline text-ubc-blue-cobalt hover--text-black hover--bg-unit-tertiary-alt hover--no-underline">
 				<span class="visually-hidden">Next page</span>
-				<span aria-hidden="true">Next ›</span></a>
-		</li>
-		<li class="pager__item pager__item--last">
-			<a href="?search=&amp;audience=All&amp;organization=All&amp;date=now&amp;page=2" title="Go to last page" class="hidden">
-				<span class="visually-hidden">Last page</span>
-				<span aria-hidden="true">Last »</span>
+				<span aria-hidden="true">›</span>
 			</a>
 		</li>
-		</ul>
-</div>
-
-
-
+		<li class="pager__item pager__item--last">
+			<a href="?page=25" title="Go to last page" class="hidden">
+				<span class="visually-hidden">Last page</span>
+				<span aria-hidden="true">»</span>
+			</a>
+		</li>
+	</ul>
+</nav>
+<h4>Mini pager</h4>
+<nav class="mt-8 pager item-list" role="navigation" aria-labelledby="pagination-heading--6RPpaxiDPKM">
+	<h4 id="pagination-heading--6RPpaxiDPKM" class="visually-hidden">Pagination</h4>
+	<ul class="flex max-w-md pager__items js-pager__items list-unstyled">
+		<li class="pager__item pager__item--mini pager__item--current">
+			<span class="visually-hidden">
+				Current page
+			</span>
+			1
+		</li>
+		<li class="pager__item pager__item--mini pager__item--action pager__item--next">
+			<a class="pager__link pager__link--mini pager__link--action-link" title="Go to next page" href="#" data-once="views-ajax">
+				<span class="visually-hidden">Next page</span>
+			</a>
+		</li>
+	</ul>
+</nav>

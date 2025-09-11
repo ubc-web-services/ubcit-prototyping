@@ -1,0 +1,218 @@
+/** @define Drupal Theme */
+
+/*
+* This file contains all styles used to modify Drupal makrup to match the theme.
+*/
+
+/* drupal media */
+figure.align-center,
+figure.align-left,
+figure.align-right,
+figure.img-and-caption {
+  @apply table;
+}
+
+figure.align-center figcaption,
+figure.align-left figcaption,
+figure.align-right figcaption,
+figure.img-and-caption figcaption {
+  @apply table-caption caption-bottom;
+}
+
+.media--type-image {
+  @apply mt-leading;
+}
+
+figure .media--type-image {
+  @apply mt-0;
+}
+
+figure .media--type-image img {
+  @apply w-full;
+}
+
+figure.align-left,
+.align-left.media--type-image {
+  @apply float-left mr-leading mb-leading;
+}
+
+figure.align-right,
+.align-right.media--type-image {
+  @apply float-right ml-leading mb-leading;
+}
+
+.align-right.media--type-image,
+.align-left.media--type-image {
+  @apply inline-block;
+}
+
+.align-center.media--type-image img,
+figure.align-center {
+  @apply mx-auto;
+}
+
+figure.align-center > article,
+figure.align-center > div {
+  @apply block max-w-full;
+}
+
+/* paragraphs */
+.paragraph--type--text__inner > :first-child,
+.paragraph--type--text > div > div > :first-child {
+  @apply mt-0;
+}
+
+.paragraph.bg-ubc-blue {
+  @apply text-white;
+}
+
+.paragraph.bg-ubc-blue a {
+  @apply text-ubc-blue-polar;
+}
+
+.paragraph.bg-ubc-blue a:hover {
+  @apply text-ubc-blue-cornflower;
+}
+
+.paragraph.bg-ubc-blue .unit-button--light {
+  @apply text-ubc-blue-cobalt;
+}
+
+.paragraph.bg-ubc-blue .unit-button--dark {
+  @apply text-ubc-blue-polar;
+}
+
+.paragraph.bg-ubc-blue .unit-button--light:hover,
+.paragraph.bg-ubc-blue .unit-button--dark:hover {
+  @apply text-white;
+}
+
+.paragraph.bg-ubc-blue .unit-button--simple::after {
+  content: url("../img/svg/icon-caret--white.svg");
+}
+
+.paragraph.bg-ubc-blue .unit-button--simple:hover::after {
+  content: url("../img/svg/icon-caret--white.svg");
+}
+
+/* jquery datepicker */
+.ui-datepicker {
+  font-size: 75%;
+}
+
+.ui-state-highlight,
+.ui-widget-content .ui-state-highlight,
+.ui-widget-header .ui-state-highlight {
+  @apply text-white border border-ubc-blue bg-ubc-blue-cobalt;
+}
+
+/* webform */
+.webform-submission-form legend {
+  @apply pb-0 border-b-[.25rem] border-ubc-blue-neptune text-sm;
+}
+
+.webform-submission-form .fieldset-legend.form-required {
+  color: inherit;
+  font-weight: inherit;
+}
+
+.webform-submission-form .fieldset-legend.form-required::after {
+  content: " *";
+  color: var(--input-required-color);
+  font-weight: 700;
+}
+
+.webform-type-checkboxes > legend {
+  @apply normal-case border-b-0 text-ubc-blue;
+}
+
+.webform-submission-form .form-actions {
+  @apply mt-12;
+}
+
+fieldset.webform-type-checkboxes,
+fieldset.webform-type-radios {
+  @apply shadow-none;
+}
+
+.webform-submission-form .fieldset-wrapper {
+  @apply p-8;
+}
+
+fieldset fieldset {
+  @apply !mt-12 !mb-0 px-0 py-0 shadow-none;
+}
+
+fieldset fieldset legend {
+  @apply normal-case border-b-[.125rem];
+}
+
+.webform-submission-form .webform-type-radios .fieldset-wrapper,
+.webform-submission-form .webform-type-checkboxes .fieldset-wrapper {
+  @apply p-0;
+}
+
+.webform-submission-form .fieldset-wrapper .form-item.form-radio,
+.webform-submission-form .fieldset-wrapper .form-item.form-checkbox {
+  @apply mt-0;
+}
+
+.webform-submission-form .webform-type-radios > legend,
+.webform-submission-form .webform-type-checkboxes > legend {
+  @apply border-b-0;
+}
+
+.text-count-message,
+.description {
+  @apply text-sm text-grey-700;
+}
+
+@media (min-width: 400px) {
+  .webform-options-display-two-columns,
+  .webform-options-display-three-columns {
+    @apply flex flex-wrap mt-0 columns-[initial]
+  }
+  .webform-options-display-two-columns div.form-item {
+    @apply w-half;
+  }
+  .webform-options-display-three-columns div.form-item {
+    @apply w-one-third;
+  }
+}
+
+/* misc */
+.text-uppercase {
+  @apply uppercase;
+}
+
+.text-lowercase {
+  @apply lowercase;
+}
+
+/* jquery date picker picks up default table styles */
+.ui-datepicker-calendar thead,
+.ui-datepicker-calendar tr {
+  @apply border-0;
+}
+
+.ui-datepicker-calendar th {
+  @apply normal-case text-grey-900;
+}
+
+/* quickedit divs (gah!) */
+[data-quickedit-field-id] {
+  @apply inline;
+}
+
+/* Drupal inline images */
+.node__content .field--name-field-media-image img {
+  @apply mt-leading;
+}
+
+/* Drupal messages */
+.message p:first-of-type {
+  @apply mt-0;
+}
+.message p {
+  @apply mt-3;
+}

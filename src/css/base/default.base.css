@@ -1,8 +1,4 @@
-/** @define layouts */
-
-/* variables in file */
-$focus-bg: rgba(64, 180, 229, 0.5);
-$focus-inner-bg: rgba(0, 33, 69, 1);
+/** @define default.base */
 
 /* Set up a decent box model on the root element */
 html {
@@ -25,15 +21,16 @@ html {
 button:focus {
   outline: none;
   box-shadow:
-    0 0 0 6px $focus-bg,
-    0 0 0 1px $focus-inner-bg !important;
-  z-index: 2;
+    0 0 0 6px rgba(var(--ubc-blue-neptue), 0.5),
+    0 0 0 1px rgba(var(--ubc-blue), 1) !important;
 }
 
 [tabindex="-1"]:focus {
   outline: none !important;
 }
 
-[hidden] {
+[hidden],
+[data-screen="sm"] .hidden--mobile,
+[data-screen="lg"] .hidden--desktop {
   display: none;
 }

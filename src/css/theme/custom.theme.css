@@ -1,4 +1,4 @@
-/** @define custom */
+/** @define custom.theme */
 
 /*
 * This file contains all styles related to the custom theme.
@@ -6,19 +6,11 @@
 
 /* Inline list */
 .list-inline {
-  margin-left: 0;
-  list-style: none;
+  @apply ml-0 list-none;
 }
 
 .list-inline > li {
-  display: inline-block;
-  padding-left: 0;
-}
-
-/* links on coloured backgrounds */
-.bg-dark a:not(.unit-button),
-.bg-dark.text-white a:hover:not(.unit-button) {
-  color: #fff;
+  @apply inline-block pl-0;
 }
 
 /* paragraphs */
@@ -27,51 +19,171 @@
   @apply mt-0;
 }
 
-.bg-dark {
+
+/* text and links on coloured backgrounds */
+.bg-dark,
+.bg-dark a:not(.unit-button),
+.bg-dark.text-white a:hover:not(.unit-button),
+.ubc-card.bg-dark,
+.widget-card.bg-unit-primary,
+.widget-color-box.bg-unit-primary,
+.widget-color-box.bg-ubc-blue,
+.widget-color-box.bg-ubc-blue-sea,
+.widget-color-box.bg-ubc-blue-cobalt {
   color: #fff;
 }
 
-.bg-dark a {
-  color: $ubc-blue-polar;
+.bg-dark a:not(.unit-button),
+.ubc-card.bg-dark a:not(.unit-button),
+.widget-card.bg-unit-primary a:not(.unit-button),
+.widget-color-box.bg-unit-primary a:not(.unit-button),
+.widget-color-box.bg-ubc-blue a:not(.unit-button),
+.widget-color-box.bg-ubc-blue-sea a:not(.unit-button),
+.widget-color-box.bg-ubc-blue-cobalt a:not(.unit-button)  {
+  @apply text-ubc-blue-polar;
 }
 
-.bg-dark a:hover {
-  color: $ubc-blue-cornflower;
+.bg-dark a:not(.unit-button):hover,
+.ubc-card.bg-dark a:not(.unit-button):hover,
+.widget-card.bg-unit-primary a:not(.unit-button):hover,
+.widget-color-box.bg-unit-primary a:not(.unit-button):hover,
+.widget-color-box.bg-ubc-blue a:not(.unit-button):hover,
+.widget-color-box.bg-ubc-blue-sea a:not(.unit-button):hover,
+.widget-color-box.bg-ubc-blue-cobalt a:not(.unit-button):hover {
+  @apply text-ubc-blue-cornflower;
 }
 
-.bg-dark .unit-button--light {
-  color: $ubc-blue-cobalt;
+.bg-dark .unit-button--light,
+.ubc-card.bg-dark .unit-button--light,
+.widget-card.bg-unit-primary .unit-button--light,
+.widget-color-box.bg-unit-primary .unit-button--light,
+.widget-color-box.bg-ubc-blue .unit-button--light,
+.widget-color-box.bg-ubc-blue-sea .unit-button--light,
+.widget-color-box.bg-ubc-blue-cobalt .unit-button--light {
+  @apply text-ubc-blue-cobalt;
 }
 
-.bg-dark .unit-button--dark {
-  border-color: $ubc-blue-polar;
+.bg-dark .unit-button--dark,
+.ubc-card.bg-dark .unit-button--dark,
+.widget-card.bg-unit-primary .unit-button--dark,
+.widget-color-box.bg-unit-primary .unit-button--dark,
+.widget-color-box.bg-ubc-blue .unit-button--dark,
+.widget-color-box.bg-ubc-blue-sea .unit-button--dark,
+.widget-color-box.bg-ubc-blue-cobalt .unit-button--dark {
+  @apply border-ubc-blue-polar;
 }
 
-.bg-dark .unit-button--light:hover,
-.bg-dark .unit-button--dark:hover {
+.bg-dark .unit-button--simple,
+.bg-dark .unit-button--simple:hover,
+.bg-dark.group:hover .unit-button--simple,
+.ubc-card.bg-dark .unit-button--simple,
+.ubc-card.bg-dark .unit-button--simple:hover,
+.ubc-card.bg-dark.group:hover .unit-button--simple,
+.widget-card.bg-unit-primary .unit-button--simple,
+.widget-card.bg-unit-primary .unit-button--simple:hover,
+.widget-card.bg-unit-primary.group:hover .unit-button--simple,
+.widget-card.bg-ubc-blue .unit-button--simple,
+.widget-card.bg-ubc-blue .unit-button--simple:hover,
+.widget-card.bg-ubc-blue.group:hover .unit-button--simple,
+.widget-card.bg-ubc-blue-sea .unit-button--simple,
+.widget-card.bg-ubc-blue-sea .unit-button--simple:hover,
+.widget-card.bg-ubc-blue-sea.group:hover .unit-button--simple,
+.widget-card.bg-ubc-blue-cobalt .unit-button--simple,
+.widget-card.bg-ubc-blue-cobalt .unit-button--simple:hover,
+.widget-card.bg-ubc-blue-cobalt.group:hover .unit-button--simple,
+.widget-color-box.bg-unit-primary .unit-button--simple,
+.widget-color-box.bg-unit-primary .unit-button--simple:hover,
+.widget-color-box.bg-ubc-blue .unit-button--simple,
+.widget-color-box.bg-ubc-blue .unit-button--simple:hover,
+.widget-color-box.bg-ubc-blue-sea .unit-button--simple,
+.widget-color-box.bg-ubc-blue-sea .unit-button--simple:hover,
+.widget-color-box.bg-ubc-blue-cobalt .unit-button--simple,
+.widget-color-box.bg-ubc-blue-cobalt .unit-button--simple:hover {
   color: #fff;
 }
 
-.bg-dark .unit-button--simple::after {
-  content: url("../img/svg/icon-arrow--polar.svg");
+.bg-dark .unit-button--simple::after,
+.bg-dark .unit-button--simple:hover::after,
+.bg-dark.group:hover .unit-button--simple::after,
+.ubc-card.bg-dark .unit-button--simple::after,
+.ubc-card.bg-dark .unit-button--simple:hover::after,
+.ubc-card.bg-dark.group:hover .unit-button--simple::after,
+.widget-card.bg-unit-primary .unit-button--simple::after,
+.widget-card.bg-unit-primary .unit-button--simple:hover::after,
+.widget-card.bg-unit-primary.group:hover .unit-button--simple::after,
+.widget-card.bg-ubc-blue .unit-button--simple::after,
+.widget-card.bg-ubc-blue .unit-button--simple:hover::after,
+.widget-card.bg-ubc-blue.group:hover .unit-button--simple::after,
+.widget-card.bg-ubc-blue-sea .unit-button--simple::after,
+.widget-card.bg-ubc-blue-sea .unit-button--simple:hover::after,
+.widget-card.bg-ubc-blue-sea.group:hover .unit-button--simple::after,
+.widget-card.bg-ubc-blue-cobalt .unit-button--simple::after,
+.widget-card.bg-ubc-blue-sea-cobalt .unit-button--simple:hover::after,
+.widget-card.bg-ubc-blue-sea-cobalt.group:hover .unit-button--simple::after,
+.widget-color-box.bg-unit-primary .unit-button--simple::after,
+.widget-color-box.bg-unit-primary .unit-button--simple:hover::after,
+.widget-color-box.bg-ubc-blue .unit-button--simple::after,
+.widget-color-box.bg-ubc-blue .unit-button--simple:hover::after,
+.widget-color-box.bg-ubc-blue-sea .unit-button--simple::after,
+.widget-color-box.bg-ubc-blue-sea .unit-button--simple:hover::after,
+.widget-color-box.bg-ubc-blue-cobalt .unit-button--simple::after,
+.widget-color-box.bg-ubc-blue-cobalt .unit-button--simple:hover::after {
+  background-image: url(../img/svg/icon-caret--white.svg);
 }
 
-.bg-dark .unit-button--simple:hover::after {
-  content: url("../img/svg/icon-arrow--cornflower.svg");
+/* light cards */
+.ubc-card.bg-light,
+.ubc-card.bg-light a:hover:not(.unit-button) {
+  color: var(--text-color);
+}
+
+.ubc-card.bg-light a:not(.unit-button)  {
+  color: var(--default-color-link);
+}
+
+.ubc-card.bg-light a:not(.unit-button):hover {
+  color: var(--default-color-link-hover);
+}
+
+.ubc-card.bg-light .unit-button--light {
+  @apply text-black;
+}
+
+.ubc-card.bg-light .unit-button--dark {
+  @apply border-white;
+}
+
+.ubc-card.bg-light .unit-button--simple {
+  color: var(--default-color-link);
+}
+
+.ubc-card.bg-light .unit-button--simple:hover,
+.ubc-card.bg-light.group:hover .unit-button--simple {
+  color: var(--default-color-link-hover);
+}
+
+.ubc-card.bg-light .unit-button--simple::after,
+.ubc-card.bg-light .unit-button--simple:hover::after,
+.ubc-card.bg-light.group:hover .unit-button--simple::after {
+  background-image: url(../img/svg/icon-caret--ubc-blue.svg);
 }
 
 /* SVG Icon fix for cards */
 .paragraph--type--icon-card img {
-  margin-right: auto;
-  margin-left: auto;
+  @apply mx-auto;
 }
 
 /* Views exposed forms */
 .views-exposed-form .form-item {
-  margin-top: 0;
+  @apply mt-0;
 }
 
 /* image filters */
 .img-greyscale {
   filter: grayscale(100%);
+}
+
+.keyline-bottom::after {
+  @apply absolute block bg-white h-[1px] w-[40%] left-[30%] bottom-[-5px] opacity-50;
+  content: '';
 }

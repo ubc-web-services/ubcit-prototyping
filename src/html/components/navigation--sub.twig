@@ -1,22 +1,19 @@
-<nav id="secondary-navigation" aria-labelledby="subnav-heading"
-	class="subnav">
-	<h2 id="subnav-heading" class="hidden text-xs font-normal subnav__heading text-ubc-blue-sea md--text-sm lg--text-base">
-		{{ unitName }}</h2>
-	<ul class="subnav__links">
-		<li>
-			<a href="#" class="navlink--secondary is-active">Degree programs</a>
-		</li>
-		<li>
-			<a href="#" class="navlink--secondary">Student stars</a>
-		</li>
-		<li>
-			<a href="#" class="navlink--secondary">Student-related news</a>
-		</li>
-		<li>
-			<a href="#" class="navlink--secondary">Coordinated international experience<br />Testing the line height</a>
-		</li>
-		<li><a href="#" class="navlink--secondary">McEwen family teacher recognition award</a></li>
-		<li><a href="#" class="navlink--secondary">McEwen family quality of life prize</a></li>
-		<li><a href="#" class="navlink--secondary">Study in Canada this summer</a></li>
-	</ul>
-</nav>
+<h4 class="mb-4">Standard Subnavigation</h4>
+{% include "navigation--sub--1.twig" %}
+
+<details>
+  <summary class="font-mono">Subnav Code</summary>
+  <script type="text/plain" class="language-markup">
+    {% include "navigation--sub--1.twig" %}
+  </script>
+</details>
+
+<h4 class="mb-4">Collapsed Subnavigation on mobile</h4>
+{% include "navigation--sub--1.twig" %}
+
+<details>
+  <summary class="font-mono">Subnav Code</summary>
+  <script type="text/plain" class="language-markup">
+    {% include "navigation--sub--2.twig" %}
+  </script>
+</details>

@@ -4,155 +4,91 @@
 * This file contains all styles related to the button component.
 */
 
-/* flex button */
 .unit-button {
-  @apply inline-flex text-center no-underline border-2;
-
-  padding: 0.75em 2em;
-  cursor: pointer;
+  @apply inline-flex text-center no-underline border px-[2em] py-[.65em] cursor-pointer;
+  color: var(--button-text);
+  background-color: var(--button-bg);
+  border-color: var(--button-border);
   transition: all 0.125s ease-out;
-  color: $button-text;
-  border-color: $button-border;
-  background-color: $button-bg;
 }
 
-.unit-button:hover {
+.unit-button:hover,
+.unit-button:active,
+.group:hover .unit-button {
   @apply no-underline shadow-md;
-
-  color: $button-text--hover;
-  border-color: $button-border--hover;
-  background-color: $button-bg--hover;
-}
-
-.unit-button:active {
-  @apply no-underline shadow-md;
-
-  color: $button-text--active;
-  border-color: $button-border--active;
-  background-color: $button-bg--active;
+  color: var(--button-text--hover);
+  background-color: var(--button-bg--hover);
+  border-color: var(--button-border--hover);
 }
 
 .unit-button--block {
-  display: block;
-  width: 100%;
-  text-align: center;
+  @apply block w-full text-center;
 }
 
-.unit-button--small {
-  padding: 0.25em 0.75em;
-}
-
-/* button colour variations */
 .unit-button--light {
-  color: $button-light-text;
-  border-color: $button-light-border;
-  background-color: $button-light-bg;
+  color: var(--button-light-text);
+  background-color: var(--button-light-bg);
+  border-color: var(--button-light-border);
 }
 
-.unit-button--light:hover {
-  color: $button-light-text--hover;
-  border-color: $button-light-border--hover;
-  background-color: $button-light-bg--hover;
-}
-
-.unit-button--light:active {
-  color: $button-light-text--active;
-  border-color: $button-light-border--active;
-  background-color: $button-light-bg--active;
+.unit-button--light:hover,
+.unit-button--light:active,
+.group:hover .unit-button--light {
+  color: var(--button-light-text--hover);
+  background-color: var(--button-light-bg--hover);
+  border-color: var(--button-light-border--hover);
 }
 
 .unit-button--dark {
-  color: $button-dark-text;
-  border-color: $button-dark-border;
-  background-color: $button-dark-bg;
+  color: var(--button-dark-text);
+  background-color: var(--button-dark-bg);
+  border-color: var(--button-dark-border);
 }
 
-.unit-button--dark:hover {
-  color: $button-dark-text--hover;
-  border-color: $button-dark-border--hover;
-  background-color: $button-dark-bg--hover;
-}
-
-.unit-button--dark:active {
-  color: $button-dark-text--active;
-  border-color: $button-dark-border--active;
-  background-color: $button-dark-bg--active;
+.unit-button--dark:hover,
+.unit-button--dark:active,
+.group:hover .unit-button--dark {
+  color: var(--button-dark-text--hover);
+  background-color: var(--button-dark-bg--hover);
+  border-color: var(--button-dark-border--hover);
 }
 
 .unit-button--transparent {
-  color: $button-transparent-text;
-  border-color: $button-transparent-border;
-  background-color: $button-transparent-bg;
+  color: var(--button-transparent-text);
+  background-color: var(--button-transparent-bg);
+  border-color: var(--button-transparent-border);
 }
 
-.unit-button--transparent:hover {
-  color: $button-transparent-text--hover;
-  border-color: $button-transparent-border--hover;
-  background-color: $button-transparent-bg--hover;
-}
-
-.unit-button--transparent:active {
-  color: $button-transparent-text--active;
-  border-color: $button-transparent-border--active;
-  background-color: $button-transparent-bg--active;
-}
-
-.unit-button--secondary {
-  color: $ubc-blue;
-  border-color: var(--color-secondary);
-  background-color: var(--color-secondary);
-}
-
-.unit-button--secondary:hover {
-  color: $ubc-blue;
-  border-color: $ubc-grey-3;
-  background-color: $ubc-grey-3;
-}
-
-.unit-button--secondary:active {
-  color: $ubc-blue;
-  border-color: $ubc-grey-2;
-  background-color: $ubc-grey-2;
-}
-
-.unit-button.unit-button--disabled,
-.unit-button--dark.unit-button--disabled {
-  @apply !bg-accessible-grey !border-accessible-grey !text-white cursor-not-allowed
-}
-
-.unit-button--light.unit-button--disabled {
-  @apply !border-accessible-grey !text-accessible-grey !bg-white cursor-not-allowed
+.unit-button--transparent:hover,
+.unit-button--transparent:active,
+.group:hover .unit-button--transparent{
+  color: var(--button-transparent-text--hover);
+  background-color: var(--button-transparent-bg--hover);
+  border-color: var(--button-transparent-border--hover);
 }
 
 .unit-button--simple {
-  @apply relative py-0 pl-0 overflow-hidden tracking-wider border-0;
-
-  padding-right: 1.5em;
-  color: $default-link-color;
-  background: transparent;
+  @apply relative py-0 pl-0 overflow-hidden tracking-wider border-0 bg-transparent pr-[1.5em];
+  color: var(--default-link-color);
 }
 
 .unit-button--simple::before {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 1.5em;
-  height: 100%;
+  @apply absolute top-0 right-0 w-[1.5em] h-full;
   content: "";
   transition-timing-function: ease-out;
   transition-duration: 0.2s;
   transition-property: transform;
   transform: translate3d(0, 0, 0);
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1792 1792'%3E%3Cpath fill='%23002145' d='M1363 877l-742 742q-19 19-45 19t-45-19l-166-166q-19-19-19-45t19-45l531-531-531-531q-19-19-19-45t19-45l166-166q19-19 45-19t45 19l742 742q19 19 19 45t-19 45z'%3E%3C/path%3E%3C/svg%3E");
+  background-image: url(../img/svg/icon-caret--ubc-blue.svg);
   background-repeat: no-repeat;
-  background-position: top 0.3em center;
-  background-size: 0.85em 0.85em;
+  background-position: center;
+  background-size: 1.5em 1.5em;
 }
 
-.unit-button--simple:hover {
-  text-decoration: none;
-  color: $default-link-color-hover;
-  background: transparent;
+.unit-button--simple:hover,
+.group:hover .unit-button--simple {
+  @apply no-underline bg-transparent;
+  color: var(--default-link-color-hover);
   box-shadow: none;
 }
 
@@ -164,7 +100,10 @@
 
 .unit-button--simple:hover::before,
 .unit-button--simple:focus::before,
-.unit-button--simple:active::before {
+.unit-button--simple:active::before,
+.group:hover .unit-button--simple::before,
+.group:focus .unit-button--simple::before,
+.group:active .unit-button--simple::before {
   transform: translate3d(4px, 0, 0);
 }
 
@@ -174,4 +113,27 @@
   height: 1em;
   margin-left: 0.5em;
   transform: translateY(0.2em);
+}
+
+.unit-button--capped {
+  @apply flex pl-0 -mt-[1px] transition-all bg-transparent border-y border-x-0 border-unit-primary relative text-left pl-[1em];
+  background-position: right 2em center;
+  background-size: 1em 1em;
+  background-repeat: no-repeat;
+  color: var(--default-color-link);
+}
+
+.unit-button--capped:hover,
+.group:hover .unit-button--capped {
+  @apply z-10 transition-all shadow-none border-y border-x-0;
+  border-color: var(--color-primary) transparent var(--color-primary) transparent;
+  background-image: url(../img/svg/icon-caret--ubc-blue.svg);
+  background-position: right 1em center;
+  background-size: 2em;
+  color: var(--default-color-link-hover);
+}
+
+.unit-button--capped:active {
+  @apply border-y border-x-0 border-unit-primary;
+  color: var(--default-color-link-active);
 }

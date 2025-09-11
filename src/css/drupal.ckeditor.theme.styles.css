@@ -1,0 +1,53 @@
+/**
+ * @file
+ * Imports all custom styles and prefixes them with the '.ck-editor'
+ * class to prevent style bleed in adnim theme. This is done via the postcss config.
+ */
+@import url("styles.css");
+
+/* add some default variables */
+:root {
+    --leading: 1.625;
+    --base-font-size: 1rem;
+    --text-font-stack: "Whitney SSm A", "Whitney SSm B", Arial, sans-serif;
+    --alternate-font-stack: var(--text-font-stack);
+    --code-font-stack:  menlo, monaco, consolas, "Liberation Mono", "Courier New", monospace;
+    --base-line-height: var(--leading);
+}
+
+/* alter the behaviour inside the editor becuase of different markup vs front end */
+@media (min-width:768px) {
+    .media.align-left,
+    .media.align-right {
+        max-width: 100%;
+    }
+}
+
+.text-align-right > .ckeditor5-icons__widget,
+.text-align-left > .ckeditor5-icons__widget,
+.text-align-center > .ckeditor5-icons__widget {
+    display: inline-block;
+}
+
+/* ensure white text is visible */
+.text-white,
+.unit-button--transparent {
+  text-shadow: rgba(0, 0, 0, .5) 1px 0 10px;
+}
+
+/* make invisible anchors visible */
+.anchor-invisible {
+  display: inline-block !important;
+  font-size: .875em;
+  position: relative !important;
+  width: auto !important;
+  height: auto !important;
+}
+
+.anchor-invisible::after {
+  content: " (only visible in edit mode)"
+}
+
+form[class~="node-form"] a[class~="anchor-invisible"] {
+  visibility: visible;
+}

@@ -1,13 +1,17 @@
+/**
+ * @file
+ * Styles imported from bootstrap
+ */
 /* import unstyled components styles from local bootstrap copy
 This allows you to use the bootstrap behaviours without inheriting any styles. Note that this is a subset of the available javascript components at the moment. For a full list, see https://getbootstrap.com/docs/5.1/getting-started/introduction/#components */
 
-@import url("/bootstrap/carousel.css");
-@import url("/bootstrap/collapse.css");
-@import url("/bootstrap/dropdown.css");
-@import url("/bootstrap/fade.css");
-@import url("/bootstrap/modal.css");
-@import url("/bootstrap/offcanvas.css");
-@import url("/bootstrap/tabs.css");
+@import "/lib/bootstrap/carousel.css";
+@import "/lib/bootstrap/collapse.css";
+@import "/lib/bootstrap/dropdown.css";
+@import "/lib/bootstrap/fade.css";
+@import "/lib/bootstrap/modal.css";
+@import "/lib/bootstrap/offcanvas.css";
+@import "/lib/bootstrap/tabs.css";
 
 /* alternatively, import all styles from bootstrap */
 /*

@@ -1,0 +1,40 @@
+/** @define drupal.entity.moderation */
+
+/*
+* This file contains styles for the drupal content moderation form
+*/
+.entity-moderation-form {
+  @apply relative block px-2 py-0 bg-white/50 text-sm;
+}
+
+.entity-moderation-form__item {
+  @apply block my-0 mx-2;
+}
+
+.entity-moderation-form__item:last-child {
+  @apply mr-2;
+}
+
+.entity-moderation-form__item .button {
+  @apply text-white border border-ubc-blue bg-ubc-blue w-full block mb-[1em] px-5 py-2 text-center;
+}
+
+.entity-moderation-form__item .button:hover {
+  @apply no-underline border-ubc-blue-sea bg-ubc-blue-sea;
+}
+
+@media (min-width: 640px) {
+
+  .entity-moderation-form {
+    @apply flex;
+  }
+
+  .entity-moderation-form__item {
+    flex: 1 1 0%;
+  }
+
+  .entity-moderation-form__item:first-child,
+  .entity-moderation-form__item:last-child {
+    @apply flex-none;
+  }
+}

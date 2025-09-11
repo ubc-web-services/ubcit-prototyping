@@ -1,0 +1,47 @@
+{% extends "layouts/default.twig" %}
+{% set title = "Plain page" %}
+{% set pageTitle = "Plain Page Layout" %}
+{% set showTitle = TRUE %}
+{% set showBreadcrumb = TRUE %}
+
+{% block masthead %}
+  <section class="p-12 text-center border-2 border-dashed bg-grey-100 border-grey-500">
+    <p class="mt-0">Masthead Area</p>
+  </section>
+{% endblock %}
+
+{% block content %}
+  <section class="p-12 text-center border-2 border-dashed bg-grey-100 border-grey-500">
+    <p class="mt-0">Content Area <code>[Area A]</code></p>
+  </section>
+{% endblock %}
+
+{% block areab %}
+	<section class="p-12 text-center border-2 border-dashed bg-grey-100 border-grey-500">
+    <p class="mt-0">Area B</p>
+  </section>
+{% endblock %}
+
+{% block areac %}
+  <section class="p-12 text-center border-2 border-dashed bg-grey-100 border-grey-500">
+    <p class="mt-0">Area C</p>
+  </section>
+{% endblock %}
+
+{% block aread %}
+  <section class="p-12 text-center border-2 border-dashed bg-grey-100 border-grey-500">
+    <p class="mt-0">Area D</p>
+  </section>
+{% endblock %}
+
+{% block prefooter %}
+  <section class="p-12 mt-4 text-center border-2 border-dashed bg-grey-100 border-grey-500">
+    <p class="mt-0">Prefooter</p>
+  </section>
+{% endblock %}
+
+{% block custom_css %}
+{% endblock %}
+
+{% block custom_javascript %}
+{% endblock %}

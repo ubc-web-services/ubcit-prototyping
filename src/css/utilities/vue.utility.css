@@ -38,7 +38,7 @@
   opacity: 0;
 }
 
-@media (min-width: $breakpoint--md) {
+@media (min-width: 980px) {
   .fade-alt-leave-active {
     transition: none;
   }

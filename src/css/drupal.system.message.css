@@ -2,67 +2,46 @@
  * @file
  * Styles for system messages
  */
-@import url("config/variables.config.css");
-
 .message {
-  position: relative;
-  display: flex;
-  align-items: center;
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-  padding: 1rem 3rem 1rem 3rem;
-  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 10%), 0 4px 6px -2px rgb(0 0 0 / 5%);
-}
-
-.message--success {
-  background-color: $success;
-}
-
-.message--status {
-  background-color: $status;
-}
-
-.message--warning {
-  background-color: $warning;
+  @apply relative flex items-center px-12 py-4 my-6 shadow;
 }
 
 .message--error {
-  background-color: $error;
+  @apply bg-[#ff7c7c];
+}
+
+.message--status {
+  @apply bg-ubc-blue-neptune;
+}
+
+.message--success {
+  @apply bg-[#57edae];
+}
+
+.message--warning {
+  @apply bg-[#f8e605];
 }
 
 .message__close {
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 0.75rem 1rem 0.75rem 1rem;
-  line-height: 1;
+  @apply absolute top-0 right-0 px-4 py-3 leading-none;
 }
 
 .message__close:hover {
-  text-decoration: none;
-  color: #000;
-  background-color: rgb(255 255 255 / 50%);
+  @apply text-black no-underline bg-white/50;
 }
 
 .message__icon {
-  display: inline-block;
-  flex: none;
-  width: 3rem;
-  height: 3rem;
-  margin-right: 1rem;
-  color: $ubc-blue;
+  @apply flex-none inline-block w-12 h-12 mr-4 text-ubc-blue;
 }
 
-@media (min-width: 1720px:) {
+@media (min-width: 1720px) {
+
   .message {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    padding-left: 2rem;
+    @apply py-8 pl-8;
   }
 
   .message__icon {
-    width: 5rem;
-    height: 5rem;
-    margin-right: 2rem;
+    @apply w-20 h-20 mr-8;
   }
+
 }

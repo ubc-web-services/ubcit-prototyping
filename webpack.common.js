@@ -4,6 +4,7 @@ module.exports = {
     bootstrap: ["./src/js/bootstrap.js"],
     "kraken.accordion": ["./src/js/kraken.accordion.js"],
     "kraken.dismiss": ["./src/js/kraken.dismiss.js"],
+    "kraken.mediaquery": ["./src/js/kraken.mediaquery.js"],
     "kraken.misc": ["./src/js/kraken.misc.js"],
     "kraken.scroll": ["./src/js/kraken.scroll.js"],
     "kraken.sticky": ["./src/js/kraken.sticky.js"],
