@@ -23,14 +23,14 @@
 {% block prefooter %}
 <div class="bg-grey-100">
     <div class="{{ containerClasses }}">
-        <div class="gap-12 md--grid md--grid-cols-2">
-            <div class="p-0 bg-transparent first-child--mt-0 drop-shadow-none">
+        <div class="grid grid-cols-2 gap-8">
+            <div class="col-span-2 p-0 bg-transparent md--col-span-1 first-child--mt-0 drop-shadow-none">
                 <h2 class="mt-0 font-normal">
                     Our subsection
                 </h2>
                 {{ loremIpsum }}
             </div>
-            <div class="p-8 bg-white first-child--mt-0 drop-shadow">
+            <div class="col-span-2 p-8 bg-white md--col-span-1 first-child--mt-0 drop-shadow">
                 <h3 class="mt-0 font-normal">
                     Take action
                 </h3>
@@ -40,6 +40,19 @@
                 </p>
             </div>
         </div>
+    </div>
+</div>
+<div class="">
+    <div class="{{ containerClasses }}">
+        <h2 class="mt-0 font-normal">Latest News</h2>
+        <div class="grid grid-cols-1 gap-8 md--grid-cols-3">
+            {% include "components/component--card--vertical--2.twig" %}
+            {% include "components/component--card--vertical--2.twig" %}
+            {% include "components/component--card--vertical--2.twig" %}
+        </div>
+        <p class="text-right">
+            <a href="#" class="text-xs unit-button">See all news</a>
+        </p>
     </div>
 </div>
 {% endblock %}
