@@ -2,31 +2,16 @@
 {% set title = "Landing page - masthead" %}
 {% set pageTitle = "Health and Wellbeing" %}
 {% set showTitle = FALSE %}
-{% set showBreadcrumb = TRUE %}
+{% set showBreadcrumb = FALSE %}
 
 {% block masthead %}
 
-<section class="overflow-hidden masthead">
-	<div class="relative min-h-64 md--min-h-96 ">
-		<div
-			class="absolute block w-full h-full min-h-64 md--min-h-96 has-content--after has-gradient-bottom--after">
-			<img src="https://live.staticflickr.com/3776/19936844258_51b56c4606_b.jpg" alt="UBC I day"
-				class="object-cover w-full h-full">
-		</div>
-		<div class="relative flex min-h-64 md--min-h-96">
-			<div class="container self-end flex-1 px-4 mx-auto">
-				<h1 class="masthead__page-title">Health &amp; <span
-						class="block decoration-endline decoration-endline--large">Wellbeing.</span></h1>
-			</div>
-		</div>
-	</div>
-</section>
+{% include "components/region--masthead--region--2.twig" %}
 
 {% endblock %}
 
 {% block content %}
-<h1>Health and Wellbeing</h1>
-<h2>Taking care of our entire selves makes sense.</h2>
+<h2 class="mt-0">Taking care of our entire selves makes sense.</h2>
 <p class="text-lead">We're committed to ensuring that our UBC workplaces are safe,
 	healthy and respectful, and we offer many programs and resources to keep you healthy at work.</p>
 <p>
@@ -42,66 +27,26 @@
 {% endblock %}
 
 {% block areac %}
-<ul class="mb-8 md--flex md---mx-4 md--flex-wrap">
-	<li class="py-4 ubc-card md--w-1/2 md--p-4">
-		<a href="#"
-			class="flex flex-1 h-full text-black shadow ubc-card__primary-action hover--no-underline group hover--shadow-lg bg-ubc-blue-polar">
-			<div class="order-last w-1/3 bg-cover ubc-card__media min-h-64"
-				style="background-image: url(https://live.staticflickr.com/4584/38588637591_0241df7a93_z_d.jpg);">
-			</div>
-			<div class="self-end w-2/3 p-8 ubc-card__content">
-				<h2 class="card__title">Ergonomics</h2>
-				<p class="text-hug">It's not your typical day to day and, if you want to be a part of it.
-				</p>
-			</div>
-		</a>
-	</li>
-	<li class="py-4 ubc-card md--w-1/2 md--p-4">
-		<a href="#"
-			class="flex flex-1 h-full text-black shadow ubc-card__primary-action hover--no-underline group hover--shadow-lg bg-ubc-blue-polar">
-			<div class="order-last w-1/3 bg-cover ubc-card__media min-h-64"
-				style="background-image: url(https://live.staticflickr.com/603/23144566274_e6133da0ee_b.jpg);">
-			</div>
-			<div class="self-end w-2/3 p-8 ubc-card__content">
-				<h2 class="card__title">Occupantional &amp; Preventative Health Program</h2>
-				<p class="text-hug">It's not your typical day to day and, if you want to be a part of it.
-				</p>
-			</div>
-		</a>
-	</li>
-	<li class="py-4 ubc-card md--w-1/2 md--p-4">
-		<a href="#"
-			class="flex flex-1 h-full text-black shadow ubc-card__primary-action hover--no-underline group hover--shadow-lg bg-ubc-blue-polar">
-			<div class="order-last w-1/3 bg-cover ubc-card__media min-h-64"
-				style="background-image: url(https://live.staticflickr.com/4527/37965347504_f63c420360_b.jpg);">
-			</div>
-			<div class="self-end w-2/3 p-8 ubc-card__content">
-				<h2 class="card__title">Accidents at work</h2>
-				<p class="text-hug">It's not your typical day to day and, if you want to be a part of it.
-				</p>
-			</div>
-		</a>
-	</li>
-	<li class="py-4 ubc-card md--w-1/2 md--p-4">
-		<a href="#"
-			class="flex flex-1 h-full text-black shadow ubc-card__primary-action hover--no-underline group hover--shadow-lg bg-ubc-blue-polar">
-			<div class="order-last w-1/3 bg-cover ubc-card__media min-h-64"
-				style="background-image: url(https://live.staticflickr.com/481/19901880860_921901ff1f_b.jpg);">
-			</div>
-			<div class="self-end w-2/3 p-8 ubc-card__content">
-				<h2 class="card__title">Remain at work / Return to work program</h2>
-				<p class="text-hug">It's not your typical day to day and, if you want to be a part of it.
-				</p>
-			</div>
-		</a>
-	</li>
-</ul>
+
 {% endblock %}
 
 {% block aread %}
 {% endblock %}
 
 {% block prefooter %}
+<div class="bg-ubc-blue-polar">
+    <div class="{{ containerClasses }}">
+        <h2 class="mt-0 font-normal">Latest News</h2>
+        <div class="grid grid-cols-1 gap-8 md--grid-cols-3">
+            {% include "components/component--card--vertical--2.twig" %}
+            {% include "components/component--card--vertical--2.twig" %}
+            {% include "components/component--card--vertical--2.twig" %}
+        </div>
+        <p class="text-right">
+            <a href="#" class="text-xs unit-button unit-button--dark">See all news</a>
+        </p>
+    </div>
+</div>
 {% endblock %}
 
 {% block custom_css %}

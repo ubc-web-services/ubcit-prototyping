@@ -33,6 +33,21 @@
   @apply bg-gradient-to-t from-grey-300/60 to-grey-300;
 }
 
+.bg-gradient--screen {
+  position: relative;
+}
+
+.bg-gradient--screen::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(227deg, rgb(var(--ubc-blue-cobalt)) 2.5%, rgb(var(--ubc-blue-cobalt)) 33%, rgb(var(--ubc-blue)) 80%);
+  opacity: .6;
+  content: '';
+}
 
 .has-gradient--after,
 .has-gradient-top--after,

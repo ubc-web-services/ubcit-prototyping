@@ -1,0 +1,154 @@
+/** @define masthead */
+
+/*
+* This file contains all styles related to the masthead component.
+*/
+
+/* general styles */
+.masthead {
+    @apply bg-ubc-blue border-unit-secondary border-b-[1rem];
+
+    container-type: inline-size;
+    container-name: masthead;
+}
+
+.masthead__container {
+    @apply  flex flex-col gap-8;
+}
+
+.masthead__media {
+    display: none;
+}
+
+.masthead__content {
+    @apply flex flex-col py-8 place-self-center;
+}
+
+.masthead--alt .masthead__content {
+    @apply !place-self-end bg-[length:120px_120px] bg-no-repeat bg-[url("../img/svg/bg-pattern.svg")] bg-[right_top_-20px] !pt-[8rem];
+}
+
+.masthead__heading {
+    @apply mt-0 text-3xl font-normal leading-tight text-white;
+}
+
+.masthead__heading em {
+    @apply not-italic font-semibold text-unit-secondary;
+}
+
+.masthead__teaser {
+    @apply text-unit-secondary
+}
+
+.masthead figcaption {
+    @apply mt-4 text-right;
+}
+
+/* masthead larger than 48rem wide (768px) */
+@container masthead (min-width: 48rem) {
+
+    .masthead__container {
+        @apply flex-row;
+    }
+
+    .masthead__content {
+        @apply justify-center min-h-[20rem];
+        flex: 2;
+    }
+
+    .masthead--alt .masthead__content {
+        @apply bg-[length:200px_200px] justify-end  pb-12 bg-[right_top_-30px];
+    }
+
+    .masthead__media {
+        display: block;
+        flex: 1;
+    }
+
+    .masthead__media figcaption {
+
+    }
+
+    .masthead__media--mobile {
+        display: none;
+    }
+
+}
+
+/* masthead larger than 56.25rem wide (900px) */
+@container masthead (min-width: 56.25rem) {
+
+    .masthead__content {
+        @apply min-h-[30rem];
+        flex: 1;
+    }
+
+    .masthead--alt .masthead__content {
+        @apply bg-[length:260px_260px] bg-[right_top_-40px] pb-16;
+    }
+
+    .masthead__media {
+        max-width: 50%;
+    }
+
+    .masthead__heading {
+        @apply text-[3rem];
+    }
+
+    .masthead__teaser {
+        @apply text-[2rem];
+    }
+
+}
+
+/* variant with image and text */
+.masthead-w-image-text {
+    container-type: inline-size;
+    container-name: mastheadwimagetext;
+}
+
+.masthead-w-image-text__content {
+    @apply pb-8;
+}
+
+.masthead-w-image-text figure {
+    @apply relative flex flex-col place-self-end;
+}
+
+.masthead-w-image-text figcaption {
+    @apply absolute bottom-0 right-0 w-full text-right bg-white;
+
+    transform: translateY(100%);
+}
+
+.masthead-w-image-text__spacer {
+    @apply h-24 bg-white;
+}
+
+/* masthead-w-image-text larger than 48rem wide (768px) */
+@container mastheadwimagetext (min-width: 48rem) {
+
+    .masthead-w-image-text__wrapper {
+        @apply grid grid-cols-3 gap-x-12;
+    }
+
+    .masthead-w-image-text__content {
+        @apply col-span-2 pb-16;
+    }
+
+    .masthead-w-image-text figure {
+        @apply col-span-1;
+    }
+
+    .masthead-w-image-text figcaption {
+        @apply bg-transparent;
+
+        width: 200%;
+        /* transform: translateX(-100%); */
+        transform: translateY(100%);
+    }
+
+    .masthead-w-image-text__spacer {
+        @apply col-span-3;
+    }
+}

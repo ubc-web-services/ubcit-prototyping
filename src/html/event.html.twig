@@ -1,13 +1,18 @@
-{% extends "layouts/side-r.twig" %}
+{% extends "layouts/narrow.twig" %}
 {% set title = "Page" %}
-{% set pageTitle = "Pension workshop title" %}
+{% set pageTitle = "Event / workshop title" %}
 {% set showTitle = TRUE %}
 {% set showBreadcrumb = TRUE %}
 
+{% block masthead %}
+
+{% include "components/region--masthead--region--4.twig" %}
+
+{% endblock %}
+
 {% block content %}
 
-<div class="mt-12 text-base meta meta__bg meta_big md--text-lg lg--text-2xl"><span class="block inline-block px-2 py-1 text-xs bg-ubc-blue-cornflower text-ubc-blue">UBCV</span><br />Thursday,
-	June 20, 2019<br />The Nest, Room 135</div>
+<h2 class="mt-0 font-sans font-normal h4">September 16, 2025, 1:00 pm to 2:30 pm</h2>
 <p>Chupa chups tiramisu icing donut marzipan cookie wafer. Gummies donut topping brownie halvah tiramisu
 	liquorice cookie marzipan. Jelly-o brownie topping muffin lollipop chocolate jujubes jelly chocolate
 	cake. Tiramisu pudding topping jelly beans tart oat cake soufflé apple pie.</p>
@@ -20,13 +25,18 @@
 	{% include "components/media--map.twig" %}
 </div>
 <p>
-	<a href="#" class="inline-block px-6 py-3 mr-6 border unit-button unit-button--white text-ubc-blue-cobalt border-ubc-blue-cobalt hover--bg-ubc-blue-cobalt hover--text-white hover--no-underline hover--shadow-md group">Register today <svg role="presentation" class="inline-block w-4 h-4 ml-2 -mt-1 unit-button__icon text-ubc-blue-cobalt group-hover--text-white stroke-w-4" viewBox="0 0 64 64"><use xlink:href="#icon-arrow-circle"></use></svg></a>
+	<a href="#" class="text-sm unit-button unit-button--dark">Register today</a>
 </p>
+<hr class="styled-hr">
+<div class="flex flex-wrap mt-4 tags">
+	<ul class="inline-flex pl-0 list-none">
+		<li class="tag">Event category A</li>
+	</ul>
+</div>
 
 {% endblock %}
 
 {% block areab %}
-	{% include "components/navigation--sub--1.twig" %}
 {% endblock %}
 
 {% block areac %}

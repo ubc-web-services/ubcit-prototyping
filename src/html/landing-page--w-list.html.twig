@@ -1,97 +1,150 @@
-{% extends "layouts/landing.twig" %}
+{% extends "layouts/narrow.twig" %}
 {% set title = "Landing page - list" %}
-{% set pageTitle = "Pension Workshops" %}
+{% set pageTitle = "Page with a searchable list" %}
 {% set showTitle = TRUE %}
 {% set showBreadcrumb = TRUE %}
 
 {% block masthead %}
 
-<section class="overflow-hidden masthead">
-	<div class="relative min-h-64 md--min-h-96 ">
-		<div
-			class="absolute block w-full h-full min-h-64 md--min-h-96 has-content--after has-gradient-bottom--after">
-			<img src="https://live.staticflickr.com/4584/38588637591_0241df7a93_z_d.jpg" alt="UBC I day"
-				class="object-cover w-full h-full">
-		</div>
-		<div class="relative flex min-h-64 md--min-h-96">
-			<div class="container self-end flex-1 px-4 mx-auto">
-				<h1 class="masthead__page-title">Pension <span
-						class="block decoration-endline decoration-endline--large">Workshops.</span></h1>
-			</div>
-		</div>
-	</div>
-</section>
+{% include "components/region--masthead--region--4.twig" %}
 
 {% endblock %}
 
 {% block content %}
 
-<p class="text-lead text-ubc-blue-cobalt">As an employee of the University, there are several resources
-	that the University and the Plan provide for new and current employees. Pension plans are complex
-	and may not be easy to understand, which is why the Plan provides the following information sessions
-	and workshops to help you understand pension plans, the Staff Pension Plan, and how they might help
-	you with your financial and retirement planning.</p>
-<p>Understanding Your Staff Pension Plan (UYSPP) is an informative workshop session designed for both
-	potential and current members of the UBC Staff Pension Plan. All ages are welcome to attend. If you
-	are close to retiring, you may want to consider booking a Retirement Information Session (RIS)
-	rather than attending the workshop, as we’ll be able to review your specific situation including
-	pension estimates.</p>
-<p>If you are already a Plan member, regardless of age, this workshop will help you learn more about the
-	Plan, pensions in general, and related retirement considerations. If you are interested in
-	retirement planning, this workshop will help you understand your retirement options. If you are not
-	yet a member, this workshop will provide enrolment information and an opportunity to have all of
-	your pension-related questions answered.</p>
-<p>Advance registration is required. Please note that registration cut-off time is 24 hours before the
-	workshop.</p>
-<section>
-	<h2>Workshop sessions</h2>
-	<ul class="mb-0 list-style-none">
+<p class="text-lead">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+
+<form class="views-exposed-form" data-drupal-selector="views-exposed-form-content-announcement-block-1" action="/news-and-updates/rss.xml" method="get" id="views-exposed-form-content-announcement-block-1" accept-charset="UTF-8" data-once="exposed-form">
+	<div class="js-form-item form-item js-form-textfield form-textfield js-form-item-keywords form-item-keywords form-item-wrapper">
+		<label for="edit-keywords">Keywords</label>
+		<input placeholder="Enter search terms" data-drupal-selector="edit-keywords" type="text" id="edit-keywords" name="keywords" value="" size="30" maxlength="128" class="form-text">
+	</div>
+	<div class="js-form-item form-item js-form-select form-select js-form-item-type form-item-type form-item-wrapper">
+		<label for="edit-type">Type</label>
+		<select data-drupal-selector="edit-type" id="edit-type" name="type" class="form-select">
+			<option value="All" selected="selected">- Any -</option>
+			<option value="70">News</option>
+			<option value="71">Press Release</option>
+		</select>
+	</div>
+	<div class="js-form-item form-item js-form-select form-select js-form-item-tags form-item-tags form-item-wrapper">
+		<label for="edit-tags">Category</label>
+		<select data-drupal-selector="edit-tags" id="edit-tags" name="tags" class="form-select">
+			<option value="All" selected="selected">- Any -</option>
+		</select>
+	</div>
+	<div class="flex justify-end form-actions js-form-wrapper form-wrapper" data-drupal-selector="edit-actions" id="edit-actions">
+		<input class="mt-auto unit-button unit-button--block button js-form-submit form-submit" data-drupal-selector="edit-submit-content-announcement" type="submit" id="edit-submit-content-announcement" value="Search">
+	</div>
+</form>
+
+<div class="item-list">
+	<ol class="flex flex-col gap-8 pl-0 my-0 list-none" start="1">
 		<li>
-			<span
-				class="block inline-block px-2 py-1 text-xs bg-ubc-blue-cornflower text-ubc-blue">UBCV</span>
-			<span class="block pt-2 text-xs meta__date">Thursday, June 14, 2019</span>
-			<a href="#" title="some title"
-				class="block pb-4 mb-4 underline border-b-2 text-ubc-blue-cobalt hover--text-ubc-blue border-grey-300">UBC
-				Staff Pension Plan Fair</a>
+			{% include "components/component--card--horizontal--1.twig" %}
 		</li>
 		<li>
-			<span class="block inline-block px-2 py-1 text-xs text-white bg-ubc-blue-sea">UBCO</span>
-			<span class="block pt-2 text-xs meta__date">Monday, June 20, 2019</span>
-			<a href="#" title="some title"
-				class="block pb-4 mb-4 underline border-b-2 text-ubc-blue-cobalt hover--text-ubc-blue border-grey-300">Apply
-				for Community Leadership Program or a really long title for an event because this
-				container should adjust</a>
-		<li>
-			<span
-				class="block inline-block px-2 py-1 text-xs bg-ubc-blue-cornflower text-ubc-blue">UBCV</span>
-			<span class="block pt-2 text-xs meta__date">Sunday, June 19, 2019</span>
-			<a href="#" title="some title"
-				class="block pb-4 mb-4 underline border-b-2 text-ubc-blue-cobalt hover--text-ubc-blue border-grey-300">UBC
-				Staff Pension Plan 2018: Annual Report</a>
+			{% include "components/component--card--horizontal--1.twig" %}
 		</li>
 		<li>
-			<span
-				class="block inline-block px-2 py-1 text-xs bg-ubc-blue-cornflower text-ubc-blue">UBCV</span>
-			<span class="block pt-2 text-xs meta__date">Thursday, June 14, 2019</span>
-			<a href="#" title="some title"
-				class="block pb-4 mb-4 underline border-b-2 text-ubc-blue-cobalt hover--text-ubc-blue border-grey-300">UBC
-				Staff Pension Plan Fair</a>
+			{% include "components/component--card--horizontal--1.twig" %}
 		</li>
 		<li>
-			<span class="block inline-block px-2 py-1 text-xs text-white bg-ubc-blue-sea">UBCO</span>
-			<span class="block pt-2 text-xs meta__date">Monday, June 20, 2019</span>
-			<a href="#" title="some title"
-				class="block pb-4 mb-4 underline border-b-2 text-ubc-blue-cobalt hover--text-ubc-blue border-grey-300">Apply
-				for Community Leadership Program or a really long title for an event because this
-				container should adjust</a>
+			{% include "components/component--card--horizontal--1.twig" %}
+		</li>
+		<li>
+			{% include "components/component--card--horizontal--1.twig" %}
+		</li>
+	</ol>
+</div>
+<nav class="flex justify-center my-8 pager" role="navigation" aria-labelledby="pagination-heading">
+	<h4 id="pagination-heading" class="visually-hidden">Pagination</h4>
+	<ul class="flex max-w-md pager__items js-pager__items list-unstyled">
+		<li class="pager__item is-active">
+			<a href="?page=0" title="Current page" aria-current="page" class="block px-4 py-2 no-underline text-ubc-blue-cobalt hover--text-black hover--bg-unit-tertiary-alt hover--no-underline">
+				<span class="visually-hidden">
+					Current page
+				</span>1</a>
+		</li>
+		<li class="pager__item">
+			<a href="?page=1" title="Go to page 2" class="block px-4 py-2 no-underline text-ubc-blue-cobalt hover--text-black hover--bg-unit-tertiary-alt hover--no-underline">
+				<span class="visually-hidden">
+					Page
+				</span>2</a>
+		</li>
+		<li class="pager__item">
+			<a href="?page=2" title="Go to page 3" class="block px-4 py-2 no-underline text-ubc-blue-cobalt hover--text-black hover--bg-unit-tertiary-alt hover--no-underline">
+				<span class="visually-hidden">
+					Page
+				</span>3</a>
+		</li>
+		<li class="pager__item">
+			<a href="?page=3" title="Go to page 4" class="block px-4 py-2 no-underline text-ubc-blue-cobalt hover--text-black hover--bg-unit-tertiary-alt hover--no-underline">
+				<span class="visually-hidden">
+					Page
+				</span>4</a>
+		</li>
+		<li class="pager__item">
+			<a href="?page=4" title="Go to page 5" class="block px-4 py-2 no-underline text-ubc-blue-cobalt hover--text-black hover--bg-unit-tertiary-alt hover--no-underline">
+				<span class="visually-hidden">
+					Page
+				</span>5</a>
+		</li>
+		<li class="pager__item">
+			<a href="?page=5" title="Go to page 6" class="block px-4 py-2 no-underline text-ubc-blue-cobalt hover--text-black hover--bg-unit-tertiary-alt hover--no-underline">
+				<span class="visually-hidden">
+					Page
+				</span>6</a>
+		</li>
+		<li class="pager__item">
+			<a href="?page=6" title="Go to page 7" class="block px-4 py-2 no-underline text-ubc-blue-cobalt hover--text-black hover--bg-unit-tertiary-alt hover--no-underline">
+				<span class="visually-hidden">
+					Page
+				</span>7</a>
+		</li>
+		<li class="pager__item">
+			<a href="?page=7" title="Go to page 8" class="block px-4 py-2 no-underline text-ubc-blue-cobalt hover--text-black hover--bg-unit-tertiary-alt hover--no-underline">
+				<span class="visually-hidden">
+					Page
+				</span>8</a>
+		</li>
+		<li class="pager__item">
+			<a href="?page=8" title="Go to page 9" class="block px-4 py-2 no-underline text-ubc-blue-cobalt hover--text-black hover--bg-unit-tertiary-alt hover--no-underline">
+				<span class="visually-hidden">
+					Page
+				</span>9</a>
+		</li>
+		<li class="pager__item pager__item--ellipsis" role="presentation">…</li>
+		<li class="pager__item pager__item--next">
+			<a href="?page=1" title="Go to next page" rel="next" class="block px-6 py-2 no-underline text-ubc-blue-cobalt hover--text-black hover--bg-unit-tertiary-alt hover--no-underline">
+				<span class="visually-hidden">Next page</span>
+				<span aria-hidden="true">›</span>
+			</a>
+		</li>
+		<li class="pager__item pager__item--last">
+			<a href="?page=25" title="Go to last page" class="hidden">
+				<span class="visually-hidden">Last page</span>
+				<span aria-hidden="true">»</span>
+			</a>
 		</li>
 	</ul>
-</section>
+</nav>
+
+<div class="feed-icons">
+	<a href="https://master-7rqtwti-rh2ho4kehraae.ca-1.platformsh.site/news-and-updates/rss.xml" class="mt-6 text-sm feed-icon unit-button lg--text-base">
+	Subscribe to News and Updates
+		<svg id="icon-rss" class="self-center inline-block w-4 h-4 ml-3 -mt-1" role="img" viewBox="0 0 64 64">
+			<path d="M10.063 45.824a8.088 8.088 0 1 0 8.063 8.088 8.075 8.075 0 0 0-8.063-8.088z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10"></path>
+			<path d="M2.656 22.219h-.469v11.192h.469a27.971 27.971 0 0 1 27.938 27.931V62H41.75v-.658A39.111 39.111 0 0 0 2.656 22.219z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10"></path>
+			<path d="M2.656 2h-.469v11.191h.469A48.188 48.188 0 0 1 50.75 61.342V62H62v-.658A59.408 59.408 0 0 0 2.656 2z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10"></path>
+		</svg>
+	</a>
+</div>
 
 {% endblock %}
 
 {% block areab %}
-	{% include "components/navigation--sub--1.twig" %}
 {% endblock %}
 
 {% block areac %}
