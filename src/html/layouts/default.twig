@@ -8,63 +8,93 @@
 {% set containerClasses = 'container px-5 py-12 mx-auto md--px-4' %}
 {% set pageIntro = '<p class="text-lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>' %}
 {% set loremIpsum = '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>' %}
+{% set contentClasses = 'pb-12 mt-12 col-span-full' %}
+{% set sidebar1Classes = 'col-span-full' %}
+{% set sidebar2Classes = 'col-span-full' %}
+{% if layout == 'sidebars' %}
+    {% set contentClasses = 'pb-12 mt-12 col-span-full md--col-span-6 md--col-start-4 md--row-start-2' %}
+    {% set sidebar1Classes = 'md--mt-12 col-span-full md--col-span-3 md--col-start-1 md--row-start-2' %}
+    {% set sidebar2Classes = 'md--mt-12 col-span-full md--col-span-3 md--col-start-10 md--row-start-2' %}
+{% elseif layout == 'sidebar-left' %}
+    {% set contentClasses = 'pb-12 mt-12 col-span-full md--col-span-8 md--col-start-5 md--row-start-2' %}
+    {% set sidebar1Classes = 'md--mt-12 col-span-full md--col-span-4 md--row-start-2 md--col-start-1' %}
+{% elseif layout == 'sidebar-right' %}
+    {% set contentClasses = 'pb-12 mt-12 col-span-full md--col-span-8 col-start-1 lg--col-span-8' %}
+    {% set sidebar1Classes = 'md--mt-12 col-span-full md--col-span-4 md--row-start-2 md--col-start-9' %}
+{% elseif layout == 'narrow' %}
+    {% set contentClasses = 'pb-12 mt-12 col-span-full md--col-span-10 md--col-start-2 lg--col-span-8 lg--col-start-3' %}
+{% endif %}
 
 <!doctype html>
 <html class="no-js" lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>{{ title }}
+			|
+			{{ unitName }}</title>
+		{% include "../includes/head.twig" %}
+		{% block custom_css %}{% endblock %}
+		<style>
+			#ubc7-unit {
+				background-color: var(--color-primary);
+			}
+		</style>
+	</head>
 
-<head>
-	<meta charset="UTF-8">
-	<title>{{ title }} | {{ unitName }}</title>
-	{% include "../includes/head.twig" %}
-	{% block custom_css %}{% endblock %}
-	<style>
-		#ubc7-unit { background-color: var(--color-primary); }
-	</style>
-</head>
-
-<body class="overflow-x-hidden layout--full-width js-bootstrap">
-	<div id="main-content">
-		{% if clfversion == 7 %}
-			{% include "../includes/header--clf7.twig" %}
-		{% else %}
-			{% include "../includes/header.twig" %}
-		{% endif %}
-		{% block masthead %}{% endblock %}
-		<main class="unit-content">
-			<div class="container px-5 mx-auto md--px-4">
-				{% if showBreadcrumb %}
-					{% include "components/navigation--breadcrumb.twig" %}
-				{% endif %}
-				{% if showTitle %}
-        	<h1>{{ pageTitle }}</h1>
-				{% endif %}
-				{% block content %}{% endblock %}
-				{% block areab %}{% endblock %}
-				{% block areac %}{% endblock %}
-				{% block aread %}{% endblock %}
-			</div>
-		</main>
-		{% block prefooter %}{% endblock %}
-		<footer>
+	<body class="overflow-x-hidden layout--full-width js-bootstrap">
+		<div id="main-content">
 			{% if clfversion == 7 %}
-				{% include "../includes/footer--unit.twig" %}
-				{% include "../includes/footer--clf7.twig" %}
+				{% include "../includes/header--clf7.twig" %}
 			{% else %}
-				{% include "../includes/footer--unit.twig" %}
-				{% include "../includes/footer.twig" %}
+				{% include "../includes/header.twig" %}
 			{% endif %}
-		</footer>
-		<div id="totop-mask"></div>
-		<button id="totop" v-scroll-to="{ el: 'body'}">
-			<span class="sr-only">to top</span>
-			<svg role="img" class="inline-block w-8 h-8 rotate-90 text-ubc-blue">
-				<use xlink:href="#icon-arrow"></use>
-			</svg>
-		</button>
-	</div>
-	{% include "../includes/svg.twig" %}
-	{% include "../includes/scripts.twig" %}
-	{% block custom_javascript %}{% endblock %}
-</body>
-
+			{% block masthead %}{% endblock %}
+			<main class="unit-content">
+				<div class="container grid grid-cols-12 px-5 mx-auto gap-x-8 md--px-4">
+					<div class="col-span-full">
+						{% if showBreadcrumb %}
+							{% include "components/navigation--breadcrumb.twig" %}
+						{% endif %}
+					</div>
+                    <div class="{{ contentClasses }}" id="primary-content">
+                        {% if showTitle %}
+							<h1 class="mt-0 page-title text-ubc-blue">
+								{{ pageTitle }}
+							 </h1>
+						{% endif %}
+                        {% block content %}{% endblock %}
+                    </div>
+                    <div class="{{ sidebar1Classes }}">
+                        {% block areab %}{% endblock %}
+                    </div>
+                    <div class="{{ sidebar2Classes }}">
+                        {% block areac %}{% endblock %}
+                    </div>
+					<div class="col-span-full">
+						{% block aread %}{% endblock %}
+					</div>
+				</div>
+			</main>
+			{% block prefooter %}{% endblock %}
+			<footer>
+				{% if clfversion == 7 %}
+					{% include "../includes/footer--unit.twig" %}
+					{% include "../includes/footer--clf7.twig" %}
+				{% else %}
+					{% include "../includes/footer--unit.twig" %}
+					{% include "../includes/footer.twig" %}
+				{% endif %}
+			</footer>
+			<div id="totop-mask"></div>
+			<button id="totop" v-scroll-to="{ el: 'body'}">
+				<span class="sr-only">to top</span>
+				<svg role="img" class="inline-block w-8 h-8 rotate-90 text-ubc-blue">
+					<use xlink:href="#icon-arrow"></use>
+				</svg>
+			</button>
+		</div>
+		{% include "../includes/svg.twig" %}
+		{% include "../includes/scripts.twig" %}
+		{% block custom_javascript %}{% endblock %}
+	</body>
 </html>
