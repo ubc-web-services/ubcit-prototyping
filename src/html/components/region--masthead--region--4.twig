@@ -4,7 +4,11 @@
 
 <section class="relative masthead img-cover has-gradient--after bg-dark" data-component-id="kraken:masthead">
   <figure class="m-0">
-     <img alt="alternate text" src="img/demo/ouc-about-us-banner-min.jpg.webp" loading="lazy" height="360" width="1300" class="" />
+    {% if mastheadImage %}
+      {{ mastheadImage}}
+    {% else %}
+      <img alt="alternate text" src="img/demo/ouc-about-us-banner-min.jpg.webp" loading="lazy" height="360" width="1300" class="" />
+    {% endif %}
   </figure>
   <div class="container absolute inset-0 z-40 flex flex-col justify-end px-5 mx-auto md--px-4">
     <div class="p-16 max-w-[640px] xl--max-w-[768px]">

@@ -1,12 +1,20 @@
 <section class="relative masthead img-cover has-gradient--after bg-dark" data-component-id="ouc:masthead">
-	<figure class="m-0">
-		<img alt="alternate text" src="img/demo/ouc-about-us-banner-min.jpg.webp" loading="lazy" height="360" width="1300" class="" />
+	<figure class="m-0 min-h-[250px]">
+        {% if mastheadImage %}
+            {{ mastheadImage}}
+        {% else %}
+            <img alt="alternate text" src="img/demo/ouc-about-us-banner-min.jpg.webp" loading="lazy" height="360" width="1300" class="min-h-[250px]" />
+        {% endif %}
     </figure>
     <div class="absolute inset-0 z-40 flex flex-col justify-end px-5 mx-auto md--container md--px-4">
         <div class="py-8 md--p-16">
+            {% if mastheadTitle %}
+                {{ mastheadTitle}}
+            {% else %}
             <h1 class="mt-0 font-normal heading-responsive">
                 <span class="field field--name-title field--type-string field--label-hidden">About Us</span>
             </h1>
+            {% endif %}
         </div>
     </div>
 </section>

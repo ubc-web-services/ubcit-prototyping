@@ -1,7 +1,11 @@
 <div class="relative bg-ubc-blue">
     <div class="container relative z-40 flex flex-col justify-end px-5 py-24 mx-auto text-white md--px-4 carousel__content">
-    <h2 class="mt-0 text-white heading-responsive">UBC Information Technology</h2>
-    <p class="text-hug">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    <p><a href="#" class="unit-button unit-button--transparent link-expand ">Call to action</a></p>
+        {% if mastheadTitle %}
+            {{ mastheadTitle}}
+        {% else %}
+            <h2 class="mt-0 text-white heading-responsive">UBC Information Technology</h2>
+            <p class="text-hug">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p><a href="#" class="unit-button unit-button--transparent link-expand ">Call to action</a></p>
+        {% endif %}
     </div>
 </div>
