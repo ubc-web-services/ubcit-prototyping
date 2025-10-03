@@ -26,7 +26,7 @@
 {% endif %}
 
 <!doctype html>
-<html class="no-js{% if clf_sticky == TRUE %} md--scroll-pt-[60px] scroll-smooth{% endif %}" lang="en">
+<html class="no-js scroll-smooth{% if clf_sticky == TRUE %} md--scroll-pt-[60px]{% endif %}" lang="en">
 	<head>
 		<meta charset="UTF-8">
 		<title>{{ title }}
@@ -42,6 +42,9 @@
 	</head>
 
 	<body class="overflow-x-hidden layout--full-width js-bootstrap">
+		{% if loggedin == TRUE %}
+			{% include "../includes/cwl-loggedin.twig" %}
+		{% endif %}
 		<div id="main-content">
 			{% if clfversion == 7 %}
 				{% include "../includes/header--clf7.twig" %}
