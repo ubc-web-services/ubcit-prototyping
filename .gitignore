@@ -5,3 +5,5 @@ build/*
 
 # Ignore .DS_Store files from OSX
 .DS_Store
+
+.vscode/*
