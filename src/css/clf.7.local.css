@@ -1041,7 +1041,8 @@ a#ubc7-global-utility-no-script {
   #ubc7-vancouver-campus,
   #ubc7-wordmark-block,
   .ubc7-arrow {
-    @apply bg-[url(../img/clf/ubc7-clf-sprite-blue-2x.png)] bg-[1500px];
+    @apply bg-[url(../img/clf/ubc7-clf-sprite-blue-2x.png)];
+    background-size: 1500px!important;
   }
   .legacy--wg #ubc7-global-utility-no-script,
   .legacy--wg #ubc7-global-utility button span,
@@ -1059,7 +1060,8 @@ a#ubc7-global-utility-no-script {
   .legacy--wb #ubc7-vancouver-campus,
   .legacy--wb #ubc7-wordmark-block,
   .legacy--wb .ubc7-arrow {
-    @apply bg-[url(../img/clf/ubc7-clf-sprite-white-2x.png)] bg-[1500px];
+    @apply bg-[url(../img/clf/ubc7-clf-sprite-white-2x.png)];
+    background-size: 1500px!important;
   }
   .legacy--gw #ubc7-global-utility-no-script,
   .legacy--gw #ubc7-global-utility button span,
@@ -1069,7 +1071,8 @@ a#ubc7-global-utility-no-script {
   .legacy--gw #ubc7-vancouver-campus,
   .legacy--gw #ubc7-wordmark-block,
   .legacy--gw .ubc7-arrow {
-    @apply bg-[url(../img/clf/ubc7-clf-sprite-grey-2x.png)] bg-[1500px];
+    @apply bg-[url(../img/clf/ubc7-clf-sprite-grey-2x.png)];
+    background-size: 1500px!important;
   }
 }
 @media only screen and (-o-min-device-pixel-ratio: "3/2") and (max-width: 979px),
@@ -1077,7 +1080,8 @@ a#ubc7-global-utility-no-script {
   only screen and (min--moz-device-pixel-ratio: 1.5) and (max-width: 979px),
   only screen and (min-device-pixel-ratio: 1.5) and (max-width: 979px) {
   #ubc7-signature a {
-    @apply bg-[-2px_-435px] bg-[1400px];
+    @apply bg-[-2px_-435px];
+    background-size: 1400px!important;
   }
 }
 @media only screen and (-o-min-device-pixel-ratio: "3/2") and (max-width: 767px),
@@ -1085,7 +1089,8 @@ a#ubc7-global-utility-no-script {
   only screen and (min--moz-device-pixel-ratio: 1.5) and (max-width: 767px),
   only screen and (min-device-pixel-ratio: 1.5) and (max-width: 767px) {
   #ubc7-signature a {
-    @apply bg-[-2px_-544px] bg-[1500px];
+    @apply bg-[-2px_-544px];
+    background-size: 1500px!important;
   }
 }
 @media (max-width: 360px) {

@@ -6,6 +6,10 @@
   @apply mt-6;
 }
 
+.webform-submission-form legend {
+  @apply pb-0 border-b-[.25rem] border-ubc-blue-neptune text-sm;
+}
+
 .webform-submission-form .field-prefix,
 .webform-submission-form .field-suffix {
   @apply text-sm;
@@ -50,7 +54,7 @@ input[name="custom_composite_table_add"] {
   @apply text-xs;
 }
 
-@media (min-width: 480px) {
+@media (min-width: 400px) {
 
   .webform-options-display-two-columns,
   .webform-options-display-three-columns {
@@ -84,4 +88,47 @@ input[name="custom_composite_table_add"] {
 
 .webform-submission-form .form-item-wrapper>label {
   display: inline-block;
+}
+
+.webform-submission-form .fieldset-legend.form-required {
+  color: inherit;
+  font-weight: inherit;
+}
+
+.webform-submission-form .fieldset-legend.form-required::after {
+  content: " *";
+  color: var(--input-required-color);
+  font-weight: 700;
+}
+
+.webform-type-checkboxes > legend {
+  @apply normal-case border-b-0 text-ubc-blue;
+}
+
+.webform-submission-form .form-actions {
+  @apply mt-12;
+}
+
+fieldset.webform-type-checkboxes,
+fieldset.webform-type-radios {
+  @apply shadow-none;
+}
+
+.webform-submission-form .fieldset-wrapper {
+  @apply p-8;
+}
+
+.webform-submission-form .webform-type-radios .fieldset-wrapper,
+.webform-submission-form .webform-type-checkboxes .fieldset-wrapper {
+  @apply p-0;
+}
+
+.webform-submission-form .fieldset-wrapper .form-item.form-radio,
+.webform-submission-form .fieldset-wrapper .form-item.form-checkbox {
+  @apply mt-0;
+}
+
+.webform-submission-form .webform-type-radios > legend,
+.webform-submission-form .webform-type-checkboxes > legend {
+  @apply border-b-0;
 }

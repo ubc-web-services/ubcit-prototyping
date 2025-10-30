@@ -108,7 +108,7 @@
 }
 
 .masthead-w-image-text__content {
-    @apply pb-8;
+    @apply py-8;
 }
 
 .masthead-w-image-text figure {
@@ -133,7 +133,7 @@
     }
 
     .masthead-w-image-text__content {
-        @apply col-span-2 pb-16;
+        @apply col-span-2 py-16;
     }
 
     .masthead-w-image-text figure {

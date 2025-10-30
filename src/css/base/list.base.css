@@ -5,39 +5,7 @@
 */
 
 /* Lists */
-ul,
-ol,
-dl {
-  @apply my-3;
-}
-
-h2 + ul,
-h2 + ol,
-h2 + dl,
-h3 + ul,
-h3 + ol,
-h3 + dl,
-h4 + ul,
-h4 + ol,
-h4 + dl,
-h5 + ul,
-h5 + ol,
-h5 + dl,
-h6 + ul,
-h6 + ol,
-h6 + dl {
-  @apply mt-leading;
-}
-
-ul > ul,
-ol > ol,
-ul > ol,
-ol > ul {
-  @apply my-0;
-}
-
 ul {
-  @apply pl-6;
   list-style-type: disc;
 }
 
@@ -50,7 +18,7 @@ ul ul ul {
 }
 
 ol {
-  @apply pl-6;
+
   list-style-type: decimal;
 }
 
@@ -68,6 +36,18 @@ ol ol ol ol {
 
 dt {
   text-transform: uppercase;
+}
+
+/* ordered lists with counters */
+ol.list-counters,
+ol.list-counters ol {
+  counter-reset: section;
+  list-style-type: none;
+}
+
+ol.list-counters li::before {
+  counter-increment: section;
+  content: counters(section, ".") " ";
 }
 
 /* styles for formatted text (since we don't style lists automatically) */
@@ -155,4 +135,13 @@ ol.item-list,
   .list-checked li {
     @apply pl-8;
   }
+}
+
+/* Inline list */
+.list-inline {
+  @apply ml-0 list-none;
+}
+
+.list-inline > li {
+  @apply inline-block pl-0;
 }

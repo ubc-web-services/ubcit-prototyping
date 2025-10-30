@@ -28,7 +28,6 @@ module.exports = {
       "ubc-grey-4": "rgba(var(--ubc-grey-4), 1)",
       "ubc-grey-5": "rgba(var(--ubc-grey-5), 1)",
       "ubc-grey-6": "rgba(var(--ubc-grey-6), 1)",
-      "ubc-black": "rgba(var(--ubc-black), 1)",
       "unit-primary": "rgba(var(--unit-color-primary), 1)",
       "unit-secondary": "rgba(var(--unit-color-secondary), 1)",
       "unit-tertiary": "rgba(var(--unit-color-tertiary), 1)",

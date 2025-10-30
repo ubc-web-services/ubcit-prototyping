@@ -81,4 +81,12 @@
     max-width: 1720px;
   }
 
+  .message {
+    @apply py-8 pl-8;
+  }
+
+  .message__icon {
+    @apply w-16 h-16 mr-8;
+  }
+
 }

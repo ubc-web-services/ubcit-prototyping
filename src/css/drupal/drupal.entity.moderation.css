@@ -4,11 +4,11 @@
 * This file contains styles for the drupal content moderation form
 */
 .entity-moderation-form {
-  @apply relative block px-2 py-0 bg-white/50 text-sm;
+  @apply relative block px-2 py-0 text-sm bg-white/50;
 }
 
 .entity-moderation-form__item {
-  @apply block my-0 mx-2;
+  @apply block mx-2 my-0;
 }
 
 .entity-moderation-form__item:last-child {

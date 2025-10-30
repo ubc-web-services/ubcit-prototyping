@@ -1,0 +1,47 @@
+/** @define drupal.paragraphs */
+
+/*
+* Styles for paragraphs
+*/
+.paragraph--type--text__inner > :first-child,
+.paragraph--type--text > div > div > :first-child {
+  @apply mt-0;
+}
+
+.paragraph.bg-ubc-blue {
+  @apply text-white;
+}
+
+.paragraph.bg-ubc-blue a {
+  @apply text-ubc-blue-polar;
+}
+
+.paragraph.bg-ubc-blue a:hover {
+  @apply text-ubc-blue-cornflower;
+}
+
+.paragraph.bg-ubc-blue .unit-button--light {
+  @apply text-ubc-blue-cobalt;
+}
+
+.paragraph.bg-ubc-blue .unit-button--dark {
+  @apply text-ubc-blue-polar;
+}
+
+.paragraph.bg-ubc-blue .unit-button--light:hover,
+.paragraph.bg-ubc-blue .unit-button--dark:hover {
+  @apply text-white;
+}
+
+.paragraph.bg-ubc-blue .unit-button--simple::after {
+  content: url("../img/svg/icon-caret--white.svg");
+}
+
+.paragraph.bg-ubc-blue .unit-button--simple:hover::after {
+  content: url("../img/svg/icon-caret--white.svg");
+}
+
+/* SVG Icon fix for cards */
+.paragraph--type--icon-card img {
+  @apply mx-auto;
+}

@@ -1,12 +1,11 @@
-/** @define typography.base */
+/** @define typography */
 
 /*
-* This file contains default typographic styles for text.
+* This file contains default typographic styles for text elements.
 */
 
-
 html {
-  color: var(--default-text-color);
+  color: var(--text-color);
   font-family: var(--text-font-stack);
   font-size: 100%;
 }
@@ -14,78 +13,191 @@ html {
 body {
   font-family: var(--text-font-stack);
   font-size: var(--base-font-size);
-  line-height: var(--leading);
+  line-height: var(--line-height-base);
 }
 
-/* heading elements */
+/* Headings */
 h1,
 .h1 {
-  @apply mb-0 text-6xl;
-  margin-top: calc(var(--leading) * 3.5rem);
-  font-family: var(--alternate-font-stack);
-  font-weight: var(--title-weight);
-  line-height: 1.25;
+  font-size: var(--text-4xl);
+  margin-top: calc(var(--text-4xl) * var(--scale-ratio));
+  line-height: calc(1 + var(--line-height-tight));
 }
 
 h2,
 .h2 {
-  @apply mb-0 text-4xl;
-  margin-top: calc(var(--leading) * 2.25rem);
-  font-family: var(--alternate-font-stack);
-  font-weight: var(--title-weight);
-  line-height: 1.4;
+  font-size: var(--text-3xl);
+  margin-top: calc(var(--text-3xl) * var(--scale-ratio));
+  line-height: calc(1 + var(--line-height-tight));
 }
 
 h3,
 .h3 {
-  @apply mb-0 text-3xl;
-  margin-top: calc(var(--leading) * 1.75rem);
-  letter-spacing: 0.025em;
-  font-family: var(--alternate-font-stack);
-  font-weight: var(--title-weight);
-  line-height: 1.4;
+  font-size: var(--text-2xl);
+  margin-top: calc(var(--text-2xl) * var(--scale-ratio));
+  line-height: calc(1 + var(--line-height-tight) * 1.2);
 }
 
 h4,
 .h4 {
-  @apply mb-0 text-2xl;
-  margin-top: calc(var(--leading) * 1.25rem);
-  letter-spacing: 0.025em;
-  font-family: var(--alternate-font-stack);
-  font-weight: 700;
-  line-height: 1.4;
+  font-size: var(--text-xl);
+  margin-top: calc(var(--text-xl) * var(--scale-ratio));
+  line-height: calc(1 + var(--line-height-tight) * 1.3);
 }
 
 h5,
 .h5 {
-  @apply mb-0 text-base;
-  margin-top: calc(var(--leading) * 1rem);
-  letter-spacing: 0.05em;
-  font-family: var(--alternate-font-stack);
-  font-weight: var(--title-weight);
-  line-height: 1.425;
+  font-size: var(--text-lg);
+  margin-top: calc(var(--text-lg) * var(--scale-ratio));
+  line-height: calc(1 + var(--line-height-tight) * 1.4);
 }
 
 h6,
 .h6 {
-  @apply mb-0 text-sm;
-  margin-top: calc(var(--leading) * 1rem);
-  letter-spacing: 0.05em;
-  font-family: var(--alternate-font-stack);
-  font-weight: var(--title-weight);
-  line-height: 1.425;
+  font-size: var(--text-base);
+  margin-top: calc(var(--text-base) * var(--scale-ratio));
+  line-height: var(--line-height-base);
+  font-weight: 600;
+}
+
+/* heading siblings */
+h1 + h2 {
+  margin-top: calc(var(--text-3xl) * var(--scale-ratio) * 0.6);
+}
+
+h2 + h3 {
+  margin-top: calc(var(--text-2xl) * var(--scale-ratio) * 0.6);
+}
+
+h3 + h4 {
+  margin-top: calc(var(--text-xl) * var(--scale-ratio) * 0.6);
+}
+
+h4 + h5 {
+  margin-top: calc(var(--text-lg) * var(--scale-ratio) * 0.6);
+}
+
+h5 + h6 {
+  margin-top: calc(var(--text-base) * var(--scale-ratio) * 0.6);
+}
+
+/* Body text */
+p {
+  margin-top: calc(var(--text-base) * var(--scale-ratio));
+  line-height: var(--line-height-base);
+}
+
+blockquote {
+  font-size: var(--text-lg);
+  margin-top: calc(var(--text-xl) * var(--scale-ratio));
+  margin-bottom: calc(var(--text-xl) * var(--scale-ratio));
+  line-height: var(--line-height-base);
+  padding-left: calc(var(--text-base) * var(--scale-ratio));
+}
+
+pre,
+code {
+  line-height: var(--line-height-base);
+}
+
+pre {
+  margin-top: calc(var(--text-base) * var(--scale-ratio));
+  margin-bottom: calc(var(--text-base) * var(--scale-ratio));
+  padding: calc(var(--text-base) * var(--scale-ratio));
+}
+
+/* Lists */
+ul,
+ol {
+  margin-top: calc(var(--text-base) * var(--scale-ratio));
+  margin-bottom: calc(var(--text-base) * var(--scale-ratio));
+  line-height: var(--line-height-base);
+  padding-left: calc(var(--text-base) * var(--scale-ratio) * 1.5);
+}
+
+li {
+  margin-top: calc(var(--text-xs) / var(--scale-ratio));
+}
+
+/* Nested lists */
+ul ul,
+ul ol,
+ol ul,
+ol ol {
+  margin-top: calc(var(--text-base) / var(--scale-ratio));
+  margin-bottom: calc(var(--text-base) / var(--scale-ratio));
+}
+
+/* Definition lists */
+dl {
+  margin-top: calc(var(--text-base) * var(--scale-ratio));
+  line-height: var(--line-height-base);
+}
+
+dt {
+  margin-top: calc(var(--text-base) / var(--scale-ratio));
+}
+
+dd {
+  margin-top: calc(var(--text-base) / var(--scale-ratio) / var(--scale-ratio));
+  margin-left: calc(var(--text-base) * var(--scale-ratio));
+}
+
+/* Small text */
+small {
+  font-size: var(--text-sm);
+  margin-top: calc(var(--text-sm) * var(--scale-ratio));
+  line-height: var(--line-height-base);
+}
+
+hr {
+  margin-top: calc(var(--text-xl) * var(--scale-ratio));
+  margin-bottom: calc(var(--text-xl) * var(--scale-ratio));
+}
+
+/* Remove top margin from first child */
+:where(
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    ul,
+    ol,
+    dl,
+    dt,
+    blockquote,
+    pre,
+    form,
+    table
+  ):first-child,
+nav li {
+  margin-top: 0;
+}
+
+/** decorative styles **/
+/* heading elements */
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  @apply font-semibold text-ubc-blue;
 }
 
 .heading-display,
 .heading-display h1 {
-  @apply text-5xl;
-  font-weight: var(--title-weight);
+  @apply text-5xl font-semibold;
   line-height: 1.2;
-}
-
-/* responsive type (20px min to 46px max) - see https://modern-fluid-typography.vercel.app for configuration */
-.heading-responsive {
-  font-size: clamp(1.25rem, 2vw + 1rem, 2.875rem);
 }
 
 @media (max-width: 479px) {
@@ -95,51 +207,29 @@ h6,
   }
 }
 
-/* heading siblings */
-h1 + h2 {
-  margin-top: calc(var(--leading) * 1.125rem);
-}
-
-h2 + h3 {
-  margin-top: calc(var(--leading) * 1rem);
-}
-
-h3 + h4 {
-  margin-top: calc(var(--leading) * .875rem);
-}
-
-h4 + h5 {
-  margin-top: calc(var(--leading) * .75rem);
-}
-
-h5 + h6 {
-  margin-top: calc(var(--leading) * .5rem);
+/* responsive type (20px min to 46px max) - see https://modern-fluid-typography.vercel.app for configuration */
+.heading-responsive {
+  font-size: clamp(1.25rem, 2vw + 1rem, 3rem);
 }
 
 /* text and list elements */
-p,
-pre,
-table,
-blockquote {
-  @apply mb-0 mt-leading;
-}
-
 b,
 strong {
   font-weight: 600;
 }
 
+code,
 kbd,
-code {
-  @apply py-[.125em] px-[.25em] bg-grey-100 text-[.875em];
+pre,
+samp {
+  font-family: var(--code-font-stack);
+  font-feature-settings: normal;
+  font-variation-settings: normal;
 }
 
-kbd {
-  @apply inline-block border shadow-sm border-grey-300;
-  text-wrap: nowrap;
-  border-radius: 3px;
-  font-weight: 600;
-  line-height: 1;
+kbd,
+code {
+  @apply py-[.125em] px-[.25em] bg-grey-100;
 }
 
 code,
@@ -152,6 +242,30 @@ samp,
   vertical-align: baseline;
 }
 
+pre {
+  @apply relative p-4 border rounded-sm bg-grey-100 border-grey-300 text-grey-800;
+  direction: ltr;
+  font-style: normal;
+  min-width: 200px;
+  tab-size: 4;
+  text-align: left;
+  white-space: pre-wrap;
+}
+
+pre code {
+  background: unset;
+  border-radius: 0;
+  padding: 0;
+}
+
+kbd {
+  @apply inline-block text-sm border shadow-sm border-grey-300;
+  text-wrap: nowrap;
+  border-radius: 3px;
+  font-weight: 600;
+  line-height: 1;
+}
+
 sup {
   top: -0.5em;
 }
@@ -162,77 +276,59 @@ sub {
 
 /* Blockquote */
 blockquote {
-  @apply relative p-12 mx-auto my-8 text-2xl;
-
+  @apply relative p-12 mx-auto text-2xl italic;
   max-width: 60ch;
-  /* quotes: "“""”""‘""’"; */
   font-family: var(--alternate-font-stack);
 }
 
 blockquote::before {
-  position: absolute;
-  top: 2rem;
-  left: 3rem;
-  height: 1.5em;
-  width: 1.5em;
-  background-image: url("../img/svg/icon-quote-open--ubc-blue.svg");
-  background-size: 1.5em 1.5em;
-  background-position: center;
-  background-repeat: no-repeat;
+  @apply absolute top-12 left-0 h-8 w-8 bg-center bg-[length:2rem_2rem] bg-no-repeat bg-[url("../img/svg/icon-quote-open--ubc-blue.svg")] bg-transparent;
   content: "";
 }
 
-
-blockquote p:last-of-type {
-  position: relative;
+.text-cite {
+  @apply text-sm not-italic font-normal text-right uppercase;
 }
 
-/*
-blockquote p:first-of-type::before {
-	content: '“';
+.text-cite::before {
+  content: "—";
+  padding-right: 0.25em;
 }
 
-blockquote p:last-of-type::after {
-	content: '”';
-}
-*/
-
-cite,
-.cite {
-  @apply pt-6 font-sans text-sm not-italic font-normal text-right uppercase;
-}
-
-cite span,
-.cite span {
-  @apply block;
+.text-cite span {
+  display: block;
 }
 
 .blockquote--inverse,
-.blockquote--inverse cite,
-.blockquote--inverse .cite {
+.blockquote--inverse .text-cite {
   @apply text-left bg-transparent text-ubc-blue;
 }
 
 /* horizontal rule element */
 hr,
 .hr {
-  @apply mx-0 my-3 border-t border-grey-300;
+  @apply border-t border-grey-300;
 }
 
 .hr--styled {
-  @apply max-w-[7rem] mx-0 my-3 border-t border-ubc-blue;
+  @apply border-t border-ubc-blue;
+  max-width: 7rem;
+  margin-top: calc(var(--text-base) * var(--scale-ratio));
+  margin-bottom: calc(var(--text-base) * var(--scale-ratio));
 }
 
 /* Text utilities */
 .text-lead {
-  @apply mb-0 text-xl;
-  margin-top: calc(var(--leading) * 1.5rem);
+  @apply text-2xl;
+  margin-top: calc(var(--text-2xl) * var(--scale-ratio));
+  margin-bottom: 0;
   font-family: var(--alternate-font-stack);
-  line-height: var(--leading);
+  line-height: var(--line-height-base);
+  color: var(--color-primary);
 }
 
 .text-hug {
-  @apply mt-0;
+  margin-top: 0;
 }
 
 .text-uppercase {
@@ -247,127 +343,34 @@ hr,
   text-transform: capitalize;
 }
 
-/* Responsive text sizing - disabled by default
-/*
-@media (min-width: 1720px) {
-
-  body {
-    @apply text-2xl;
-  }
-
-  h1,
-  .h1 {
-    @apply text-8xl;
-    margin-top: calc(var(--leading) * 3rem);
-    letter-spacing: -0.01em;
-  }
-
-  h2,
-  .h2 {
-    @apply text-7xl;
-    margin-top: calc(var(--leading) * 2.5rem);
-  }
-
-  h3,
-  .h3 {
-    @apply text-6xl;
-    margin-top: calc(var(--leading) * 2.5rem);
-    line-height: 1.25;
-  }
-
-  h4,
-  .h4 {
-    @apply text-5xl;
-    margin-top: calc(var(--leading) * 1rem);
-  }
-
-  h5,
-  .h5 {
-    @apply text-3xl;
-    margin-top: calc(var(--leading) * 0.875rem);
-    line-height: 1.4;
-  }
-
-  h6,
-  .h6 {
-    @apply text-2xl;
-  }
-
-  .heading-display,
-  .heading-display h1 {
-    @apply text-7xl;
-  }
-
-  blockquote {
-    @apply text-4xl;
-  }
-
-  cite,
-  .cite {
-    @apply text-base;
-  }
-
-  .text-lead {
-    @apply text-5xl;
-  }
-
-  .text-xs {
-    @apply !text-lg;
-  }
-
-  .text-sm {
-    @apply !text-xl;
-  }
-
-  .text-base {
-    @apply !text-2xl;
-  }
-
-  .text-lg {
-    @apply !text-3xl;
-  }
-
-  .text-xl {
-    @apply !text-4xl;
-  }
-
-  .text-2xl {
-    @apply !text-5xl;
-  }
-
-  .text-3xl {
-    @apply !text-6xl;
-  }
-
-  .text-4xl {
-    @apply !text-7xl;
-  }
-
-  .text-5xl {
-    @apply !text-8xl;
-  }
-
-  .text-6xl {
-    @apply !text-9xl;
-  }
-
-  .text-7xl {
-    @apply !text-10xl;
-  }
-}
-*/
-
 /* we use the 'ch' unit, which is the width of the '0' [zero] character in the current font. */
-
 /* https://meyerweb.com/eric/thoughts/2018/06/28/what-is-the-css-ch-unit/ */
 .text-measure {
   max-width: 60ch;
+  display: block;
 }
 
 .text-measure-sm {
   max-width: 50ch;
+  display: block;
 }
 
 .text-measure-lg {
   max-width: 70ch;
+  display: block;
+}
+
+/* allows text to be hidden without altering layout */
+.text-hide {
+  height: 0;
+  opacity: 0;
+}
+
+/* indent styles */
+.indented {
+  @apply ml-8;
+}
+
+[dir="rtl"] .indented {
+  @apply ml-0 mr-8;
 }

@@ -1,137 +1,79 @@
 /** @define drupal.media */
 
-/* drupal media */
-.ubc-card__media .media--type-image,
-figure .media--type-image {
-  @apply mt-0;
-}
-
-.text-formatted figure:not([class*="align-"]) {
-  @apply w-full;
-}
-
-.align-center,
-.align-left,
-.align-right {
-  @apply table;
-}
-
-.align-center {
-  @apply mx-auto;
-}
-
-figure[class*="align-"] figcaption {
-  @apply table-caption caption-bottom;
-}
-
-img.align-left,
-figure.align-left,
-img.align-right,
-figure.align-right,
-.media.align-left,
-.media.align-right {
-  @apply mb-4;
-}
-
-figure img {
-  @apply !mt-0;
-}
-
-.drupal-media.align-left,
-.drupal-media.align-right,
-.media.align-left,
-.media.align-right,
-figure.align-left,
-figure.align-right {
-  @apply mt-leading;
-}
-
-img.align-left,
-img.align-right {
-  @apply mt-[.5em];
-}
-
-[class^="widget-"].align-left,
-[class^="widget-"].align-right {
-  @apply max-w-md;
-}
-
-@media (min-width: 768px) {
-
-  .align-left {
-    float: left;
-  }
-
-  .align-right {
-    float: right;
-  }
-
-  .drupal-media.align-left,
-  .drupal-media.align-right,
-  .media.align-left,
-  .media.align-right,
-  .caption-drupal-media.align-left,
-  .caption-drupal-media.align-right,
-  figure.align-left,
-  figure.align-right,
-  img.align-left,
-  img.align-right  {
-    clear: both;
-    max-width: 50%;
-  }
-
-  [class^="widget-"].align-left,
-  img.align-left,
-  figure.align-left,
-  .media.align-left {
-    @apply mr-6;
-  }
-
-  [class^="widget-"].align-right,
-  img.align-right,
-  figure.align-right,
-  .media.align-right {
-    @apply ml-6;
-  }
-
-}
-
-/* specific overrides */
-.carousel__cell .media--type-remote-video,
-.media--type-remote-video.media--view-mode--featured-content {
-  @apply my-0;
-}
-
-@media (max-width: 767px) {
-
-  figure.align-left,
-  figure.align-right,
-  .media.align-left,
-  .media.align-right,
-  .drupal-media.align-left,
-  .drupal-media.align-right,
-  .caption-drupal-media.align-left,
-  .caption-drupal-media.align-right,
-  img.align-left,
-  img.align-right,
-  [class^="widget-"].align-left,
-  [class^="widget-"].align-right {
-    @apply float-none max-w-full ml-0 mr-0;
-  }
-
-  figure.align-left,
-  figure.align-right {
-    @apply w-full;
-  }
-
-}
-
 /* image filters */
 .img-greyscale {
   filter: grayscale(100%);
 }
 
-/* add play button on top of image thumbnail */
+/* drupal media */
+figure img,
+img[data-entity-type="file"] {
+  @apply mt-0;
+}
+
+/* add margin to images */
+.image-inline:not(:where(figure .image-inline)) {
+  @apply mt-leading;
+}
+
+/* don't let floated images float on tiny screens */
+figure.align-left,
+figure.align-right,
+img.align-left,
+img.align-right,
+.media.align-left,
+.media.align-right {
+  @apply float-none mx-auto mb-leading;
+}
+
+figure.align-left,
+figure.align-right {
+  @apply mt-leading;
+}
+
+img[data-entity-type="file"]:not(
+  .align-left,
+  .align-center,
+  .align-right):not(:where(figure img)) {
+  @apply mt-leading;
+}
+
+figure.align-center,
+img.align-center {
+  @apply mx-auto mt-leading;
+}
+
+.media.align-center {
+  @apply table mx-auto;
+}
+
+@media screen and (min-width: 640px) {
+
+  figure.align-left,
+  img.align-left,
+  .media.align-left {
+    @apply float-left mr-leading;
+  }
+
+  figure.align-right,
+  img.align-right,
+  .media.align-right {
+    @apply float-right ml-leading;
+  }
+
+  /* set a max width for floated media items */
+  [class^="widget-"].align-left,
+  [class^="widget-"].align-right {
+    @apply max-w-md;
+  }
+
+}
+
+/* Remote video - play button over image thumbnail */
+.media--type-remote-video.media--view-mode--featured-content {
+  @apply my-0;
+}
+
 .media--type-remote-video {
   @apply relative;
 }

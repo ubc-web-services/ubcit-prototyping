@@ -34,15 +34,9 @@
   @apply mt-0 text-base;
 }
 
-/* responsive text style - disabled by default */
-/*
-@media (min-width: 1720px) {
-
-  .widget-accordion h3 {
-    @apply text-2xl;
-  }
+.accordion__content {
+  @apply my-6;
 }
-*/
 
 /* summary element */
 summary {

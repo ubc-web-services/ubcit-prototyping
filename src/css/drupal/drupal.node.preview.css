@@ -8,14 +8,15 @@
 }
 
 .node-preview-backlink {
-  @apply inline-block my-2 mx-0 py-2 px-4 no-underline text-white border border-ubc-blue-sea bg-ubc-blue-sea/80;
+  @apply inline-block px-4 py-2 mx-0 my-2 text-white no-underline border border-ubc-blue-sea bg-ubc-blue-sea/80;
   border-radius: 0.25rem;
 }
 
 .node-preview-backlink:hover {
-  @apply no-underline text-white border border-ubc-blue bg-ubc-blue/80;
+  @apply text-white no-underline border border-ubc-blue bg-ubc-blue/80;
 }
 
 .node-preview-container select {
   @apply min-w-[200px];
 }
+

@@ -2,8 +2,40 @@
 * This file contains all default application-wide Sass and CSS3 variables.
 */
 :root {
-    --base-line-height: var(--leading);
+    /* type variables */
 
+    /* Base line height - inverted ratio for tighter headings */
+    --line-height-tight: 0.35;
+    --base-line-height: var(--leading);
+    --line-height-base: var(--leading);
+        /* Base font size */
+    --base-font-size: 1rem; /* 16px */
+    /* Scale ratio (1.25 = Major Third) */
+    --scale-ratio: 1.25;
+    /* Calculated font sizes */
+    --text-xs: calc(
+        var(--base-font-size) / var(--scale-ratio) / var(--scale-ratio)
+    );
+    --text-sm: calc(var(--base-font-size) / var(--scale-ratio));
+    --text-base: var(--base-font-size);
+    --text-lg: calc(var(--base-font-size) * var(--scale-ratio));
+    --text-xl: calc(
+        var(--base-font-size) * var(--scale-ratio) * var(--scale-ratio)
+    );
+    --text-2xl: calc(
+        var(--base-font-size) * var(--scale-ratio) * var(--scale-ratio) *
+        var(--scale-ratio)
+    );
+    --text-3xl: calc(
+        var(--base-font-size) * var(--scale-ratio) * var(--scale-ratio) *
+        var(--scale-ratio) * var(--scale-ratio)
+    );
+    --text-4xl: calc(
+        var(--base-font-size) * var(--scale-ratio) * var(--scale-ratio) *
+        var(--scale-ratio) * var(--scale-ratio) * var(--scale-ratio)
+    );
+
+    /* colours */
     --ubc-blue: 0, 33, 69; /* #002145 */
     --ubc-blue-sea: 0, 58, 121; /* #003a79 */
     --ubc-blue-cobalt: 0, 85, 183; /* #0055b7 */
@@ -19,7 +51,6 @@
     --ubc-grey-4: 195, 208, 219; /* #c3d0db */
     --ubc-grey-5: 213, 222, 228; /* #d5dee4 */
     --ubc-grey-6: 234, 238, 241; /* #eaeef1 */
-    --ubc-black: 34, 34, 34; /* #222 */
 
     --black: 0, 0, 0; /* #000 */
     --white: 255, 255, 255; /* #fff */
@@ -34,18 +65,16 @@
     --grey-800: 66, 66, 66; /* #424242 */
     --grey-900: 33, 33, 33; /* #212121 */
 
-    --error: 186, 16, 16;
-    --warning: 216, 202, 8;
-    --success: 12, 146, 90;
-    --status: 27, 150, 211;
+    --error: 186, 16, 16; /* #b33542 */
+    --warning: 216, 202, 8; /* #ef8843 */
+    --success: 12, 146, 90; /* #95be4f */
+    --status: 27, 150, 211; /* #324d6a */
     --text-color: rgba(var(--grey-900), 1);
 
     --default-text-color: var(--text-color);
     --default-color-link: rgba(var(--ubc-blue-cobalt), 1);
     --default-color-link-hover: rgba(var(--ubc-blue), 1);
     --default-color-link-active: rgba(var(--ubc-blue), 1);
-
-    --title-weight: 600;
 
     /* Forms */
     --input-border-radius: 0;

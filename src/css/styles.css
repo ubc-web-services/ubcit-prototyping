@@ -19,12 +19,12 @@
 @import "base/print.base.css";
 
 /* Add any Drupal specific stylesheets */
-@import "drupal/drupal.node.preview.css";
 @import "drupal/drupal.entity.moderation.css";
 @import "drupal/drupal.media.css";
+@import "drupal/drupal.node.preview.css";
+@import "drupal/drupal.paragraphs.css";
 @import "drupal/drupal.views.css";
 @import "drupal/drupal.webform.css";
-@import "drupal/clf.drupal.css";
 @import "drupal/drupal.theme.css";
 
 /* Add styles for specific components */
@@ -49,7 +49,6 @@
 @import "utilities/animate.utility.css";
 @import "utilities/container.utility.css";
 @import "utilities/margin.utility.css";
-@import "utilities/min-height.utility.css";
 @import "utilities/skip-link.utility.css";
 @import "utilities/svg.utility.css";
 @import "utilities/ubc-gradient.utility.css";

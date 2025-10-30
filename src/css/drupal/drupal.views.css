@@ -16,12 +16,17 @@
   --total-gap-width: calc(var(--gap-count) * var(--grid-layout-gap));
   --grid-item--max-width: calc((100% - var(--total-gap-width)) / var(--grid-column-count));
 
-  @apply grid p-8 my-0 mb-8 bg-grey-100;
+  @apply grid items-end p-8 my-0 mb-8 bg-grey-100;
 
   grid-template-columns: repeat(auto-fill, minmax(max(var(--grid-item--min-width), var(--grid-item--max-width)), 1fr));
   grid-gap: var(--grid-layout-gap);
 }
 
+.views-exposed-form .form-item {
+  @apply mt-0;
+}
+
+/* adjustment for views sticky header - probably don't need this */
 @media screen and (min-width: 980px) {
 
   .nav--is-pinned table.sticky-header {

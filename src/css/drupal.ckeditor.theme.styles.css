@@ -15,7 +15,7 @@
     --base-line-height: var(--leading);
 }
 
-/* alter the behaviour inside the editor becuase of different markup vs front end */
+/* alter the behaviour inside the editor because of different markup vs front end */
 @media (min-width:768px) {
     .media.align-left,
     .media.align-right {
@@ -27,6 +27,12 @@
 .text-align-left > .ckeditor5-icons__widget,
 .text-align-center > .ckeditor5-icons__widget {
     display: inline-block;
+}
+
+/* remove decorative blockquote styles */
+.ck-content blockquote {
+  font-style: initial;
+  border-left: none;
 }
 
 /* ensure white text is visible */
@@ -50,4 +56,49 @@
 
 form[class~="node-form"] a[class~="anchor-invisible"] {
   visibility: visible;
+}
+
+/* make sure images in figures without alignment classes aren't displayed in the center of the editor */
+figure:not(.image-style-align-left, .image-style-align-center, .image-style-align-right) {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* ensure figures with images get a vertical margin */
+figure.image {
+  margin-top: 26px !important;
+  margin-bottom: 26px !important;
+}
+
+/* ensure images in figures get no vertical margin */
+figure.image img {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+/* ensure images set to inline get no vertical margin */
+span.image-inline,
+span.image-inline img  {
+  margin-top: 0 !important;
+}
+
+/* ensure centered media images are centered */
+.drupal-media.drupal-media-style-align-center {
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* fix caption display when media item is floated */
+.drupal-media.drupal-media-style-align-left .media,
+.drupal-media.drupal-media-style-align-right .media {
+  margin-bottom: 0!important;
+}
+
+.drupal-media.drupal-media-style-align-right > figcaption {
+  margin-left: 26px!important;
+}
+
+.drupal-media.drupal-media-style-align-left > figcaption {
+  margin-right: 26px!important;
 }
