@@ -6,7 +6,7 @@
 
 /* js text counter */
 .text-count-message {
-  @apply text-sm text-grey-700;
+  @apply text-xs text-grey-700;
 }
 
 /* jquery datepicker */
@@ -33,4 +33,32 @@
 /* quickedit divs (gah!) */
 [data-quickedit-field-id] {
   @apply inline;
+}
+
+/* form elements inside tables */
+.tableselect td input,
+.tableselect-sort td input,
+.tableselect td .form-item,
+.tableselect-sort td .form-item  {
+  @apply mt-0;
+}
+
+/* drag elements */
+a.tabledrag-handle .handle {
+  width: 14px;
+  height: 14px;
+  margin: 0 0.5em;
+  padding: 0.42em 0.5em;
+  background: url(../img/svg/icon-move.svg) no-repeat 6px 7px;
+  background-size: 14px 14px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.tableselect-sort td {
+  @apply relative;
+}
+
+.tableselect-sort .tabledrag-changed {
+  @apply absolute top-[.5em] left-0;
 }

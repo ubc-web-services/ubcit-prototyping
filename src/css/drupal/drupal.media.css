@@ -1,19 +1,21 @@
 /** @define drupal.media */
 
-/* image filters */
-.img-greyscale {
-  filter: grayscale(100%);
-}
-
 /* drupal media */
 figure img,
 img[data-entity-type="file"] {
   @apply mt-0;
 }
 
-/* add margin to images */
-.image-inline:not(:where(figure .image-inline)) {
+/* add margin to media without figure containers */
+.image-inline:not(:where(figure .image-inline)),
+.media--type-image:not(:where(figure .media--type-image)),
+.media--type-remote-video:not(:where(figure .media--type-remote-video)) {
   @apply mt-leading;
+}
+
+/* make embedded video full width when not aligned */
+figure:not(.align-left, .align-center, .align-right):has(.media--type-remote-video)  {
+  width: 100%;
 }
 
 /* don't let floated images float on tiny screens */
@@ -61,10 +63,10 @@ img.align-center {
     @apply float-right ml-leading;
   }
 
-  /* set a max width for floated media items */
-  [class^="widget-"].align-left,
-  [class^="widget-"].align-right {
-    @apply max-w-md;
+  /* set a max width for floated items */
+  .align-left,
+  .align-right {
+    @apply max-w-[50%];
   }
 
 }
@@ -99,4 +101,62 @@ img.align-center {
   .media--type-remote-video .field--name-thumbnail:after {
     background-size: 7.5rem 7.5rem;
   }
+}
+
+/* File icons. */
+.file {
+  @apply inline-block pl-[1.5em] bg-no-repeat bg-[left_center];
+  background-size: .875em .875em;
+}
+
+[dir="rtl"] .file {
+  @apply inline-block min-h-[1em] pr-[1.5em] pl-[inherit] bg-right;
+}
+
+.file--general,
+.file--application-octet-stream,
+.file--application-x-executable {
+  background-image: url(../img/svg/file-blank.svg);
+}
+
+.file--package-x-generic {
+  background-image: url(../img/svg/file-zipped.svg);
+}
+
+.file--x-office-spreadsheet {
+  background-image: url(../img/svg/file-excel.svg);
+}
+
+.file--x-office-document {
+  background-image: url(../img/svg/file-word.svg);
+}
+
+.file--x-office-presentation {
+  background-image: url(../img/svg/file-powerpoint.svg);
+}
+
+.file--text-x-script,
+.file--text-html {
+  background-image: url(../img/svg/file-code.svg);
+}
+
+.file--application-pdf {
+  background-image: url(../img/svg/file-pdf.svg);
+}
+
+.file--audio {
+  background-image: url(../img/svg/file-audio.svg);
+}
+
+.file--video {
+  background-image: url(../img/svg/file-video.svg);
+}
+
+.file--text-plain,
+.file--text {
+  background-image: url(../img/svg/file-text.svg);
+}
+
+.file--image {
+  background-image: url(../img/svg/file-image.svg);
 }

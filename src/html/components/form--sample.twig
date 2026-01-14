@@ -1,9 +1,9 @@
 <form action="" method="" accept-charset="UTF-8">
 	<div>
 		<h3>Selects</h3>
-		<div class="form-item-wrapper">
-			<label for="edit-fid">Dropdown Label</label>
-			<select id="edit-fid" name="fid" class="form-select">
+		<div class="mt-4 form-item-wrapper">
+			<label for="edit-fid" class="block pb-1 mt-1 text-sm text-ubc-blue">Dropdown Label</label>
+			<select id="edit-fid" name="fid" class="form-select pr-9 py-2 pl-2 border w-full max-w-full border-grey-300 text-grey-800/90 text-sm rounded-lg bg-white appearance-none box-border bg-origin-border bg-[url(../img/svg/icon-select-down--grey.svg)] bg-[right_0.5rem_center] bg-no-repeat bg-[length:1.5em_1.5em] cursor-pointer h-10 ">
 				<option value="All" selected="selected">Any</option>
 				<option value="79">College for Interdisciplinary Studies</option>
 				<option value="79">Faculty of Applied Science</option>
@@ -18,121 +18,157 @@
 				<option value="79">Faculty of Pharmaceutical Sciences</option>
 				<option value="79">Graduate and Postdoctoral Studies</option>
 			</select>
+			<div class="w-full my-2 text-xs description text-grey-700/90">
+				<div class="webform-element-description">
+					The form element description
+				</div>
+    		</div>
 		</div>
 		<h3>Text</h3>
-		<div class="form-item-wrapper">
-			<label for="edit-psq">Text Label</label>
-			<input id="edit-psq" type="text" name="psq" value="" size="30" maxlength="128" class="form-text" placeholder="Placeholder text...">
-
+		<div class="mt-4 form-item-wrapper">
+			<label for="edit-psq" class="block pb-1 mt-1 text-sm text-ubc-blue">Text Label</label>
+			<input id="edit-psq" type="text" name="psq" value="" size="30" maxlength="128" class="box-border block w-full h-10 p-2 text-sm bg-white border rounded-lg form-text border-grey-300 text-grey-800/90" placeholder="Placeholder text...">
+			<div class="w-full my-2 text-xs description text-grey-700/90">
+				<div class="webform-element-description">
+					The form element description
+				</div>
+    		</div>
 		</div>
 		<h3>Radios</h3>
-		<div class="form-item-wrapper ">
-			<label>Radio Inputs</label>
-			<div class="form-radios">
-				<div class="form-radio">
-					<input id="typo2-1" type="radio" name="meta-type" value="everything" checked="checked">
-					<label for="typo2-1">All</label>
+		<div class="mt-4 form-item-wrapper">
+			<label class="block pb-1 mt-1 text-sm text-ubc-blue">Radio Inputs</label>
+			<div class="my-4 form-radios">
+				<div class="flex flex-wrap items-center mt-2 js-webform-type-radio webform-type-radio js-form-item form-item js-form-radio form-radio js-form-item-radios form-item-radios form-item-wrapper">
+					<input type="radio" name="beta-type" id="example-1" value="example-something" checked="checked" class="form-radio w-4 h-4 shrink-0 text-ubc-blue border border-grey-300 mt-2 bg-white rounded-full inline-block appearance-none box-border bg-origin-border p-0 align-middle cursor-pointer checked--border-transparent checked--bg-[url(../img/svg/icon-circle--white.svg)] checked--bg-center checked--bg-current checked--bg-no-repeat checked--bg-[length:100%_100%] disabled--border-grey-500 disabled--bg-grey-300 disabled--cursor-not-allowed">
+					<label for="example-1" class="flex-1 block mt-1 text-sm form-label js-form-label form-label--radio ms-2 option text-ubc-blue">All</label>
+					<div class="w-full my-1 text-xs description text-grey-700/90 ms-6">
+      					<div id="edit-checks-test-me--description" class="webform-element-description">The description goes here</div>
+    				</div>
 				</div>
 
-				<div class="form-radio">
-					<input id="typo2-3" type="radio" name="meta-type" value="theme2">
-					<label for="typo2-3">Themes</label>
+				<div class="flex flex-wrap items-center mt-2 js-webform-type-radio webform-type-radio js-form-item form-item js-form-radio form-radio js-form-item-radios form-item-radios form-item-wrapper">
+					<input id="example-3" type="radio" name="beta-type" value="theme" class="form-radio w-4 h-4 shrink-0 text-ubc-blue border border-grey-300 mt-2 bg-white rounded-full inline-block appearance-none box-border bg-origin-border p-0 align-middle cursor-pointer checked--border-transparent checked--bg-[url(../img/svg/icon-circle--white.svg)] checked--bg-center checked--bg-current checked--bg-no-repeat checked--bg-[length:100%_100%] disabled--border-grey-500 disabled--bg-grey-300 disabled--cursor-not-allowed">
+					<label for="example-3" class="flex-1 block mt-1 text-sm form-label js-form-label form-label--radio ms-2 option text-ubc-blue">Themes</label>
+					<div class="w-full my-1 text-xs description text-grey-700/90 ms-6">
+      					<div id="edit-checks-test-me--description" class="webform-element-description">The description goes here</div>
+    				</div>
 				</div>
 
-				<div class="form-radio">
-					<input id="typo2-4" type="radio" name="meta-type" value="documentation2">
-					<label for="typo2-4">Documentation</label>
+				<div class="flex flex-wrap items-center mt-2 js-webform-type-radio webform-type-radio js-form-item form-item js-form-radio form-radio js-form-item-radios form-item-radios form-item-wrapper">
+					<input id="example-4" type="radio" name="beta-type" value="documentation" class="form-radio w-4 h-4 shrink-0 text-ubc-blue border border-grey-300 mt-2 bg-white rounded-full inline-block appearance-none box-border bg-origin-border p-0 align-middle cursor-pointer checked--border-transparent checked--bg-[url(../img/svg/icon-circle--white.svg)] checked--bg-center checked--bg-current checked--bg-no-repeat checked--bg-[length:100%_100%] disabled--border-grey-500 disabled--bg-grey-300 disabled--cursor-not-allowed">
+					<label for="example-4" class="flex-1 block mt-1 text-sm form-label js-form-label form-label--radio ms-2 option text-ubc-blue">Documentation</label>
+					<div class="w-full my-1 text-xs description text-grey-700/90 ms-6">
+      					<div id="edit-checks-test-me--description" class="webform-element-description">The description goes here</div>
+    				</div>
 				</div>
 
-				<div class="form-radio">
-					<input id="typo2-5" type="radio" name="meta-type" value="forum-issues2">
-					<label for="typo2-5">Forums &amp; Issues </label>
+				<div class="flex flex-wrap items-center mt-2 js-webform-type-radio webform-type-radio js-form-item form-item js-form-radio form-radio js-form-item-radios form-item-radios form-item-wrapper">
+					<input id="example-5" type="radio" name="beta-type" value="forum-issues" class="form-radio w-4 h-4 shrink-0 text-ubc-blue border border-grey-300 mt-2 bg-white rounded-full inline-block appearance-none box-border bg-origin-border p-0 align-middle cursor-pointer checked--border-transparent checked--bg-[url(../img/svg/icon-circle--white.svg)] checked--bg-center checked--bg-current checked--bg-no-repeat checked--bg-[length:100%_100%] disabled--border-grey-500 disabled--bg-grey-300 disabled--cursor-not-allowed">
+					<label for="example-5" class="flex-1 block mt-1 text-sm form-label js-form-label form-label--radio ms-2 option text-ubc-blue">Forums &amp; Issues </label>
+					<div class="w-full my-1 text-xs description text-grey-700/90 ms-6">
+      					<div id="edit-checks-test-me--description" class="webform-element-description">The description goes here</div>
+    				</div>
 				</div>
 
-				<div class="form-radio">
-					<input id="typo2-6" type="radio" name="meta-type" value="group2">
-					<label for="typo2-6">Groups</label>
+				<div class="flex flex-wrap items-center mt-2 js-webform-type-radio webform-type-radio js-form-item form-item js-form-radio form-radio js-form-item-radios form-item-radios form-item-wrapper">
+					<input id="example-6" type="radio" name="beta-type" value="group" class="form-radio w-4 h-4 shrink-0 text-ubc-blue border border-grey-300 mt-2 bg-white rounded-full inline-block appearance-none box-border bg-origin-border p-0 align-middle cursor-pointer checked--border-transparent checked--bg-[url(../img/svg/icon-circle--white.svg)] checked--bg-center checked--bg-current checked--bg-no-repeat checked--bg-[length:100%_100%] disabled--border-grey-500 disabled--bg-grey-300 disabled--cursor-not-allowed">
+					<label for="example-6" class="flex-1 block mt-1 text-sm form-label js-form-label form-label--radio ms-2 option text-ubc-blue">Groups</label>
+					<div class="w-full my-1 text-xs description text-grey-700/90 ms-6">
+      					<div id="edit-checks-test-me--description" class="webform-element-description">The description goes here</div>
+    				</div>
 				</div>
 
-				<div class="form-radio">
-					<input id="typo2-2" type="radio" name="meta-type" value="module2" disabled="disabled">
-					<label for="typo2-2">Disabled option</label>
+				<div class="flex flex-wrap items-center mt-2 js-webform-type-radio webform-type-radio js-form-item form-item js-form-radio form-radio js-form-item-radios form-item-radios form-item-wrapper">
+					<input id="example-2" type="radio" name="beta-type" value="module" disabled="disabled" class="wform-radio w-4 h-4 shrink-0 text-ubc-blue border border-grey-300 mt-2 bg-white rounded-full inline-block appearance-none box-border bg-origin-border p-0 align-middle cursor-pointer checked--border-transparent checked--bg-[url(../img/svg/icon-circle--white.svg)] checked--bg-center checked--bg-current checked--bg-no-repeat checked--bg-[length:100%_100%] disabled--border-grey-500 disabled--bg-grey-300 disabled--cursor-not-allowed">
+					<label for="example-2" class="flex-1 block mt-1 text-sm form-label js-form-label form-label--radio ms-2 option text-ubc-blue">Disabled option</label>
+					<div class="w-full my-1 text-xs description text-grey-700/90 ms-6">
+      					<div id="edit-checks-test-me--description" class="webform-element-description">The description goes here</div>
+    				</div>
 				</div>
 			</div>
 		</div>
 
-		<h3>Radios: inline [3]</h3>
-		<div class="form-item-wrapper ">
-			<label>Radio Inputs</label>
-			<div class="form-radios form-group--inline-3">
-				<div class="form-radio">
-					<input type="radio" name="beta-type" id="example-1" value="example-something" checked="checked">
-					<label for="example-1">All</label>
+		<h3>Radios: inline, no descriptions</h3>
+		<div class="mt-4 form-item-wrapper">
+			<label class="block pb-1 mt-1 text-sm text-ubc-blue">Radio Inputs</label>
+			<div class="flex flex-wrap my-4 gap-x-6 gap-y-2 form-radios">
+				<div class="flex flex-wrap items-center mt-2 js-webform-type-radio webform-type-radio js-form-item form-item js-form-radio form-radio js-form-item-radios form-item-radios form-item-wrapper">
+					<input type="radio" name="beta-type" id="example-1" value="example-something" checked="checked" class="form-radio w-4 h-4 shrink-0 text-ubc-blue border border-grey-300 mt-2 bg-white rounded-full inline-block appearance-none box-border bg-origin-border p-0 align-middle cursor-pointer checked--border-transparent checked--bg-[url(../img/svg/icon-circle--white.svg)] checked--bg-center checked--bg-current checked--bg-no-repeat checked--bg-[length:100%_100%] disabled--border-grey-500 disabled--bg-grey-300 disabled--cursor-not-allowed">
+					<label for="example-1" class="flex-1 block mt-1 text-sm form-label js-form-label form-label--radio ms-2 option text-ubc-blue">All</label>
 				</div>
 
-				<div class="form-radio">
-					<input id="example-3" type="radio" name="beta-type" value="theme">
-					<label for="example-3">Themes</label>
+				<div class="flex flex-wrap items-center mt-2 js-webform-type-radio webform-type-radio js-form-item form-item js-form-radio form-radio js-form-item-radios form-item-radios form-item-wrapper">
+					<input id="example-3" type="radio" name="beta-type" value="theme" class="form-radio w-4 h-4 shrink-0 text-ubc-blue border border-grey-300 mt-2 bg-white rounded-full inline-block appearance-none box-border bg-origin-border p-0 align-middle cursor-pointer checked--border-transparent checked--bg-[url(../img/svg/icon-circle--white.svg)] checked--bg-center checked--bg-current checked--bg-no-repeat checked--bg-[length:100%_100%] disabled--border-grey-500 disabled--bg-grey-300 disabled--cursor-not-allowed">
+					<label for="example-3" class="flex-1 block mt-1 text-sm form-label js-form-label form-label--radio ms-2 option text-ubc-blue">Themes</label>
 				</div>
 
-				<div class="form-radio">
-					<input id="example-4" type="radio" name="beta-type" value="documentation">
-					<label for="example-4">Documentation</label>
+				<div class="flex flex-wrap items-center mt-2 js-webform-type-radio webform-type-radio js-form-item form-item js-form-radio form-radio js-form-item-radios form-item-radios form-item-wrapper">
+					<input id="example-4" type="radio" name="beta-type" value="documentation" class="form-radio w-4 h-4 shrink-0 text-ubc-blue border border-grey-300 mt-2 bg-white rounded-full inline-block appearance-none box-border bg-origin-border p-0 align-middle cursor-pointer checked--border-transparent checked--bg-[url(../img/svg/icon-circle--white.svg)] checked--bg-center checked--bg-current checked--bg-no-repeat checked--bg-[length:100%_100%] disabled--border-grey-500 disabled--bg-grey-300 disabled--cursor-not-allowed">
+					<label for="example-4" class="flex-1 block mt-1 text-sm form-label js-form-label form-label--radio ms-2 option text-ubc-blue">Documentation</label>
 				</div>
 
-				<div class="form-radio">
-					<input id="example-5" type="radio" name="beta-type" value="forum-issues">
-					<label for="example-5">Forums &amp; Issues </label>
+				<div class="flex flex-wrap items-center mt-2 js-webform-type-radio webform-type-radio js-form-item form-item js-form-radio form-radio js-form-item-radios form-item-radios form-item-wrapper">
+					<input id="example-5" type="radio" name="beta-type" value="forum-issues" class="form-radio w-4 h-4 shrink-0 text-ubc-blue border border-grey-300 mt-2 bg-white rounded-full inline-block appearance-none box-border bg-origin-border p-0 align-middle cursor-pointer checked--border-transparent checked--bg-[url(../img/svg/icon-circle--white.svg)] checked--bg-center checked--bg-current checked--bg-no-repeat checked--bg-[length:100%_100%] disabled--border-grey-500 disabled--bg-grey-300 disabled--cursor-not-allowed">
+					<label for="example-5" class="flex-1 block mt-1 text-sm form-label js-form-label form-label--radio ms-2 option text-ubc-blue">Forums &amp; Issues </label>
 				</div>
 
-				<div class="form-radio">
-					<input id="example-6" type="radio" name="beta-type" value="group">
-					<label for="example-6">Groups</label>
+				<div class="flex flex-wrap items-center mt-2 js-webform-type-radio webform-type-radio js-form-item form-item js-form-radio form-radio js-form-item-radios form-item-radios form-item-wrapper">
+					<input id="example-6" type="radio" name="beta-type" value="group" class="form-radio w-4 h-4 shrink-0 text-ubc-blue border border-grey-300 mt-2 bg-white rounded-full inline-block appearance-none box-border bg-origin-border p-0 align-middle cursor-pointer checked--border-transparent checked--bg-[url(../img/svg/icon-circle--white.svg)] checked--bg-center checked--bg-current checked--bg-no-repeat checked--bg-[length:100%_100%] disabled--border-grey-500 disabled--bg-grey-300 disabled--cursor-not-allowed">
+					<label for="example-6" class="flex-1 block mt-1 text-sm form-label js-form-label form-label--radio ms-2 option text-ubc-blue">Groups</label>
 				</div>
 
-				<div class="form-radio">
-					<input id="example-2" type="radio" name="beta-type" value="module" disabled="disabled">
-					<label for="example-2">Disabled option</label>
+				<div class="flex flex-wrap items-center mt-2 js-webform-type-radio webform-type-radio js-form-item form-item js-form-radio form-radio js-form-item-radios form-item-radios form-item-wrapper">
+					<input id="example-2" type="radio" name="beta-type" value="module" disabled="disabled" class="wform-radio w-4 h-4 shrink-0 text-ubc-blue border border-grey-300 mt-2 bg-white rounded-full inline-block appearance-none box-border bg-origin-border p-0 align-middle cursor-pointer checked--border-transparent checked--bg-[url(../img/svg/icon-circle--white.svg)] checked--bg-center checked--bg-current checked--bg-no-repeat checked--bg-[length:100%_100%] disabled--border-grey-500 disabled--bg-grey-300 disabled--cursor-not-allowed">
+					<label for="example-2" class="flex-1 block mt-1 text-sm form-label js-form-label form-label--radio ms-2 option text-ubc-blue">Disabled option</label>
 				</div>
 			</div>
 		</div>
 		<h3>Textarea</h3>
 		<div class="form-item-wrapper">
-			<label for="edit-submitted-row-message">Message <span class="form-required" title="This field is required.">*</span>
+			<label for="edit-submitted-row-message" class="block pb-1 mt-1 text-sm text-ubc-blue">Message <span class="form-required" title="This field is required.">*</span>
 			</label>
-			<textarea required="required" placeholder="Add your message..." id="edit-submitted-row-message" name="submitted[row][message]" cols="60" rows="5" class="form-textarea required"></textarea>
+			<textarea required="required" placeholder="Add your message..." id="edit-submitted-row-message" name="submitted[row][message]" cols="60" rows="5" class="box-border block w-full p-2 text-sm bg-white border rounded-lg resize-y form-textarea required resize-vertical border-grey-300 text-grey-800/90 min-h-16"></textarea>
 		</div>
 		<h3>Checkboxes</h3>
-		<div class="form-item-wrapper">
-			<label for="edit-abd">Checkbox Inputs</label>
-			<div class="form-checkbox">
-				<input id="edit-1-customize-ckeditor" type="checkbox" name="1[customize ckeditor]" value="customize ckeditor" class="">
-				<label for="edit-1-customize-ckeditor">Customize Display</label>
+		<div class="my-4 form-checkboxes">
+			<label for="edit-abd" class="block pb-1 mt-1 text-sm text-ubc-blue">Checkbox Inputs</label>
+			<div class="flex flex-wrap items-center mt-2 js-webform-type-checkbox webform-type-checkbox js-form-item form-item js-form-checkbox form-checkbox js-form-item-checks-test-me form-item-checks-test-me form-item-wrapper">
+				<input id="edit-1-customize-ckeditor" type="checkbox" name="1[customize ckeditor]" value="customize ckeditor" class="form-checkbox w-4 h-4 shrink-0 text-ubc-blue border mt-2 border-grey-300 bg-white rounded-sm inline-block appearance-none box-border bg-origin-border p-0 align-middle cursor-pointer checked--border-transparent checked--bg-[url(../img/svg/icon-check--white.svg)] checked--bg-center checked--bg-current checked--bg-no-repeat checked--bg-[length:100%_100%] disabled--border-grey-500 disabled--bg-grey-300 disabled--cursor-not-allowed">
+				<label for="edit-1-customize-ckeditor" class="flex-1 block mt-1 text-sm form-label js-form-label form-label--checkbox ms-2 option text-ubc-blue">Customize Display</label>
+				<div class="w-full my-1 text-xs description text-grey-700/90 ms-6">
+					<div id="edit-checks-test-me--description" class="webform-element-description">The description goes here</div>
+    			</div>
 			</div>
-			<div class="form-checkbox">
-				<input id="edit-2-customize-ckeditor" type="checkbox" name="2[customize ckeditor]" value="customize ckeditor" class="">
-				<label for="edit-2-customize-ckeditor">Customize appearance</label>
+			<div class="flex flex-wrap items-center mt-2 js-webform-type-checkbox webform-type-checkbox js-form-item form-item js-form-checkbox form-checkbox js-form-item-checks-test-me form-item-checks-test-me form-item-wrapper">
+				<input id="edit-2-customize-ckeditor" type="checkbox" name="2[customize ckeditor]" value="customize ckeditor" class="form-checkbox w-4 h-4 shrink-0 text-ubc-blue border mt-2 border-grey-300 bg-white rounded-sm inline-block appearance-none box-border bg-origin-border p-0 align-middle cursor-pointer checked--border-transparent checked--bg-[url(../img/svg/icon-check--white.svg)] checked--bg-center checked--bg-current checked--bg-no-repeat checked--bg-[length:100%_100%] disabled--border-grey-500 disabled--bg-grey-300 disabled--cursor-not-allowed">
+				<label for="edit-2-customize-ckeditor" class="flex-1 block mt-1 text-sm form-label js-form-label form-label--checkbox ms-2 option text-ubc-blue">Customize appearance</label>
+				<div class="w-full my-1 text-xs description text-grey-700/90 ms-6">
+					<div id="edit-checks-test-me--description" class="webform-element-description">The description goes here</div>
+    			</div>
 			</div>
-			<div class="form-checkbox">
-				<input id="edit-3-customize-ckeditor" type="checkbox" name="3[customize ckeditor]" value="customize ckeditor" checked="checked" disabled="disabled" class="">
-				<label for="edit-3-customize-ckeditor">Disabled option</label>
+			<div class="flex flex-wrap items-center mt-2 js-webform-type-checkbox webform-type-checkbox js-form-item form-item js-form-checkbox form-checkbox js-form-item-checks-test-me form-item-checks-test-me form-item-wrapper">
+				<input id="edit-3-customize-ckeditor" type="checkbox" name="3[customize ckeditor]" value="customize ckeditor" checked="checked" disabled="disabled" class="form-checkbox w-4 h-4 shrink-0 text-ubc-blue border mt-2 border-grey-300 bg-white rounded-sm inline-block appearance-none box-border bg-origin-border p-0 align-middle cursor-pointer checked--border-transparent checked--bg-[url(../img/svg/icon-check--white.svg)] checked--bg-center checked--bg-current checked--bg-no-repeat checked--bg-[length:100%_100%] disabled--border-grey-500 disabled--bg-grey-300 disabled--cursor-not-allowed">
+				<label for="edit-3-customize-ckeditor" class="flex-1 block mt-1 text-sm form-label js-form-label form-label--checkbox ms-2 option text-ubc-blue">Disabled option</label>
+				<div class="w-full my-1 text-xs description text-grey-700/90 ms-6">
+					<div id="edit-checks-test-me--description" class="webform-element-description">The description goes here</div>
+    			</div>
 			</div>
 		</div>
-		<h3>Checkboxes: inline [3]</h3>
+		<h3>Checkboxes: inline, no description</h3>
 		<div class="form-item-wrapper">
-			<label>Checkbox Inputs</label>
-			<div class="form-checkboxes form-group--inline-3">
-				<div class="form-checkbox">
-					<input id="edit-1-foo" type="checkbox" name="1[customize ckeditor]" value="customize ckeditor" class="">
-					<label for="edit-1-foo">Customize Display</label>
+			<label class="block pb-1 mt-1 text-sm text-ubc-blue">Checkbox Inputs</label>
+			<div class="flex flex-wrap my-4 form-checkboxes gap-x-6 gap-y-2">
+				<div class="flex flex-wrap items-center mt-2 js-webform-type-checkbox webform-type-checkbox js-form-item form-item js-form-checkbox form-checkbox js-form-item-checks-test-me form-item-checks-test-me form-item-wrapper">
+					<input id="edit-1-foo" type="checkbox" name="1[customize ckeditor]" value="customize ckeditor" class="form-checkbox w-4 h-4 shrink-0 text-ubc-blue border mt-2 border-grey-300 bg-white rounded-sm inline-block appearance-none box-border bg-origin-border p-0 align-middle cursor-pointer checked--border-transparent checked--bg-[url(../img/svg/icon-check--white.svg)] checked--bg-center checked--bg-current checked--bg-no-repeat checked--bg-[length:100%_100%] disabled--border-grey-500 disabled--bg-grey-300 disabled--cursor-not-allowed">
+					<label for="edit-1-foo" class="flex-1 block mt-1 text-sm form-label js-form-label form-label--checkbox ms-2 option text-ubc-blue">Customize Display</label>
 				</div>
-				<div class="form-checkbox">
-					<input id="edit-2-foo" type="checkbox" name="2[customize ckeditor]" value="customize ckeditor" class="">
-					<label for="edit-2-foo">Customize appearance</label>
+				<div class="flex flex-wrap items-center mt-2 js-webform-type-checkbox webform-type-checkbox js-form-item form-item js-form-checkbox form-checkbox js-form-item-checks-test-me form-item-checks-test-me form-item-wrapper">
+					<input id="edit-2-foo" type="checkbox" name="2[customize ckeditor]" value="customize ckeditor" class="form-checkbox w-4 h-4 shrink-0 text-ubc-blue border mt-2 border-grey-300 bg-white rounded-sm inline-block appearance-none box-border bg-origin-border p-0 align-middle cursor-pointer checked--border-transparent checked--bg-[url(../img/svg/icon-check--white.svg)] checked--bg-center checked--bg-current checked--bg-no-repeat checked--bg-[length:100%_100%] disabled--border-grey-500 disabled--bg-grey-300 disabled--cursor-not-allowed">
+					<label for="edit-2-foo" class="flex-1 block mt-1 text-sm form-label js-form-label form-label--checkbox ms-2 option text-ubc-blue">Customize appearance</label>
 				</div>
-				<div class="form-checkbox">
-					<input id="edit-3-foo" type="checkbox" name="3[customize ckeditor]" value="customize ckeditor" checked="checked" disabled="disabled" class="">
-					<label for="edit-3-foo">Disabled option</label>
+				<div class="flex flex-wrap items-center mt-2 js-webform-type-checkbox webform-type-checkbox js-form-item form-item js-form-checkbox form-checkbox js-form-item-checks-test-me form-item-checks-test-me form-item-wrapper">
+					<input id="edit-3-foo" type="checkbox" name="3[customize ckeditor]" value="customize ckeditor" checked="checked" disabled="disabled" class="form-checkbox w-4 h-4 shrink-0 text-ubc-blue border mt-2 border-grey-300 bg-white rounded-sm inline-block appearance-none box-border bg-origin-border p-0 align-middle cursor-pointer checked--border-transparent checked--bg-[url(../img/svg/icon-check--white.svg)] checked--bg-center checked--bg-current checked--bg-no-repeat checked--bg-[length:100%_100%] disabled--border-grey-500 disabled--bg-grey-300 disabled--cursor-not-allowed">
+					<label for="edit-3-foo" class="flex-1 block mt-1 text-sm form-label js-form-label form-label--checkbox ms-2 option text-ubc-blue">Disabled option</label>
 				</div>
 			</div>
 		</div>
@@ -148,17 +184,17 @@
 		<h3>Fieldset + Legend</h3>
 		<fieldset>
 			<legend>Personalia</legend>
-			<div class="form-item-wrapper">
-				<label for="name-sample">Name</label>
-				<input id="name-sample" type="text" name="name" value="" size="30" maxlength="128" class="form-text" placeholder="Jane Doe">
+			<div class="mt-4 form-item-wrapper">
+				<label for="name-sample" class="block pb-1 mt-1 text-sm text-ubc-blue">Name</label>
+				<input id="name-sample" type="text" name="name" value="" size="30" maxlength="128" class="box-border block w-full h-10 p-2 text-sm bg-white border rounded-lg form-text border-grey-300 text-grey-800/90 " placeholder="Jane Doe">
 			</div>
-			<div class="form-item-wrapper">
-				<label for="email-sample">Email</label>
-				<input id="email-sample" type="email" name="email" value="" size="30" maxlength="128" class="form-text" placeholder="jame.doe@ubc.ca">
+			<div class="mt-4 form-item-wrapper">
+				<label for="email-sample" class="block pb-1 mt-1 text-sm text-ubc-blue">Email</label>
+				<input id="email-sample" type="email" name="email" value="" size="30" maxlength="128" class="box-border block w-full h-10 p-2 text-sm bg-white border rounded-lg form-text border-grey-300 text-grey-800/90" placeholder="jane.doe@ubc.ca">
 			</div>
-			<div class="form-item-wrapper">
-				<label for="date-sample">Date of birth</label>
-				<input id="date-sample" type="date" name="date" value="" size="30" maxlength="128" class="form-text" placeholder="October 1, 1999">
+			<div class="mt-4 form-item-wrapper">
+				<label for="date-sample" class="block pb-1 mt-1 text-sm text-ubc-blue">Date of birth</label>
+				<input id="date-sample" type="date" name="date" value="" size="30" maxlength="128" class="box-border block w-full h-10 p-2 text-sm bg-white border rounded-lg form-text border-grey-300 text-grey-800/90" placeholder="October 1, 1999">
 			</div>
 		</fieldset>
 	</div>

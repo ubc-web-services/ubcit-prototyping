@@ -3,6 +3,7 @@
 /*
 * Styles for paragraphs
 */
+
 .paragraph--type--text__inner > :first-child,
 .paragraph--type--text > div > div > :first-child {
   @apply mt-0;

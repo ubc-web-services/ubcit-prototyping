@@ -12,14 +12,12 @@ video {
 
 figure {
   @apply mt-leading;
-  display: table;
+
   margin-bottom: 0;
 }
 
 figcaption {
   @apply px-3 pt-2 text-sm text-grey-700;
-  display: table-caption;
-  caption-side: bottom;
 }
 
 /* svgs
@@ -37,64 +35,6 @@ object {
   aspect-ratio: 16/9;
   height: auto;
   width: 100%;
-}
-
-/* File icons. */
-.file {
-  @apply inline-block pl-[1.5em] bg-no-repeat bg-[left_center];
-  background-size: .875em .875em;
-}
-
-[dir="rtl"] .file {
-  @apply inline-block min-h-[1em] pr-[1.5em] pl-[inherit] bg-right;
-}
-
-.file--general,
-.file--application-octet-stream,
-.file--application-x-executable {
-  background-image: url(../img/svg/file-blank.svg);
-}
-
-.file--package-x-generic {
-  background-image: url(../img/svg/file-zipped.svg);
-}
-
-.file--x-office-spreadsheet {
-  background-image: url(../img/svg/file-excel.svg);
-}
-
-.file--x-office-document {
-  background-image: url(../img/svg/file-word.svg);
-}
-
-.file--x-office-presentation {
-  background-image: url(../img/svg/file-powerpoint.svg);
-}
-
-.file--text-x-script,
-.file--text-html {
-  background-image: url(../img/svg/file-code.svg);
-}
-
-.file--application-pdf {
-  background-image: url(../img/svg/file-pdf.svg);
-}
-
-.file--audio {
-  background-image: url(../img/svg/file-audio.svg);
-}
-
-.file--video {
-  background-image: url(../img/svg/file-video.svg);
-}
-
-.file--text-plain,
-.file--text {
-  background-image: url(../img/svg/file-text.svg);
-}
-
-.file--image {
-  background-image: url(../img/svg/file-image.svg);
 }
 
 /* image helpers */

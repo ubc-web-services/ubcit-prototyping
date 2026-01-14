@@ -7,7 +7,7 @@
 }
 
 .webform-submission-form legend {
-  @apply pb-0 border-b-[.25rem] border-ubc-blue-neptune text-sm;
+  @apply pb-0 text-sm;
 }
 
 .webform-submission-form .field-prefix,
@@ -22,13 +22,15 @@
   @apply mt-0;
 }
 
+/*
 .webform-submission-form .fieldset-wrapper {
   @apply mt-[1em];
 }
+*/
 
 .text-count-message,
 .description {
-  @apply text-sm text-grey-700;
+  @apply text-xs text-grey-700;
 }
 
 .form--inline .form-item {
@@ -70,65 +72,6 @@ input[name="custom_composite_table_add"] {
   }
 }
 
-.webform-submission-form .checkboxes--wrapper legend,
-.webform-submission-form .webform-checkboxes-other--wrapper legend,
-.webform-submission-form .radios--wrapper legend,
-.webform-submission-form .webform-radios-other--wrapper legend {
-  @apply pb-0 text-sm normal-case border-b-0 text-ubc-blue;
-}
-
-.webform-submission-form .checkboxes--wrapper .fieldset-wrapper,
-.webform-submission-form .webform-checkboxes-other--wrapper .fieldset-wrapper,
-.webform-submission-form .radios--wrapper .fieldset-wrapper,
-.webform-submission-form .webform-radios-other--wrapper .fieldset-wrapper,
-.webform-submission-form :not(.checkboxes--wrapper) .form-item.form-checkbox,
-.webform-submission-form :not(.radios--wrapper) .form-item.form-radio {
-  @apply mt-[.5em];
-}
-
-.webform-submission-form .form-item-wrapper>label {
-  display: inline-block;
-}
-
-.webform-submission-form .fieldset-legend.form-required {
-  color: inherit;
-  font-weight: inherit;
-}
-
-.webform-submission-form .fieldset-legend.form-required::after {
-  content: " *";
-  color: var(--input-required-color);
-  font-weight: 700;
-}
-
-.webform-type-checkboxes > legend {
-  @apply normal-case border-b-0 text-ubc-blue;
-}
-
-.webform-submission-form .form-actions {
-  @apply mt-12;
-}
-
-fieldset.webform-type-checkboxes,
-fieldset.webform-type-radios {
-  @apply shadow-none;
-}
-
-.webform-submission-form .fieldset-wrapper {
-  @apply p-8;
-}
-
-.webform-submission-form .webform-type-radios .fieldset-wrapper,
-.webform-submission-form .webform-type-checkboxes .fieldset-wrapper {
-  @apply p-0;
-}
-
-.webform-submission-form .fieldset-wrapper .form-item.form-radio,
-.webform-submission-form .fieldset-wrapper .form-item.form-checkbox {
-  @apply mt-0;
-}
-
-.webform-submission-form .webform-type-radios > legend,
-.webform-submission-form .webform-type-checkboxes > legend {
-  @apply border-b-0;
+.webform-element-description {
+  @apply my-2 text-xs text-grey-700;
 }

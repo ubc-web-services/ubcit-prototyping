@@ -10,10 +10,10 @@ form {
 }
 
 fieldset {
-  @apply border border-ubc-blue;
+  @apply border rounded-lg border-grey-300;
   margin-top: calc(var(--text-base) * var(--scale-ratio));
   margin-bottom: calc(var(--text-base) * var(--scale-ratio));
-  padding: calc(var(--text-base) * var(--scale-ratio));
+  padding: calc(var(--text-xl) * var(--scale-ratio));
 }
 
 legend {
@@ -44,36 +44,15 @@ textarea {
   font-weight: 700;
 }
 
-/*
-[type="number"],
-[type="search"],
-[type="date"],
-[type="time"],
-[type="datetime-local"],
-[type="month"],
-[type="text"],
-[type="password"],
-[type="datetime"],
-[type="week"],
-[type="email"],
-[type="url"],
-[type="tel"],
-[type="color"],
-textarea,
-select {
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 100%;
-  padding: 0.65em 1em;
-  color: var(--input-text);
-  border: 1px solid var(--input-border);
-  border-radius: var(--input-border-radius);
-  background-color: var(--input-bg);
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+.description {
+  @apply mt-2;
 }
-*/
+
+/* adust multiple form element styles */
+fieldset .form-checkboxes,
+fieldset .form-radios  {
+  @apply my-0;
+}
 
 /* error styles */
 form .error {
@@ -81,9 +60,18 @@ form .error {
 }
 
 form .error::placeholder,
-form .error + .description {
+form .error + .description,
+abbr.tabledrag-changed {
   color: rgba(var(--error), 1) important;
 }
+
+/* draggable elements */
+abbr.tabledrag-changed {
+  text-decoration: none;
+}
+
+
+
 
 /* focus styles */
 [type="number"]:focus,

@@ -65,10 +65,10 @@
     --grey-800: 66, 66, 66; /* #424242 */
     --grey-900: 33, 33, 33; /* #212121 */
 
-    --error: 186, 16, 16; /* #b33542 */
-    --warning: 216, 202, 8; /* #ef8843 */
-    --success: 12, 146, 90; /* #95be4f */
-    --status: 27, 150, 211; /* #324d6a */
+    --error: 255, 124, 124; /* #ff7c7c */
+    --warning: 248, 230, 5; /* #f8e605 */
+    --success: 87, 237, 174; /* #57edae */
+    --status: 64, 180, 229; /* #40b4e5 */
     --text-color: rgba(var(--grey-900), 1);
 
     --default-text-color: var(--text-color);
