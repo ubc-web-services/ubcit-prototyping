@@ -16,6 +16,10 @@ fieldset {
   padding: calc(var(--text-xl) * var(--scale-ratio));
 }
 
+fieldset:has(> legend) {
+  padding-top: 0;
+}
+
 legend {
   @apply text-ubc-blue;
   font-size: 1.25em;
