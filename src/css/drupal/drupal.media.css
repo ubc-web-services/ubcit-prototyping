@@ -12,11 +12,16 @@ figure .field--type-image {
   display: table-cell;
 }
 
-/* add margin to media without figure containers */
+/* add margin to media */
 .image-inline:not(:where(figure .image-inline)),
 .media--type-image:not(:where(figure .media--type-image)),
-.media--type-remote-video:not(:where(figure .media--type-remote-video)) {
-  @apply mt-leading;
+.media--type-remote-video:not(:where(figure .media--type-remote-video)),
+figure.align-left,
+figure.align-right,
+figure.align-center,
+img.align-center,
+img[data-entity-type="file"]:not(:where(figure img)) {
+  @apply my-leading;
 }
 
 /* make embedded video full width when not aligned */
@@ -34,23 +39,18 @@ img.align-right,
   @apply float-none mx-auto mb-leading;
 }
 
-figure.align-left,
-figure.align-right {
-  @apply mt-leading;
-}
 
-img[data-entity-type="file"]:not(:where(figure img)) {
-  @apply mt-leading;
-}
 
 figure.align-center,
-img.align-center {
-  @apply mx-auto mt-leading;
+img.align-center,
+.align-center,
+.media.align-center {
+  @apply mx-auto;
 }
 
 .align-center,
 .media.align-center {
-  @apply table mx-auto;
+  @apply table;
 }
 
 @media screen and (min-width: 640px) {
@@ -71,6 +71,10 @@ img.align-center {
   .align-left,
   .align-right {
     @apply max-w-[50%];
+  }
+
+  .align-center {
+    @apply max-w-[75%];
   }
 
 }
