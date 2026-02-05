@@ -11,13 +11,13 @@ video {
 }
 
 figure {
-  @apply mt-leading;
+  @apply table mt-leading;
 
   margin-bottom: 0;
 }
 
 figcaption {
-  @apply px-3 pt-2 text-sm text-grey-700;
+  @apply table-caption px-3 pt-2 text-sm text-grey-700 caption-bottom;
 }
 
 /* svgs

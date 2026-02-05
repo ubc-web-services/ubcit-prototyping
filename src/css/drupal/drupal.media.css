@@ -1,9 +1,15 @@
 /** @define drupal.media */
 
 /* drupal media */
+
 figure img,
 img[data-entity-type="file"] {
   @apply mt-0;
+}
+
+figure > div,
+figure .field--type-image {
+  display: table-cell;
 }
 
 /* add margin to media without figure containers */
@@ -33,10 +39,7 @@ figure.align-right {
   @apply mt-leading;
 }
 
-img[data-entity-type="file"]:not(
-  .align-left,
-  .align-center,
-  .align-right):not(:where(figure img)) {
+img[data-entity-type="file"]:not(:where(figure img)) {
   @apply mt-leading;
 }
 
@@ -45,6 +48,7 @@ img.align-center {
   @apply mx-auto mt-leading;
 }
 
+.align-center,
 .media.align-center {
   @apply table mx-auto;
 }
